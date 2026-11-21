@@ -1,0 +1,22 @@
+# CODEOWNERS — review routing, not a merge block.
+#
+# This does not by itself require review before merge (branch protection has
+# to be configured separately for that). It exists so GitHub auto-requests
+# the right reviewer on high-blast-radius paths, even solo — future-you (or
+# a future collaborator) benefits from the routing being explicit instead of
+# tribal knowledge.
+#
+# Add paths as the project grows real blast-radius (CI config, auth code,
+# migrations, anything a bad change to would be expensive). Until then, a
+# single blanket owner is enough.
+
+# FIRST-TIME SETUP: replace @your-github-handle with the real owner (a user or
+# @org/team) and uncomment the line below. Until then this file routes
+# nothing, which is intentional: a template copy should never auto-request
+# review from the template author.
+#
+# * @your-github-handle
+
+# Example of narrower routing once it's warranted:
+# /.github/workflows/ @your-github-handle
+# /docs/product/specs/ @your-github-handle

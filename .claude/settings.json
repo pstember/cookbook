@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '## Agent orientation'; echo 'Read docs/agents/README.md and AGENTS.md before starting work.'; echo '---'; cat \"$CLAUDE_PROJECT_DIR/docs/agents/README.md\" 2>/dev/null || true"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard-pr-merge.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}

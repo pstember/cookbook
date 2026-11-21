@@ -1,0 +1,9 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "command": "echo '## Agent orientation'; echo 'Read docs/agents/README.md and AGENTS.md before starting work.'; echo '---'; cat \"$(git rev-parse --show-toplevel)/docs/agents/README.md\" 2>/dev/null || true"
+      }
+    ]
+  }
+}

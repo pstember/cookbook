@@ -1,0 +1,18 @@
+name: Chore / maintenance
+description: Tooling, cleanup, dependency updates, non-user-facing work
+labels: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What needs doing?
+      description: The task, and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What's in scope vs explicitly out of scope for this chore.
+    validations:
+      required: false
