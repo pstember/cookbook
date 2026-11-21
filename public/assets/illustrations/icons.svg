@@ -83,4 +83,26 @@
     <path d="M23 45c.8-2 4-3 8-5 10-4 12-7 15-14 3 2 5 6 6 8 8-1 11-6 11-14 6 1 9 5 10 11 5-.5 8 0 7 4l-13 13Z" fill="#fff3d8" stroke="#6f4c31" stroke-width="1.6" stroke-linejoin="round"/>
     <path d="M67 48v15m-18-21c8-2 12-5 15-10m-29 9c5-2 8-5 11-10M14 29v10m-5-5h10M84 12v10m-5-5h10" stroke="#ac7953" stroke-width="1.45" stroke-linecap="round"/>
   </symbol>
+  <symbol id="art-salad" viewBox="0 0 100 76">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 46c3 14 15 24 34 24 18 0 31-10 34-24" fill="#f0d18d" stroke="#65513a" stroke-width="1.7"/>
+      <ellipse cx="50" cy="46" rx="34" ry="10" fill="#f7e4af" stroke="#65513a" stroke-width="1.65"/>
+      <path d="M29 47C14 38 16 23 28 24c-4-10 12-18 16-8 6-7 15-2 13 8 10-4 19 1 14 9 10-1 13 7 3 13-11 8-29 9-45 1Z" fill="#9bb47d" stroke="#516743" stroke-width="1.65"/>
+      <path d="M34 45c0-8-5-12-10-15m20 15c0-8-3-16-5-22m17 23c2-8 7-13 10-15m-17 18c10 3 18-3 24-8" stroke="#5f7752" stroke-width="1.35"/>
+      <circle cx="39" cy="43" r="5" fill="#edaa9a" stroke="#9a5a52" stroke-width="1.4"/>
+      <circle cx="59" cy="43" r="5.6" fill="#e6a48d" stroke="#9a5a52" stroke-width="1.4"/>
+      <path d="M23 53c13 8 40 11 53 .5" stroke="#a87a45" stroke-width="1.3"/>
+      <path d="M12 16v8m-4-4h8m70 4v10m-5-5h10" stroke="#758baf" stroke-width="1.45"/>
+    </g>
+  </symbol>
+  <symbol id="art-toast" viewBox="0 0 100 76">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="50" cy="58" rx="40" ry="10" fill="#a9c3dc" stroke="#526a83" stroke-width="1.55"/>
+      <path d="M28 33c-5-7 0-14 8-16 9-4 26-4 34 1 6 3 8 10 3 15l1 24c-12 5-36 6-48 0Z" fill="#cc8e5a" stroke="#72523b" stroke-width="1.8"/>
+      <path d="M31 31c-4-6 2-11 9-12 9-3 20-2 27 1 5 2 7 6 3 11l1 22c-10 4-30 5-42 0Z" fill="#f8db9f" stroke="#99673f" stroke-width="1.5"/>
+      <path d="M41 50c-5-1-8-5-6-10 2-4 6-4 10-8 4-4 13-5 17 0 6 2 8 10 5 14-3 5-10 5-14 4-5 1-8 2-12 0Z" fill="#fff7e0" stroke="#b09879" stroke-width="1.4"/>
+      <circle cx="52" cy="40" r="7.1" fill="#f3c454" stroke="#9c7338" stroke-width="1.4"/>
+      <path d="M52 36c-1.5.2-2.5 1-2.9 2.3M17 26v10m-5-5h10m62-7v8m-4-4h8" stroke="#a57a4f" stroke-width="1.4"/>
+    </g>
+  </symbol>
 </svg>

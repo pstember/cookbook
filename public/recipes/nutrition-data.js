@@ -44,5 +44,25 @@ export const foodData = {
     source: "Tesco cornflour label", url: "https://www.tesco.com/shop/en-GB/products/254881569",
     kj: 1517.6, kcal: 357.2, fat: 0.4, saturates: 0, carbs: 88, sugars: 0, fibre: 0, protein: 0.4, salt: 0.1,
   },
+  greekYoghurt: {
+    source: "FAGE Total 5% Greek yoghurt label",
+    url: "https://www.waitrose.com/ecom/products/fage-total-5-fat-natural-greek-yogurt/053227-26599-26600",
+    kj: 389, kcal: 93, fat: 5, saturates: 3.6, carbs: 3, sugars: 3, fibre: 0, protein: 9, salt: 0.1,
+  },
+  strawberries: {
+    source: "CoFID 14-324, raw strawberries", url: cofid,
+    kj: 126, kcal: 30, fat: 0.5, saturates: 0.04, carbs: 6.1, sugars: 6.1, fibre: 3.8, protein: 0.6, salt: 1 * 0.0025,
+  },
+  banana: {
+    source: "CoFID 14-318, banana flesh", url: cofid,
+    // CoFID starch and sucrose are expressed as monosaccharide equivalents.
+    kj: 348, kcal: 81, fat: 0.1, saturates: 0.04, carbs: 7.9 + 7.5 + 2.7 * 0.95 + 2.2 * 0.9,
+    sugars: 7.9 + 7.5 + 2.7 * 0.95, fibre: 1.4, protein: 1.2, salt: 0,
+  },
+  glucoseSyrup: {
+    source: "Dr. Oetker liquid glucose label",
+    url: "https://groceries.morrisons.com/products/dr-oetker-liquid-glucose/107377502",
+    kj: 1377, kcal: 324, fat: 0, saturates: 0, carbs: 81, sugars: 55, fibre: 0, protein: 0, salt: 0.01,
+  },
   water: { kj: 0, kcal: 0, fat: 0, saturates: 0, carbs: 0, sugars: 0, fibre: 0, protein: 0, salt: 0 },
 };

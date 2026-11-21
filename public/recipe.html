@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffaf0">
+  <meta name="description" content="An illustrated cookbook with ingredient checklists and step-by-step recipes.">
+  <title>Recipe | The Little Cookbook</title>
+  <link rel="stylesheet" href="assets/cookbook.css">
+  <link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <script type="module" src="src/recipe-page.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#recipe">Skip to the recipe</a>
+  <header class="site-header">
+    <div class="site-bar wrap">
+      <a class="brand" href="./">
+        <svg class="brand-icon" aria-hidden="true"><use href="assets/illustrations/icons.svg#brand"></use></svg>
+        <span>The Little Cookbook</span>
+      </a>
+      <nav id="recipe-nav" aria-label="Recipe sections" hidden>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#recipe-notes">Notes</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+      <button class="button print-button" type="button" id="print" aria-label="Print recipe" hidden>
+        <svg class="icon" aria-hidden="true"><use href="assets/illustrations/icons.svg#print"></use></svg>
+        <span>Print recipe</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="recipe" class="wrap" tabindex="-1">
+    <noscript><p class="notice">Enable JavaScript to load this recipe and its cooking controls.</p></noscript>
+    <section id="recipe-unavailable" class="recipe-section" aria-labelledby="recipe-unavailable-title" hidden>
+      <h1 id="recipe-unavailable-title">Recipe unavailable</h1>
+      <p>Browse the cookbook to find a recipe.</p>
+      <a class="button jump-button" href="./#recipes">Browse recipes</a>
+    </section>
+    <article id="recipe-content" aria-labelledby="recipe-title" hidden>
+      <p class="recipe-return" lang="en-GB"><a href="./#recipes">Recipe index</a></p>
+      <header class="recipe-hero">
+        <div class="hero" id="recipe-hero-panel">
+          <div class="hero-copy">
+            <p class="category" id="recipe-category"></p>
+            <h1 id="recipe-title"></h1>
+            <p class="hero-description" id="recipe-description" hidden></p>
+            <a class="button jump-button" id="recipe-jump" href="#ingredients" lang="en-GB" hidden>Jump to recipe</a>
+          </div>
+          <img class="hero-art" id="recipe-image" alt="" width="1200" height="800" fetchpriority="high" hidden>
+        </div>
+        <dl class="facts" id="recipe-facts" aria-label="Recipe timings and yield" hidden></dl>
+      </header>
+
+      <section class="recipe-section" id="ingredients" aria-labelledby="ingredients-title" hidden>
+        <div class="section-heading" lang="en-GB">
+          <div>
+            <h2 id="ingredients-title">Ingredients</h2>
+            <p>Tick off each ingredient as you go.</p>
+          </div>
+          <div class="servings-picker" id="servings-picker" hidden>
+            <label for="servings">Servings</label>
+            <div class="select-wrap"><select id="servings"></select></div>
+          </div>
+        </div>
+        <div class="ingredient-grid" id="ingredient-groups"></div>
+        <div class="ingredient-footer">
+          <div class="ingredient-notes" id="ingredient-notes"></div>
+          <button class="text-button" id="clear-ingredients" type="button" lang="en-GB" disabled>Clear checks</button>
+        </div>
+      </section>
+
+      <section class="recipe-section method-section" id="method" aria-labelledby="method-title" hidden>
+        <div class="section-heading" lang="en-GB">
+          <div>
+            <h2 id="method-title">The method</h2>
+            <p id="method-intro">Mark each step when it’s done.</p>
+          </div>
+          <div class="step-progress">
+            <p id="step-count" role="status"></p>
+            <progress id="step-progress" aria-label="Steps completed"></progress>
+          </div>
+        </div>
+        <ol class="step-list" id="recipe-steps" role="list"></ol>
+      </section>
+
+      <section class="recipe-section recipe-notes" id="recipe-notes" aria-labelledby="recipe-notes-title" hidden>
+        <div class="section-heading"><h2 id="recipe-notes-title" lang="en-GB">Notes</h2></div>
+        <div class="recipe-notes-copy" id="recipe-notes-copy"></div>
+      </section>
+
+      <section class="recipe-section safety-section" id="food-safety" aria-labelledby="safety-title" hidden></section>
+
+      <section class="recipe-section recipe-notes" id="related-recipes" aria-labelledby="related-recipes-title" hidden>
+        <div class="section-heading"><h2 id="related-recipes-title" lang="en-GB">Related recipes</h2></div>
+        <ul class="related-recipes" id="related-recipes-list"></ul>
+      </section>
+
+      <section class="recipe-section nutrition-section" id="nutrition" aria-labelledby="nutrition-title" hidden>
+        <div class="nutrition-intro">
+          <h2 id="nutrition-title" lang="en-GB">Nutrition</h2>
+          <p lang="en-GB">Estimated values per 100 g of finished food.</p>
+          <div id="nutrition-method"></div>
+        </div>
+        <div class="nutrition-card" id="nutrition-card"></div>
+      </section>
+
+      <section class="recipe-section recipe-notes" id="recipe-source" aria-labelledby="recipe-source-title" hidden>
+        <div class="section-heading"><h2 id="recipe-source-title" lang="en-GB">Source</h2></div>
+        <p id="recipe-source-copy"></p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="./">
+        <svg class="brand-icon" aria-hidden="true"><use href="assets/illustrations/icons.svg#brand"></use></svg>
+        <span>The Little Cookbook</span>
+      </a>
+      <a class="back-link" href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>

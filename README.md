@@ -1,6 +1,6 @@
 # Cookbook
 
-The Little Cookbook is an illustrated, static cookbook with ingredient checklists, scalable quantities and cooking timers. Its first recipe is a pregnancy-friendly lemon meringue pie with thermometer-checked Swiss meringue.
+The Little Cookbook is an illustrated recipe collection drawn from the author’s Notion cookbook. Browse by category and open a recipe for its ingredients, method and any cooking notes. Recipes with verified batch quantities can scale, and recipes with sourced ingredient data and finished yields include nutrition estimates per 100 g.
 
 ## Run locally
 
@@ -12,7 +12,7 @@ npm run dev
 
 Open [the cookbook](http://127.0.0.1:8000) in a browser. The page uses native JavaScript modules. You can also serve `public/` with any static HTTP server. The local preview serves the same files that GitHub Pages publishes.
 
-Run `npm run check` to check the JavaScript and verify the nutrition calculation.
+Run `npm run check` to check the JavaScript, catalogue registration and nutrition calculation.
 
 ## Publish to GitHub Pages
 
@@ -21,9 +21,11 @@ In the repository’s **Settings → Pages**, set **Build and deployment → Sou
 ## Edit or add a recipe
 
 - Edit `public/recipes/desserts/lemon-meringue-pie.js` for ingredients, steps, safety notes and the estimated finished weight. Ingredient weights in grams drive both the checklist and the nutrition calculation.
-- Add data files under category directories such as `public/recipes/breads/` and register them in `public/recipes/index.js`. A registered recipe is available at `/?recipe=<id>`. The first recipe is the default.
+- Add data files under category directories such as `public/recipes/breads/` and register them in `public/recipes/index.js`. Registered recipes appear on the home page grouped by category. Each recipe has a direct link at `/recipe.html?recipe=<id>` relative to the site’s root.
+- Give each recipe a stable `id`, a `title`, and a `category`. Put ingredient checklists in `groups` and numbered instructions in `steps`. A recipe can also include `times`, `servings` or `yield`, `notes`, `related` recipe IDs and a public `source`. Use `grams` for a weighed ingredient or `quantity` and `unit` to keep the source measure. Set `lang: "fr"` for French recipe copy.
 - Keep ingredient reference values and their sources in `public/recipes/nutrition-data.js`. Values describe 100 g of edible ingredient. The renderer sums the nutrient contribution of each ingredient and divides by the finished batch weight to display values per 100 g of finished food.
-- The page template, styling and interactions live in `public/index.html`, `public/assets/` and `public/src/`.
+- The [design system](docs/design-system.md) describes the shared typography, colours, cards and controls.
+- The catalogue and recipe templates live in `public/index.html` and `public/recipe.html`. Their styling and interactions live in `public/assets/` and `public/src/`.
 
 The pie is adapted from Angela Nilsen’s Good Food recipe with original illustration and a Swiss meringue topping. The page’s nutrition notes name the reference data and explain the estimated yield. [Good Food recipe](https://www.bbcgoodfood.com/recipes/ultimate-lemon-meringue-pie)
 

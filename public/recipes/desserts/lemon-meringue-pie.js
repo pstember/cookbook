@@ -2,7 +2,6 @@ export default {
   id: "lemon-meringue-pie",
   category: "Desserts",
   title: "Lemon Meringue Pie",
-  qualifier: "Pregnancy-friendly",
   description: "A buttery shortcrust, a bright lemon filling and soft swirls of toasted Swiss meringue.",
   image: {
     src: "assets/illustrations/lemon-meringue-pie.webp",
@@ -52,7 +51,7 @@ export default {
       ],
     },
   ],
-  ingredientTip: "Use British Lion shell eggs or pasteurised liquid whites suitable for whipping. If using shell eggs, save the whites when you separate the pastry and filling yolks. Weigh the eggs without their shells.",
+  ingredientTip: "Save the whites when you separate the pastry and filling yolks. Weigh the eggs without their shells. If using carton whites, choose ones suitable for whipping.",
   steps: [
     {
       id: "pastry", title: "Roll the pastry", art: "rolling", tone: "yellow",
@@ -113,25 +112,13 @@ export default {
       timers: [{ label: "Cool on the rack", minutes: 45 }, { label: "Chill the finished pie", minutes: 120 }],
     },
   ],
-  safety: {
-    title: "Egg safety during pregnancy",
-    notes: [
-      { title: "Choose your eggs", text: "Use British Lion hen eggs within their use-by date or pasteurised liquid egg whites for the topping. Pick a carton labelled suitable for whipping. If you use carton whites, still cook the filling eggs as directed." },
-      { title: "Check both egg mixtures", text: "Whisk the whites and sugar over simmering water and check that the mixture reaches at least 72°C (162°F) throughout before whipping. Check the filling reaches the same temperature on the hob. This target is above the 160°F minimum for egg dishes." },
-      { title: "Golden peaks are for colour", text: "A browned top can still be undercooked underneath. Use a clean digital food thermometer for both checks." },
-    ],
-    sources: [
-      { label: "NHS pregnancy guidance", url: "https://www.nhs.uk/pregnancy/keeping-well/foods-to-avoid/" },
-      { label: "FDA guidance on egg dishes", url: "https://www.fda.gov/food/people-risk-foodborne-illness/holiday-goodies-food-safety-moms-be" },
-      { label: "Swiss meringue method", url: "https://www.kingarthurbaking.com/recipes/swiss-meringue-recipe" },
-    ],
-  },
   nutrition: {
     finishedWeightGrams: 1200,
     yieldAssumptions: "The finished weight allows for moisture lost during cooking and cooling, plus a small amount of pastry trimming. The yield is estimated from the ingredient weights and has not been weighed.",
     dataAssumptions: "The calculation treats the weight loss as predominantly water and retains all ingredient nutrients. Raw egg white is a proxy for pasteurised white. Raw lemon peel is a proxy for zest, with fibre subtracted from total carbohydrate. Fresh lemon juice uses CoFID’s NSP fibre as a proxy because its AOAC value is unavailable. CoFID trace values are treated as zero. Tap water is modelled as zero for the listed nutrients.",
   },
   source: {
+    credit: "Recipe adapted from",
     label: "Angela Nilsen’s lemon meringue pie in Good Food",
     url: "https://www.bbcgoodfood.com/recipes/ultimate-lemon-meringue-pie",
   },
