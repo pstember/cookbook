@@ -498,6 +498,26 @@ progress::-moz-progress-bar { background: #657c56; }
 .step-timing { display: flex; align-items: center; gap: .38rem; margin-top: .45rem; color: var(--muted); font-size: .85rem; font-weight: 700; line-height: 1.35; }
 .step-timing .icon { width: 16px; height: 16px; }
 .step-art { flex: none; width: clamp(60px, 9vw, 106px); height: auto; aspect-ratio: 100 / 76; }
+.step-illustration {
+  margin: 0;
+  border: 1px solid var(--rule);
+  border-radius: .8rem;
+  overflow: hidden;
+}
+.step-illustration svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--tint);
+}
+.step-illustration-motion { opacity: .7; }
+.step-illustration-shadow { fill: #665648; opacity: .085; }
+.step-illustration figcaption {
+  padding: .55rem .75rem;
+  border-top: 1px solid var(--rule);
+  font-size: .9rem;
+  color: var(--muted);
+}
 .step-body { flex: 1; }
 .step-body p + p { margin-top: .65rem; }
 .step-tip { padding: .63rem .8rem; border-radius: 9px; background: var(--tint); font-size: .91rem; }
@@ -658,6 +678,13 @@ progress::-moz-progress-bar { background: #657c56; }
   .step-number { width: 16pt; height: 16pt; font-size: 10pt; border: 1px solid #bbb; }
   .step-heading { display: block; }
   .step-timing { margin-top: 1pt; }
+  .step-illustration {
+    clear: both;
+    margin-top: 4pt;
+    border-radius: 3pt;
+  }
+  .step-illustration svg { max-height: 65pt; }
+  .step-illustration figcaption { padding: 3pt 4pt; font-size: 8.5pt; }
   .step-body { clear: both; padding-top: 4pt; }
   .step-body p + p { margin-top: 3pt; }
   .step-tip { padding: 0; background: none; font-size: 9pt; }

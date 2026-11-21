@@ -1,0 +1,36 @@
+export default {
+  blend: {
+    before: ["beans", "tomato"],
+    focus: "blender",
+    after: "bowl",
+    motion: "stir",
+    en: "Blend the cannellini beans and passata until there are no visible pieces of bean.",
+    fr: "Mixez les haricots blancs cannellini et la passata jusqu’à ce qu’il ne reste plus de morceaux.",
+  },
+  brown: {
+    before: ["chicken", "oil"],
+    focus: "pan",
+    tool: "tongs",
+    after: "plate",
+    motion: "heat",
+    en: "Move the chicken to a plate once the outside is browned.",
+    fr: "Déposez le poulet sur une assiette dès que les morceaux sont dorés à l’extérieur.",
+  },
+  vegetables: {
+    before: ["onion", "spice"],
+    focus: "pan",
+    tool: "spatula",
+    motion: "stir",
+    en: "Soften the diced vegetables first. Stir in the garlic and paprika once they are tender.",
+    fr: "Faites d’abord revenir les légumes en dés. Ajoutez l’ail et le paprika quand les légumes sont tendres.",
+  },
+  simmer: {
+    before: ["beans"],
+    focus: "pot",
+    tool: "thermometer",
+    after: "bowl",
+    motion: "check",
+    en: "The sauce thickens after the butter beans go in. Check the centre of a piece of chicken reaches 74°C (165°F).",
+    fr: "La sauce épaissit après l’ajout des haricots de Lima. Vérifiez qu’un morceau de poulet atteint 74 °C (165 °F) à cœur.",
+  },
+};

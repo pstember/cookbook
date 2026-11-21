@@ -1,0 +1,41 @@
+export default {
+  "make-pastry": {
+    before: ["flour", "butter"],
+    focus: "bowl",
+    after: "dough",
+    motion: "stir",
+    en: "Rub the butter in until the mixture looks sandy. Add the yolk and enough water for the dough to hold together, then chill before rolling.",
+    fr: "Sablez la farine avec le beurre. Ajoutez le jaune et juste assez d’eau pour que la pâte se tienne, puis réfrigérez-la avant de l’étaler.",
+  },
+  "blind-bake": {
+    before: ["parchment"],
+    focus: "baking-beads",
+    after: "oven",
+    motion: "layer",
+    en: "Put baking paper between the pastry and the beans. Remove both after 15 minutes at 180 °C.",
+    fr: "Placez le papier cuisson entre la pâte et les billes de cuisson. Retirez les deux après 15 minutes à 180 °C.",
+  },
+  compote: {
+    before: ["apple", "spice"],
+    focus: "saucepan",
+    tool: "spoon",
+    motion: "stir",
+    en: "The apple pieces should be soft enough to mash. Remove the cinnamon stick first if you used one.",
+    fr: "Les morceaux de pomme doivent être assez tendres pour s’écraser. Retirez d’abord le bâton de cannelle si vous en avez utilisé un.",
+  },
+  assemble: {
+    before: ["apple", "egg"],
+    focus: "pastry-shell",
+    tool: "knife",
+    motion: "layer",
+    en: "Set thin apple slices over the compote, then brush them with the yolk and water mixture.",
+    fr: "Disposez les fines tranches de pomme sur la compote, puis badigeonnez-les avec le mélange de jaune d’œuf et d’eau.",
+  },
+  bake: {
+    focus: "oven",
+    after: "pie",
+    motion: "heat",
+    en: "Look for golden pastry and tender apples after about 30 minutes at 180 °C. Cool the tart before lifting it out.",
+    fr: "Après environ 30 minutes à 180 °C, la pâte doit être dorée et les pommes tendres. Laissez refroidir la tarte avant de la démouler.",
+  },
+};

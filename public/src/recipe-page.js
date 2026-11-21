@@ -3,6 +3,7 @@ import { foodData } from "../recipes/nutrition-data.js";
 import { catalogueHref, categoryLabel, locale, recipeForLocale, ui } from "./localization.js";
 import { nutritionPer100g } from "./nutrition.js";
 import { recipeHref } from "./recipe-links.js";
+import { renderStepIllustration } from "./step-illustration.js";
 import { addTimer } from "./timers.js";
 
 const recipeId = new URLSearchParams(window.location.search).get("recipe");
@@ -248,6 +249,7 @@ function renderRecipe(recipe) {
       top.append(badge, label);
 
       item.append(top);
+      const illustration = renderStepIllustration(recipe.id, step.id);
       if (step.title || step.timing || step.art) {
         const heading = element("div", "step-heading");
         const copy = element("div");
@@ -258,10 +260,11 @@ function renderRecipe(recipe) {
           copy.append(timing);
         }
         heading.append(copy);
-        if (step.art) heading.append(icon(`art-${step.art}`, "step-art"));
+        if (step.art && !illustration) heading.append(icon(`art-${step.art}`, "step-art"));
         item.append(heading);
       }
 
+      if (illustration) item.append(illustration);
       const instructions = step.instructions.map(() => element("p"));
       const body = element("div", "step-body");
       body.append(...instructions);

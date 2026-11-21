@@ -1,0 +1,35 @@
+export default {
+  dry: {
+    before: ["flour", "sugar"],
+    focus: "bowl",
+    tool: "whisk",
+    motion: "stir",
+    en: "Whisk the dry ingredients so the baking powder and vanilla sugar are evenly distributed.",
+    fr: "Fouettez les ingrédients secs pour bien répartir la levure chimique et le sucre vanillé.",
+  },
+  batter: {
+    before: ["egg", "milk"],
+    focus: "bowl",
+    tool: "whisk",
+    after: "butter",
+    motion: "pour",
+    en: "Pour in the milk gradually while whisking, then stir in the lukewarm melted butter.",
+    fr: "Versez le lait progressivement tout en fouettant, puis incorporez le beurre fondu tiède.",
+  },
+  rest: {
+    before: ["bowl"],
+    focus: "fridge",
+    after: "timer",
+    motion: "chill",
+    en: "Cover the bowl before chilling. After an hour in the fridge, the batter should be slightly thicker.",
+    fr: "Couvrez le bol avant de le mettre au frais. Après une heure au réfrigérateur, la pâte doit avoir légèrement épaissi.",
+  },
+  cook: {
+    before: ["bowl"],
+    focus: "waffle-iron",
+    after: "waffles",
+    motion: "heat",
+    en: "Cook each batch in the hot waffle iron until the waffles are golden, about 3–5 minutes.",
+    fr: "Faites cuire chaque fournée dans le gaufrier chaud jusqu’à ce que les gaufres soient dorées, soit environ 3 à 5 minutes.",
+  },
+};

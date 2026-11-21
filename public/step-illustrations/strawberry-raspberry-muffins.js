@@ -1,0 +1,42 @@
+export default {
+  filling: {
+    before: ["berries", "sugar"],
+    focus: "saucepan",
+    tool: "spoon",
+    after: "jam",
+    motion: "heat",
+    en: "Cook the berries until glossy and thick, with a few pieces of fruit still visible. Let the filling cool completely.",
+    fr: "Faites cuire les fruits jusqu’à ce que la garniture soit brillante et épaisse, avec quelques morceaux encore visibles. Laissez-la refroidir complètement.",
+  },
+  batter: {
+    before: ["flour", "egg"],
+    focus: "bowl",
+    tool: "spatula",
+    motion: "stir",
+    en: "Fold the wet mixture into the dry ingredients, then add the berries. Stop while the batter is still slightly uneven.",
+    fr: "Incorporez délicatement le mélange liquide aux ingrédients secs, puis ajoutez les fruits. Arrêtez quand la pâte est encore un peu irrégulière.",
+  },
+  fill: {
+    before: ["bowl", "jam"],
+    focus: "tin",
+    tool: "spoon",
+    motion: "layer",
+    en: "Layer batter, chilled filling and more batter. Cover the berry centre completely and leave the cases about 90% full.",
+    fr: "Superposez la pâte, la garniture froide et une seconde couche de pâte. Recouvrez entièrement le cœur aux fruits et remplissez les caissettes à environ 90 %.",
+  },
+  topping: {
+    before: ["berries", "sugar"],
+    focus: "tin",
+    motion: "add",
+    en: "Top each muffin with a couple of pieces of berry and about 1 g of sugar.",
+    fr: "Déposez deux petits morceaux de fruits et environ 1 g de sucre sur chaque muffin.",
+  },
+  bake: {
+    before: ["tin"],
+    focus: "oven",
+    after: "muffins",
+    motion: "heat",
+    en: "Lower the oven after 5 minutes without opening the door. The tops are ready when golden and spring back lightly.",
+    fr: "Baissez la température au bout de 5 minutes sans ouvrir la porte. Les muffins sont prêts quand le dessus est doré et reprend sa forme au toucher.",
+  },
+};

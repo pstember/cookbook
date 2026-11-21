@@ -1,0 +1,37 @@
+export default {
+  ganache: {
+    before: ["cream", "jar"],
+    focus: "bowl",
+    tool: "spoon",
+    after: "fridge",
+    motion: "pour",
+    en: "Pour the hot cream over the Nutella and stir until smooth and glossy. Chill for at least 30 minutes before whipping.",
+    fr: "Versez la crème chaude sur le Nutella et remuez jusqu’à obtenir une ganache lisse et brillante. Réfrigérez au moins 30 minutes avant de la fouetter.",
+  },
+  sponge: {
+    before: ["egg", "sugar"],
+    focus: "bowl",
+    tool: "whisk",
+    after: "tin",
+    motion: "stir",
+    en: "Lift the whisk. The pale, thick mixture should fall in a ribbon before you fold in the flour.",
+    fr: "Soulevez le fouet. Le mélange pâle et épais doit retomber en ruban avant d’incorporer la farine.",
+  },
+  "syrup-and-frosting": {
+    before: ["glass", "jar"],
+    focus: "mixer",
+    after: "cream",
+    motion: "stir",
+    en: "Cool the dissolved syrup. Whip the chilled ganache until lighter and fluffy, then whisk the mascarpone frosting separately until thick enough to spread.",
+    fr: "Laissez refroidir le sirop une fois le sucre dissous. Fouettez la ganache froide jusqu’à ce qu’elle s’éclaircisse et devienne mousseuse, puis préparez le glaçage au mascarpone dans un autre bol jusqu’à ce qu’il s’étale facilement.",
+  },
+  layer: {
+    before: ["sponge"],
+    focus: "cake",
+    tool: "spatula",
+    after: "slice",
+    motion: "layer",
+    en: "Brush three even sponge layers with syrup, sandwich them with whipped ganache, then spread the mascarpone frosting over the top and sides.",
+    fr: "Imbibez trois disques de génoise de même épaisseur avec le sirop, garnissez-les de ganache montée, puis étalez le glaçage au mascarpone sur le dessus et les côtés.",
+  },
+};

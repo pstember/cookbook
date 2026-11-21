@@ -1,0 +1,37 @@
+export default {
+  compote: {
+    before: ["apple", "water"],
+    focus: "saucepan",
+    tool: "fork",
+    after: "ramekin",
+    motion: "heat",
+    en: "Simmer the apple pieces until soft enough to crush with a fork, leaving some chunks in the compote.",
+    fr: "Faites mijoter les morceaux de pomme jusqu’à pouvoir les écraser à la fourchette. Gardez quelques morceaux dans la compote.",
+  },
+  potatoes: {
+    before: ["potatoes", "pot"],
+    focus: "tray",
+    tool: "tongs",
+    after: "herbs",
+    motion: "heat",
+    en: "Drain and steam-dry the boiled potato cubes before roasting. Turn halfway and add parsley after roasting.",
+    fr: "Égouttez les dés de pommes de terre précuits et laissez-les sécher à la vapeur. Enfournez, retournez-les à mi-cuisson, puis ajoutez le persil à la sortie du four.",
+  },
+  shape: {
+    before: ["chicken", "egg"],
+    focus: "blender",
+    after: "nuggets",
+    motion: "roll",
+    en: "Pulse the chicken into a thick paste. Shape small nuggets with damp hands and coat them with flour, then breadcrumbs.",
+    fr: "Mixez le poulet par impulsions jusqu’à obtenir une pâte épaisse. Façonnez de petits nuggets avec les mains humides, puis passez-les dans la farine et la chapelure.",
+  },
+  fry: {
+    before: ["nuggets", "oil"],
+    focus: "air-fryer",
+    tool: "thermometer",
+    after: "plate",
+    motion: "check",
+    en: "Air-fry in a single layer, turn halfway, then check that the thickest nuggets reach 74°C (165°F) at the centre.",
+    fr: "Disposez les nuggets en une seule couche dans la friteuse à air, retournez-les à mi-cuisson et vérifiez que les plus épais atteignent 74 °C (165 °F) à cœur.",
+  },
+};
