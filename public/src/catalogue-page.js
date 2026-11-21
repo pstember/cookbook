@@ -1,4 +1,5 @@
 import { recipes } from "../recipes/index.js";
+import { catalogueHref, categoryLabel, locale, recipeForLocale, ui } from "./localization.js";
 import { recipeHref } from "./recipe-links.js";
 
 const categoryStyles = new Map([
@@ -19,7 +20,50 @@ if (requestedRecipe !== null) {
 } else if (legacyAnchors.has(hash)) {
   window.location.replace(recipeHref("lemon-meringue-pie") + recipeHash);
 } else {
+  localizeCatalogue();
   renderCatalogue();
+}
+
+function localizeCatalogue() {
+  const copy = {
+    brand: ui("The Little Cookbook", "Le petit livre de cuisine"),
+    skip: ui("Skip to the recipe index", "Aller au répertoire des recettes"),
+    index: ui("Recipe index", "Répertoire des recettes"),
+    heroStart: ui("The Little", "Le petit livre"),
+    heroEnd: ui(" Cookbook", " de cuisine"),
+    intro: ui("Find your next recipe and keep your place as you cook.", "Trouvez une recette et suivez-la à votre rythme."),
+    browse: ui("Browse recipes", "Voir les recettes"),
+    searchLabel: ui("Search by recipe or ingredient", "Chercher par recette ou ingrédient"),
+    emptyHelp: ui("Try another ingredient or clear the filters to see all recipes.", "Essayez un autre ingrédient ou effacez les filtres pour voir toutes les recettes."),
+    clear: ui("Clear filters", "Effacer les filtres"),
+  };
+
+  document.documentElement.lang = ui("en-GB", "fr");
+  document.title = copy.brand;
+  document.querySelector('meta[name="description"]').content = ui(
+    "Browse The Little Cookbook, an illustrated collection of recipes with step-by-step methods.",
+    "Parcourez Le petit livre de cuisine, un recueil illustré de recettes expliquées pas à pas.",
+  );
+  for (const node of document.querySelectorAll("[data-copy]")) {
+    node.textContent = copy[node.dataset.copy];
+  }
+  document.getElementById("catalogue-home").href = catalogueHref();
+  document.getElementById("recipe-search").placeholder = ui("Recipe or ingredient", "Recette ou ingrédient");
+  document.getElementById("catalogue-filters").setAttribute("aria-label", ui("Filter by category", "Filtrer par catégorie"));
+  document.querySelector(".language-switch").setAttribute("aria-label", ui("Language", "Langue"));
+
+  function updateLanguageLinks() {
+    const section = window.location.hash === "#recipes" ? "#recipes" : "";
+    for (const code of ["en", "fr"]) {
+      const link = document.getElementById(`language-${code}`);
+      link.href = catalogueHref(code) + section;
+      if (locale === code) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    }
+  }
+
+  updateLanguageLinks();
+  window.addEventListener("hashchange", updateLanguageLinks);
 }
 
 function searchText(value) {
@@ -37,14 +81,18 @@ function renderCatalogue() {
   const categories = new Map();
   let selected = "";
 
-  for (const recipe of recipes) {
+  for (const original of recipes) {
+    const recipe = recipeForLocale(original);
+    const alternate = recipeForLocale(original, locale === "fr" ? "en" : "fr");
     if (!categories.has(recipe.category)) categories.set(recipe.category, { entries: [] });
-    const ingredients = (recipe.groups ?? []).flatMap(group => group.ingredients ?? []);
-    const keywords = searchText([
-      recipe.title, recipe.category, recipe.qualifier, recipe.description,
-      ...ingredients.map(ingredient => ingredient.name),
-    ].join(" "));
-    categories.get(recipe.category).entries.push({ recipe, keywords });
+    const words = [recipe.category, categoryLabel(recipe.category, "fr")];
+    for (const copy of [recipe, alternate]) {
+      words.push(copy.title, copy.qualifier, copy.description);
+      for (const group of copy.groups ?? []) {
+        words.push(...(group.ingredients ?? []).map(ingredient => ingredient.name));
+      }
+    }
+    categories.get(recipe.category).entries.push({ recipe, keywords: searchText(words.join(" ")) });
   }
 
   const orderedCategories = [...new Set([...categoryStyles.keys(), ...categories.keys()])]
@@ -57,7 +105,7 @@ function renderCatalogue() {
     section.className = `catalogue-category tone-${tone}`;
     group.section = section;
     const title = document.createElement("h3");
-    title.textContent = category;
+    title.textContent = categoryLabel(category);
     const list = document.createElement("ul");
     list.className = "catalogue-grid";
 
@@ -108,8 +156,8 @@ function renderCatalogue() {
       count += categoryCount;
     }
 
-    const countText = count === 1 ? "1 recipe" : `${count} recipes`;
-    results.textContent = count ? countText : "No matching recipes";
+    const countText = count === 1 ? ui("1 recipe", "1 recette") : ui(`${count} recipes`, `${count} recettes`);
+    results.textContent = count ? countText : ui("No matching recipes", "Aucune recette trouvée");
     empty.hidden = count > 0 || recipes.length === 0;
   }
 
@@ -128,7 +176,7 @@ function renderCatalogue() {
       button.className = "button";
       button.type = "button";
       button.value = category;
-      button.textContent = category || "All recipes";
+      button.textContent = category ? categoryLabel(category) : ui("All recipes", "Toutes les recettes");
       button.setAttribute("aria-pressed", String(!category));
       button.addEventListener("click", () => selectCategory(category));
       filters.append(button);

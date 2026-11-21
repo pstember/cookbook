@@ -25,6 +25,7 @@
 .catalogue-hero h1 {
   font: 700 clamp(3.1rem, 6.1vw, 5.6rem)/.96 var(--display);
   letter-spacing: -.065em;
+  overflow-wrap: anywhere;
 }
 
 .catalogue-hero p {
@@ -88,7 +89,7 @@
 
 .catalogue-card-description { color: var(--muted); font-size: .95rem; }
 
-.site-nav-link { flex: none; }
+.catalogue-site-bar .site-nav-link { flex: none; margin-inline-start: auto; }
 
 .catalogue-tools {
   display: flex;
@@ -123,6 +124,7 @@
 
 @media (max-width: 760px) {
   .catalogue-hero { min-height: auto; margin-top: 1.25rem; }
+  .catalogue-site-bar .site-nav-link { display: none; }
 }
 
 @media (max-width: 620px) {
@@ -139,7 +141,7 @@
 }
 
 @media (max-width: 340px) {
-  .site-nav-link { max-width: 7ch; text-align: right; }
   .catalogue-search .text-input { padding-inline: 2rem .5rem; }
   .catalogue-search-icon { inset-inline-start: .5rem; }
+  .catalogue-filters .button { padding-inline: .58rem; font-size: .82rem; }
 }

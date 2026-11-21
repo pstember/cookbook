@@ -1,11 +1,14 @@
 import { recipes } from "../recipes/index.js";
 import { foodData } from "../recipes/nutrition-data.js";
+import { catalogueHref, categoryLabel, locale, recipeForLocale, ui } from "./localization.js";
 import { nutritionPer100g } from "./nutrition.js";
 import { recipeHref } from "./recipe-links.js";
 import { addTimer } from "./timers.js";
 
 const recipeId = new URLSearchParams(window.location.search).get("recipe");
-const recipe = recipes.find(entry => entry.id === recipeId);
+const originalRecipe = recipes.find(entry => entry.id === recipeId);
+const languageTag = ui("en-GB", "fr");
+const bookTitle = ui("The Little Cookbook", "Le petit livre de cuisine");
 const iconsPath = "assets/illustrations/icons.svg";
 const svgNamespace = "http://www.w3.org/2000/svg";
 const byId = id => document.getElementById(id);
@@ -35,18 +38,42 @@ function sourceLink({ label, url }) {
   return link;
 }
 
-if (recipe) {
-  renderRecipe(recipe);
+function localizePage() {
+  document.documentElement.lang = languageTag;
+  if (locale === "fr") {
+    for (const node of document.querySelectorAll("[data-fr]")) node.textContent = node.dataset.fr;
+    for (const node of document.querySelectorAll("[data-fr-aria-label]")) {
+      node.setAttribute("aria-label", node.dataset.frAriaLabel);
+    }
+    document.querySelector('meta[name="description"]').content = "Un livre de cuisine illustré avec des listes d’ingrédients à cocher et des recettes pas à pas.";
+  }
+  for (const link of document.querySelectorAll("[data-catalogue-link]")) {
+    link.href = catalogueHref() + link.dataset.catalogueLink;
+  }
+
+  const switcher = byId("recipe-language");
+  const links = [...switcher.querySelectorAll("a")];
+  function updateLanguageLinks() {
+    for (const link of links) link.href = recipeHref(recipeId ?? "", link.hreflang) + window.location.hash;
+  }
+  links.find(link => link.hreflang === locale).setAttribute("aria-current", "page");
+  updateLanguageLinks();
+  window.addEventListener("hashchange", updateLanguageLinks);
+  switcher.hidden = false;
+}
+
+localizePage();
+if (originalRecipe) {
+  renderRecipe(recipeForLocale(originalRecipe));
 } else {
-  document.title = "Recipe unavailable | The Little Cookbook";
+  document.title = `${ui("Recipe unavailable", "Recette indisponible")} | ${bookTitle}`;
   byId("recipe-unavailable").hidden = false;
 }
 
 function renderRecipe(recipe) {
   const storageKey = `cookbook:${recipe.id}:v1`;
   const article = byId("recipe-content");
-  if (recipe.lang) article.lang = recipe.lang;
-  const number = new Intl.NumberFormat(recipe.lang ?? "en-GB", { maximumFractionDigits: 8 });
+  const number = new Intl.NumberFormat(languageTag, { maximumFractionDigits: 8 });
   const groups = (recipe.groups ?? []).filter(group => group.ingredients?.length);
   const steps = recipe.steps ?? [];
   const batches = Number.isFinite(recipe.servings) && recipe.servings > 0 ? recipe.batches ?? [] : [];
@@ -91,8 +118,8 @@ function renderRecipe(recipe) {
 
   function renderHero() {
     const fullTitle = [recipe.qualifier, recipe.title].filter(Boolean).join(" ");
-    document.title = `${fullTitle} | The Little Cookbook`;
-    byId("recipe-category").textContent = recipe.category;
+    document.title = `${fullTitle} | ${bookTitle}`;
+    byId("recipe-category").textContent = categoryLabel(recipe.category);
     const title = byId("recipe-title");
     if (recipe.qualifier) {
       const badge = element("span", "hero-badge");
@@ -116,22 +143,21 @@ function renderRecipe(recipe) {
     }
     const entries = [...(recipe.times ?? [])];
     if (state.servings != null) {
-      entries.push({ label: "Serves", value: state.servings, icon: "servings", isServings: true, lang: "en-GB" });
+      entries.push({ label: ui("Serves", "Portions"), value: state.servings, icon: "servings", isServings: true });
     } else if (recipe.yield) {
-      entries.push({ label: "Yield", value: recipe.yield, icon: "servings", lang: "en-GB" });
+      entries.push({ label: ui("Yield", "Quantité"), value: recipe.yield, icon: "servings" });
     }
     const facts = byId("recipe-facts");
     facts.hidden = !entries.length;
     facts.style.setProperty("--fact-count", Math.min(entries.length, 4));
     for (const fact of entries) {
       const row = element("div", "fact");
-      const value = element("dd", null, fact.value);
+      const value = element("dd", null, typeof fact.value === "number" ? number.format(fact.value) : fact.value);
       if (fact.isServings) {
         value.id = "hero-servings";
         value.setAttribute("aria-live", "polite");
       }
       const label = element("dt", null, fact.label);
-      if (fact.lang) label.lang = fact.lang;
       label.prepend(icon(fact.icon ?? "clock", "fact-icon"));
       row.append(label, value);
       facts.append(row);
@@ -178,7 +204,7 @@ function renderRecipe(recipe) {
     if (canScale) {
       const select = byId("servings");
       for (const batch of batches) {
-        select.add(new Option(batch.servings, batch.servings, false, batch.servings === state.servings));
+        select.add(new Option(number.format(batch.servings), batch.servings, false, batch.servings === state.servings));
       }
       select.addEventListener("change", () => {
         state.servings = Number(select.value);
@@ -208,14 +234,14 @@ function renderRecipe(recipe) {
     for (const [index, step] of steps.entries()) {
       const item = element("li", `step-card tone-${step.tone ?? "yellow"}`);
       const top = element("div", "step-top");
-      const badge = element("span", "step-number", index + 1);
+      const stepNumber = number.format(index + 1);
+      const badge = element("span", "step-number", stepNumber);
       badge.setAttribute("aria-hidden", "true");
       const label = element("label", "step-check");
-      label.lang = "en-GB";
       const checkbox = element("input", "check");
       checkbox.type = "checkbox";
-      const stepLabel = `Step ${index + 1}`;
-      checkbox.setAttribute("aria-label", `Mark step ${index + 1} complete`);
+      const stepLabel = ui(`Step ${stepNumber}`, `Étape ${stepNumber}`);
+      checkbox.setAttribute("aria-label", ui(`Mark step ${stepNumber} complete`, `Marquer l’étape ${stepNumber} comme terminée`));
       checkbox.checked = state.steps.has(step.id);
       const done = element("span", "step-check-text");
       label.append(checkbox, done);
@@ -241,8 +267,7 @@ function renderRecipe(recipe) {
       body.append(...instructions);
       if (step.tip) {
         const tip = element("p", "step-tip");
-        const label = element("strong", null, "Tip");
-        label.lang = "en-GB";
+        const label = element("strong", null, ui("Tip", "Astuce"));
         tip.append(label, document.createTextNode(` ${step.tip}`));
         body.append(tip);
       }
@@ -257,7 +282,7 @@ function renderRecipe(recipe) {
       stepRows.push({ step, instructions, checkbox });
       function updateStep() {
         item.classList.toggle("is-complete", checkbox.checked);
-        done.textContent = checkbox.checked ? "Done" : "Mark done";
+        done.textContent = checkbox.checked ? ui("Done", "Terminée") : ui("Mark done", "Cocher");
       }
       updateStep();
       checkbox.addEventListener("change", () => {
@@ -268,7 +293,7 @@ function renderRecipe(recipe) {
       list.append(item);
     }
     if (steps.some(step => step.timers?.length)) {
-      byId("method-intro").textContent = "Mark each step when it’s done, and use the timers if you like.";
+      byId("method-intro").textContent = ui("Mark each step when it’s done, and use the timers if you like.", "Cochez chaque étape une fois terminée. Utilisez les minuteurs si vous le souhaitez.");
     }
     byId("step-progress").max = steps.length;
     updateStepProgress();
@@ -277,7 +302,9 @@ function renderRecipe(recipe) {
 
   function updateStepProgress() {
     const completed = stepRows.filter(({ checkbox }) => checkbox.checked).length;
-    byId("step-count").textContent = `${completed} of ${steps.length} complete`;
+    const count = number.format(completed);
+    const total = number.format(steps.length);
+    byId("step-count").textContent = ui(`${count} of ${total} complete`, `${count} ${completed > 1 ? "étapes terminées" : "étape terminée"} sur ${total}`);
     byId("step-progress").value = completed;
   }
 
@@ -285,7 +312,7 @@ function renderRecipe(recipe) {
     const batch = batches.find(entry => entry.servings === state.servings);
     const scale = canScale ? state.servings / recipe.servings : 1;
     const servings = byId("hero-servings");
-    if (servings) servings.textContent = state.servings;
+    if (servings) servings.textContent = typeof state.servings === "number" ? number.format(state.servings) : state.servings;
     for (const { ingredient, label, amount, note } of ingredientRows) {
       const quantity = ingredient.grams ?? ingredient.quantity;
       const unit = ingredient.grams == null ? ingredient.unit : "g";
@@ -299,7 +326,8 @@ function renderRecipe(recipe) {
       if (ingredient.eggGrams) {
         const count = ingredient.grams * scale / ingredient.eggGrams;
         if (Number.isInteger(count)) {
-          detail = `about ${count} ${ingredient.eggName}${count === 1 ? "" : "s"}`;
+          const eggName = count === 1 ? ingredient.eggName : ingredient.eggPlural ?? ingredient.eggNamePlural ?? `${ingredient.eggName}s`;
+          detail = ui(`about ${number.format(count)} ${eggName}`, `environ ${number.format(count)} ${eggName}`);
         }
       }
       note.textContent = detail;
@@ -314,7 +342,11 @@ function renderRecipe(recipe) {
     notes.replaceChildren();
     if (batch?.tins) {
       const pan = element("p");
-      pan.append(element("strong", null, `For ${state.servings}: `), document.createTextNode(`Use ${batch.tins}.`));
+      const count = number.format(state.servings);
+      pan.append(
+        element("strong", null, ui(`For ${count} servings`, `Pour ${count} ${state.servings === 1 ? "portion" : "portions"}`)),
+        document.createTextNode(ui(`, use ${batch.tins}.`, `, utiliser ${batch.tins}.`)),
+      );
       notes.append(pan);
     }
     if (recipe.ingredientTip) notes.append(element("p", null, recipe.ingredientTip));
@@ -332,9 +364,8 @@ function renderRecipe(recipe) {
     const heading = element("div", "safety-heading");
     const symbol = element("span", "safety-icon");
     symbol.append(icon("heart"));
-    const title = element("h2", null, recipe.safety.title ?? "Food safety");
+    const title = element("h2", null, recipe.safety.title ?? ui("Food safety", "Sécurité alimentaire"));
     title.id = "safety-title";
-    if (!recipe.safety.title) title.lang = "en-GB";
     heading.append(symbol, title);
 
     const notes = element("div", "safety-notes");
@@ -361,13 +392,12 @@ function renderRecipe(recipe) {
   function renderRelated() {
     if (!recipe.related?.length) return;
     const list = byId("related-recipes-list");
-    for (const { id, label } of recipe.related) {
+    for (const { id } of recipe.related) {
       const related = recipes.find(entry => entry.id === id);
       if (!related) continue;
       const item = element("li");
-      const link = element("a", null, label ?? related.title);
+      const link = element("a", null, recipeForLocale(related).title);
       link.href = recipeHref(id);
-      if (related.lang && !label) link.lang = related.lang;
       item.append(link);
       list.append(item);
     }
@@ -385,11 +415,15 @@ function renderRecipe(recipe) {
   function renderNutrition() {
     if (!recipe.nutrition) return;
     const values = nutritionPer100g(recipe);
+    const formatNutrient = (value, digits) => value.toLocaleString(languageTag, {
+      minimumFractionDigits: digits,
+      maximumFractionDigits: digits,
+    });
     const table = element("table", "nutrition-table");
-    const caption = element("caption", "visually-hidden", "Estimated nutrition per 100 g of finished food");
+    const caption = element("caption", "visually-hidden", ui("Estimated nutrition per 100 g of finished food", "Valeurs nutritionnelles estimées pour 100 g de produit fini"));
     const header = element("thead");
     const columns = element("tr");
-    for (const name of ["Typical values", "Per 100 g"]) {
+    for (const name of [ui("Typical values", "Valeurs moyennes"), ui("Per 100 g", "Pour 100 g")]) {
       const column = element("th", null, name);
       column.scope = "col";
       columns.append(column);
@@ -397,14 +431,14 @@ function renderRecipe(recipe) {
     header.append(columns);
     const body = element("tbody");
     const rows = [
-      ["Energy", `${Math.round(values.kj)} kJ / ${Math.round(values.kcal)} kcal`],
-      ["Fat", `${values.fat.toFixed(1)} g`],
-      ["Of which saturates", `${values.saturates.toFixed(1)} g`, true],
-      ["Carbohydrates", `${values.carbs.toFixed(1)} g`],
-      ["Of which sugars", `${values.sugars.toFixed(1)} g`, true],
-      ["Fibre", `${values.fibre.toFixed(1)} g`],
-      ["Protein", `${values.protein.toFixed(1)} g`],
-      ["Salt", `${values.salt.toFixed(2)} g`],
+      [ui("Energy", "Énergie"), `${formatNutrient(values.kj, 0)} kJ / ${formatNutrient(values.kcal, 0)} kcal`],
+      [ui("Fat", "Matières grasses"), `${formatNutrient(values.fat, 1)} g`],
+      [ui("Of which saturates", "Dont acides gras saturés"), `${formatNutrient(values.saturates, 1)} g`, true],
+      [ui("Carbohydrates", "Glucides"), `${formatNutrient(values.carbs, 1)} g`],
+      [ui("Of which sugars", "Dont sucres"), `${formatNutrient(values.sugars, 1)} g`, true],
+      [ui("Fibre", "Fibres alimentaires"), `${formatNutrient(values.fibre, 1)} g`],
+      [ui("Protein", "Protéines"), `${formatNutrient(values.protein, 1)} g`],
+      [ui("Salt", "Sel"), `${formatNutrient(values.salt, 2)} g`],
     ];
     for (const [name, amount, secondary] of rows) {
       const row = element("tr", secondary ? "nutrition-subrow" : null);
@@ -420,21 +454,24 @@ function renderRecipe(recipe) {
     const ingredients = recipe.groups.flatMap(group => group.ingredients);
     const weight = number.format(recipe.nutrition.finishedWeightGrams);
     const startingWeight = number.format(ingredients.reduce((sum, ingredient) => sum + ingredient.grams, 0));
-    notes.append(element("p", "yield-note", `Estimated finished weight: ${weight} g for the base recipe.`));
+    notes.append(element("p", "yield-note", ui(`The estimated finished weight for the base recipe is ${weight} g.`, `Le poids final de la recette de base est estimé à ${weight} g.`)));
     const details = element("details", "nutrition-sources");
     details.append(
-      element("summary", null, "How we calculated it"),
-      element("p", null, "Each ingredient’s nutrient values are multiplied by its weight, added together and divided by the estimated finished weight to get the values for 100 g."),
-      element("p", null, [`The base recipe starts with ${startingWeight} g of ingredients.`, recipe.nutrition.yieldAssumptions].filter(Boolean).join(" ")),
+      element("summary", null, ui("How we calculated it", "Comment les valeurs sont calculées")),
+      element("p", null, ui(
+        "Each ingredient’s nutrient values are weighted by the amount used. We add the contributions together, then calculate what 100 g of the finished recipe contains.",
+        "Nous calculons l’apport de chaque ingrédient en fonction de la quantité utilisée, puis additionnons ces apports et les ramenons à 100 g de produit fini.",
+      )),
+      element("p", null, [ui(`The base recipe starts with ${startingWeight} g of ingredients.`, `Les ingrédients de la recette de base pèsent ${startingWeight} g avant préparation.`), recipe.nutrition.yieldAssumptions].filter(Boolean).join(" ")),
     );
     if (recipe.nutrition.dataAssumptions) details.append(element("p", null, recipe.nutrition.dataAssumptions));
     const sources = element("ul");
     const foods = new Set(ingredients.map(ingredient => ingredient.food));
     for (const key of foods) {
-      const { source: label, url } = foodData[key];
+      const { source, sourceFr, url } = foodData[key];
       if (!url) continue;
       const item = element("li");
-      item.append(sourceLink({ label, url }));
+      item.append(sourceLink({ label: ui(source, sourceFr ?? source), url }));
       sources.append(item);
     }
     details.append(sources);
@@ -455,10 +492,10 @@ function renderRecipe(recipe) {
   article.hidden = false;
 
   const jumpTargets = [
-    ["ingredients", "Jump to recipe"],
-    ["method", "Jump to method"],
-    ["recipe-notes", "View recipe notes"],
-    ["recipe-source", "View source"],
+    ["ingredients", ui("Jump to recipe", "Voir la recette")],
+    ["method", ui("Jump to method", "Voir la préparation")],
+    ["recipe-notes", ui("View recipe notes", "Voir les notes")],
+    ["recipe-source", ui("View source", "Voir la source")],
   ];
   const destination = jumpTargets.find(([id]) => !byId(id).hidden);
   if (destination) {
