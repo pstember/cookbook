@@ -3,6 +3,7 @@ export default {
   title: "Spanish Tomato & Spinach Frittata",
   category: "Breakfast & brunch",
   description: "A tomato and spinach frittata that uses the rest of the passata from the chicken and butter bean stew.",
+  thumbnail: "assets/illustrations/recipes/tomato-spinach-frittata.webp",
   servings: "2 adult portions + 1 toddler portion",
   groups: [
     {
@@ -11,12 +12,12 @@ export default {
       ingredients: [
         { id: "passata", name: "passata", grams: 250, note: "half a standard 500 g carton" },
         { id: "spinach", name: "baby spinach", grams: 160 },
-        { id: "eggs", name: "large eggs", quantity: 5 },
-        { id: "extra-eggs", name: "additional large eggs", quantity: 2, note: "or 100 g liquid egg whites" },
+        { id: "eggs", name: "large eggs", grams: 250, weightEstimate: true, quantity: 5, note: "weighed without the shells" },
+        { id: "extra-eggs", name: "additional large eggs", grams: 100, weightEstimate: true, quantity: 2, note: "or 100 g liquid egg whites" },
         { id: "cheese", name: "cheddar or feta", grams: 40, note: "grated or crumbled" },
         { id: "oil", name: "avocado oil", grams: 8, note: "about ½ tbsp" },
-        { id: "oregano", name: "dried oregano", quantity: 1, unit: "tsp" },
-        { id: "seasoning", name: "sea salt and black pepper", quantity: "To taste" },
+        { id: "oregano", name: "dried oregano", grams: 1, weightEstimate: true, quantity: 1, unit: "tsp" },
+        { id: "seasoning", name: "sea salt and black pepper", gramRange: [0, 3], weightEstimate: true, quantity: "To taste", note: "suggested total range. Start with less and adjust to taste" },
       ],
     },
   ],

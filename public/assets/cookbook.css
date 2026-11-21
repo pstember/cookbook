@@ -412,7 +412,7 @@ select {
 .ingredient-list li + li { border-top: 1px dashed #e2d6c4; }
 .ingredient {
   display: grid;
-  grid-template-columns: auto minmax(3.5rem, max-content) 1fr;
+  grid-template-columns: auto fit-content(44%) minmax(0, 1fr);
   gap: .55rem;
   align-items: start;
   padding-block: .56rem;
@@ -446,8 +446,8 @@ select {
   border-width: 0 0 2px 2px;
 }
 
-.ingredient .amount { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.ingredient-name { color: var(--ink); }
+.ingredient .amount { min-inline-size: 3.5rem; font-weight: 700; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.ingredient-name { color: var(--ink); overflow-wrap: anywhere; }
 .ingredient-note { display: block; margin-top: .13rem; color: var(--muted); font-size: .84rem; }
 .ingredient:has(:checked) :is(.amount, .ingredient-name) { color: var(--muted); text-decoration: line-through; }
 .ingredient-footer {
@@ -646,7 +646,8 @@ progress::-moz-progress-bar { background: #657c56; }
   .ingredient-card-head { min-height: auto; padding: 4pt 6pt; background: none; }
   .ingredient-card h3, .step-card h3 { font-size: 13pt; }
   .ingredient-list { padding: 0 6pt; }
-  .ingredient { grid-template-columns: minmax(27pt, max-content) 1fr; gap: 5pt; min-height: auto; padding-block: 2pt; }
+  .ingredient { grid-template-columns: fit-content(44%) minmax(0, 1fr); gap: 5pt; min-height: auto; padding-block: 2pt; }
+  .ingredient .amount { min-inline-size: 27pt; }
   .ingredient:has(:checked) :is(.amount, .ingredient-name) { color: black; text-decoration: none; }
   .ingredient-note, .ingredient-footer { font-size: 8.5pt; }
   .ingredient-footer { margin-top: 4pt; }

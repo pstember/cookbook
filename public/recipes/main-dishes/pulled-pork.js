@@ -3,6 +3,7 @@ export default {
   title: "Barbecue Pulled Pork",
   category: "Main dishes",
   description: "Slow-cooked pork with a smoky paprika rub, cider vinegar and a little honey.",
+  thumbnail: "assets/illustrations/recipes/pulled-pork.webp",
   times: [
     { label: "Cook", value: "About 7 hr", icon: "oven" },
     { label: "Rest", value: "40 min", icon: "clock" },
@@ -12,9 +13,9 @@ export default {
       title: "Pork",
       tone: "blue",
       ingredients: [
-        { id: "pork", name: "pork shoulder" },
-        { id: "vinegar", name: "apple cider vinegar", note: "for spraying and wrapping" },
-        { id: "honey", name: "honey", note: "a little, for wrapping" },
+        { id: "pork", name: "pork shoulder", gramRange: [1800, 2300], weightEstimate: true, note: "suggested joint size, since the original notes gave no weight" },
+        { id: "vinegar", name: "apple cider vinegar", gramRange: [60, 120], weightEstimate: true, note: "suggested total to have on hand for spritzing and wrapping. Use as needed" },
+        { id: "honey", name: "honey", gramRange: [5, 15], weightEstimate: true, note: "suggested range, to taste when wrapping" },
       ],
     },
     {
@@ -24,7 +25,7 @@ export default {
         { id: "paprika", name: "paprika", grams: 30 },
         { id: "sugar", name: "dark brown sugar", grams: 35 },
         { id: "salt", name: "kosher salt", grams: 20 },
-        { id: "mustard", name: "ground mustard", quantity: 4, unit: "tsp" },
+        { id: "mustard", name: "ground mustard", grams: 8, weightEstimate: true, quantity: 4, unit: "tsp" },
         { id: "pepper", name: "freshly ground black pepper", grams: 4 },
         { id: "chipotle", name: "chipotle flakes", grams: 2 },
         { id: "oregano", name: "dried oregano", grams: 3 },

@@ -20,8 +20,9 @@ Use `.wrap` as the shared page container. Hero copy uses display typography with
 
 - Use `.panel` for a cream surface with shared edges and elevation. Ingredient and method cards use the same surface styles.
 - Use `.button` on native links or buttons. Add `.jump-button` for a primary action. Use `aria-pressed` on category filter buttons to expose their selected state.
+- Use `.language-switch` for the English and French links. Mark the current language with `aria-current="page"` and use each language’s own name.
 - Give `.text-input` controls an associated label. Use `.visually-hidden` for a label when the control and nearby context already make the purpose clear.
 - Use `.check` with native labelled checkboxes for ingredient and cooking progress. Keep print styles focused on recipe content.
-- Use the local illustration set under `public/assets/illustrations/`. A recipe image appears in its card when available. Cards without images use a decorative category illustration and accent.
+- Use the local illustration set under `public/assets/illustrations/`. Set `thumbnail` in the recipe data to use a dedicated local card illustration. Cards can also use the recipe’s hero image or a decorative category illustration.
 
 Catalogue-specific layout lives in `public/assets/catalogue.css`. Keep colour and control behaviour shared so additions to the collection feel consistent.

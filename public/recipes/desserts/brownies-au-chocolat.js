@@ -3,6 +3,7 @@ export default {
   category: "Desserts",
   title: "Brownies au chocolat",
   description: "Un petit brownie au chocolat noir et aux cacahuètes, à cuire dans un moule de 10 cm.",
+  thumbnail: "assets/illustrations/recipes/brownies-au-chocolat.webp",
   lang: "fr",
   servings: 3,
   times: [
@@ -13,7 +14,7 @@ export default {
     {
       title: "Pâte à brownie", art: "whisk", tone: "yellow",
       ingredients: [
-        { id: "oeuf", name: "œuf", quantity: 1 },
+        { id: "oeuf", name: "œuf", quantity: 1, grams: 50, weightEstimate: true, note: "pesé sans coquille" },
         { id: "farine", name: "farine", grams: 15 },
         { id: "sucre", name: "sucre", grams: 25 },
         { id: "cacao", name: "cacao", grams: 8 },

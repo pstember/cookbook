@@ -308,18 +308,43 @@ function renderRecipe(recipe) {
     byId("step-progress").value = completed;
   }
 
+  function formatGramAmount(ingredient, scale) {
+    const format = value => number.format(value * scale);
+    const prefix = ingredient.weightEstimate ? "≈ " : "";
+    if (ingredient.grams != null) return `${prefix}${format(ingredient.grams)} g`;
+    if (ingredient.gramRange) return `${prefix}${ingredient.gramRange.map(format).join("–")}\u00a0g`;
+    if (ingredient.gramVariants) return `${prefix}${ingredient.gramVariants.map(format).join(" / ")}\u00a0g`;
+    return "";
+  }
+
+  function formatSourceAmount(ingredient, scale) {
+    const { quantity, unit } = ingredient;
+    if (quantity == null) return "";
+    const measure = typeof quantity === "number" ? number.format(quantity * scale) : quantity;
+    return unit ? `${measure} ${unit}` : measure;
+  }
+
+  function originalMeasureNote(ingredient, sourceAmount) {
+    if (!sourceAmount) return "";
+    const { quantity, unit } = ingredient;
+    const gramUnit = /^(?:g|grams?|grammes?)$/i.test(unit?.trim() ?? "");
+    if (gramUnit && (typeof quantity === "number" || /^[\d.,\s/–-]+$/.test(quantity))) return "";
+    if (!unit && typeof quantity === "number") {
+      const name = locale === "fr" ? ingredient.name.replace(/^(?:d[’']|de |du |des )/i, "") : ingredient.name;
+      return `${sourceAmount} ${name}`;
+    }
+    return sourceAmount;
+  }
+
   function updateBatch() {
     const batch = batches.find(entry => entry.servings === state.servings);
     const scale = canScale ? state.servings / recipe.servings : 1;
     const servings = byId("hero-servings");
     if (servings) servings.textContent = typeof state.servings === "number" ? number.format(state.servings) : state.servings;
     for (const { ingredient, label, amount, note } of ingredientRows) {
-      const quantity = ingredient.grams ?? ingredient.quantity;
-      const unit = ingredient.grams == null ? ingredient.unit : "g";
-      if (quantity != null) {
-        const measure = typeof quantity === "number" ? number.format(quantity * scale) : quantity;
-        amount.textContent = unit ? `${measure} ${unit}` : measure;
-      }
+      const grams = formatGramAmount(ingredient, scale);
+      const sourceAmount = formatSourceAmount(ingredient, scale);
+      amount.textContent = grams || sourceAmount;
       amount.hidden = !amount.textContent;
       label.classList.toggle("ingredient--unmeasured", amount.hidden);
       let detail = ingredient.note ?? "";
@@ -330,8 +355,9 @@ function renderRecipe(recipe) {
           detail = ui(`about ${number.format(count)} ${eggName}`, `environ ${number.format(count)} ${eggName}`);
         }
       }
-      note.textContent = detail;
-      note.hidden = !detail;
+      const original = grams ? originalMeasureNote(ingredient, sourceAmount) : "";
+      note.textContent = [...new Set([original, detail].filter(Boolean))].join(" · ");
+      note.hidden = !note.textContent;
     }
     for (const { step, instructions } of stepRows) {
       step.instructions.forEach((text, index) => {

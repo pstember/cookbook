@@ -3,6 +3,7 @@ export default {
   category: "Desserts",
   title: "Strawberry & Raspberry Bakery Muffins",
   description: "Large buttery muffins with fresh berries, homemade berry filling and a crisp sugar top.",
+  thumbnail: "assets/illustrations/recipes/strawberry-raspberry-muffins.webp",
   yield: "6 large muffins",
   times: [
     { label: "Cook filling", value: "10–12 min", icon: "clock" },
@@ -17,7 +18,8 @@ export default {
         { id: "filling-sugar", name: "caster sugar", grams: 35 },
         { id: "lemon-juice", name: "lemon juice", grams: 10 },
         { id: "glucose", name: "glucose syrup", grams: 15 },
-        { id: "cornflour", name: "cornflour", quantity: "½–1", unit: "tsp", note: "optional, if the filling needs thickening" },
+        { id: "cornflour", name: "cornflour", quantity: "½–1", unit: "tsp", gramRange: [1.2, 2.3], weightEstimate: true, note: "optional, if the filling needs thickening" },
+        { id: "slurry-water", name: "cold water", grams: 5, weightEstimate: true, note: "suggested amount for mixing with the optional cornflour" },
       ],
     },
     {
@@ -26,11 +28,11 @@ export default {
         { id: "flour", name: "plain flour", grams: 180 },
         { id: "baking-powder", name: "baking powder", grams: 8 },
         { id: "batter-sugar", name: "caster sugar", grams: 90 },
-        { id: "egg", name: "large egg", quantity: 1 },
+        { id: "egg", name: "large egg", quantity: 1, grams: 50, weightEstimate: true, note: "weighed without the shell" },
         { id: "butter", name: "salted butter", grams: 70, note: "melted" },
         { id: "milk", name: "milk", grams: 70 },
         { id: "yoghurt", name: "Greek yoghurt", grams: 60 },
-        { id: "vanilla", name: "vanilla extract", quantity: 1, unit: "tsp", note: "optional" },
+        { id: "vanilla", name: "vanilla extract", quantity: 1, unit: "tsp", grams: 4.2, weightEstimate: true, note: "optional" },
         { id: "batter-strawberries", name: "strawberries", grams: 100, note: "diced into about 5 mm pieces" },
         { id: "batter-raspberries", name: "raspberries", grams: 60 },
       ],
@@ -38,8 +40,8 @@ export default {
     {
       title: "Fruit and sugar topping", art: "pie", tone: "blue",
       ingredients: [
-        { id: "extra-berries", name: "extra pieces of strawberry and raspberry", quantity: "A few", note: "for the tops and, optionally, the centres" },
-        { id: "topping-sugar", name: "caster or coarse sugar", quantity: "1–2", unit: "tsp" },
+        { id: "extra-berries", name: "extra pieces of strawberry and raspberry", quantity: "A few", gramRange: [20, 50], weightEstimate: true, note: "estimated allowance for the tops and, optionally, the centres" },
+        { id: "topping-sugar", name: "caster or coarse sugar", quantity: "1–2", unit: "tsp", gramRange: [4.1, 8.3], weightEstimate: true },
       ],
     },
   ],
@@ -49,7 +51,7 @@ export default {
       timing: "10–12 min, plus cooling",
       instructions: [
         "Put the diced strawberries, whole raspberries, caster sugar, lemon juice and glucose syrup into a small saucepan. Cook over medium heat for 10–12 minutes, stirring regularly and lightly crushing some of the strawberries. The filling should be thick and glossy with a few pieces of fruit still visible.",
-        "If the filling is still runny, mix ½–1 tsp cornflour with a little cold water, stir it in and cook for another minute. Cool the filling completely. Refrigerate it while you prepare the batter if it has already cooled.",
+        "If the filling is still runny, mix about 1.2–2.3 g cornflour with about 5 g cold water, stir it in and cook for another minute. Cool the filling completely. Refrigerate it while you prepare the batter if it has already cooled.",
       ],
       timers: [{ label: "Check the filling", minutes: 10 }],
     },
@@ -73,7 +75,7 @@ export default {
     {
       id: "topping", title: "Add the topping", art: "pie", tone: "yellow",
       instructions: [
-        "Place a couple of small berry pieces on each muffin and sprinkle each top with about ¼ tsp sugar.",
+        "Place a couple of small berry pieces on each muffin and sprinkle each top with about 1 g sugar.",
       ],
     },
     {

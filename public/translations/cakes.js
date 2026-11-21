@@ -10,7 +10,7 @@ export default {
     ingredientTip: "Lorsque deux quantités sont indiquées, la première correspond à un gâteau de 20 cm et la seconde à un gâteau de 23 cm.",
     groupTitles: ["Génoise", "Garniture aux fruits", "Crème au mascarpone"],
     ingredients: {
-      eggs: { name: "gros œufs" },
+      eggs: { name: "gros œufs", note: "pesés sans coquille" },
       "sponge-sugar": { name: "sucre en poudre" },
       flour: { name: "farine à gâteau ou farine T45" },
       fat: { name: "beurre fondu ou huile" },
@@ -18,11 +18,11 @@ export default {
       raspberries: { name: "framboises", note: "laissées entières" },
       gelatine: { name: "gélatine (200 Bloom)", note: "environ 2 ou 2½ feuilles selon la marque" },
       "filling-sugar": { name: "sucre" },
-      "lemon-juice": { name: "jus de citron", note: "quantité non précisée" },
+      "lemon-juice": { name: "jus de citron", note: "quantités suggérées, la recette d’origine n’en précise pas" },
       mascarpone: { name: "mascarpone", note: "bien froid" },
       cream: { name: "crème liquide (au moins 30 % de matière grasse)", note: "bien froide" },
       "icing-sugar": { name: "sucre glace" },
-      vanilla: { name: "vanille", note: "quantité non précisée" },
+      vanilla: { name: "extrait de vanille", note: "quantités suggérées, la recette d’origine n’en précise pas" },
     },
     steps: {
       "make-sponge": {
@@ -91,18 +91,18 @@ export default {
     ],
     groupTitles: ["Génoise", "Garniture aux fruits rouges", "Crème au beurre à la meringue suisse"],
     ingredients: {
-      eggs: { name: "gros œufs", note: "à température ambiante" },
+      eggs: { name: "gros œufs", note: "à température ambiante, pesés sans coquille" },
       "sponge-sugar": { name: "sucre en poudre" },
       flour: { name: "farine de blé", note: "tamisée deux fois" },
       "sponge-butter": { name: "beurre salé", note: "fondu et refroidi" },
       "sponge-vanilla": { name: "extrait de vanille", unit: "c. à café" },
-      "icing-sugar": { name: "sucre glace", note: "pour saupoudrer le torchon et éventuellement le roulé terminé" },
+      "icing-sugar": { name: "sucre glace", note: "quantité estimée pour saupoudrer le torchon et éventuellement le roulé terminé" },
       raspberries: { name: "framboises", note: "fraîches ou surgelées" },
       strawberries: { name: "fraises", note: "fraîches ou surgelées, équeutées et coupées en morceaux" },
       "filling-sugar": { name: "sucre en poudre" },
       cornflour: { name: "fécule de maïs", unit: "c. à café" },
       "lemon-juice": { name: "jus de citron", unit: "c. à café" },
-      water: { name: "eau", unit: "c. à café", note: "à répartir entre la cuisson des fruits et la dilution de la fécule" },
+      water: { name: "eau", unit: "c. à café", note: "5 g pour cuire les fruits et 5 g pour délayer la fécule" },
       "egg-whites": { name: "blancs d’œufs", note: "environ le blanc d’un gros œuf" },
       "buttercream-sugar": { name: "sucre en poudre" },
       "buttercream-butter": { name: "beurre salé", note: "ramolli et coupé en dés" },
@@ -113,8 +113,8 @@ export default {
         title: "Cuire la garniture aux fruits rouges",
         timing: "15 min de préparation active",
         instructions: [
-          "Réunissez les fruits rouges, le sucre et la moitié de l’eau dans une petite casserole. Faites cuire à feu moyen 5 à 7 minutes, jusqu’à ce que les fruits ramollissent et rendent leur jus.",
-          "Délayez la fécule dans le reste d’eau. Versez sur les fruits et remuez jusqu’à épaississement. Ajoutez le jus de citron, transvasez dans un plat peu profond et réfrigérez jusqu’à refroidissement complet.",
+          "Réunissez les fruits rouges, le sucre et 5 g d’eau dans une petite casserole. Faites cuire à feu moyen 5 à 7 minutes, jusqu’à ce que les fruits ramollissent et rendent leur jus.",
+          "Délayez la fécule dans les 5 g d’eau restants. Versez sur les fruits et remuez jusqu’à épaississement. Ajoutez le jus de citron, transvasez dans un plat peu profond et réfrigérez jusqu’à refroidissement complet.",
         ],
         tip: "Ajustez le sucre à votre goût si les fruits sont très mûrs.",
       },
@@ -166,7 +166,7 @@ export default {
     ],
     groupTitles: ["Génoise", "Sirop de sucre", "Ganache montée", "Glaçage et décoration"],
     ingredients: {
-      egg: { name: "gros œuf", note: "à température ambiante" },
+      egg: { name: "gros œuf", note: "à température ambiante, pesé sans coquille" },
       "caster-sugar": { name: "sucre en poudre fin" },
       flour: { name: "farine de blé", note: "tamisée" },
       butter: { name: "beurre doux", note: "fondu et refroidi" },
@@ -177,7 +177,7 @@ export default {
       cream: { name: "crème double" },
       mascarpone: { name: "mascarpone ou fromage frais entier", note: "bien froid" },
       "frosting-nutella": { name: "Nutella" },
-      garnish: { name: "sel marin ou noisettes concassées", note: "facultatif, pour la décoration" },
+      garnish: { name: "sel marin ou noisettes concassées", note: "décoration facultative, environ 0,4 g de sel marin ou 5 g de noisettes concassées" },
     },
     steps: {
       ganache: {
@@ -232,17 +232,18 @@ export default {
       "lemon-juice": { name: "jus de citron" },
       glucose: { name: "sirop de glucose" },
       cornflour: { name: "fécule de maïs", unit: "c. à café", note: "facultative, si la garniture doit être épaissie" },
+      "slurry-water": { name: "eau froide", note: "quantité suggérée pour délayer la fécule facultative" },
       flour: { name: "farine de blé" },
       "baking-powder": { name: "levure chimique" },
       "batter-sugar": { name: "sucre en poudre fin" },
-      egg: { name: "gros œuf" },
+      egg: { name: "gros œuf", note: "pesé sans coquille" },
       butter: { name: "beurre salé", note: "fondu" },
       milk: { name: "lait" },
       yoghurt: { name: "yaourt grec" },
       vanilla: { name: "extrait de vanille", unit: "c. à café", note: "facultatif" },
       "batter-strawberries": { name: "fraises", note: "coupées en dés d’environ 5 mm" },
       "batter-raspberries": { name: "framboises" },
-      "extra-berries": { name: "morceaux de fraises et de framboises", quantity: "Quelques", note: "pour le dessus et éventuellement le cœur des muffins" },
+      "extra-berries": { name: "morceaux de fraises et de framboises", quantity: "Quelques", note: "quantité estimée pour le dessus et éventuellement le cœur des muffins" },
       "topping-sugar": { name: "sucre en poudre fin ou sucre à gros grains", unit: "c. à café" },
     },
     steps: {
@@ -251,7 +252,7 @@ export default {
         timing: "10 à 12 min, hors refroidissement",
         instructions: [
           "Mettez les dés de fraise, les framboises entières, le sucre, le jus de citron et le sirop de glucose dans une petite casserole. Faites cuire à feu moyen 10 à 12 minutes, en remuant régulièrement et en écrasant légèrement une partie des fraises. La garniture doit être épaisse et brillante, avec quelques morceaux de fruits encore visibles.",
-          "Si la garniture est encore liquide, délayez ½ à 1 c. à café de fécule de maïs dans un peu d’eau froide. Versez-la dans la casserole et poursuivez la cuisson une minute en remuant. Laissez refroidir complètement. Si elle est déjà refroidie, réfrigérez-la pendant que vous préparez la pâte.",
+          "Si la garniture est encore liquide, délayez environ 1,2 à 2,3 g de fécule de maïs dans environ 5 g d’eau froide. Versez-la dans la casserole et poursuivez la cuisson une minute en remuant. Laissez refroidir complètement. Si elle est déjà refroidie, réfrigérez-la pendant que vous préparez la pâte.",
         ],
         timerLabels: ["Vérifier la garniture"],
       },
@@ -275,7 +276,7 @@ export default {
       topping: {
         title: "Garnir le dessus",
         instructions: [
-          "Déposez deux petits morceaux de fruits rouges sur chaque muffin et saupoudrez chacun d’environ ¼ de c. à café de sucre.",
+          "Déposez deux petits morceaux de fruits rouges sur chaque muffin et saupoudrez chacun d’environ 1 g de sucre.",
         ],
       },
       bake: {
@@ -306,11 +307,11 @@ export default {
     ingredients: {
       butter: { name: "beurre ramolli", note: "½ tasse, de préférence salé" },
       sugar: { name: "sucre", note: "1 tasse" },
-      egg: { name: "œuf", note: "battu" },
+      egg: { name: "œuf", note: "battu, pesé sans coquille" },
       vanilla: { name: "extrait de vanille", unit: "c. à café" },
       flour: { name: "farine de blé", note: "1¾ tasse, plus un peu pour le façonnage" },
       "baking-soda": { name: "bicarbonate de soude", unit: "c. à café" },
-      salt: { name: "sel", quantity: "1 pincée", note: "utilisez ¼ de c. à café si vous prenez du beurre doux" },
+      salt: { name: "sel fin", quantity: "1 pincée", note: "utilisez environ 1,5 g (¼ de c. à café) si vous prenez du beurre doux" },
       "chocolate-chips": { name: "pépites de chocolat", note: "1 tasse de pépites de chocolat au lait, noir ou blanc" },
     },
     steps: {
@@ -365,7 +366,7 @@ export default {
     ],
     groupTitles: ["Brownie batter"],
     ingredients: {
-      oeuf: { name: "egg" },
+      oeuf: { name: "egg", note: "weighed without the shell" },
       farine: { name: "flour" },
       sucre: { name: "sugar" },
       cacao: { name: "cocoa powder" },

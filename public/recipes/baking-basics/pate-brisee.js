@@ -4,6 +4,7 @@ export default {
   category: "Baking basics",
   lang: "fr",
   description: "Une pâte à foncer au beurre et au jaune d’œuf pour les tartes salées ou sucrées.",
+  thumbnail: "assets/illustrations/recipes/pate-brisee.webp",
   groups: [{
     title: "Pâte",
     art: "rolling",
@@ -11,9 +12,9 @@ export default {
     ingredients: [
       { id: "flour", name: "farine", grams: 200 },
       { id: "butter", name: "beurre", grams: 100, note: "souple et coupé en morceaux" },
-      { id: "salt", name: "sel fin", quantity: 2, unit: "pincées" },
-      { id: "yolk", name: "jaune d’œuf", quantity: 1 },
-      { id: "water", name: "eau", quantity: 4, unit: "cl", note: "à ajuster selon la consistance" },
+      { id: "salt", name: "sel fin", grams: 0.8, quantity: 2, unit: "pincées", weightEstimate: true },
+      { id: "yolk", name: "jaune d’œuf", grams: 17, quantity: 1, weightEstimate: true },
+      { id: "water", name: "eau", grams: 40, quantity: 4, unit: "cl", weightEstimate: true, note: "à ajuster selon la consistance" },
     ],
   }],
   steps: [

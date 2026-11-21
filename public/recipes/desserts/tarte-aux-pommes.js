@@ -3,6 +3,7 @@ export default {
   title: "Tarte aux pommes",
   category: "Desserts",
   description: "A shortcrust tart with cinnamon apple compote and a layer of thinly sliced Golden apples.",
+  thumbnail: "assets/illustrations/recipes/tarte-aux-pommes.webp",
   times: [
     { label: "Blind bake", value: "15 min", icon: "oven" },
     { label: "Final bake", value: "About 30 min", icon: "oven" },
@@ -15,9 +16,9 @@ export default {
       ingredients: [
         { id: "flour", name: "flour", grams: 200 },
         { id: "butter", name: "softened butter", grams: 100 },
-        { id: "pastry-yolk", name: "egg yolk", quantity: 1 },
-        { id: "pastry-water", name: "water", quantity: 4, unit: "cl", note: "adjust as needed" },
-        { id: "salt", name: "salt", quantity: 2, unit: "pinches" },
+        { id: "pastry-yolk", name: "egg yolk", grams: 17, quantity: 1, weightEstimate: true },
+        { id: "pastry-water", name: "water", grams: 40, quantity: 4, unit: "cl", weightEstimate: true, note: "adjust as needed" },
+        { id: "salt", name: "salt", grams: 0.8, quantity: 2, unit: "pinches", weightEstimate: true },
       ],
     },
     {
@@ -25,10 +26,10 @@ export default {
       art: "saucepan",
       tone: "blue",
       ingredients: [
-        { id: "compote-apples", name: "Bramley cooking apples", quantity: 4, note: "cored and chopped, or use 6 eating apples" },
-        { id: "compote-water", name: "water", quantity: 200, unit: "ml", note: "100 ml for a chunky sauce or 300 ml for a smooth purée" },
-        { id: "cinnamon", name: "cinnamon stick", quantity: 3, unit: "inches", note: "or ½ tsp ground cinnamon" },
-        { id: "lemon-juice", name: "lemon juice", quantity: 1, unit: "tbsp", note: "an extra tablespoon is optional" },
+        { id: "compote-apples", name: "Bramley cooking apples", grams: 900, quantity: 4, weightEstimate: true, note: "weigh after coring, then chop. Use the same weight of eating apples if substituting (about 6)" },
+        { id: "compote-water", name: "water", grams: 200, quantity: 200, unit: "ml", weightEstimate: true, note: "use 100 g (100 ml) for a chunky sauce or 300 g (300 ml) for a smooth purée" },
+        { id: "cinnamon", name: "cinnamon stick", grams: 3, quantity: 3, unit: "inches", weightEstimate: true, note: "or about 1.3 g (½ tsp) ground cinnamon" },
+        { id: "lemon-juice", name: "lemon juice", grams: 14, quantity: 1, unit: "tbsp", weightEstimate: true, note: "add another 14 g (1 tbsp) if you like" },
         { id: "sugar", name: "granulated sugar", grams: 150, note: "optional, adjust to taste" },
       ],
     },
@@ -37,9 +38,9 @@ export default {
       art: "pie",
       tone: "pink",
       ingredients: [
-        { id: "golden-apples", name: "Golden apples", quantity: 2 },
-        { id: "glaze-yolk", name: "egg yolk", quantity: 1 },
-        { id: "glaze-water", name: "water", quantity: 1, unit: "tbsp" },
+        { id: "golden-apples", name: "Golden apples", grams: 360, quantity: 2, weightEstimate: true, note: "weighed after coring" },
+        { id: "glaze-yolk", name: "egg yolk", grams: 17, quantity: 1, weightEstimate: true },
+        { id: "glaze-water", name: "water", grams: 15, quantity: 1, unit: "tbsp", weightEstimate: true },
       ],
     },
   ],
@@ -64,7 +65,7 @@ export default {
       id: "assemble", title: "Fill and glaze the tart", art: "pie", tone: "yellow",
       instructions: [
         "Spread the compote in the pastry shell. Thinly slice the Golden apples and arrange the slices over the compote.",
-        "Mix the remaining yolk with the tablespoon of water and brush it over the apple slices.",
+        "Mix the remaining yolk with 15 g (1 tbsp) of water and brush it over the apple slices.",
       ],
     },
     {

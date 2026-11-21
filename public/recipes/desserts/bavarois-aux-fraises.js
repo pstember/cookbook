@@ -4,6 +4,7 @@ export default {
   category: "Desserts",
   lang: "fr",
   description: "Une génoise fine sous une mousse aux fraises, avec un coulis gélifié qui prend toute une nuit au frais.",
+  thumbnail: "assets/illustrations/recipes/bavarois-aux-fraises.webp",
   times: [
     { label: "Cuisson de la génoise", value: "18 min", icon: "oven" },
     { label: "Repos", value: "Une nuit", icon: "snow" },
@@ -14,11 +15,11 @@ export default {
       art: "whisk",
       tone: "yellow",
       ingredients: [
-        { id: "sponge-egg", name: "œuf", quantity: 1 },
+        { id: "sponge-egg", name: "œuf", grams: 50, quantity: 1, weightEstimate: true, note: "sans coquille" },
         { id: "sponge-flour", name: "farine", grams: 30 },
         { id: "sponge-sugar", name: "sucre", grams: 30 },
         { id: "sponge-fat", name: "beurre ou huile", grams: 10, note: "pour graisser le moule" },
-        { id: "sponge-salt", name: "sel", note: "facultatif" },
+        { id: "sponge-salt", name: "sel", gramRange: [0, 0.4], weightEstimate: true, note: "facultatif, jusqu’à 1 pincée" },
       ],
     },
     {
@@ -29,7 +30,7 @@ export default {
         { id: "mousse-fruit", name: "fraises", grams: 350 },
         { id: "mousse-sugar", name: "sucre en poudre", grams: 75 },
         { id: "mousse-cream", name: "crème liquide entière", grams: 225, note: "très froide, à peser" },
-        { id: "mousse-gelatin", name: "gélatine en poudre 200 Bloom", grams: 8, note: "ou 4 feuilles de même force" },
+        { id: "mousse-gelatin", name: "gélatine en poudre 200 Bloom", grams: 8, note: "ou 8 g de gélatine en feuilles de même force (environ 4 feuilles)" },
         { id: "mousse-water", name: "eau très froide", grams: 40, note: "pour la gélatine en poudre" },
       ],
     },
@@ -40,7 +41,7 @@ export default {
       ingredients: [
         { id: "topping-fruit", name: "fraises", grams: 150 },
         { id: "topping-sugar", name: "sucre en poudre", grams: 20, note: "à ajuster selon les fraises" },
-        { id: "topping-gelatin", name: "gélatine en poudre 200 Bloom", grams: 3, note: "ou 1½ feuille de même force" },
+        { id: "topping-gelatin", name: "gélatine en poudre 200 Bloom", grams: 3, note: "ou 3 g de gélatine en feuilles de même force (environ 1½ feuille)" },
         { id: "topping-water", name: "eau très froide", grams: 15, note: "pour la gélatine en poudre" },
       ],
     },
@@ -51,7 +52,7 @@ export default {
       timing: "Au moins 20 min",
       instructions: [
         "Dans deux récipients séparés, mélangez 8 g de gélatine en poudre avec 40 g d’eau et 3 g de gélatine en poudre avec 15 g d’eau. Laissez gonfler au moins 20 minutes.",
-        "Si vous utilisez des feuilles, faites tremper séparément 4 feuilles et 1½ feuille dans deux bols d’eau très froide. Essorez-les avant de les incorporer.",
+        "Si vous utilisez des feuilles, faites tremper séparément 8 g de feuilles (environ 4) et 3 g de feuilles (environ 1½) dans deux bols d’eau très froide. Essorez-les avant de les incorporer.",
       ],
       timers: [{ label: "Hydrater la gélatine", minutes: 20 }],
     },

@@ -3,6 +3,7 @@ export default {
   title: "Cinnamon Apple Sauce",
   category: "Sides",
   description: "A simple apple sauce you can mash for texture or blend to a smooth purée.",
+  thumbnail: "assets/illustrations/recipes/apple-sauce.webp",
   times: [{ label: "Simmer", value: "15–20 min", icon: "clock" }],
   groups: [
     {
@@ -10,17 +11,17 @@ export default {
       tone: "yellow",
       art: "saucepan",
       ingredients: [
-        { id: "apples", name: "Bramley apples", quantity: 4, note: "cored and chopped, or use 6 eating apples" },
-        { id: "water", name: "water", quantity: 200, unit: "ml", note: "100 ml for chunky sauce or 300 ml for smooth purée" },
-        { id: "cinnamon", name: "cinnamon stick", quantity: 1, note: "about 7.5 cm, or use ½ tsp ground cinnamon" },
+        { id: "apples", name: "Bramley apples", gramVariants: [800, 1100], weightEstimate: true, quantity: 4, note: "4 Bramley apples (about 800 g) or 6 medium eating apples (about 1,100 g), weighed before coring and chopping" },
+        { id: "water", name: "water", grams: 200, weightEstimate: true, quantity: 200, unit: "ml", note: "100 g for chunky sauce or 300 g for smooth purée" },
+        { id: "cinnamon", name: "cinnamon stick", gramVariants: [3, 1.3], weightEstimate: true, quantity: 1, note: "one stick about 7.5 cm long (about 3 g), or ½ tsp ground cinnamon (about 1.3 g)" },
       ],
     },
     {
       title: "Optional to finish",
       tone: "pink",
       ingredients: [
-        { id: "sugar", name: "granulated sugar", quantity: "Up to 150", unit: "g", note: "add to taste" },
-        { id: "lemon", name: "lemon juice", quantity: 1, unit: "tbsp" },
+        { id: "sugar", name: "granulated sugar", gramRange: [0, 150], quantity: "Up to 150", unit: "g", note: "add to taste" },
+        { id: "lemon", name: "lemon juice", gramRange: [0, 15], weightEstimate: true, quantity: 1, unit: "tbsp" },
       ],
     },
   ],
@@ -39,7 +40,7 @@ export default {
       id: "season", title: "Sweeten to taste",
       timing: "5 min if adding sugar",
       instructions: [
-        "Taste and, if needed, add sugar a tablespoon at a time. Stir in the optional lemon juice for brightness. If you added sugar, return the pan to low heat for about 5 minutes to dissolve it.",
+        "Taste and, if needed, add sugar about 12 g at a time. Stir in the optional lemon juice for brightness. If you added sugar, return the pan to low heat for about 5 minutes to dissolve it.",
       ],
     },
   ],

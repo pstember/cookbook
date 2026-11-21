@@ -8,13 +8,13 @@ export default {
     ],
     groupTitles: ["Poulet", "Sauce"],
     ingredients: {
-      chicken: { name: "hauts de cuisse de poulet désossés", unit: "lb", note: "environ 900 g, parés" },
+      chicken: { name: "hauts de cuisse de poulet désossés", unit: "lb", note: "parés" },
       coating: { name: "fécule de maïs", unit: "tasse", note: "amidon de maïs" },
       "frying-oil": { name: "huile d’olive au goût très doux", unit: "tasse", note: "plus si nécessaire" },
       ginger: { name: "gingembre frais", unit: "c. à soupe", note: "finement haché, prélevé sur un morceau d’environ 5 cm" },
       garlic: { name: "gousses d’ail", note: "râpées ou finement hachées, environ 1 c. à soupe" },
       chilli: { name: "flocons de piment", unit: "c. à café", note: "à ajuster au goût" },
-      sesame: { name: "graines de sésame", unit: "c. à café", note: "garniture facultative" },
+      sesame: { name: "graines de sésame", unit: "c. à café", note: "à omettre si vous ne décorez pas le plat" },
       water: { name: "eau froide", unit: "tasse" },
       soy: { name: "sauce soja réduite en sel", unit: "c. à soupe" },
       vinegar: { name: "vinaigre de riz", unit: "c. à soupe", note: "plus au goût" },
@@ -34,7 +34,7 @@ export default {
         title: "Dorer le poulet en plusieurs fois",
         instructions: [
           "Chauffez un peu d’huile dans une grande poêle antiadhésive. Faites revenir le poulet en deux ou trois fois en retournant les morceaux pour les dorer des deux côtés. Ajoutez de l’huile au besoin.",
-          "Vérifiez que les morceaux les plus épais atteignent 74 °C (165 °F) à cœur, puis transférez chaque fournée dans un bol propre. Gardez environ une cuillère à soupe d’huile dans la poêle.",
+          "Vérifiez que les morceaux les plus épais atteignent 74 °C (165 °F) à cœur, puis transférez chaque fournée dans un bol propre. Gardez environ 13 g d’huile dans la poêle.",
         ],
       },
       sauce: {
@@ -66,9 +66,9 @@ export default {
     ],
     groupTitles: ["Porc", "Mélange d’épices"],
     ingredients: {
-      pork: { name: "épaule de porc" },
-      vinegar: { name: "vinaigre de cidre", note: "pour vaporiser et pour la papillote" },
-      honey: { name: "miel", note: "un peu, pour la papillote" },
+      pork: { name: "épaule de porc", note: "poids conseillé, les notes d’origine ne précisant pas la taille de la pièce" },
+      vinegar: { name: "vinaigre de cidre", note: "quantité totale indicative pour vaporiser et pour la papillote. Utilisez-en au besoin" },
+      honey: { name: "miel", note: "quantité indicative, à doser au goût pour la papillote" },
       paprika: { name: "paprika" },
       sugar: { name: "cassonade foncée" },
       salt: { name: "sel casher" },
@@ -121,24 +121,24 @@ export default {
     groupTitles: ["Nuggets de poulet", "Pommes de terre persillées", "Compote de pommes"],
     ingredients: {
       chicken: { name: "hauts de cuisse de poulet désossés, sans peau" },
-      egg: { name: "gros œuf", note: "environ 60 g sans la coquille" },
+      egg: { name: "gros œuf", note: "pesé sans la coquille" },
       milk: { name: "lait ou crème", note: "environ 25 ml" },
       breadcrumbs: { name: "chapelure" },
       flour: { name: "farine de blé ordinaire" },
       carrot: { name: "carotte", note: "râpée très finement" },
       onion: { name: "oignon", note: "râpé très finement" },
-      "nugget-salt": { name: "sel", unit: "c. à café", note: "environ 7 g" },
-      paprika: { name: "paprika doux", unit: "c. à café", note: "environ 1 g" },
-      thyme: { name: "thym séché", unit: "c. à café", note: "environ 0,3 g" },
+      "nugget-salt": { name: "sel", unit: "c. à café" },
+      paprika: { name: "paprika doux", unit: "c. à café" },
+      thyme: { name: "thym séché", unit: "c. à café" },
       "nugget-oil": { name: "huile neutre", note: "tournesol ou colza" },
       potatoes: { name: "pommes de terre", note: "épluchées" },
       butter: { name: "beurre" },
       "potato-oil": { name: "huile d’olive ou de colza" },
-      "potato-salt": { name: "sel", unit: "c. à café", note: "environ 4 g" },
-      parsley: { name: "persil frais", unit: "c. à soupe", note: "finement haché, environ 8 à 10 g" },
-      apples: { name: "pommes de taille moyenne", note: "environ 750 g avant épluchage" },
+      "potato-salt": { name: "sel", unit: "c. à café" },
+      parsley: { name: "persil frais", unit: "c. à soupe", note: "finement haché" },
+      apples: { name: "pommes de taille moyenne", note: "pesées avant épluchage" },
       water: { name: "eau", unit: "ml" },
-      cinnamon: { name: "cannelle", quantity: "Une toute petite pincée", note: "facultative" },
+      cinnamon: { name: "cannelle", quantity: "Une toute petite pincée", note: "facultative, une toute petite pincée si utilisée" },
     },
     steps: {
       compote: {
@@ -196,7 +196,7 @@ export default {
     ingredients: {
       cannellini: { name: "haricots cannellini", note: "une boîte de 400 g, poids égoutté" },
       passata: { name: "coulis de tomates", note: "la moitié d’une brique de 500 g" },
-      stock: { name: "bouillon de volaille réduit en sel", unit: "ml", note: "répartir en 75 ml et 125 ml" },
+      stock: { name: "bouillon de volaille réduit en sel", unit: "ml", note: "répartir en 75 g et 125 g" },
       tomatoes: { name: "tomates concassées", note: "une boîte" },
       "butter-beans": { name: "gros haricots blancs", note: "deux boîtes de 400 g, poids égoutté" },
       chicken: { name: "hauts de cuisse de poulet désossés, sans peau", note: "coupés en morceaux d’une bouchée" },
@@ -206,12 +206,12 @@ export default {
       garlic: { name: "ail", note: "environ 3 gousses, hachées" },
       paprika: { name: "paprika doux fumé", note: "environ 1½ c. à café" },
       oil: { name: "huile d’avocat", note: "environ 1 c. à soupe" },
-      seasoning: { name: "sel de mer et poivre noir", quantity: "Au goût" },
+      seasoning: { name: "sel de mer et poivre noir", quantity: "Au goût", note: "quantité totale indicative. Commencez par en mettre peu, puis ajustez au goût" },
     },
     steps: {
       blend: {
         title: "Mixer la sauce",
-        instructions: ["Mixez les haricots cannellini égouttés avec le coulis de tomates et 75 ml de bouillon jusqu’à obtenir une sauce lisse. Réservez."],
+        instructions: ["Mixez les haricots cannellini égouttés avec le coulis de tomates et 75 g de bouillon jusqu’à obtenir une sauce lisse. Réservez."],
       },
       brown: {
         title: "Dorer le poulet",
@@ -227,7 +227,7 @@ export default {
         title: "Faire mijoter le plat",
         timing: "20 min à couvert · 10 min à découvert",
         instructions: [
-          "Remettez le poulet et son jus dans la sauteuse. Ajoutez la sauce mixée, les tomates concassées et les 125 ml de bouillon restants. Couvrez et laissez mijoter à feu doux pendant 20 minutes.",
+          "Remettez le poulet et son jus dans la sauteuse. Ajoutez la sauce mixée, les tomates concassées et les 125 g de bouillon restants. Couvrez et laissez mijoter à feu doux pendant 20 minutes.",
           "Incorporez les gros haricots blancs égouttés et laissez mijoter 10 minutes supplémentaires à découvert pour épaissir le tout. Vérifiez que le poulet atteint 74 °C (165 °F) à cœur. Assaisonnez au goût.",
         ],
         timerLabels: ["Faire mijoter à couvert", "Laisser réduire à découvert"],
@@ -252,12 +252,12 @@ export default {
     ingredients: {
       passata: { name: "coulis de tomates", note: "la moitié d’une brique de 500 g" },
       spinach: { name: "jeunes pousses d’épinards" },
-      eggs: { name: "gros œufs" },
+      eggs: { name: "gros œufs", note: "pesés sans la coquille" },
       "extra-eggs": { name: "gros œufs supplémentaires", note: "ou 100 g de blancs d’œufs liquides" },
       cheese: { name: "cheddar ou feta", note: "râpé ou émiettée" },
       oil: { name: "huile d’avocat", note: "environ ½ c. à soupe" },
       oregano: { name: "origan séché", unit: "c. à café" },
-      seasoning: { name: "sel de mer et poivre noir", quantity: "Au goût" },
+      seasoning: { name: "sel de mer et poivre noir", quantity: "Au goût", note: "quantité totale indicative. Commencez par en mettre peu, puis ajustez au goût" },
     },
     steps: {
       wilt: {
@@ -298,9 +298,9 @@ export default {
     times: [{ label: "Cuisson à feu doux", value: "15 à 20 min" }],
     groupTitles: ["Compote de pommes", "Pour la finition, au choix"],
     ingredients: {
-      apples: { name: "pommes Bramley", note: "évidées et coupées, ou 6 pommes à croquer" },
-      water: { name: "eau", unit: "ml", note: "100 ml pour une compote avec des morceaux ou 300 ml pour une purée lisse" },
-      cinnamon: { name: "bâton de cannelle", note: "environ 7,5 cm, ou ½ c. à café de cannelle moulue" },
+      apples: { name: "pommes Bramley", note: "4 pommes Bramley (environ 800 g) ou 6 pommes à croquer de taille moyenne (environ 1 100 g), pesées avant de les évider et de les couper" },
+      water: { name: "eau", unit: "ml", note: "100 g pour une compote avec des morceaux ou 300 g pour une purée lisse" },
+      cinnamon: { name: "bâton de cannelle", note: "un bâton d’environ 7,5 cm (environ 3 g), ou ½ c. à café de cannelle moulue (environ 1,3 g)" },
       sugar: { name: "sucre en poudre", quantity: "Jusqu’à 150", unit: "g", note: "à doser au goût" },
       lemon: { name: "jus de citron", unit: "c. à soupe" },
     },
@@ -319,7 +319,7 @@ export default {
         title: "Sucrer au goût",
         timing: "5 min si vous ajoutez du sucre",
         instructions: [
-          "Goûtez et, au besoin, ajoutez le sucre une cuillère à soupe à la fois. Si vous le souhaitez, ajoutez le jus de citron pour apporter une note acidulée. Si vous avez ajouté du sucre, remettez la casserole à feu doux pendant environ 5 minutes pour le dissoudre.",
+          "Goûtez et, au besoin, ajoutez le sucre par petites doses d’environ 12 g. Si vous le souhaitez, ajoutez le jus de citron pour apporter une note acidulée. Si vous avez ajouté du sucre, remettez la casserole à feu doux pendant environ 5 minutes pour le dissoudre.",
         ],
       },
     },
@@ -341,9 +341,10 @@ export default {
     ingredients: {
       milk: { name: "lait", unit: "litre" },
       rice: { name: "riz à grains courts", note: "le riz à risotto convient" },
-      sugar: { name: "sucre", note: "plus 4 c. à soupe" },
-      egg: { name: "œuf", note: "jaune et blanc séparés" },
-      vanilla: { name: "gousse de vanille", note: "ou 1 c. à soupe d’extrait de vanille" },
+      sugar: { name: "sucre" },
+      "extra-sugar": { name: "sucre supplémentaire", unit: "c. à soupe" },
+      egg: { name: "œuf", note: "pesé sans la coquille, puis jaune et blanc séparés" },
+      vanilla: { name: "gousse de vanille", note: "une gousse entière (environ 4 g) ou 1 c. à soupe d’extrait de vanille (environ 13 g)" },
       salt: { name: "sel", quantity: "Une pincée" },
       butter: { name: "beurre" },
     },
@@ -360,7 +361,7 @@ export default {
       yolk: {
         title: "Incorporer le jaune et le beurre",
         instructions: [
-          "Fouettez le jaune d’œuf avec le sucre, en délayant peu à peu le mélange avec des cuillerées de lait chaud prélevé dans la casserole. Incorporez ce mélange tiédi au riz cuit, puis ajoutez le beurre.",
+          "Fouettez le jaune d’œuf avec les deux quantités de sucre, en délayant peu à peu le mélange avec des cuillerées de lait chaud prélevé dans la casserole. Incorporez ce mélange tiédi au riz cuit, puis ajoutez le beurre.",
         ],
       },
       finish: {

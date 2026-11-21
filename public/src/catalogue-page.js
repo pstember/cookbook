@@ -116,13 +116,15 @@ function renderCatalogue() {
       if (recipe.lang) card.querySelector(".catalogue-card-copy").lang = recipe.lang;
       const artwork = card.querySelector(".catalogue-card-art");
       artwork.querySelector("use").setAttribute("href", `assets/illustrations/icons.svg#art-${art}`);
-      if (recipe.image?.src) {
+      const thumbnail = recipe.thumbnail ?? recipe.image?.src;
+      if (thumbnail) {
         const media = card.querySelector(".catalogue-card-image");
         media.addEventListener("error", () => {
           media.hidden = true;
           artwork.removeAttribute("hidden");
         }, { once: true });
-        media.src = recipe.image.src;
+        media.src = thumbnail;
+        media.classList.toggle("catalogue-card-thumbnail", Boolean(recipe.thumbnail));
         media.hidden = false;
         artwork.setAttribute("hidden", "");
       }

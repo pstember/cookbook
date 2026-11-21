@@ -3,6 +3,7 @@ export default {
   title: "Vanilla Waffles",
   category: "Breakfast & brunch",
   description: "Golden waffles made with vanilla sugar and rested batter.",
+  thumbnail: "assets/illustrations/recipes/waffles.webp",
   times: [{ label: "Rest", value: "1 hr", icon: "snow" }, { label: "Cook", value: "3–5 min each", icon: "oven" }],
   groups: [{
     title: "Waffle batter",
@@ -12,8 +13,8 @@ export default {
       { id: "baking-powder", name: "baking powder", grams: 10 },
       { id: "vanilla-sugar", name: "vanilla sugar", grams: 60 },
       { id: "salt", name: "salt", grams: 2 },
-      { id: "eggs", name: "eggs", quantity: 6, note: "about 300 g without shells" },
-      { id: "milk", name: "whole milk", quantity: 500, unit: "ml" },
+      { id: "eggs", name: "eggs", grams: 300, quantity: 6, weightEstimate: true, note: "weighed without shells" },
+      { id: "milk", name: "whole milk", grams: 516, quantity: 500, unit: "ml", weightEstimate: true },
       { id: "butter", name: "melted butter", grams: 180, note: "lukewarm" },
     ],
   }],

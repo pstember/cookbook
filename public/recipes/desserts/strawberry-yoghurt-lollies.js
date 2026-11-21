@@ -3,6 +3,7 @@ export default {
   title: "Strawberry Yoghurt Lollies",
   category: "Desserts",
   description: "Strawberries, banana and Greek yoghurt blended into creamy ice lollies.",
+  thumbnail: "assets/illustrations/recipes/strawberry-yoghurt-lollies.webp",
   yield: "About 5 lollies",
   times: [{ label: "Freeze", value: "At least 6 hr", icon: "snow" }],
   groups: [{

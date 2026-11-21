@@ -4,6 +4,7 @@ export default {
   lang: "fr",
   category: "Desserts",
   description: "Des carrés fondants au citron, avec un glaçage acidulé.",
+  thumbnail: "assets/illustrations/recipes/lemonies.webp",
   servings: 9,
   times: [{ label: "Préparation", value: "10 min", icon: "clock" }, { label: "Cuisson", value: "15–20 min", icon: "oven" }],
   groups: [
@@ -11,14 +12,14 @@ export default {
       title: "Pâte au citron",
       tone: "yellow",
       ingredients: [
-        { id: "eggs", name: "œufs", quantity: 4 },
+        { id: "eggs", name: "d’œufs", grams: 200, quantity: 4, weightEstimate: true, note: "pesés sans coquille" },
         { id: "flour", name: "de farine", grams: 115 },
-        { id: "baking-powder", name: "de levure chimique", quantity: "1 c. à café rase" },
+        { id: "baking-powder", name: "de levure chimique", grams: 4, quantity: "1 c. à café rase", weightEstimate: true },
         { id: "sugar", name: "de sucre", grams: 120 },
         { id: "lemon-juice", name: "de jus de citron", grams: 15 },
-        { id: "vanilla", name: "de vanille liquide", quantity: "1 c. à café" },
+        { id: "vanilla", name: "de vanille liquide", grams: 4.2, quantity: "1 c. à café", weightEstimate: true },
         { id: "butter", name: "de beurre fondu", grams: 120 },
-        { id: "zest", name: "citron non traité", quantity: "Le zeste d’un" },
+        { id: "zest", name: "de zeste de citron non traité", grams: 6, quantity: "le zeste d’un citron", weightEstimate: true },
       ],
     },
     {

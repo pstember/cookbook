@@ -4,13 +4,14 @@ export default {
   category: "Baking basics",
   lang: "fr",
   description: "Une crème au lait et aux jaunes d’œufs à utiliser pour garnir des choux ou un fond de tarte.",
+  thumbnail: "assets/illustrations/recipes/creme-patissiere.webp",
   groups: [{
     title: "Crème",
     art: "whisk",
     tone: "yellow",
     ingredients: [
       { id: "milk", name: "lait", grams: 250 },
-      { id: "yolks", name: "jaunes d’œufs", quantity: 3 },
+      { id: "yolks", name: "jaunes d’œufs", grams: 51, quantity: 3, weightEstimate: true },
       { id: "sugar", name: "sucre cristallisé", grams: 50, note: "type S2" },
       { id: "flour", name: "farine", grams: 12.5 },
       { id: "starch", name: "fécule de maïs", grams: 12.5 },
@@ -26,7 +27,7 @@ export default {
     {
       id: "thicken", title: "Faire épaissir la crème", art: "saucepan", tone: "yellow",
       instructions: [
-        "Quand le lait bout, versez-en un tiers sur les jaunes en fouettant. Reversez le mélange dans la casserole avec le reste de lait.",
+        "Quand le lait bout, versez-en environ 83 g (un tiers) sur les jaunes en fouettant. Reversez le mélange dans la casserole avec le reste de lait.",
         "Remettez à feu doux et remuez sans arrêt jusqu’à ce que la crème épaississe et forme de grosses bulles.",
       ],
     },

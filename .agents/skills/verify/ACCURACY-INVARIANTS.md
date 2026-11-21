@@ -10,7 +10,14 @@ This file is an **append-only** log of bug classes or review gaps this project's
 
 ## Entries
 
-<!-- None yet. Add entries here as real gaps are found, in the form:
+### Ingredients must be weighable
+
+**Found:** 2026-11-21 during cookbook review.
+**Failure mode:** A checklist could show a count, volume or an unquantified ingredient, leaving no amount to weigh.
+**What to check:** Each ingredient has one positive gram weight, an ordered gram range, or gram weights for the recipe’s batch variants in both languages. Mark conversions and suggested starting amounts as estimates.
+**Promoted to automation:** Yes. `scripts/ingredient-weights.test.js` is part of `npm run check`.
+
+<!-- Add entries in the form:
 
 ### <short title>
 

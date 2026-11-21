@@ -18,7 +18,9 @@ test("each registered recipe has a complete second language", () => {
     const translatedIngredients = translated.groups.flatMap(group => group.ingredients);
     for (const [index, ingredient] of recipe.groups.flatMap(group => group.ingredients).entries()) {
       const localized = translatedIngredients[index];
-      assert.equal(localized.grams, ingredient.grams, `${recipe.id}/${ingredient.id}`);
+      for (const field of ["grams", "gramRange", "gramVariants", "weightEstimate"]) {
+        assert.deepEqual(localized[field], ingredient[field], `${recipe.id}/${ingredient.id}/${field}`);
+      }
       if (Number.isFinite(ingredient.quantity)) assert.equal(localized.quantity, ingredient.quantity, recipe.id);
     }
     assert.deepEqual(

@@ -3,6 +3,7 @@ export default {
   title: "Spanish Chicken & Butter Bean Stew",
   category: "Main dishes",
   description: "A smoky one-pan stew with tender chicken, whole butter beans and a creamy blended cannellini base.",
+  thumbnail: "assets/illustrations/recipes/chicken-butter-bean-stew.webp",
   servings: "4 adult portions + 2 toddler portions",
   groups: [
     {
@@ -12,7 +13,7 @@ export default {
       ingredients: [
         { id: "cannellini", name: "cannellini beans", grams: 240, note: "drained from one 400 g tin" },
         { id: "passata", name: "passata", grams: 250, note: "half a standard 500 g carton" },
-        { id: "stock", name: "low-sodium chicken stock", quantity: 200, unit: "ml", note: "divide into 75 ml and 125 ml" },
+        { id: "stock", name: "low-sodium chicken stock", grams: 200, weightEstimate: true, quantity: 200, unit: "ml", note: "divide into 75 g and 125 g" },
         { id: "tomatoes", name: "chopped tomatoes", grams: 400, note: "one tin" },
         { id: "butter-beans", name: "butter beans", grams: 480, note: "drained from two 400 g tins" },
       ],
@@ -28,14 +29,14 @@ export default {
         { id: "garlic", name: "garlic", grams: 12, note: "about 3 cloves, minced" },
         { id: "paprika", name: "sweet smoked paprika", grams: 5, note: "about 1½ tsp" },
         { id: "oil", name: "avocado oil", grams: 15, note: "about 1 tbsp" },
-        { id: "seasoning", name: "sea salt and black pepper", quantity: "To taste" },
+        { id: "seasoning", name: "sea salt and black pepper", gramRange: [0, 6], weightEstimate: true, quantity: "To taste", note: "suggested total range. Start with less and adjust to taste" },
       ],
     },
   ],
   steps: [
     {
       id: "blend", title: "Blend the sauce",
-      instructions: ["Blend the drained cannellini beans with the passata and 75 ml of stock until smooth. Set aside."],
+      instructions: ["Blend the drained cannellini beans with the passata and 75 g of stock until smooth. Set aside."],
     },
     {
       id: "brown", title: "Brown the chicken",
@@ -51,7 +52,7 @@ export default {
       id: "simmer", title: "Simmer the stew", art: "saucepan",
       timing: "20 min covered · 10 min uncovered",
       instructions: [
-        "Return the chicken and any juices to the pan. Stir in the blended sauce, the chopped tomatoes and the remaining 125 ml of stock. Cover and simmer over low heat for 20 minutes.",
+        "Return the chicken and any juices to the pan. Stir in the blended sauce, the chopped tomatoes and the remaining 125 g of stock. Cover and simmer over low heat for 20 minutes.",
         "Stir in the drained butter beans and simmer uncovered for another 10 minutes until the stew thickens. Check that the chicken reaches 74°C (165°F) at the centre. Season to taste.",
       ],
       timers: [{ label: "Simmer covered", minutes: 20 }, { label: "Reduce uncovered", minutes: 10 }],

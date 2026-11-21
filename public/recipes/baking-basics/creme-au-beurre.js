@@ -3,6 +3,7 @@ export default {
   title: "Crème au beurre",
   category: "Baking basics",
   description: "A simple buttercream for icing cakes or piping onto cupcakes.",
+  thumbnail: "assets/illustrations/recipes/creme-au-beurre.webp",
   groups: [{
     title: "Buttercream",
     art: "whisk",
@@ -10,7 +11,7 @@ export default {
     ingredients: [
       { id: "butter", name: "unsalted butter", grams: 150, note: "softened" },
       { id: "sugar", name: "icing sugar", grams: 340, note: "sifted" },
-      { id: "liquid", name: "whole milk", quantity: "3–4", unit: "tbsp", note: "or infused milk, juice or another liquid" },
+      { id: "liquid", name: "whole milk", gramRange: [45, 60], quantity: "3–4", unit: "tbsp", weightEstimate: true, note: "or infused milk, juice or another liquid" },
     ],
   }],
   steps: [
@@ -24,7 +25,7 @@ export default {
     },
     {
       id: "adjust", title: "Adjust the consistency", art: "whisk", tone: "blue",
-      instructions: ["Beat in the liquid a spoonful at a time until the buttercream is smooth and soft enough to spread or pipe."],
+      instructions: ["Beat in the liquid about 15 g (1 tbsp) at a time until the buttercream is smooth and soft enough to spread or pipe."],
     },
   ],
   source: {

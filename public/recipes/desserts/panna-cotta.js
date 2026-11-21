@@ -3,6 +3,7 @@ export default {
   title: "Vanilla Panna Cotta",
   category: "Desserts",
   description: "A simple cream-and-milk panna cotta set with leaf gelatine.",
+  thumbnail: "assets/illustrations/recipes/panna-cotta.webp",
   times: [{ label: "Chill", value: "4 hr", icon: "snow" }],
   groups: [{
     title: "Panna cotta",
@@ -10,8 +11,8 @@ export default {
     ingredients: [
       { id: "cream", name: "whipping cream", grams: 130 },
       { id: "milk", name: "milk", grams: 115 },
-      { id: "gelatine", name: "of leaf gelatine", quantity: 1, unit: "sheet" },
-      { id: "vanilla", name: "vanilla" },
+      { id: "gelatine", name: "leaf gelatine", grams: 2, quantity: 1, unit: "sheet", weightEstimate: true, note: "about 2 g for a gold-grade sheet. Check the packet for your grade" },
+      { id: "vanilla", name: "vanilla extract", grams: 2, weightEstimate: true, note: "suggested starting amount. The original recipe does not specify a quantity" },
     ],
   }],
   steps: [

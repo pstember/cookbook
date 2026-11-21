@@ -43,17 +43,18 @@ export default {
     times: [{ label: "Baking", value: "25 min" }],
     groupTitles: ["Sponge"],
     ingredients: {
-      egg: { name: "egg" },
+      egg: { name: "egg", note: "without shell" },
       flour: { name: "flour" },
       sugar: { name: "sugar" },
       fat: { name: "butter or oil", note: "for preparing the tin" },
-      salt: { name: "salt", note: "optional" },
+      "tin-flour": { name: "flour", note: "for dusting the tin if you aren’t lining it" },
+      salt: { name: "salt", note: "optional, up to 1 pinch" },
     },
     steps: {
       prepare: {
         title: "Prepare the tin",
         instructions: [
-          "Preheat the oven to 180 °C. Grease and flour a 20 cm tin, or line the base and sides with baking parchment.",
+          "Preheat the oven to 180 °C. Grease a 20 cm tin and dust with the 5 g of flour set aside for the tin, or line the base and sides with baking parchment.",
         ],
       },
       whip: {
@@ -101,7 +102,7 @@ export default {
       thicken: {
         title: "Thicken the custard",
         instructions: [
-          "When the milk comes to the boil, pour a third of it over the yolks while whisking. Pour the mixture back into the saucepan with the remaining milk.",
+          "When the milk comes to the boil, pour about 83 g (a third) over the yolks while whisking. Pour the mixture back into the saucepan with the remaining milk.",
           "Return it to a low heat and stir constantly until the custard thickens and forms large bubbles.",
         ],
       },
@@ -141,7 +142,7 @@ export default {
       adjust: {
         title: "Ajuster la consistance",
         instructions: [
-          "Incorporez le liquide une cuillerée à la fois en fouettant, jusqu’à ce que la crème soit lisse et assez souple pour être étalée ou dressée à la poche.",
+          "Incorporez le liquide en fouettant, environ 15 g (1 c. à soupe) à la fois, jusqu’à ce que la crème soit lisse et assez souple pour être étalée ou dressée à la poche.",
         ],
       },
     },
@@ -162,12 +163,12 @@ export default {
       "pastry-yolk": { name: "jaune d’œuf" },
       "pastry-water": { name: "eau", note: "ajuster au besoin" },
       salt: { name: "sel", unit: "pincées" },
-      "compote-apples": { name: "pommes à cuire Bramley", note: "épépinées et coupées en morceaux, ou 6 pommes à croquer" },
-      "compote-water": { name: "eau", note: "100 ml pour une compote avec des morceaux, ou 300 ml pour une purée lisse" },
-      cinnamon: { name: "bâton de cannelle", unit: "pouces", note: "ou ½ c. à café de cannelle moulue" },
-      "lemon-juice": { name: "jus de citron", unit: "c. à soupe", note: "une cuillerée à soupe supplémentaire est facultative" },
+      "compote-apples": { name: "pommes à cuire Bramley", note: "à peser après avoir retiré le trognon, puis à couper en morceaux. On peut utiliser le même poids de pommes à croquer (environ 6)" },
+      "compote-water": { name: "eau", note: "100 g (100 ml) pour une compote avec des morceaux, ou 300 g (300 ml) pour une purée lisse" },
+      cinnamon: { name: "bâton de cannelle", unit: "pouces", note: "ou environ 1,3 g (½ c. à café) de cannelle moulue" },
+      "lemon-juice": { name: "jus de citron", unit: "c. à soupe", note: "ajouter 14 g (1 c. à soupe) de plus selon le goût" },
       sugar: { name: "sucre cristallisé", note: "facultatif, à doser selon le goût" },
-      "golden-apples": { name: "pommes Golden" },
+      "golden-apples": { name: "pommes Golden", note: "à peser après avoir retiré le trognon" },
       "glaze-yolk": { name: "jaune d’œuf" },
       "glaze-water": { name: "eau", unit: "c. à soupe" },
     },
@@ -196,7 +197,7 @@ export default {
         title: "Garnir et dorer la tarte",
         instructions: [
           "Étalez la compote sur le fond de tarte. Coupez les pommes Golden en fines lamelles et disposez-les sur la compote.",
-          "Mélangez le jaune restant avec la cuillerée à soupe d’eau et badigeonnez-en les lamelles de pomme.",
+          "Mélangez le jaune restant avec 15 g d’eau (1 c. à soupe) et badigeonnez-en les lamelles de pomme.",
         ],
       },
       bake: {
@@ -222,19 +223,19 @@ export default {
     ],
     groupTitles: ["Genoise sponge", "Strawberry mousse", "Strawberry coulis"],
     ingredients: {
-      "sponge-egg": { name: "egg" },
+      "sponge-egg": { name: "egg", note: "without shell" },
       "sponge-flour": { name: "flour" },
       "sponge-sugar": { name: "sugar" },
       "sponge-fat": { name: "butter or oil", note: "for greasing the tin" },
-      "sponge-salt": { name: "salt", note: "optional" },
+      "sponge-salt": { name: "salt", note: "optional, up to 1 pinch" },
       "mousse-fruit": { name: "strawberries" },
       "mousse-sugar": { name: "granulated sugar" },
       "mousse-cream": { name: "full-fat whipping cream", note: "very cold, weighed" },
-      "mousse-gelatin": { name: "200 Bloom powdered gelatine", note: "or 4 leaves of the same strength" },
+      "mousse-gelatin": { name: "200 Bloom powdered gelatine", note: "or 8 g of leaf gelatine of the same strength (about 4 leaves)" },
       "mousse-water": { name: "very cold water", note: "for the powdered gelatine" },
       "topping-fruit": { name: "strawberries" },
       "topping-sugar": { name: "granulated sugar", note: "adjust to suit the strawberries" },
-      "topping-gelatin": { name: "200 Bloom powdered gelatine", note: "or 1½ leaves of the same strength" },
+      "topping-gelatin": { name: "200 Bloom powdered gelatine", note: "or 3 g of leaf gelatine of the same strength (about 1½ leaves)" },
       "topping-water": { name: "very cold water", note: "for the powdered gelatine" },
     },
     steps: {
@@ -243,7 +244,7 @@ export default {
         timing: "At least 20 min",
         instructions: [
           "In separate bowls, mix 8 g of powdered gelatine with 40 g of water and 3 g of powdered gelatine with 15 g of water. Leave to bloom for at least 20 minutes.",
-          "If using leaves, soak 4 leaves and 1½ leaves separately in two bowls of very cold water. Squeeze them out before adding them.",
+          "If using leaves, soak 8 g (about 4 leaves) and 3 g (about 1½ leaves) separately in two bowls of very cold water. Squeeze them out before adding them.",
         ],
         timerLabels: ["Bloom the gelatine"],
       },

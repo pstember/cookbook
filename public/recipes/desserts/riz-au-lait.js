@@ -3,6 +3,7 @@ export default {
   title: "Riz au Lait",
   category: "Desserts",
   description: "French vanilla rice pudding finished with butter and a folded-in whipped egg white.",
+  thumbnail: "assets/illustrations/recipes/riz-au-lait.webp",
   times: [{ label: "Simmer the rice", value: "22 min", icon: "clock" }],
   groups: [
     {
@@ -10,12 +11,13 @@ export default {
       art: "saucepan",
       tone: "yellow",
       ingredients: [
-        { id: "milk", name: "milk", quantity: 1, unit: "litre" },
+        { id: "milk", name: "milk", grams: 1030, weightEstimate: true, quantity: 1, unit: "litre" },
         { id: "rice", name: "short-grain rice", grams: 250, note: "risotto rice works" },
-        { id: "sugar", name: "sugar", grams: 60, note: "plus 4 tbsp" },
-        { id: "egg", name: "egg", quantity: 1, note: "separated" },
-        { id: "vanilla", name: "vanilla pod", quantity: 1, note: "or 1 tbsp vanilla extract" },
-        { id: "salt", name: "salt", quantity: "A pinch" },
+        { id: "sugar", name: "sugar", grams: 60 },
+        { id: "extra-sugar", name: "additional sugar", grams: 50, weightEstimate: true, quantity: 4, unit: "tbsp" },
+        { id: "egg", name: "egg", grams: 50, weightEstimate: true, quantity: 1, note: "weighed without the shell, then separated" },
+        { id: "vanilla", name: "vanilla pod", gramVariants: [4, 13], weightEstimate: true, quantity: 1, note: "one whole pod (about 4 g) or 1 tbsp vanilla extract (about 13 g)" },
+        { id: "salt", name: "salt", gramRange: [0, 0.4], weightEstimate: true, quantity: "A pinch" },
         { id: "butter", name: "butter", grams: 15 },
       ],
     },
@@ -33,7 +35,7 @@ export default {
     {
       id: "yolk", title: "Stir in the yolk and butter", art: "whisk",
       instructions: [
-        "Whisk the yolk and sugar together, loosening the mixture gradually with spoonfuls of hot milk from the pan. Stir the warmed yolk mixture back into the cooked rice, then add the butter.",
+        "Whisk the yolk and both sugar measures together, loosening the mixture gradually with spoonfuls of hot milk from the pan. Stir the warmed yolk mixture back into the cooked rice, then add the butter.",
       ],
     },
     {

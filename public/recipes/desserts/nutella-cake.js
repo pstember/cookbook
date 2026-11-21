@@ -3,6 +3,7 @@ export default {
   category: "Desserts",
   title: "Nutella Cake",
   description: "A small three-layer génoise with whipped hazelnut chocolate ganache and mascarpone frosting.",
+  thumbnail: "assets/illustrations/recipes/nutella-cake.webp",
   times: [
     { label: "Tin diameter", value: "10 cm", icon: "oven" },
     { label: "Bake", value: "15–18 min", icon: "clock" },
@@ -13,25 +14,25 @@ export default {
     {
       title: "Génoise sponge", art: "whisk", tone: "yellow",
       ingredients: [
-        { id: "egg", name: "large egg", quantity: 1, note: "room temperature" },
+        { id: "egg", name: "large egg", quantity: 1, grams: 50, weightEstimate: true, note: "room temperature, weighed without the shell" },
         { id: "caster-sugar", name: "caster sugar", grams: 30 },
         { id: "flour", name: "plain flour", grams: 30, note: "sifted" },
         { id: "butter", name: "unsalted butter", grams: 10, note: "melted and cooled" },
-        { id: "vanilla", name: "vanilla extract", quantity: "¼", unit: "tsp" },
+        { id: "vanilla", name: "vanilla extract", quantity: "¼", unit: "tsp", grams: 1.1, weightEstimate: true },
       ],
     },
     {
       title: "Simple syrup", art: "saucepan", tone: "blue",
       ingredients: [
-        { id: "white-sugar", name: "white sugar", quantity: 1, unit: "tbsp" },
-        { id: "water", name: "hot water", quantity: 1, unit: "tbsp" },
+        { id: "white-sugar", name: "white sugar", quantity: 1, unit: "tbsp", grams: 12.4, weightEstimate: true },
+        { id: "water", name: "hot water", quantity: 1, unit: "tbsp", grams: 15, weightEstimate: true },
       ],
     },
     {
       title: "Whipped ganache", art: "whisk", tone: "pink",
       ingredients: [
         { id: "ganache-nutella", name: "Nutella", grams: 40 },
-        { id: "cream", name: "double cream", quantity: 40, unit: "ml" },
+        { id: "cream", name: "double cream", quantity: 40, unit: "ml", grams: 40, weightEstimate: true },
       ],
     },
     {
@@ -39,7 +40,7 @@ export default {
       ingredients: [
         { id: "mascarpone", name: "mascarpone or full-fat cream cheese", grams: 60, note: "cold" },
         { id: "frosting-nutella", name: "Nutella", grams: 40 },
-        { id: "garnish", name: "sea salt or crushed hazelnuts", note: "optional, for garnish" },
+        { id: "garnish", name: "sea salt or crushed hazelnuts", gramRange: [0.4, 5], weightEstimate: true, note: "optional garnish, about 0.4 g sea salt or 5 g crushed hazelnuts" },
       ],
     },
   ],

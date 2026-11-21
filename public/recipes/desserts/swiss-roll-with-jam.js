@@ -3,6 +3,7 @@ export default {
   category: "Desserts",
   title: "Swiss Roll with Raspberry–Strawberry Filling",
   description: "A rolled génoise with homemade berry filling and silky Swiss meringue buttercream.",
+  thumbnail: "assets/illustrations/recipes/swiss-roll-with-jam.webp",
   servings: 4,
   times: [
     { label: "Sponge bake", value: "10–12 min", icon: "oven" },
@@ -13,12 +14,12 @@ export default {
     {
       title: "Génoise sponge", art: "whisk", tone: "yellow",
       ingredients: [
-        { id: "eggs", name: "large eggs", quantity: 2, note: "room temperature" },
+        { id: "eggs", name: "large eggs", quantity: 2, grams: 100, weightEstimate: true, note: "room temperature, weighed without shells" },
         { id: "sponge-sugar", name: "granulated sugar", grams: 60 },
         { id: "flour", name: "plain flour", grams: 60, note: "sifted twice" },
         { id: "sponge-butter", name: "salted butter", grams: 20, note: "melted and cooled" },
-        { id: "sponge-vanilla", name: "vanilla extract", quantity: "½", unit: "tsp" },
-        { id: "icing-sugar", name: "icing sugar", note: "for dusting the tea towel and, optionally, the finished roll" },
+        { id: "sponge-vanilla", name: "vanilla extract", quantity: "½", unit: "tsp", grams: 2.1, weightEstimate: true },
+        { id: "icing-sugar", name: "icing sugar", grams: 5, weightEstimate: true, note: "estimated amount for dusting the tea towel and, optionally, the finished roll" },
       ],
     },
     {
@@ -27,9 +28,9 @@ export default {
         { id: "raspberries", name: "raspberries", grams: 75, note: "fresh or frozen" },
         { id: "strawberries", name: "strawberries", grams: 75, note: "fresh or frozen, hulled and chopped" },
         { id: "filling-sugar", name: "granulated sugar", grams: 40 },
-        { id: "cornflour", name: "cornflour", quantity: 1, unit: "tsp" },
-        { id: "lemon-juice", name: "lemon juice", quantity: 2, unit: "tsp" },
-        { id: "water", name: "water", quantity: 2, unit: "tsp", note: "divided between the fruit and the cornflour slurry" },
+        { id: "cornflour", name: "cornflour", quantity: 1, unit: "tsp", grams: 2.3, weightEstimate: true },
+        { id: "lemon-juice", name: "lemon juice", quantity: 2, unit: "tsp", grams: 10, weightEstimate: true },
+        { id: "water", name: "water", quantity: 2, unit: "tsp", grams: 10, weightEstimate: true, note: "5 g for the fruit and 5 g for the cornflour slurry" },
       ],
     },
     {
@@ -38,7 +39,7 @@ export default {
         { id: "egg-whites", name: "egg whites", grams: 30, note: "about one large egg white" },
         { id: "buttercream-sugar", name: "granulated sugar", grams: 50 },
         { id: "buttercream-butter", name: "salted butter", grams: 75, note: "softened and cubed" },
-        { id: "buttercream-vanilla", name: "vanilla extract", quantity: "¼", unit: "tsp" },
+        { id: "buttercream-vanilla", name: "vanilla extract", quantity: "¼", unit: "tsp", grams: 1.1, weightEstimate: true },
       ],
     },
   ],
@@ -47,8 +48,8 @@ export default {
       id: "fruit", title: "Cook the berry filling", art: "saucepan", tone: "pink",
       timing: "15 min active",
       instructions: [
-        "Combine the berries, sugar and half the water in a small saucepan. Cook over medium heat for 5–7 minutes, until the fruit softens and releases its juices.",
-        "Stir the cornflour into the remaining water, then add the slurry to the fruit and stir until thickened. Stir in the lemon juice, transfer to a shallow dish and refrigerate until completely cool.",
+        "Combine the berries, sugar and 5 g of the water in a small saucepan. Cook over medium heat for 5–7 minutes, until the fruit softens and releases its juices.",
+        "Stir the cornflour into the remaining 5 g of water, then add the slurry to the fruit and stir until thickened. Stir in the lemon juice, transfer to a shallow dish and refrigerate until completely cool.",
       ],
       tip: "If the berries are very ripe, adjust the sugar to taste.",
     },

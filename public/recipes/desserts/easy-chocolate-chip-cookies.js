@@ -3,6 +3,7 @@ export default {
   category: "Desserts",
   title: "Easy Chocolate Chip Cookies",
   description: "Thick chocolate chip cookies with crisp edges and a soft middle.",
+  thumbnail: "assets/illustrations/recipes/easy-chocolate-chip-cookies.webp",
   times: [
     { label: "Mix", value: "About 10 min", icon: "clock" },
     { label: "Chill", value: "1–24 hr", icon: "snow" },
@@ -14,11 +15,11 @@ export default {
       ingredients: [
         { id: "butter", name: "softened butter", grams: 115, note: "½ cup, preferably salted" },
         { id: "sugar", name: "sugar", grams: 200, note: "1 cup" },
-        { id: "egg", name: "egg", quantity: 1, note: "beaten" },
-        { id: "vanilla", name: "vanilla extract", quantity: 1, unit: "tsp" },
+        { id: "egg", name: "egg", quantity: 1, grams: 50, weightEstimate: true, note: "beaten, weighed without the shell" },
+        { id: "vanilla", name: "vanilla extract", quantity: 1, unit: "tsp", grams: 4.2, weightEstimate: true },
         { id: "flour", name: "plain flour", grams: 220, note: "1¾ cups, plus a little for shaping" },
-        { id: "baking-soda", name: "bicarbonate of soda", quantity: "½", unit: "tsp" },
-        { id: "salt", name: "salt", quantity: "1 pinch", note: "use ¼ tsp instead if using unsalted butter" },
+        { id: "baking-soda", name: "bicarbonate of soda", quantity: "½", unit: "tsp", grams: 3, weightEstimate: true },
+        { id: "salt", name: "fine salt", quantity: "1 pinch", grams: 0.4, weightEstimate: true, note: "use about 1.5 g (¼ tsp) instead if using unsalted butter" },
         { id: "chocolate-chips", name: "chocolate chips", grams: 150, note: "1 cup of milk, dark or white chocolate chips" },
       ],
     },
