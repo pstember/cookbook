@@ -1,51 +1,54 @@
 export default {
-  "make-sponge": {
-    before: ["egg", "sugar"],
-    focus: "bowl",
-    tool: "whisk",
-    motion: "stir",
-    en: "Look for a thick ribbon falling from the whisk before folding in the flour.",
-    fr: "Attendez que le mélange retombe en formant un ruban épais avant d’incorporer la farine.",
-  },
-  bake: {
-    before: ["tin"],
-    focus: "oven",
-    after: "rack",
-    motion: "heat",
-    en: "Let the sponge cool completely on the rack before wrapping it for its overnight rest.",
-    fr: "Laissez la génoise refroidir complètement sur une grille avant de l’emballer pour la nuit.",
-  },
-  filling: {
-    before: ["berries", "gelatine"],
-    focus: "saucepan",
-    tool: "spoon",
-    after: "fridge",
-    motion: "stir",
-    en: "Stir the drained gelatine into the warm fruit off the heat. Chill until the filling spreads without running.",
-    fr: "Hors du feu, incorporez la gélatine essorée aux fruits chauds. Réfrigérez jusqu’à ce que la garniture s’étale sans couler.",
-  },
-  "slice-and-whip": {
-    focus: "sponge",
-    tool: "knife",
-    after: "cream",
-    motion: "cut",
-    en: "Cut the sponge into two even layers. Whip the icing until the peaks stand upright.",
-    fr: "Coupez la génoise en deux disques de même épaisseur. Fouettez la crème au mascarpone jusqu’à ce qu’elle forme des pics fermes.",
-  },
-  assemble: {
-    before: ["bag", "berries"],
-    focus: "cake",
-    tool: "spatula",
-    motion: "layer",
-    en: "Pipe a tall ring of icing to hold in the berry filling, then spread a thin coat over the assembled cake to trap the crumbs.",
-    fr: "Pochez un cordon épais de crème pour retenir la garniture, puis étalez une fine couche sur le gâteau monté pour fixer les miettes.",
-  },
-  finish: {
-    before: ["cream"],
-    focus: "cake",
-    after: "fridge",
-    motion: "chill",
-    en: "Cover the top and sides with the remaining icing, then chill the finished cake for at least 2 hours.",
-    fr: "Recouvrez le dessus et les côtés du reste de crème, puis réfrigérez le gâteau au moins 2 heures.",
-  },
+  "make-sponge": [
+    {
+      en: "Lift the whisk to check that the eggs and sugar fall in a thick ribbon.",
+      fr: "Soulevez le fouet pour vérifier que les œufs et le sucre retombent en ruban épais.",
+    },
+    {
+      en: "Sift in the flour in batches and fold gently after each addition.",
+      fr: "Tamisez la farine en plusieurs fois et incorporez-la délicatement à chaque ajout.",
+    },
+  ],
+  "bake": [
+    {
+      en: "Let the sponge cool completely on the rack before wrapping it for its overnight rest.",
+      fr: "Laissez la génoise refroidir complètement sur une grille avant de l’emballer pour la nuit.",
+    },
+  ],
+  "filling": [
+    {
+      en: "Squeeze the water from the softened gelatine before stirring it into the warm strawberries off the heat.",
+      fr: "Essorez la gélatine ramollie avant de l’incorporer aux fraises chaudes hors du feu.",
+    },
+    {
+      en: "Fold in the whole raspberries gently so they hold their shape.",
+      fr: "Incorporez délicatement les framboises entières pour qu’elles gardent leur forme.",
+    },
+  ],
+  "slice-and-whip": [
+    {
+      en: "Hold the serrated knife level to cut the sponge into two even layers.",
+      fr: "Tenez le couteau dentelé à l’horizontale pour couper la génoise en deux disques de même épaisseur.",
+    },
+    {
+      en: "Whip the mascarpone icing until its peaks stand upright.",
+      fr: "Fouettez la crème au mascarpone jusqu’à ce qu’elle forme des pics fermes.",
+    },
+  ],
+  "assemble": [
+    {
+      en: "Pipe a tall ring of icing around the edge to hold the berry filling in the middle.",
+      fr: "Pochez un cordon épais de crème autour du bord pour retenir la garniture aux fruits au centre.",
+    },
+    {
+      en: "After stacking the second layer, spread a thin crumb coat over the top and sides.",
+      fr: "Une fois le deuxième disque posé, étalez une fine couche de crème sur le dessus et les côtés pour fixer les miettes.",
+    },
+  ],
+  "finish": [
+    {
+      en: "Cover the chilled crumb coat with the remaining icing, smoothing the top and sides.",
+      fr: "Recouvrez la première couche froide du reste de crème, puis lissez le dessus et les côtés.",
+    },
+  ],
 };

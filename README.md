@@ -25,7 +25,7 @@ In the repository’s **Settings → Pages**, set **Build and deployment → Sou
 - Give each recipe a stable `id`, a `title`, and a `category`. Put ingredient checklists in `groups` and numbered instructions in `steps`. A recipe can also include `times`, `servings` or `yield`, `notes`, `related` recipe IDs and a public `source`. Give every ingredient a gram weight. Use `grams` for a single weight, `gramRange: [min, max]` for a range, or `gramVariants` for ordered batch options. Keep `quantity` and `unit` when the source measure adds useful context. Set `lang: "fr"` for French recipe copy.
 - Add the second language in `public/translations/`. Key the copy by recipe ID, then by ingredient and step IDs. Keep group titles, timing labels and timer labels in the same order as the source. Ingredient weights, serving numbers and timer durations come from the source recipe.
 - Keep ingredient reference values and their sources in `public/recipes/nutrition-data.js`. Values describe 100 g of edible ingredient. The renderer sums the nutrient contribution of each ingredient and divides by the finished batch weight to display values per 100 g of finished food.
-- Give every numbered step an illustration and a caption in both languages. Scene data lives in `public/step-illustrations/`.
+- Illustrate every numbered step, with extra frames for distinct stages. Caption each image in both languages. The files and naming conventions are documented in the design system.
 - The [design system](docs/design-system.md) describes the shared typography, colours, cards and controls.
 - The catalogue and recipe templates live in `public/index.html` and `public/recipe.html`. Their styling and interactions live in `public/assets/` and `public/src/`.
 

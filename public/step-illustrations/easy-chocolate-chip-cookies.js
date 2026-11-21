@@ -1,35 +1,30 @@
 export default {
-  mix: {
-    before: ["butter", "sugar"],
-    focus: "bowl",
-    tool: "mixer",
-    after: "dough",
-    motion: "stir",
-    en: "Beat the butter and sugar first. Add the flour mixture with the chips in three batches, stopping as soon as the dough holds together.",
-    fr: "Fouettez d’abord le beurre et le sucre. Incorporez le mélange de farine et de pépites en trois fois, puis arrêtez dès que la pâte se rassemble.",
-  },
-  chill: {
-    before: ["dough"],
-    focus: "fridge",
-    after: "timer",
-    motion: "chill",
-    en: "Gather the dough into one ball and wrap it before chilling. The cold dough will spread less in the oven.",
-    fr: "Rassemblez la pâte en une seule boule et enveloppez-la avant de la réfrigérer. La pâte froide s’étalera moins à la cuisson.",
-  },
-  shape: {
-    before: ["dough", "parchment"],
-    focus: "tray",
-    tool: "fork",
-    motion: "spread",
-    en: "Leave space between golf-ball-sized portions and flatten just the tops with a flour-dusted fork.",
-    fr: "Espacez les portions de la taille d’une balle de golf et aplatissez juste le dessus avec une fourchette farinée.",
-  },
-  bake: {
-    before: ["tray"],
-    focus: "oven",
-    after: "rack",
-    motion: "heat",
-    en: "Check the cookies at 15 minutes. For a softer finish, move them to a rack once firm enough to lift.",
-    fr: "Vérifiez les cookies au bout de 15 minutes. Pour qu’ils restent plus moelleux, transférez-les sur une grille dès qu’ils sont assez fermes pour être soulevés.",
-  },
+  "mix": [
+    {
+      "en": "Beat the softened butter and sugar together before adding the egg and vanilla.",
+      "fr": "Battez le beurre mou avec le sucre avant d’ajouter l’œuf et la vanille."
+    },
+    {
+      "en": "Work the dry mix and chips into the dough in three batches. Stop as soon as it comes together.",
+      "fr": "Incorporez le mélange sec et les pépites en trois fois. Arrêtez dès que la pâte se tient."
+    }
+  ],
+  "chill": [
+    {
+      "en": "Gather the dough into one ball and wrap it before refrigerating.",
+      "fr": "Rassemblez la pâte en une seule boule et filmez-la avant de la placer au réfrigérateur."
+    }
+  ],
+  "shape": [
+    {
+      "en": "Space the dough balls well apart. Press the tops lightly with a flour-dusted fork.",
+      "fr": "Espacez bien les boules de pâte. Aplatissez légèrement le dessus avec une fourchette farinée."
+    }
+  ],
+  "bake": [
+    {
+      "en": "Once the cookies are firm enough to lift, move them to a rack for a softer finish.",
+      "fr": "Quand les cookies se tiennent assez pour être soulevés, transférez-les sur une grille pour qu’ils restent tendres."
+    }
+  ]
 };

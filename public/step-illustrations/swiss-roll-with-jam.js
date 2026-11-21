@@ -1,45 +1,44 @@
 export default {
-  fruit: {
-    before: ["berries", "sugar"],
-    focus: "saucepan",
-    tool: "spoon",
-    motion: "stir",
-    after: "jam",
-    en: "Stir the cornflour slurry into the softened berries until the filling thickens.",
-    fr: "Incorporez la fécule de maïs délayée aux fruits attendris et remuez jusqu’à épaississement.",
-  },
-  sponge: {
-    before: ["sponge"],
-    focus: "cloth",
-    motion: "roll",
-    after: "log",
-    en: "Turn the hot sponge onto the dusted tea towel, peel off the parchment and roll the sponge up with the towel.",
-    fr: "Retournez la génoise chaude sur le torchon saupoudré de sucre glace, retirez le papier cuisson et roulez-la avec le torchon.",
-  },
-  buttercream: {
-    before: ["egg", "sugar"],
-    focus: "bowl",
-    tool: "thermometer",
-    motion: "check",
-    after: "cream",
-    en: "Whisk over simmering water and check for 72°C (162°F) throughout before taking the bowl off the heat to whip.",
-    fr: "Fouettez au-dessus d’une eau frémissante et vérifiez que le mélange atteint 72 °C (162 °F) partout avant de retirer le bol du feu et de le fouetter au batteur.",
-  },
-  assemble: {
-    before: ["cream", "jam"],
-    focus: "sponge",
-    tool: "spatula",
-    motion: "spread",
-    after: "fridge",
-    en: "Leave a 1 cm border around the buttercream, spread the cooled berry filling over it, then roll snugly and chill.",
-    fr: "Laissez une bordure de 1 cm autour de la crème au beurre, étalez la garniture froide par-dessus, puis roulez bien serré et réfrigérez.",
-  },
-  finish: {
-    focus: "log",
-    tool: "knife",
-    motion: "cut",
-    after: "roll-slices",
-    en: "Wipe the knife between cuts to keep each slice’s spiral neat.",
-    fr: "Essuyez le couteau entre chaque coupe pour garder une spirale bien nette.",
-  },
+  fruit: [
+    {
+      en: "Stir the cornflour slurry into the softened fruit until the filling thickens.",
+      fr: "Incorporez la fécule de maïs délayée aux fruits attendris et remuez jusqu’à épaississement.",
+    },
+  ],
+  sponge: [
+    {
+      en: "Lift the whisk to check that the beaten eggs fall in thick ribbons.",
+      fr: "Soulevez le fouet pour vérifier que les œufs battus retombent en ruban épais.",
+    },
+    {
+      en: "Roll the warm sponge from a short side with the clean, dusted towel inside.",
+      fr: "Roulez la génoise encore chaude en partant d’un petit côté, avec le torchon propre et saupoudré de sucre glace à l’intérieur.",
+    },
+  ],
+  buttercream: [
+    {
+      en: "Check the egg whites and sugar reach 72°C (162°F) throughout over simmering water.",
+      fr: "Vérifiez que les blancs et le sucre atteignent 72 °C (162 °F) partout au bain-marie.",
+    },
+    {
+      en: "Once the whipped meringue and bowl have cooled, beat in the butter one piece at a time.",
+      fr: "Lorsque la meringue montée et le bol ont refroidi, ajoutez le beurre morceau par morceau en fouettant.",
+    },
+  ],
+  assemble: [
+    {
+      en: "Spread cooled berry filling over the buttercream, leaving the narrow border bare.",
+      fr: "Étalez la garniture refroidie sur la crème au beurre en laissant une fine bordure libre.",
+    },
+    {
+      en: "Roll the filled sponge snugly from a short side before wrapping and chilling.",
+      fr: "Roulez la génoise garnie en serrant bien, en partant d’un petit côté, puis emballez-la et réfrigérez-la.",
+    },
+  ],
+  finish: [
+    {
+      en: "Use a sharp knife and wipe the blade between cuts to keep the spiral neat.",
+      fr: "Utilisez un couteau bien aiguisé et essuyez la lame entre les coupes pour garder la spirale nette.",
+    },
+  ],
 };

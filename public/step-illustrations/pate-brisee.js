@@ -1,26 +1,24 @@
 export default {
-  "rub-in": {
-    before: ["flour", "butter"],
-    focus: "bowl",
-    after: "crumbs",
-    motion: "stir",
-    en: "Rub the butter into the flour until the mixture looks like coarse sand.",
-    fr: "Travaillez le beurre du bout des doigts dans la farine jusqu’à obtenir un sable grossier.",
-  },
-  form: {
-    before: ["egg", "water"],
-    focus: "bowl",
-    tool: "spatula",
-    after: "dough",
-    motion: "pour",
-    en: "Add the yolk and pour in water a little at a time. Stop when the dough holds together without crumbling.",
-    fr: "Ajoutez le jaune puis l’eau petit à petit. Arrêtez dès que la pâte tient sans s’effriter.",
-  },
-  rest: {
-    before: ["dough", "bag"],
-    focus: "fridge",
-    motion: "chill",
-    en: "Wrap the dough before putting it in the fridge. It can rest there overnight.",
-    fr: "Enveloppez la pâte avant de la mettre au réfrigérateur. Elle peut y reposer toute la nuit.",
-  },
+  "rub-in": [
+    {
+      "en": "Rub the butter into the flour with your fingertips until it feels like coarse sand.",
+      "fr": "Sablez le beurre et la farine du bout des doigts jusqu’à obtenir un sable grossier."
+    }
+  ],
+  "form": [
+    {
+      "en": "Add the yolk and a little water at a time. Stop once the dough holds together.",
+      "fr": "Ajoutez le jaune et versez l’eau petit à petit. Arrêtez dès que la pâte se rassemble."
+    },
+    {
+      "en": "Press briefly with the heel of your hand, then gather the dough with a scraper.",
+      "fr": "Aplatissez brièvement la pâte du talon de la main, puis rassemblez-la avec une corne."
+    }
+  ],
+  "rest": [
+    {
+      "en": "Wrap the dough snugly before chilling it.",
+      "fr": "Enveloppez bien la pâte avant de la laisser reposer au frais."
+    }
+  ]
 };

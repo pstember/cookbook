@@ -1,55 +1,54 @@
 export default {
-  pastry: {
-    before: ["parchment"],
-    focus: "dough",
-    tool: "rolling-pin",
-    after: "pastry-shell",
-    motion: "roll",
-    en: "Roll the dough to about 3 mm between sheets of baking parchment, then fit it into the tin.",
-    fr: "Étalez la pâte sur environ 3 mm entre deux feuilles de papier cuisson, puis foncez le moule.",
-  },
-  "blind-bake": {
-    before: ["parchment"],
-    focus: "baking-beads",
-    after: "oven",
-    motion: "heat",
-    en: "Fill the lined shell to the rim with baking beans. Remove the paper and beans once the sides hold their shape, then finish baking the bare base.",
-    fr: "Remplissez le fond de tarte chemisé de billes de cuisson jusqu’au bord. Quand les côtés tiennent, retirez le papier et les billes, puis terminez la cuisson du fond à nu.",
-  },
-  curd: {
-    before: ["lemon", "egg"],
-    focus: "saucepan",
-    tool: "thermometer",
-    after: "pastry-shell",
-    motion: "check",
-    en: "Warm the eggs with spoonfuls of hot lemon mixture before returning them to the pan. Check for at least 72°C (162°F) before stirring in the butter and filling the shell.",
-    fr: "Réchauffez les œufs en leur ajoutant le mélange chaud au citron par cuillerées, puis reversez le tout dans la casserole. Vérifiez que la crème atteint au moins 72 °C (162 °F) avant d’ajouter le beurre et de garnir le fond de tarte.",
-  },
-  meringue: {
-    before: ["egg", "sugar"],
-    focus: "double-boiler",
-    tool: "whisk",
-    after: "mixer",
-    motion: "stir",
-    en: "Whisk the whites and sugar in a bowl above barely simmering water, with no contact between bowl and water. Once the mixture reaches at least 72°C (162°F), beat it off the heat to glossy, stiff peaks.",
-    fr: "Fouettez les blancs et le sucre dans un bol au-dessus d’une eau à peine frémissante, sans que le bol touche l’eau. Quand le mélange atteint au moins 72 °C (162 °F), fouettez hors du feu jusqu’à obtenir des pics fermes et brillants.",
-  },
-  brown: {
-    before: ["bowl"],
-    focus: "pie",
-    tool: "spoon",
-    after: "broiler",
-    motion: "spread",
-    en: "Spread the meringue right to the pastry edge and lift the spoon to form peaks. Watch under the grill and pull the pie out as soon as the tips are golden.",
-    fr: "Étalez la meringue jusqu’au bord de la pâte et soulevez la cuillère pour former des pics. Surveillez la tarte sous le gril et sortez-la dès que les pointes sont dorées.",
-  },
-  chill: {
-    before: ["rack", "fridge"],
-    focus: "pie",
-    tool: "knife",
-    after: "slice",
-    motion: "cut",
-    en: "Cool the pie on a rack and chill until the filling sets. Wipe the knife between slices for clean layers.",
-    fr: "Laissez refroidir la tarte sur une grille, puis réfrigérez-la jusqu’à ce que la crème prenne. Essuyez la lame entre les parts pour garder des couches nettes.",
-  },
+  pastry: [
+    {
+      en: "Rub cold butter into the flour and sugar with your fingertips until it resembles fine crumbs.",
+      fr: "Sablez du bout des doigts le beurre froid, la farine et le sucre jusqu’à obtenir une chapelure fine.",
+    },
+    {
+      en: "Roll the dough between sheets of baking parchment to about 3 mm thick before lining the tin.",
+      fr: "Étalez la pâte entre deux feuilles de papier cuisson sur environ 3 mm avant de foncer le moule.",
+    },
+  ],
+  "blind-bake": [
+    {
+      en: "Lift the parchment and baking beads out together once the pastry sides hold their shape.",
+      fr: "Retirez ensemble le papier cuisson et les billes quand les bords de la pâte se tiennent.",
+    },
+  ],
+  curd: [
+    {
+      en: "Whisk a little of the hot lemon mixture into the eggs at a time to bring them up to temperature.",
+      fr: "Incorporez le mélange chaud au citron aux œufs petit à petit en fouettant pour les réchauffer.",
+    },
+    {
+      en: "Check the curd in the pan reaches at least 72°C (162°F). Keep the probe off the bottom.",
+      fr: "Vérifiez que la crème atteint au moins 72 °C (162 °F). Évitez de toucher le fond avec la sonde.",
+    },
+  ],
+  meringue: [
+    {
+      en: "Whisk the whites and sugar above barely simmering water, leaving a gap below the bowl.",
+      fr: "Fouettez les blancs et le sucre au-dessus d’une eau à peine frémissante, sans que le bol touche l’eau.",
+    },
+    {
+      en: "After heating to at least 72°C (162°F), whip off the heat until a peak stands upright.",
+      fr: "Après avoir atteint au moins 72 °C (162 °F), fouettez hors du feu jusqu’à ce qu’un pic tienne droit.",
+    },
+  ],
+  brown: [
+    {
+      en: "Spread the meringue to the pastry edge and lift the spoon to pull up peaks.",
+      fr: "Étalez la meringue jusqu’au bord de la pâte et soulevez la cuillère pour former des pics.",
+    },
+    {
+      en: "Watch the pie under the grill and take it out as soon as the tips turn golden.",
+      fr: "Surveillez la tarte sous le gril et sortez-la dès que les pointes sont dorées.",
+    },
+  ],
+  chill: [
+    {
+      en: "Slice the chilled pie once the lemon layer is set and can hold its shape.",
+      fr: "Découpez la tarte froide quand la crème au citron est prise et se tient.",
+    },
+  ],
 };

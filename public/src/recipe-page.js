@@ -274,13 +274,15 @@ function renderRecipe(recipe) {
         tip.append(label, document.createTextNode(` ${step.tip}`));
         body.append(tip);
       }
-      item.append(body);
+      const details = element("div", "step-details");
+      details.append(body);
 
       if (step.timers?.length) {
         const timers = element("div", "timers");
         for (const timer of step.timers) addTimer(timers, step.title ?? stepLabel, timer, icon("clock"));
-        item.append(timers);
+        details.append(timers);
       }
+      item.append(details);
 
       stepRows.push({ step, instructions, checkbox });
       function updateStep() {

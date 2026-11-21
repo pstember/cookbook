@@ -1,37 +1,30 @@
 export default {
-  syrup: {
-    before: ["sugar", "berries"],
-    focus: "saucepan",
-    tool: "sieve",
-    after: "glass",
-    motion: "drain",
-    en: "Steep the berries in syrup off the heat, then strain and keep the fruit and syrup separately.",
-    fr: "Laissez infuser les fruits rouges dans le sirop hors du feu, puis filtrez et réservez séparément les fruits et le sirop.",
-  },
-  whip: {
-    before: ["sugar"],
-    focus: "bowl",
-    tool: "whisk",
-    after: "cream",
-    motion: "stir",
-    en: "Add the mascarpone once soft peaks form, then whisk just until the peaks stand upright.",
-    fr: "Ajoutez le mascarpone dès que les pointes retombent légèrement, puis fouettez juste assez pour qu’elles tiennent droites.",
-  },
-  layer: {
-    before: ["wafers", "berries"],
-    focus: "tin",
-    tool: "spatula",
-    after: "cream",
-    motion: "layer",
-    en: "Build each of the two layers with briefly dipped biscuits, berries, then mascarpone cream.",
-    fr: "Pour chacune des deux couches, déposez les biscuits trempés brièvement, puis les fruits rouges et la crème au mascarpone.",
-  },
-  chill: {
-    before: ["timer"],
-    focus: "fridge",
-    after: "berries",
-    motion: "chill",
-    en: "Chill the covered tiramisu for 2–4 hours, then garnish just before serving.",
-    fr: "Couvrez le tiramisu et réfrigérez-le 2 à 4 heures, puis décorez-le juste avant de servir.",
-  },
+  syrup: [
+    {
+      en: "Strain the steeped berries over a bowl to catch the syrup.",
+      fr: "Filtrez les fruits infusés au-dessus d’un bol pour récupérer le sirop.",
+    },
+  ],
+  whip: [
+    {
+      en: "Stop whipping when the mascarpone cream holds an upright peak.",
+      fr: "Arrêtez de fouetter quand la crème au mascarpone forme une pointe qui tient droite.",
+    },
+  ],
+  layer: [
+    {
+      en: "Dip each ladyfinger briefly in the berry syrup before laying it in the dish.",
+      fr: "Trempez brièvement chaque biscuit à la cuillère dans le sirop avant de le déposer dans le plat.",
+    },
+    {
+      en: "Spread the mascarpone cream over the fruit, then repeat the biscuits, fruit and cream.",
+      fr: "Étalez la crème au mascarpone sur les fruits, puis répétez les couches de biscuits, de fruits et de crème.",
+    },
+  ],
+  chill: [
+    {
+      en: "Cover the layered tiramisu and place the dish in the fridge.",
+      fr: "Couvrez le tiramisu et placez le plat au réfrigérateur.",
+    },
+  ],
 };

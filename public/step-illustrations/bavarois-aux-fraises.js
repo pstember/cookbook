@@ -1,51 +1,22 @@
 export default {
-  bloom: {
-    before: ["gelatine", "water"],
-    focus: "bowl",
-    after: "bowl",
-    motion: "add",
-    en: "Let the two portions of gelatine swell in separate bowls of cold water.",
-    fr: "Laissez gonfler les deux portions de gélatine dans deux bols d’eau froide.",
-  },
-  sponge: {
-    before: ["tin"],
-    focus: "oven",
-    after: "sponge",
-    motion: "heat",
-    en: "Bake the sponge in an 18 cm tin, then cut a 16 cm round once it has cooled.",
-    fr: "Faites cuire la génoise dans un moule de 18 cm, puis découpez un disque de 16 cm une fois refroidie.",
-  },
-  mousse: {
-    before: ["berries", "cream"],
-    focus: "bowl",
-    tool: "spatula",
-    motion: "stir",
-    en: "Fold the cooled strawberry purée into the whipped cream with a spatula.",
-    fr: "Incorporez la purée de fraises refroidie à la crème fouettée avec une spatule.",
-  },
-  "set-mousse": {
-    before: ["sponge"],
-    focus: "tin",
-    tool: "ladle",
-    after: "fridge",
-    motion: "layer",
-    en: "Centre the sponge in the ring and leave about 3 mm above the mousse for the topping.",
-    fr: "Centrez la génoise dans le cercle et laissez environ 3 mm au-dessus de la mousse pour le coulis.",
-  },
-  coulis: {
-    before: ["berries"],
-    focus: "saucepan",
-    tool: "ladle",
-    after: "cake",
-    motion: "pour",
-    en: "Pour the cooled coulis into the centre of the set mousse and let it spread to the edges.",
-    fr: "Versez le coulis refroidi au centre de la mousse prise et laissez-le s’étaler jusqu’aux bords.",
-  },
-  serve: {
-    before: ["fridge"],
-    focus: "cake",
-    after: "plate",
-    en: "After an overnight chill, lift off the ring and peel away the lining.",
-    fr: "Après une nuit au frais, soulevez le cercle et retirez le rhodoïd.",
-  },
+  "bloom": [
+    { en: "Hydrate the larger and smaller gelatine portions in separate bowls.", fr: "Hydratez la grande et la petite portion de gélatine dans des bols séparés." },
+  ],
+  "sponge": [
+    { en: "Fold the sifted flour through the whipped egg and sugar with a spatula.", fr: "Incorporez la farine tamisée à l’œuf fouetté avec le sucre, à l’aide d’une spatule." },
+    { en: "Centre the smaller ring on the cooled sponge and cut out a 16 cm disc.", fr: "Centrez le petit cercle sur la génoise refroidie et découpez un disque de 16 cm." },
+  ],
+  "mousse": [
+    { en: "Take the pan off the heat and stir the larger portion of hydrated gelatine into the hot purée.", fr: "Hors du feu, faites dissoudre la grande portion de gélatine hydratée dans la purée chaude." },
+    { en: "Gently fold the cooled strawberry purée into the whipped cream.", fr: "Incorporez délicatement la purée de fraises refroidie à la crème fouettée." },
+  ],
+  "set-mousse": [
+    { en: "Pour the mousse over the centred sponge, leaving about 3 mm at the top for the coulis.", fr: "Versez la mousse sur la génoise centrée en laissant environ 3 mm en haut pour le coulis." },
+  ],
+  "coulis": [
+    { en: "Pour the cooled coulis into the centre of the set mousse and let it spread to the edges.", fr: "Versez le coulis refroidi au centre de la mousse prise et laissez-le s’étaler jusqu’aux bords." },
+  ],
+  "serve": [
+    { en: "Lift off the ring, then peel the clear lining away from the chilled layers.", fr: "Soulevez le cercle puis décollez le rhodoïd du bavarois bien froid." },
+  ],
 };

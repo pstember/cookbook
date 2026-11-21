@@ -1,25 +1,11 @@
 export default {
-  heat: {
-    before: ["milk", "cream"],
-    focus: "saucepan",
-    motion: "heat",
-    en: "Heat the dairy and vanilla just until it comes to a boil. Soak the gelatine separately in cold water.",
-    fr: "Portez le lait, la crème et la vanille juste à ébullition. Faites tremper la gélatine à part dans de l’eau froide.",
-  },
-  dissolve: {
-    before: ["gelatine"],
-    focus: "saucepan",
-    tool: "spoon",
-    motion: "stir",
-    en: "Off the heat, squeeze out the gelatine and stir it into the hot cream until it disappears.",
-    fr: "Hors du feu, essorez la gélatine et remuez-la dans la crème chaude jusqu’à dissolution.",
-  },
-  set: {
-    before: ["saucepan"],
-    focus: "ramekin",
-    after: "fridge",
-    motion: "pour",
-    en: "Pour into ramekins, let them cool, then chill for about four hours until set.",
-    fr: "Versez dans les ramequins, laissez refroidir puis réfrigérez environ quatre heures, jusqu’à ce que la crème soit prise.",
-  },
+  "heat": [
+    { en: "Look for the first bubbles around the edge of the cream.", fr: "Repérez les premières bulles sur le bord de la crème." },
+  ],
+  "dissolve": [
+    { en: "Squeeze water from the softened gelatine before stirring it into the cream off the heat.", fr: "Essorez la gélatine ramollie avant de l’incorporer à la crème hors du feu." },
+  ],
+  "set": [
+    { en: "Pour the smooth cream into ramekins, then cool and chill them.", fr: "Versez la crème lisse dans les ramequins, puis laissez-les refroidir avant de les réfrigérer." },
+  ],
 };

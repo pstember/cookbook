@@ -29,6 +29,8 @@ Catalogue-specific layout lives in `public/assets/catalogue.css`. Keep colour an
 
 ## Step illustrations
 
-A step card uses a figure followed by the written method. The illustration shares the card’s accent, and the caption calls out the action or visible result to look for. Captions stay selectable in English and French, and the illustrations are included in print.
+Each step card pairs close-up artwork with the full written instructions. Wide screens put them side by side within a single step. Narrow screens show the artwork first. Use the actual equipment, ingredient texture, hand position and cooking stage from the recipe. Match the collection’s warm gouache and coloured-pencil style. Draw one frame for a single action and use separate frames when a step has distinct stages to learn.
 
-Add a scene for each step ID in `public/step-illustrations/` and register the recipe in that directory’s `index.js`. Choose a central `focus` from `public/assets/illustrations/step-objects.svg`. Optional `before` objects, a `tool`, an `after` object and a `motion` cue show the order or technique. Provide short `en` and `fr` captions that agree with the recipe. When adding symbols, use the same view box, rounded strokes and muted cookbook palette.
+Add a caption array for every step ID in `public/step-illustrations/` and register the recipe in that directory’s `index.js`. Give each frame matching short `en` and `fr` captions that describe the illustrated cue. The written recipe remains the source for quantities, temperatures and times.
+
+Save each distinct WebP in `public/assets/illustrations/steps/<recipe-id>/`. Name a single frame `<step-id>.webp`. For multiple frames, name them `<step-id>-1.webp`, `<step-id>-2.webp` and so on in caption order. Check the finished crop against the recipe. Keep important tools and actions inside the frame, and keep text in the captions. The browser includes the artwork and captions in print.

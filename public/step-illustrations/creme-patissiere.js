@@ -1,27 +1,24 @@
 export default {
-  whisk: {
-    before: ["egg", "flour"],
-    focus: "bowl",
-    tool: "whisk",
-    motion: "stir",
-    en: "After whisking the yolks with sugar, whisk in the flour and cornflour until no lumps remain.",
-    fr: "Fouettez les jaunes avec le sucre, puis incorporez la farine et la fécule jusqu’à ce qu’il ne reste plus de grumeaux.",
-  },
-  thicken: {
-    before: ["milk", "bowl"],
-    focus: "saucepan",
-    tool: "whisk",
-    motion: "stir",
-    en: "Whisk a third of the hot milk into the yolks, then stir everything over low heat until large bubbles rise through the thickened cream.",
-    fr: "Versez un tiers du lait chaud sur les jaunes en fouettant, puis remuez le tout à feu doux jusqu’à ce que de grosses bulles remontent à la surface de la crème épaissie.",
-  },
-  cool: {
-    before: ["saucepan"],
-    focus: "tray",
-    tool: "spatula",
-    after: "fridge",
-    motion: "spread",
-    en: "Spread the cream on a tray to stop the cooking. If making it ahead, press cling film directly against the cream and refrigerate.",
-    fr: "Étalez la crème sur une plaque pour arrêter la cuisson. Si vous la préparez à l’avance, couvrez-la de film alimentaire au contact et réfrigérez-la.",
-  },
+  "whisk": [
+    {
+      "en": "Whisk the yolks and sugar, then add the flour and cornflour. Keep whisking until smooth.",
+      "fr": "Fouettez les jaunes avec le sucre, puis ajoutez la farine et la fécule. Fouettez jusqu’à obtenir un mélange lisse."
+    }
+  ],
+  "thicken": [
+    {
+      "en": "Whisk about a third of the hot milk into the yolk mixture in a steady stream.",
+      "fr": "Versez environ un tiers du lait chaud en filet sur les jaunes en fouettant."
+    },
+    {
+      "en": "Return the mixture to the pan. Stir over low heat until the cream thickens and large bubbles rise through it.",
+      "fr": "Reversez le mélange dans la casserole. Remuez à feu doux jusqu’à ce que la crème épaississe et forme de grosses bulles."
+    }
+  ],
+  "cool": [
+    {
+      "en": "Spread the cream in a shallow tray. If storing it, press film straight against the surface before refrigerating.",
+      "fr": "Étalez la crème sur une plaque peu profonde. Pour la conserver, posez le film au contact de la crème avant de la réfrigérer."
+    }
+  ]
 };

@@ -1,36 +1,30 @@
 export default {
-  heat: {
-    before: ["spice", "salt"],
-    focus: "pork",
-    after: "grill",
-    motion: "spread",
-    en: "Coat every side of the pork with the dry rub before it goes on the barbecue.",
-    fr: "Enrobez toutes les faces du porc avec les épices sèches avant de le mettre au barbecue.",
-  },
-  spritz: {
-    before: ["timer"],
-    focus: "pork",
-    tool: "spray",
-    after: "thermometer",
-    motion: "add",
-    en: "Mist the surface with cider vinegar. The centre should be about 71°C before wrapping.",
-    fr: "Vaporisez du vinaigre de cidre sur la surface. Le cœur doit être à environ 71 °C avant d’emballer le porc.",
-  },
-  wrap: {
-    before: ["pork", "honey"],
-    focus: "foil",
-    tool: "thermometer",
-    motion: "check",
-    en: "Wrap the joint tightly in foil. At about 96°C in the centre, the probe should slide in easily.",
-    fr: "Emballez bien le rôti dans du papier aluminium. À environ 96 °C à cœur, la sonde doit s’enfoncer facilement.",
-  },
-  pull: {
-    before: ["foil", "timer"],
-    focus: "pork",
-    tool: "fork",
-    after: "plate",
-    motion: "rest",
-    en: "Open the foil to let steam escape, then cover the pork and let it rest before pulling it into shreds.",
-    fr: "Ouvrez le papier aluminium pour laisser s’échapper la vapeur, puis couvrez le porc et laissez-le reposer avant de l’effilocher.",
-  },
+  heat: [
+    {
+      en: "Press the paprika rub onto every side of the shoulder before it goes on the barbecue.",
+      fr: "Pressez le mélange au paprika sur toutes les faces de l’épaule avant de la mettre au barbecue.",
+    },
+  ],
+  spritz: [
+    {
+      en: "Mist the surface of the pork with cider vinegar as the crust darkens.",
+      fr: "Vaporisez du vinaigre de cidre sur le porc pendant que la croûte fonce.",
+    },
+  ],
+  wrap: [
+    {
+      en: "Add the final splash of vinegar and a little honey, then fold the foil snugly around the joint.",
+      fr: "Ajoutez un dernier trait de vinaigre et un peu de miel, puis repliez le papier aluminium autour du rôti.",
+    },
+    {
+      en: "At about 96°C (205°F) in the centre, the probe should slide into the meat easily.",
+      fr: "À environ 96 °C (205 °F) à cœur, la sonde doit s’enfoncer facilement dans la viande.",
+    },
+  ],
+  pull: [
+    {
+      en: "After resting, pull the tender meat apart with two forks.",
+      fr: "Après le repos, effilochez la viande tendre avec deux fourchettes.",
+    },
+  ],
 };
