@@ -1,5 +1,6 @@
 export default {
   "lemon-meringue-pie": {
+    totalTime: "Environ 3 h 30 à 5 h 20 en travaillant étape par étape",
     title: "Tarte au citron meringuée",
     description: "Une pâte brisée au beurre garnie d’une crème au citron cuite au four et de volutes de meringue suisse dorée.",
     image: {
@@ -29,88 +30,194 @@ export default {
       "meringue-sugar": { name: "de sucre en poudre" },
     },
     ingredientTip: "Réservez les blancs des jaunes utilisés pour la pâte et la crème, puis complétez jusqu’au poids indiqué pour la meringue. Pesez les œufs sans leur coquille. Si vous utilisez des blancs en brique, choisissez-en qui peuvent être montés en neige.",
+    setup: [
+      "Utilisez {tins}, à fond amovible et d’environ 2,5 cm de profondeur.",
+      "Préchauffez le four à 200 °C en chaleur statique (180 °C en chaleur tournante / 400 °F) avec une plaque à l’intérieur.",
+    ],
+    allergens: ["Blé", "Œuf", "Lait"],
+    storage: {
+      counter: "Réfrigérez dans les 2 heures suivant la cuisson de la crème.",
+      fridge: "Conservez au réfrigérateur. Servez dans les 24 heures pour une texture optimale.",
+    },
     steps: {
-      pastry: {
-        title: "Étaler la pâte brisée",
-        timing: "30 min au réfrigérateur",
+      "rub-pastry": {
+        title: "Sabler le beurre",
         instructions: [
-          "Sablez le beurre froid avec la farine et le sucre jusqu’à obtenir la texture d’une chapelure. Ajoutez le jaune d’œuf et l’eau froide, puis rassemblez la pâte sans la travailler.",
-          "Étalez la pâte entre deux feuilles de papier cuisson sur environ 3 mm d’épaisseur et foncez {tins}. Utilisez des moules à tarte à fond amovible d’environ 2,5 cm de profondeur. Arasez les bords, piquez le fond à la fourchette et réfrigérez 30 minutes.",
+          "Sablez le beurre froid avec la farine et le sucre jusqu’à obtenir la texture d’une chapelure.",
+          "Ajoutez le jaune d’œuf et l’eau froide.",
+          "Rassemblez délicatement la pâte.",
         ],
+      },
+      pastry: {
+        title: "Foncer le moule",
         tip: "Réparez les fissures avec un peu de pâte restante.",
+        instructions: [
+          "Étalez la pâte entre deux feuilles de papier cuisson sur environ 3 mm d’épaisseur.",
+          "Foncez {tins} avec la pâte, en utilisant des moules à fond amovible d’environ 2,5 cm de profondeur.",
+          "Arasez les bords.",
+          "Piquez le fond à la fourchette.",
+        ],
+      },
+      "chill-pastry": {
+        title: "Réfrigérer le fond de tarte",
+        wait: "30 min au réfrigérateur",
+        instructions: [
+          "Réfrigérez le fond de tarte pendant 30 minutes avant la cuisson à blanc.",
+          "Préchauffez le four à 200 °C en chaleur statique (180 °C en chaleur tournante / 400 °F) avec une plaque à l’intérieur pendant le repos de la pâte.",
+        ],
         timerLabels: ["Réfrigérer la pâte"],
       },
       "blind-bake": {
-        title: "Cuire le fond de tarte à blanc",
-        timing: "200 °C / 180 °C en chaleur tournante · 20–23 min",
+        title: "Cuire le fond à blanc",
+        heat: "200 °C statique / 180 °C chaleur tournante (400 °F)",
         instructions: [
-          "Préchauffez le four à 200 °C (180 °C en chaleur tournante / 400 °F) avec une plaque à l’intérieur. Recouvrez la pâte de papier cuisson et garnissez de billes de cuisson.",
-          "Déposez le moule sur la plaque chaude et enfournez 15 minutes. Retirez le papier et les billes, puis poursuivez la cuisson 5 à 8 minutes, jusqu’à ce que le fond soit sec et doré.",
+          "Tapissez la pâte froide de papier cuisson.",
+          "Remplissez de billes de cuisson jusqu’au bord.",
+          "Posez le moule sur la plaque chaude.",
+          "Enfournez pour 15 minutes avant de retirer les billes.",
+          "Retirez ensemble le papier et les billes.",
+          "Poursuivez la cuisson à découvert 5 à 8 minutes, jusqu’à ce que le fond soit sec et doré.",
         ],
-        tip: "Remplissez le fond de tarte de billes de cuisson jusqu’au bord pour maintenir les côtés.",
         timerLabels: ["Cuire avec les billes", "Terminer la cuisson sans les billes"],
       },
       "prep-lemons": {
-        title: "Zester et presser les citrons",
-        instructions: [
-          "Lavez et séchez les citrons. Râpez finement le zeste pour la crème en ne prélevant que la partie jaune. Pressez les citrons, filtrez les pépins et pesez le jus.",
-        ],
+        title: "Zester les citrons",
+        instructions: ["Lavez les citrons.", "Séchez-les.", "Râpez finement la partie jaune de l’écorce uniquement."],
+      },
+      "juice-lemons": {
+        title: "Filtrer le jus de citron",
+        instructions: ["Pressez les citrons zestés.", "Filtrez le jus pour retirer les pépins.", "Pesez le jus nécessaire à la crème."],
+      },
+      "melt-butter": {
+        title: "Faire fondre le beurre salé",
+        instructions: ["Faites fondre le beurre salé de la crème."],
       },
       "mix-filling": {
-        title: "Mélanger la crème au citron",
-        timing: "Fouetter doucement 30–45 s",
+        title: "Fouetter les œufs",
+        timing: "Fouetter 30 à 45 s",
+        wait: "Laisser tiédir le beurre fondu",
         instructions: [
-          "Faites fondre le beurre salé et laissez-le tiédir. Mélangez le sucre et la fécule dans un saladier, puis ajoutez les œufs entiers et le jaune supplémentaire. Fouettez doucement pendant 30 à 45 secondes, jusqu’à ce que le mélange soit lisse.",
-          "Incorporez progressivement le jus de citron au fouet, puis ajoutez le zeste. Versez le beurre fondu en filet en fouettant juste assez pour l’incorporer. La crème doit rester liquide. Fouettez délicatement pour limiter les bulles d’air.",
+          "Laissez tiédir le beurre fondu hors du feu.",
+          "Mélangez le sucre et la fécule de maïs dans un saladier.",
+          "Ajoutez les œufs entiers et le jaune supplémentaire.",
+          "Fouettez doucement pendant 30 à 45 secondes jusqu’à obtenir un mélange lisse.",
+        ],
+      },
+      "finish-filling": {
+        title: "Terminer la crème au citron",
+        tip: "Un geste léger évite la formation de bulles d’air.",
+        instructions: [
+          "Incorporez progressivement le jus de citron au fouet.",
+          "Incorporez le zeste.",
+          "Versez le beurre tiède en filet en fouettant doucement, juste assez pour obtenir une crème liquide homogène.",
+        ],
+      },
+      "fill-shell": {
+        title: "Garnir le fond encore chaud",
+        instructions: [
+          "Baissez le four à 150 °C en chaleur tournante.",
+          "Posez le fond de tarte cuit encore chaud sur une plaque.",
+          "Versez la crème dans le fond de tarte en vous arrêtant juste sous le bord.",
         ],
       },
       "bake-filling": {
-        title: "Cuire la crème dans le fond de tarte",
-        timing: "150 °C en chaleur tournante · 25–35 min",
+        title: "Cuire la crème au citron",
+        timing: "Première vérification à 25 min, prévoir 25 à 35 min au total",
+        heat: "150 °C chaleur tournante",
+        instructions: ["Enfournez à mi-hauteur à 150 °C en chaleur tournante pour 25 minutes avant la première vérification."],
+        timerLabels: ["Vérifier la cuisson de la crème"],
+      },
+      "check-filling": {
+        title: "Vérifier le centre",
+        timing: "Si nécessaire, 3 à 5 min entre les vérifications",
+        heat: "150 °C chaleur tournante",
+        tip: "Vérifiez chaque tarte séparément. Protégez les bords de pâte avec du papier aluminium s’ils commencent à brunir.",
         instructions: [
-          "Baissez le four à 150 °C en chaleur tournante. Posez le fond de tarte encore chaud sur une plaque et versez la crème juste sous le bord. Enfournez à mi-hauteur et vérifiez la cuisson au bout de 25 minutes.",
-          "Secouez doucement la plaque. Les bords doivent être pris et le centre encore légèrement tremblotant, comme une gelée. Vérifiez avec un thermomètre de cuisine que le centre atteint 75 °C (167 °F). S’il est encore liquide ou trop froid, poursuivez la cuisson 3 à 5 minutes avant de vérifier de nouveau.",
+          "Secouez doucement la plaque pour vérifier que les bords sont pris et que le centre tremble légèrement comme une gelée.",
+          "Vérifiez au thermomètre de cuisine que le centre atteint au moins 75 °C (167 °F).",
+          "Prolongez la cuisson de 3 à 5 minutes si le centre est encore liquide ou en dessous de 75 °C.",
+          "Vérifiez de nouveau la texture et la température avant de sortir la tarte.",
         ],
-        tip: "Si vous faites cuire plusieurs tartes, vérifiez chacune séparément. Protégez les bords de pâte avec des bandes de papier aluminium s’ils commencent à trop dorer.",
-        timerLabels: ["Vérifier la cuisson de la crème", "Vérifier à nouveau après la cuisson supplémentaire"],
+        timerLabels: ["Vérifier à nouveau après la cuisson supplémentaire"],
       },
       "cool-filling": {
         title: "Laisser refroidir la tarte",
-        timing: "30–60 min sur une grille",
+        wait: "Sur une grille jusqu’à température ambiante",
         instructions: [
-          "Laissez la tarte dans son moule sur une grille pendant 30 à 60 minutes, jusqu’à ce que la crème soit prise et à température ambiante. Préparez la meringue lorsque la tarte est prête à garnir.",
+          "Laissez la tarte dans son moule sur une grille pendant 30 à 60 minutes, jusqu’à ce que la crème soit prise et à température ambiante.",
+          "Commencez la meringue lorsque la tarte est prête à garnir.",
         ],
         timerLabels: ["Vérifier que la tarte a refroidi"],
       },
       meringue: {
-        title: "Monter la meringue suisse",
-        timing: "72 °C / 162 °F minimum",
+        title: "Chauffer les blancs et le sucre",
+        heat: "Bain-marie à peine frémissant",
+        tip: "Remuez avant de vérifier la température. Évitez de toucher le bol avec la sonde.",
         instructions: [
-          "Mélangez les blancs et le sucre dans un bol propre résistant à la chaleur. Placez-le au-dessus d’une casserole d’eau à peine frémissante, sans que le bol touche l’eau. Fouettez sans arrêt jusqu’à dissolution du sucre et jusqu’à ce que tout le mélange atteigne au moins 72 °C (162 °F), soit environ 5 à 7 minutes.",
-          "Retirez le bol du bain-marie. Fouettez au batteur électrique 5 à 8 minutes, jusqu’à ce que la meringue soit brillante et forme des pics fermes.",
+          "Mélangez les blancs et le sucre dans un bol propre résistant à la chaleur.",
+          "Placez le bol au-dessus d’une eau à peine frémissante, sans que le fond touche l’eau.",
+          "Fouettez sans arrêt jusqu’à dissolution du sucre, environ 5 à 7 minutes.",
+          "Vérifiez que tout le mélange atteint au moins 72 °C (162 °F) avant de le retirer du bain-marie.",
         ],
-        tip: "Remuez avant de vérifier la température. La sonde du thermomètre ne doit pas toucher le bol.",
+      },
+      "whip-meringue": {
+        title: "Monter la meringue",
+        heat: "Hors du feu",
+        instructions: [
+          "Retirez le bol du bain-marie.",
+          "Fouettez au batteur électrique 5 à 8 minutes, jusqu’à ce que la meringue soit brillante et forme des pics fermes.",
+        ],
         timerLabels: ["Vérifier la tenue de la meringue"],
       },
-      brown: {
-        title: "Former des volutes et dorer la meringue",
-        timing: "Gril du four ou chalumeau de cuisine",
+      swirl: {
+        title: "Former les pics de meringue",
         instructions: [
-          "À la cuillère, déposez la meringue fraîchement montée sur la crème au citron à température ambiante et étalez-la jusqu’au bord de la pâte. Soulevez la cuillère par endroits pour former des pics. Choisissez l’une des deux méthodes pour la dorer.",
-          "Au gril du four, placez la tarte à environ 15 cm de la résistance préchauffée. Surveillez-la sans interruption et tournez le moule si nécessaire. Sortez-la dès que les pointes sont dorées, généralement au bout de 1 à 2 minutes.",
-          "Au chalumeau de cuisine, placez la tarte sur une surface résistante à la chaleur. Tenez le chalumeau à environ 15 cm de la meringue et balayez les pics sans immobiliser la flamme. Arrêtez dès que les pointes sont dorées.",
+          "Déposez la meringue fraîchement montée sur la crème à température ambiante.",
+          "Étalez-la jusqu’au bord de la pâte.",
+          "Soulevez la cuillère par endroits pour former des pics.",
         ],
-        tip: "Les deux méthodes dorent la surface. Vérifiez la température de la meringue pendant le chauffage à l’étape précédente.",
+      },
+      brown: {
+        title: "Dorer la meringue",
+        tip: "Le gril et le chalumeau dorent seulement la surface. Vérifiez la température des blancs pendant le chauffage au bain-marie.",
+        options: [
+          {
+            title: "Gril du four",
+            heat: "Gril chaud préchauffé",
+            wait: "Surveiller en continu, généralement 1 à 2 min",
+            instructions: [
+              "Placez la tarte à environ 15 cm sous la résistance chaude.",
+              "Surveillez-la sans interruption.",
+              "Tournez le moule si nécessaire.",
+              "Sortez la tarte dès que les pointes sont dorées, généralement au bout de 1 à 2 minutes.",
+            ],
+          },
+          {
+            title: "Chalumeau de cuisine",
+            heat: "Chalumeau de cuisine",
+            wait: "Jusqu’à ce que les pointes soient dorées",
+            instructions: [
+              "Placez la tarte sur une surface résistante à la chaleur.",
+              "Tenez le chalumeau à environ 15 cm des pics.",
+              "Balayez les pics avec la flamme sans l’immobiliser, jusqu’à ce que les pointes soient dorées.",
+            ],
+          },
+        ],
+        instructions: ["Dorez les pointes selon l’une des méthodes suivantes."],
       },
       chill: {
-        title: "Réfrigérer puis servir",
-        timing: "Réfrigération 1–2 h",
+        title: "Réfrigérer la tarte garnie",
+        wait: "1 à 2 h au réfrigérateur",
         instructions: [
-          "Réfrigérez la tarte garnie pendant 1 à 2 heures avant de la servir. Placez-la au réfrigérateur dans les 2 heures suivant la cuisson de la crème.",
-          "Démoulez la tarte froide et tranchez-la verticalement avec un couteau bien aiguisé. Conservez-la au réfrigérateur et servez-la dans les 24 heures pour une texture optimale.",
+          "Réfrigérez la tarte garnie dans les 2 heures suivant la cuisson de la crème.",
+          "Laissez-la au réfrigérateur 1 à 2 heures avant de servir.",
         ],
-        tip: "Essuyez la lame entre chaque part pour obtenir des couches bien nettes.",
         timerLabels: ["Vérifier que la tarte est froide"],
+      },
+      serve: {
+        title: "Découper la tarte froide",
+        tip: "Essuyez la lame entre les parts pour obtenir des couches bien nettes.",
+        instructions: ["Démoulez la tarte froide.", "Découpez-la verticalement avec un couteau bien aiguisé."],
       },
     },
     nutrition: {
@@ -123,6 +230,7 @@ export default {
     },
   },
   "panna-cotta": {
+    restTime: "Trempage selon le paquet, refroidissement puis environ 4 h au frais",
     title: "Panna cotta à la vanille",
     description: "Une panna cotta au lait et à la crème, prise avec de la gélatine en feuille.",
     times: [{ label: "Réfrigération", value: "4 h" }],
@@ -133,29 +241,59 @@ export default {
       gelatine: { name: "de gélatine en feuille", unit: "feuille", note: "environ 2 g pour une feuille de qualité or. Vérifiez les indications du paquet pour votre type de gélatine" },
       vanilla: { name: "d’extrait de vanille", note: "quantité indicative. La recette d’origine ne précise pas de quantité" },
     },
+    setup: ["Prévoyez une petite casserole et des ramequins individuels."],
+    allergens: [
+      "Lait",
+      "Poisson si la gélatine est à base de poisson (vérifiez l’étiquette)",
+    ],
     steps: {
+      soak: {
+        title: "Faire tremper la gélatine",
+        wait: "Selon la durée indiquée sur le paquet",
+        instructions: ["Faites tremper la feuille de gélatine dans de l’eau froide pendant la durée indiquée sur le paquet."],
+        tip: "Faites chauffer la crème pendant que la gélatine ramollit.",
+      },
       heat: {
         title: "Chauffer la crème",
-        instructions: ["Faites tremper la gélatine dans de l’eau froide selon les indications du paquet. Dans une petite casserole, portez juste à ébullition la crème, le lait et la vanille."],
+        heat: "Jusqu’au début de l’ébullition",
+        instructions: [
+          "Versez la crème, le lait et la vanille dans une petite casserole.",
+          "Portez le mélange tout juste à ébullition.",
+        ],
       },
       dissolve: {
-        title: "Ajouter la gélatine",
-        instructions: ["Retirez la casserole du feu. Essorez la gélatine, puis incorporez-la à la crème chaude en remuant jusqu’à dissolution complète."],
+        title: "Dissoudre la gélatine",
+        heat: "Hors du feu",
+        instructions: [
+          "Retirez la casserole du feu.",
+          "Essorez la gélatine ramollie.",
+          "Incorporez la gélatine à la crème chaude en remuant jusqu’à dissolution complète.",
+        ],
+      },
+      cool: {
+        title: "Laisser refroidir la crème en ramequins",
+        wait: "Jusqu’à refroidissement",
+        instructions: [
+          "Versez la crème dans des ramequins.",
+          "Laissez refroidir les ramequins avant de les réfrigérer.",
+        ],
       },
       set: {
-        title: "Laisser prendre en ramequins",
-        timing: "4 h",
-        instructions: ["Versez dans des ramequins, laissez refroidir et réfrigérez environ 4 heures, jusqu’à ce que la panna cotta soit prise."],
-        timerLabels: ["Réfrigérer la panna cotta"],
+        title: "Laisser prendre au réfrigérateur",
+        timing: "Environ 4 h",
+        wait: "Jusqu’à la prise",
+        instructions: ["Réfrigérez les ramequins refroidis pendant environ 4 heures, jusqu’à ce que la panna cotta soit prise."],
+        timerLabels: ["Vérifier la prise"],
       },
     },
     notes: ["Le pouvoir gélifiant des feuilles varie selon la marque. Vérifiez sur le paquet la quantité conseillée pour 245 g de liquide."],
   },
   "creme-brulee": {
+    restTime: "Laisser refroidir, puis réfrigérer quelques heures",
     title: "Crème brûlée",
     description: "Une petite quantité de crème aux œufs cuite doucement à la vapeur.",
-    times: [{ label: "Cuisson", value: "1 h 45 min" }, { label: "Réfrigération", value: "Quelques heures" }],
-    groupTitles: ["Crème aux œufs et sucre à caraméliser"],
+    times: [{ label: "Four vapeur", value: "Environ 1 h 45 au four vapeur" }, { label: "Réfrigération", value: "Quelques heures" }],
+    groupTitles: ["Crème aux œufs", "Croûte de sucre facultative"],
     ingredients: {
       cream: { name: "de crème liquide entière" },
       milk: { name: "de lait" },
@@ -165,26 +303,69 @@ export default {
       vanilla: { name: "d’extrait de vanille", note: "quantité indicative. La recette d’origine ne précise pas de quantité" },
       "topping-sugar": { name: "de sucre", note: "pour caraméliser, facultatif. La recette d’origine ne précise pas de quantité" },
     },
+    setup: ["Utilisez de petits ramequins allant au four. Réglez le four vapeur à 100 °C et à 100 % d’humidité."],
+    allergens: ["Lait", "Œuf"],
     steps: {
       mix: {
         title: "Préparer la crème",
-        instructions: ["Mélangez le lait, la crème et la vanille, puis ajoutez le sucre. Incorporez délicatement le jaune et la quantité de blanc indiquée au fouet. Versez dans de petits ramequins allant au four."],
+        instructions: [
+          "Mélangez le lait, la crème et la vanille.",
+          "Incorporez le sucre en remuant.",
+          "Incorporez délicatement le jaune et la quantité de blanc indiquée au fouet.",
+          "Versez la crème dans de petits ramequins allant au four.",
+        ],
       },
       bake: {
-        title: "Cuire doucement à la vapeur",
-        timing: "100 °C · environ 1 h 45 min",
-        instructions: ["Faites cuire dans un four vapeur réglé à 100 °C et 100 % d’humidité. Les bords doivent être pris et le centre encore légèrement tremblotant."],
-        tip: "Pour un four traditionnel, les notes suggèrent de placer un plat peu profond rempli d’eau sur une grille inférieure. Surveillez la crème, car la durée de cuisson peut varier.",
-        timerLabels: ["Vérifier la cuisson des crèmes"],
+        title: "Cuire les crèmes",
+        timing: "Environ 1 h 45 au four vapeur",
+        instructions: ["Choisissez la méthode adaptée à votre four."],
+        options: [
+          {
+            title: "Four vapeur",
+            heat: "100 °C · 100 % d’humidité",
+            wait: "Environ 1 h 45",
+            instructions: [
+              "Réglez le four vapeur à 100 °C et à 100 % d’humidité.",
+              "Faites cuire les ramequins environ 1 heure 45, jusqu’à ce que les bords soient pris et le centre encore légèrement tremblotant.",
+            ],
+            timers: [{ label: "Vérifier les crèmes au four vapeur", minutes: 105, afterInstruction: 2 }],
+          },
+          {
+            title: "Four traditionnel",
+            heat: "Vapeur d’un plat d’eau",
+            instructions: [
+              "Placez un plat peu profond rempli d’eau sur une grille inférieure, comme le suggèrent les notes de cuisine.",
+              "Faites cuire les crèmes jusqu’à ce que les bords soient pris et le centre encore légèrement tremblotant. Les notes de cuisine ne donnent ni température ni durée vérifiées pour ce mode de cuisson.",
+            ],
+          },
+        ],
+      },
+      cool: {
+        title: "Laisser refroidir les crèmes cuites",
+        wait: "Jusqu’à refroidissement",
+        instructions: [
+          "Sortez les ramequins du four.",
+          "Laissez refroidir les ramequins avant de les réfrigérer.",
+        ],
       },
       chill: {
         title: "Réfrigérer les crèmes",
-        instructions: ["Laissez refroidir les ramequins, puis placez-les quelques heures au réfrigérateur pour que les crèmes prennent complètement."],
-        tip: "Pour obtenir une croûte craquante, saupoudrez une fine couche du sucre prévu pour caraméliser juste avant de servir et faites-la caraméliser au chalumeau de cuisine.",
+        wait: "Quelques heures, jusqu’à la prise",
+        instructions: ["Réfrigérez les ramequins refroidis pendant quelques heures, jusqu’à ce que les crèmes soient bien prises."],
+      },
+      caramelise: {
+        title: "Caraméliser le dessus (facultatif)",
+        heat: "Chalumeau de cuisine",
+        instructions: [
+          "Saupoudrez la crème froide d’une fine couche de sucre juste avant de servir.",
+          "Caramélisez le sucre au chalumeau de cuisine pour former une croûte craquante.",
+        ],
       },
     },
   },
   lemonies: {
+    totalTime: "25–30 min for prep and baking, plus cooling and setting the glaze",
+    restTime: "Cool the cake, then let the glaze set",
     title: "Lemonies",
     description: "Soft lemon squares with a tangy lemon glaze.",
     times: [{ label: "Prep", value: "10 min" }, { label: "Bake", value: "15–20 min" }],
@@ -201,30 +382,70 @@ export default {
       "icing-sugar": { name: "icing sugar" },
       "icing-juice": { name: "lemon juice" },
     },
+    setup: ["Use an 18 cm square tin. Preheat the fan oven to 165°C."],
+    allergens: [
+      "Wheat (gluten)",
+      "Egg",
+      "Milk",
+    ],
     steps: {
       prepare: {
         title: "Prepare the tin",
-        instructions: ["Preheat the oven to 165°C fan. Grease an 18 cm square tin and line it with baking parchment, leaving two ends overhanging."],
+        instructions: [
+          "Preheat the fan oven to 165°C.",
+          "Grease an 18 cm square tin.",
+          "Line the tin with baking parchment, leaving two tabs overhanging on opposite sides.",
+        ],
       },
       mix: {
-        title: "Mix the batter",
-        instructions: ["Whisk the melted butter and sugar, then beat in the eggs one at a time. Add the lemon juice, the sifted flour and baking powder, then the zest and vanilla. Mix until smooth."],
+        title: "Mix the lemon batter",
+        instructions: [
+          "Whisk the melted butter with the sugar.",
+          "Beat in the eggs one at a time.",
+          "Add the lemon juice.",
+          "Sift the flour and baking powder into the mixture.",
+          "Add the zest and vanilla.",
+          "Mix until the batter is smooth.",
+          "Pour the batter into the prepared tin.",
+        ],
       },
       bake: {
         title: "Bake the lemonies",
-        timing: "165°C fan · 15–20 min",
-        instructions: ["Pour the batter into the tin and bake for 15 to 20 minutes. For a soft texture, start checking at 15 minutes. The surface should be lightly golden. Leave to cool."],
+        heat: "165°C fan",
+        instructions: [
+          "Bake for 15–20 minutes, until the surface is lightly golden.",
+          "Check the colour from 15 minutes for a soft texture.",
+        ],
         timerLabels: ["Check the bake"],
       },
+      cool: {
+        title: "Cool the slab",
+        wait: "Until cool",
+        instructions: ["Leave the baked slab to cool in the tin before glazing."],
+      },
       glaze: {
-        title: "Glaze and slice",
-        instructions: ["Mix the icing sugar and lemon juice. Lift the bake out using the parchment and spread the glaze with a spatula. Let the glaze set before cutting into nine squares."],
-        tip: "Decorate with a little lemon zest, if you like.",
+        title: "Glaze the cooled slab",
+        instructions: [
+          "Mix the icing sugar and lemon juice to make the glaze.",
+          "Lift the cooled slab from the tin by the parchment tabs.",
+          "Spread the glaze over the top with a spatula.",
+        ],
+        tip: "Decorate with a little lemon zest if you like.",
+      },
+      slice: {
+        title: "Let the glaze set before slicing",
+        wait: "Until the glaze sets",
+        instructions: [
+          "Let the glaze set.",
+          "Cut the glazed slab into nine squares.",
+        ],
       },
     },
     source: { credit: "Recipe adapted from" },
   },
   "berry-tiramisu": {
+    totalTime: "Environ 4 h 10 pour 4 h de réfrigération",
+    restTime: "10 min d’infusion, puis 2 à 4 h au frais",
     title: "Tiramisu aux fruits rouges",
     description: "Des couches de biscuits imbibés de sirop aux fruits rouges, de fruits frais et de crème fouettée au mascarpone.",
     times: [{ label: "Réfrigération", value: "2–4 h" }],
@@ -245,30 +466,78 @@ export default {
       almonds: { name: "d’amandes effilées grillées", note: "quantité indicative pour la garniture. La recette d’origine ne précise pas de quantité" },
       "extra-berries": { name: "de fruits rouges supplémentaires", note: "quantité indicative pour la garniture. La recette d’origine ne précise pas de quantité" },
     },
+    setup: ["Prévoyez un plat carré de 20 cm et environ 14 biscuits à la cuillère par couche."],
+    allergens: [
+      "Lait",
+      "Blé (gluten) et œuf dans les biscuits à la cuillère (vérifiez l’étiquette)",
+      "Amandes",
+    ],
+    storage: { fridge: "Couvrez les restes et conservez-les au réfrigérateur pendant un jour au maximum." },
     steps: {
+      "heat-syrup": {
+        title: "Dissoudre le sucre du sirop",
+        instructions: [
+          "Réunissez l’eau et le sucre du sirop dans une casserole.",
+          "Faites chauffer jusqu’à dissolution du sucre.",
+        ],
+      },
       syrup: {
         title: "Faire infuser les fruits",
-        timing: "10 min",
-        instructions: ["Faites chauffer l’eau et le sucre du sirop dans une casserole jusqu’à dissolution du sucre. Hors du feu, ajoutez les fruits et laissez infuser 10 minutes. Égouttez les fruits en récupérant le sirop. Ajoutez la crème de cassis au sirop, si vous en utilisez."],
-        timerLabels: ["Laisser infuser les fruits"],
+        heat: "Hors du feu",
+        wait: "10 min",
+        instructions: [
+          "Retirez la casserole du feu.",
+          "Ajoutez les fraises, les framboises et les myrtilles.",
+          "Laissez infuser les fruits pendant 10 minutes.",
+          "Égouttez les fruits au-dessus d’un bol pour récupérer le sirop.",
+          "Incorporez la crème de cassis au sirop si vous en utilisez.",
+        ],
+        timerLabels: ["Égoutter les fruits"],
       },
       whip: {
-        title: "Fouetter la crème",
-        instructions: ["Fouettez la crème, le sucre et la vanille jusqu’à ce que la crème forme des pics souples. Ajoutez le mascarpone et continuez à fouetter juste assez pour obtenir des pics fermes."],
+        title: "Fouetter la crème au mascarpone",
+        instructions: [
+          "Fouettez la crème, le sucre et la vanille jusqu’à la formation de pics souples.",
+          "Ajoutez le mascarpone.",
+          "Fouettez juste assez pour que la crème forme des pics fermes.",
+        ],
+      },
+      dip: {
+        title: "Tapisser le plat de biscuits imbibés",
+        instructions: [
+          "Trempez brièvement la première moitié des biscuits dans le sirop, un par un.",
+          "Disposez-les en une seule couche dans un plat carré de 20 cm.",
+        ],
+        tip: "La recette d’origine compte environ 14 biscuits par couche. Un trempage bref les garde entiers.",
       },
       layer: {
-        title: "Monter le tiramisu",
-        instructions: ["Trempez brièvement les biscuits dans le sirop et disposez-les en une seule couche dans un plat carré de 20 cm. Recouvrez de la moitié des fruits puis de la moitié de la crème. Répétez avec une seconde couche de biscuits imbibés, le reste des fruits et le reste de la crème."],
-        tip: "Trempez les biscuits un par un pour qu’ils restent entiers. La recette d’origine en compte environ 14 par couche.",
+        title: "Monter les couches de fruits et de crème",
+        instructions: [
+          "Répartissez la moitié des fruits égouttés sur les biscuits.",
+          "Recouvrez les fruits avec la moitié de la crème au mascarpone.",
+          "Trempez brièvement le reste des biscuits dans le sirop.",
+          "Disposez les biscuits imbibés sur la crème.",
+          "Recouvrez les biscuits avec le reste des fruits.",
+          "Étalez le reste de crème sur les fruits.",
+        ],
       },
       chill: {
-        title: "Réfrigérer et décorer",
-        timing: "2–4 h",
-        instructions: ["Couvrez le plat et réfrigérez 2 à 4 heures. Avant de servir, saupoudrez de sucre glace et ajoutez les amandes grillées et les fruits frais."],
-        timerLabels: ["Réfrigérer le tiramisu"],
+        title: "Réfrigérer le tiramisu",
+        wait: "2–4 h",
+        instructions: [
+          "Couvrez le plat.",
+          "Réfrigérez 2 à 4 heures avant de garnir.",
+        ],
+        timerLabels: ["Vérifier le tiramisu réfrigéré"],
+      },
+      garnish: {
+        title: "Décorer juste avant de servir",
+        instructions: [
+          "Saupoudrez le tiramisu froid de sucre glace.",
+          "Parsemez le dessus d’amandes grillées et de fruits rouges supplémentaires.",
+        ],
       },
     },
-    notes: ["Couvrez les restes et conservez-les au réfrigérateur pendant un jour au maximum."],
     source: { credit: "Recette adaptée de", label: "Bigger Bolder Baking, par Gemma Stafford" },
   },
   waffles: {
@@ -285,26 +554,64 @@ export default {
       milk: { name: "de lait entier" },
       butter: { name: "de beurre fondu", note: "tiède" },
     },
+    setup: [
+      "Prévoyez un gaufrier. Vérifiez dans sa notice la quantité de pâte par gaufre.",
+    ],
+    allergens: ["Blé (gluten)", "Œufs", "Lait"],
     steps: {
       dry: {
         title: "Mélanger les ingrédients secs",
-        instructions: ["Mélangez au fouet la farine, la levure chimique, le sucre vanillé et le sel."],
+        instructions: [
+          "Mélangez au fouet la farine, la levure chimique, le sucre vanillé et le sel.",
+        ],
       },
       batter: {
-        title: "Fouetter la pâte",
-        instructions: ["Battez légèrement les œufs, incorporez-les au fouet aux ingrédients secs, puis versez le lait progressivement. Fouettez pour éliminer les grumeaux et ajoutez le beurre fondu tiède."],
-        tip: "Pour des gaufres plus légères, séparez les blancs des jaunes dès le départ. Incorporez les jaunes à la pâte, montez les blancs en neige ferme, puis ajoutez-les délicatement après le beurre.",
+        title: "Préparer la pâte",
+        instructions: [],
+        options: [
+          {
+            title: "Aux œufs entiers",
+            instructions: [
+              "Battez légèrement les œufs.",
+              "Incorporez les œufs au fouet aux ingrédients secs.",
+              "Incorporez progressivement le lait au fouet jusqu’à obtenir une pâte lisse.",
+              "Incorporez le beurre fondu tiède.",
+            ],
+          },
+          {
+            title: "Aux blancs en neige pour des gaufres plus légères",
+            instructions: [
+              "Séparez les blancs des jaunes.",
+              "Incorporez les jaunes au fouet aux ingrédients secs.",
+              "Incorporez progressivement le lait au fouet jusqu’à obtenir une pâte lisse.",
+              "Incorporez le beurre fondu tiède.",
+              "Montez les blancs réservés en neige ferme.",
+              "Incorporez délicatement les blancs à la pâte.",
+            ],
+          },
+        ],
       },
       rest: {
         title: "Laisser reposer la pâte",
-        timing: "1 h au réfrigérateur",
-        instructions: ["Couvrez la pâte et placez-la une heure au réfrigérateur. Elle doit légèrement épaissir."],
-        timerLabels: ["Laisser reposer la pâte"],
+        instructions: [
+          "Couvrez le bol.",
+          "Réfrigérez pendant 1 heure, jusqu’à ce que la pâte ait légèrement épaissi.",
+        ],
+        wait: "1 h au réfrigérateur",
+        timerLabels: ["Vérifier la pâte reposée"],
       },
       cook: {
-        title: "Cuire les gaufres",
-        timing: "3–5 min par gaufre",
-        instructions: ["Faites chauffer le gaufrier à température moyenne à élevée. Faites cuire les gaufres par fournées pendant environ 3 à 5 minutes chacune, jusqu’à ce qu’elles soient dorées. Pour la quantité de pâte à verser, suivez la notice du gaufrier."],
+        title: "Cuire les gaufres par fournées",
+        instructions: [
+          "Faites chauffer le gaufrier à puissance moyenne à forte.",
+          "Versez dans le gaufrier la quantité de pâte indiquée dans la notice.",
+          "Faites cuire 3 à 5 minutes, jusqu’à ce que la gaufre soit dorée.",
+          "Retirez la gaufre cuite.",
+          "Recommencez avec le reste de la pâte.",
+        ],
+        timing: "3 à 5 min par gaufre",
+        heat: "Gaufrier à puissance moyenne à forte",
+        timerLabels: ["Vérifier la gaufre"],
       },
     },
     notes: [
@@ -313,6 +620,8 @@ export default {
     ],
   },
   "strawberry-yoghurt-lollies": {
+    totalTime: "Au moins 6 h, plus le mixage et le démoulage",
+    restTime: "Au moins 6 h au congélateur, puis 10 à 15 min pour assouplir si souhaité",
     title: "Bâtonnets glacés à la fraise et au yaourt",
     description: "Des glaces crémeuses à la fraise, à la banane et au yaourt grec.",
     yield: "Environ 5 bâtonnets",
@@ -325,20 +634,47 @@ export default {
       glucose: { name: "de sirop de glucose" },
       "lemon-juice": { name: "de jus de citron", note: "facultatif" },
     },
+    setup: [
+      "Prévoyez un blender, des moules à glaces et des bâtonnets.",
+    ],
+    allergens: ["Lait"],
     steps: {
       blend: {
         title: "Mixer les fruits et le yaourt",
-        instructions: ["Mettez le yaourt, les fraises, la banane, le sirop de glucose et, si vous en utilisez, le jus de citron dans un blender. Mixez jusqu’à obtenir une préparation lisse."],
+        instructions: [
+          "Mettez le yaourt, les fraises, la banane, le sirop de glucose et le jus de citron facultatif dans le blender.",
+          "Mixez jusqu’à obtenir une préparation lisse.",
+        ],
+      },
+      fill: {
+        title: "Remplir les moules",
+        instructions: [
+          "Versez la préparation dans les moules à glaces.",
+          "Insérez les bâtonnets.",
+        ],
       },
       freeze: {
-        title: "Remplir les moules et congeler",
-        timing: "Au moins 6 h",
-        instructions: ["Versez dans des moules à bâtonnets glacés, insérez les bâtonnets et placez au congélateur au moins 6 heures ou toute une nuit."],
-        timerLabels: ["Congeler les bâtonnets"],
+        title: "Congeler les bâtonnets",
+        instructions: [
+          "Placez les moules remplis au congélateur pendant au moins 6 heures ou toute une nuit, jusqu’à ce que les glaces soient prises.",
+        ],
+        wait: "Au moins 6 h ou toute une nuit",
+        timerLabels: ["Vérifier la prise des glaces"],
       },
       release: {
         title: "Démouler les bâtonnets",
-        instructions: ["Passez brièvement l’extérieur des moules sous l’eau tiède. Pour une texture plus tendre, laissez les bâtonnets s’assouplir 10 à 15 minutes."],
+        instructions: [
+          "Passez brièvement l’extérieur de chaque moule sous l’eau tiède.",
+          "Démoulez chaque glace en tirant doucement sur son bâtonnet.",
+        ],
+      },
+      soften: {
+        title: "Laisser s’attendrir, si souhaité",
+        instructions: [
+          "Laissez les glaces s’attendrir 10 à 15 minutes si vous préférez une texture plus tendre.",
+        ],
+        wait: "10 à 15 min, facultatif",
+        timerLabels: ["Vérifier la texture"],
       },
     },
     notes: [

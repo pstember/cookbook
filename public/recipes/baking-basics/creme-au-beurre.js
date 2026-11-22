@@ -14,18 +14,48 @@ export default {
       { id: "liquid", name: "whole milk", gramRange: [45, 60], quantity: "3–4", unit: "tbsp", weightEstimate: true, note: "or infused milk, juice or another liquid" },
     ],
   }],
+  yield: "Ices 12 cupcakes or 1 layer cake",
+  totalTime: "About 15 min",
+  allergens: ["Milk"],
   steps: [
     {
-      id: "beat-butter", title: "Beat the butter", art: "whisk", tone: "pink",
+      id: "beat-butter",
+      title: "Beat the butter",
+      activity: "prep",
+      tone: "pink",
+      uses: ["butter"],
       instructions: ["Beat the softened butter until smooth and pale."],
     },
     {
-      id: "add-sugar", title: "Add the icing sugar", art: "whisk", tone: "yellow",
-      instructions: ["Beat in the sifted icing sugar in batches. Scrape down the sides of the bowl so the buttercream mixes evenly."],
+      id: "add-sugar",
+      title: "Add the icing sugar",
+      activity: "prep",
+      tone: "pink",
+      uses: ["butter", "sugar"],
+      instructions: [
+        "Beat in the sifted icing sugar in batches.",
+        "Scrape down the sides of the bowl between additions.",
+      ],
     },
     {
-      id: "adjust", title: "Adjust the consistency", art: "whisk", tone: "blue",
-      instructions: ["Beat in the liquid about 15 g (1 tbsp) at a time until the buttercream is smooth and soft enough to spread or pipe."],
+      id: "adjust",
+      title: "Adjust the consistency",
+      activity: "prep",
+      tone: "pink",
+      uses: ["butter", "sugar", "liquid"],
+      instructions: [
+        "Beat in the liquid about 15 g (1 tbsp) at a time, until the buttercream is smooth and soft enough to spread or pipe.",
+      ],
+    },
+  ],
+  notes: [
+    "Add the liquid a spoonful at a time. Stop when the cream is soft enough for your piping bag or palette knife.",
+    {
+      text: "The batch size and preparation time are from Cupcake Jemma’s written recipe.",
+      source: {
+        url: "https://cupcakejemma.com/products/classic-american-buttercream-recipe",
+        label: "Classic American Buttercream",
+      },
     },
   ],
   source: {

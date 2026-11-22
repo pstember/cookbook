@@ -19,9 +19,17 @@ export default {
   ],
   simmer: [
     {
+      en: "Simmer the chicken and vegetables under a lid before adding the whole butter beans.",
+      fr: "Faites mijoter le poulet et les légumes à couvert avant d’ajouter les gros haricots entiers.",
+    },
+  ],
+  reduce: [
+    {
       en: "Stir in the whole butter beans and let the sauce thicken uncovered.",
       fr: "Incorporez les haricots de Lima entiers et laissez la sauce épaissir à découvert.",
     },
+  ],
+  finish: [
     {
       en: "Check that the centre of a thick piece of chicken reaches 74°C (165°F).",
       fr: "Vérifiez qu’un morceau épais de poulet atteint 74 °C (165 °F) à cœur.",

@@ -70,23 +70,61 @@ test("recipe plans preserve their step links and have complete translations", ()
   }
 });
 
-test("instruction-linked timers have the same valid position and duration in both languages", () => {
+function checkActions(stage, copy, localized, path) {
+  for (const field of ["title", "heat", "wait", "timing"]) {
+    if (!stage[field] && !copy[field]) continue;
+    assert.ok(stage[field]?.trim() && copy[field]?.trim(), `${path}/${field}`);
+    assert.equal(localized[field], copy[field], `${path}/${field}`);
+  }
+  assert.ok(stage.title?.trim(), path);
+  assert.equal(copy.instructions.length, stage.instructions.length, path);
+  assert.ok([...stage.instructions, ...copy.instructions].every(text => typeof text === "string" && text.trim()), path);
+  assert.deepEqual(localized.instructions, copy.instructions, path);
+  assert.ok(stage.instructions.length || stage.options?.length, path);
+
+  const timers = stage.timers ?? [];
+  assert.equal(localized.timers?.length ?? 0, timers.length, `${path}/timers`);
+  for (const [index, timer] of timers.entries()) {
+    const key = `${path}/timer-${index + 1}`;
+    const translated = localized.timers[index];
+    const translatedLabel = copy.timerLabels?.[index] ?? copy.timers?.[index]?.label;
+    assert.ok(timer.label?.trim() && translatedLabel?.trim(), key);
+    assert.equal(translated.label, translatedLabel, key);
+    assert.ok(Number.isFinite(timer.minutes) && timer.minutes > 0, key);
+    assert.ok(Number.isInteger(timer.afterInstruction), key);
+    assert.ok(timer.afterInstruction >= 1 && timer.afterInstruction <= stage.instructions.length, key);
+    assert.equal(translated.afterInstruction, timer.afterInstruction, key);
+    assert.equal(translated.minutes, timer.minutes, key);
+  }
+}
+
+test("stages and choices have matching bilingual actions, pills and instruction-linked timers", () => {
   for (const recipe of recipes) {
     const alternate = recipe.lang === "fr" ? "en" : "fr";
     const localized = recipeForLocale(recipe, alternate);
-    for (const [stepIndex, step] of recipe.steps.entries()) {
-      for (const [timerIndex, timer] of (step.timers ?? []).entries()) {
-        if (timer.afterInstruction === undefined) continue;
-        const path = `${recipe.id}/${step.id}/${timerIndex}`;
-        const translatedStep = localized.steps[stepIndex];
-        const translatedTimer = translatedStep.timers[timerIndex];
-        assert.ok(Number.isInteger(timer.afterInstruction), path);
-        assert.ok(timer.afterInstruction >= 1 && timer.afterInstruction <= step.instructions.length, path);
-        assert.ok(translatedStep.instructions[timer.afterInstruction - 1], path);
-        assert.equal(translatedTimer.afterInstruction, timer.afterInstruction, path);
-        assert.equal(translatedTimer.minutes, timer.minutes, path);
-        assert.ok(translations[recipe.id].steps[step.id].timerLabels[timerIndex], path);
+    const translated = translations[recipe.id];
+    for (const [index, stage] of recipe.steps.entries()) {
+      const copy = translated.steps[stage.id];
+      const local = localized.steps[index];
+      const path = `${recipe.id}/${stage.id}`;
+      checkActions(stage, copy, local, path);
+      const options = stage.options ?? [];
+      assert.equal(copy.options?.length ?? 0, options.length, path);
+      if (options.length) assert.ok(options.length >= 2, path);
+      for (const [i, option] of options.entries()) {
+        checkActions(option, copy.options[i], local.options[i], `${path}/option-${i + 1}`);
       }
+    }
+    for (const field of ["allergens", "setup"]) {
+      if (field === "setup" && !recipe.setup && !translated.setup) continue;
+      assert.ok(Array.isArray(recipe[field]), `${recipe.id}/${field}`);
+      assert.equal(translated[field]?.length, recipe[field].length, `${recipe.id}/${field}`);
+      assert.ok([...translated[field], ...recipe[field]].every(text => typeof text === "string" && text.trim()), recipe.id);
+    }
+    assert.deepEqual(Object.keys(translated.storage ?? {}).sort(), Object.keys(recipe.storage ?? {}).sort(), recipe.id);
+    for (const [location, text] of Object.entries(recipe.storage ?? {})) {
+      assert.ok(["counter", "fridge", "freezer"].includes(location), `${recipe.id}/storage/${location}`);
+      assert.ok(text.trim() && translated.storage[location].trim(), `${recipe.id}/storage/${location}`);
     }
   }
 });

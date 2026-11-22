@@ -67,7 +67,7 @@
 .catalogue-card-image {
   width: 100%;
   height: auto;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: contain;
   background: #faf2e3;
 }
@@ -113,7 +113,7 @@
 .catalogue-card-media {
   display: grid;
   place-items: center;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-bottom: 1px solid var(--rule);
   border-radius: calc(var(--radius-panel) - 1px) calc(var(--radius-panel) - 1px) 0 0;

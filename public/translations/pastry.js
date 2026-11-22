@@ -1,5 +1,6 @@
 export default {
   "pate-brisee": {
+    restTime: "Chill until needed. Can be made the day before.",
     title: "Shortcrust pastry",
     description: "A butter and egg yolk pastry for sweet or savoury tarts.",
     groupTitles: ["Pastry"],
@@ -10,26 +11,51 @@ export default {
       yolk: { name: "egg yolk" },
       water: { name: "water", note: "adjust to achieve the right consistency" },
     },
+    allergens: ["Wheat (gluten)", "Egg", "Milk"],
     steps: {
       "rub-in": {
         title: "Rub in the butter",
-        instructions: [
-          "Mix the flour, salt and pieces of butter. Work them together with a stand mixer fitted with the paddle attachment or rub them in with your fingertips until the mixture resembles coarse sand.",
+        instructions: ["Put the flour, salt and butter pieces in a bowl."],
+        options: [
+          {
+            title: "By hand",
+            instructions: ["Rub the mixture between your fingertips until it feels like coarse sand."],
+          },
+          {
+            title: "Stand mixer",
+            instructions: [
+              "Work the mixture with the paddle attachment until it resembles coarse sand.",
+            ],
+          },
         ],
       },
       form: {
-        title: "Bring the pastry together",
+        title: "Bring the dough together",
         instructions: [
-          "Add the yolk, then pour in the water a little at a time. Stop mixing as soon as the dough comes together and holds without crumbling.",
-          "Turn the dough onto the work surface and briefly push it away from you with the heel of your hand to flatten any visible pieces of butter. Gather it together with a dough scraper or spatula.",
+          "Mix in the yolk.",
+          "Add the water a little at a time, just until the dough holds together without crumbling.",
+        ],
+      },
+      fraise: {
+        title: "Smooth out the butter",
+        instructions: [
+          "Turn the dough onto the work surface.",
+          "Press it away from you briefly with the heel of your hand to flatten any visible butter pieces.",
+          "Gather the dough with a scraper or spatula.",
         ],
       },
       rest: {
         title: "Chill the pastry",
-        instructions: [
-          "Wrap the pastry and refrigerate it until needed. You can make it several hours ahead or the day before.",
-        ],
+        wait: "Until needed",
+        instructions: ["Wrap the dough.", "Refrigerate it until needed."],
+        tip: "You can prepare the pastry several hours ahead or the day before.",
       },
+    },
+    notes: [
+      "Stop mixing as soon as the dough holds together. Add the water gradually so you can judge when it has enough.",
+    ],
+    storage: {
+      fridge: "Keep wrapped for several hours or overnight before using.",
     },
     source: {
       credit: "Technique from",
@@ -38,6 +64,7 @@ export default {
   },
 
   genoise: {
+    restTime: "Cool on a rack before filling",
     title: "Genoise sponge",
     description: "A light sponge made by whipping the egg and sugar together until airy, ready to fill or decorate.",
     times: [{ label: "Baking", value: "25 min" }],
@@ -50,31 +77,57 @@ export default {
       "tin-flour": { name: "flour", note: "for dusting the tin if you aren’t lining it" },
       salt: { name: "salt", note: "optional, up to 1 pinch" },
     },
+    allergens: ["Wheat (gluten)", "Egg", "Milk (if using butter)"],
+    setup: ["Use a 20 cm tin. Preheat the oven to 180 °C."],
     steps: {
       prepare: {
         title: "Prepare the tin",
-        instructions: [
-          "Preheat the oven to 180 °C. Grease a 20 cm tin and dust with the 5 g of flour set aside for the tin, or line the base and sides with baking parchment.",
+        instructions: ["Preheat the oven to 180 °C."],
+        options: [
+          {
+            title: "Grease and flour",
+            instructions: [
+              "Grease the 20 cm tin with butter or oil.",
+              "Dust the greased tin with the 5 g of flour set aside for it.",
+            ],
+          },
+          {
+            title: "Baking parchment",
+            instructions: ["Line the base and sides of the 20 cm tin with baking parchment."],
+          },
         ],
       },
       whip: {
-        title: "Whip the egg and fold in the flour",
-        timing: "10 min",
+        title: "Whip the egg and sugar",
         instructions: [
           "Whisk the egg and sugar for 10 minutes, until creamy and tripled in volume.",
-          "Sift the flour with the salt, if using. Fold it in gently with a spatula to keep as much air in the mixture as possible.",
         ],
         timerLabels: ["Whisk the egg and sugar"],
       },
-      bake: {
-        title: "Bake the genoise",
-        timing: "180 °C · 25 min",
+      fold: {
+        title: "Fold in the flour",
         instructions: [
-          "Pour the batter into the tin and bake for 25 minutes. Turn the sponge out onto a wire rack and let it cool before filling or decorating.",
+          "Sift the flour with the salt, if using.",
+          "Fold it gently into the whipped egg with a spatula.",
+          "Pour the batter into the prepared tin.",
         ],
+      },
+      bake: {
+        title: "Bake the sponge",
+        heat: "180 °C",
+        instructions: ["Bake at 180 °C for 25 minutes."],
         timerLabels: ["Bake the genoise"],
       },
+      cool: {
+        title: "Cool on a rack",
+        wait: "Until cool",
+        instructions: [
+          "Turn the sponge out onto a wire rack.",
+          "Leave it to cool before filling or decorating.",
+        ],
+      },
     },
+    notes: ["Keep the air in the eggs by folding the flour in gently with a spatula."],
     source: {
       credit: "Video",
       label: "Les Secrets de Muriel – Genoise sponge",
@@ -92,27 +145,49 @@ export default {
       flour: { name: "flour" },
       starch: { name: "cornflour" },
     },
+    allergens: ["Wheat (gluten)", "Egg", "Milk"],
     steps: {
+      "heat-milk": {
+        title: "Bring the milk to the boil",
+        heat: "Hob · bring to the boil",
+        instructions: ["Bring the milk to the boil in a saucepan."],
+        tip: "Whisk the yolks while the milk heats.",
+      },
       whisk: {
         title: "Whisk the yolks",
         instructions: [
-          "Heat the milk in a saucepan. Meanwhile, whisk the yolks with the sugar. Add the flour and cornflour together and whisk until smooth.",
+          "Whisk the yolks with the sugar.",
+          "Add the flour and cornflour together.",
+          "Whisk until smooth.",
+        ],
+      },
+      temper: {
+        title: "Temper the yolks",
+        heat: "Off the heat",
+        instructions: [
+          "Whisk about 83 g of the boiling milk (one third) into the yolk mixture in a steady stream.",
+          "Pour the mixture back into the pan with the remaining milk.",
         ],
       },
       thicken: {
         title: "Thicken the custard",
+        heat: "Low heat",
         instructions: [
-          "When the milk comes to the boil, pour about 83 g (a third) over the yolks while whisking. Pour the mixture back into the saucepan with the remaining milk.",
-          "Return it to a low heat and stir constantly until the custard thickens and forms large bubbles.",
+          "Return the pan to a low heat.",
+          "Stir continuously until the custard thickens and large bubbles rise through it.",
         ],
       },
       cool: {
         title: "Cool the custard",
+        heat: "Off the heat",
         instructions: [
-          "Transfer to a stainless steel bowl or spread the custard on a tray to stop the cooking. If you are preparing it ahead, press cling film directly against the surface and refrigerate.",
+          "Transfer the custard to a stainless steel bowl or a tray to stop the cooking.",
+          "Press cling film directly against the surface if preparing ahead.",
+          "Refrigerate the covered custard if preparing ahead.",
         ],
       },
     },
+    source: { label: "Author’s cookbook notes" },
     notes: [
       "Useful equipment includes scales, a saucepan, a sieve, a whisk, a spatula and cling film.",
       "The egg whites can be frozen for another recipe.",
@@ -128,6 +203,9 @@ export default {
       sugar: { name: "sucre glace", note: "tamisé" },
       liquid: { name: "lait entier", unit: "c. à soupe", note: "ou du lait infusé, du jus ou un autre liquide" },
     },
+    yield: "Pour glacer 12 cupcakes ou 1 gâteau à étages",
+    totalTime: "Environ 15 min",
+    allergens: ["Lait"],
     steps: {
       "beat-butter": {
         title: "Fouetter le beurre",
@@ -136,7 +214,8 @@ export default {
       "add-sugar": {
         title: "Incorporer le sucre glace",
         instructions: [
-          "Ajoutez le sucre glace tamisé en plusieurs fois, tout en fouettant. Raclez les parois du bol pour obtenir une crème homogène.",
+          "Incorporez le sucre glace tamisé en plusieurs fois, en fouettant.",
+          "Raclez les parois du bol entre les ajouts.",
         ],
       },
       adjust: {
@@ -146,10 +225,22 @@ export default {
         ],
       },
     },
+    notes: [
+      "Dosez le liquide cuillerée par cuillerée. Arrêtez dès que la crème se travaille à la poche ou à la spatule.",
+      {
+        text: "Le rendement et le temps de préparation proviennent de la fiche de Cupcake Jemma.",
+        source: {
+          url: "https://cupcakejemma.com/products/classic-american-buttercream-recipe",
+          label: "Crème au beurre américaine",
+        },
+      },
+    ],
     source: { label: "Cupcake Jemma – Cours de crème au beurre" },
   },
 
   "tarte-aux-pommes": {
+    cookingTime: "Environ 45 min au four, plus la cuisson de la compote",
+    restTime: "Pâte à réfrigérer, compote et tarte cuite à laisser refroidir",
     title: "Tarte aux pommes",
     description: "Une tarte en pâte brisée garnie de compote à la cannelle et de fines lamelles de pommes Golden.",
     times: [
@@ -172,40 +263,112 @@ export default {
       "glaze-yolk": { name: "jaune d’œuf" },
       "glaze-water": { name: "eau", unit: "c. à soupe" },
     },
+    allergens: ["Blé (gluten)", "Œuf", "Lait"],
+    setup: [
+      "Utilisez un moule à tarte. Préchauffez le four à 180 °C avant la cuisson à blanc.",
+    ],
     steps: {
       "make-pastry": {
-        title: "Préparer la pâte",
+        title: "Préparer la pâte brisée",
         instructions: [
-          "Sablez le beurre avec la farine et le sel. Incorporez le jaune, puis ajoutez l’eau peu à peu jusqu’à ce que la pâte se rassemble. Enveloppez la pâte et laissez-la reposer au réfrigérateur avant de l’étaler et de foncer le moule.",
+          "Sablez le beurre avec la farine et le sel.",
+          "Incorporez le jaune.",
+          "Ajoutez l’eau peu à peu jusqu’à ce que la pâte se rassemble.",
+        ],
+      },
+      "chill-dough": {
+        title: "Faire reposer la pâte",
+        wait: "Au frais avant de l’étaler",
+        instructions: ["Enveloppez la pâte.", "Réfrigérez-la avant de l’étaler."],
+      },
+      roll: {
+        title: "Étaler la pâte",
+        instructions: [
+          "Étalez la pâte reposée en un disque mince sur le plan de travail légèrement fariné.",
+        ],
+      },
+      line: {
+        title: "Foncer le moule",
+        instructions: ["Foncez le fond et les bords du moule à tarte avec la pâte."],
+      },
+      "weight-shell": {
+        title: "Lester le fond de tarte",
+        instructions: [
+          "Préchauffez le four à 180 °C.",
+          "Recouvrez la pâte de papier cuisson.",
+          "Remplissez le fond de tarte de billes de cuisson.",
         ],
       },
       "blind-bake": {
         title: "Cuire le fond à blanc",
-        timing: "180 °C · 15 min",
+        heat: "180 °C",
         instructions: [
-          "Préchauffez le four à 180 °C. Recouvrez la pâte de papier cuisson et ajoutez des poids de cuisson. Enfournez 15 minutes, puis retirez le papier et les poids.",
+          "Enfournez le fond lesté à 180 °C pour 15 minutes.",
+          "Retirez ensemble le papier et les billes.",
         ],
         timerLabels: ["Cuire le fond de tarte à blanc"],
       },
       compote: {
-        title: "Cuire la compote",
+        title: "Cuire les pommes",
+        heat: "Sur le feu",
         instructions: [
-          "Faites cuire les morceaux de pomme avec l’eau, la cannelle et le jus de citron jusqu’à ce qu’ils soient tendres. Retirez le bâton de cannelle si vous en avez utilisé. Écrasez ou mixez selon la texture souhaitée, sucrez à votre goût et laissez refroidir.",
+          "Réunissez les morceaux de pomme à cuire, l’eau, la cannelle et le jus de citron dans une casserole.",
+          "Faites cuire jusqu’à ce que les pommes soient tendres.",
+        ],
+      },
+      texture: {
+        title: "Choisir la texture de la compote",
+        heat: "Hors du feu",
+        instructions: ["Retirez le bâton de cannelle si vous en avez utilisé un."],
+        options: [
+          {
+            title: "Avec des morceaux",
+            instructions: ["Écrasez les pommes en gardant quelques morceaux."],
+          },
+          {
+            title: "Lisse",
+            instructions: ["Mixez les pommes en purée lisse."],
+          },
+        ],
+      },
+      "cool-compote": {
+        title: "Refroidir la compote",
+        wait: "Jusqu’à refroidissement",
+        instructions: [
+          "Sucrez à votre goût si nécessaire.",
+          "Laissez refroidir la compote avant de garnir le fond de tarte.",
         ],
       },
       assemble: {
-        title: "Garnir et dorer la tarte",
+        title: "Garnir le fond de tarte",
+        instructions: ["Étalez la compote refroidie en couche régulière sur le fond de tarte."],
+      },
+      arrange: {
+        title: "Disposer les lamelles de pomme",
         instructions: [
-          "Étalez la compote sur le fond de tarte. Coupez les pommes Golden en fines lamelles et disposez-les sur la compote.",
-          "Mélangez le jaune restant avec 15 g d’eau (1 c. à soupe) et badigeonnez-en les lamelles de pomme.",
+          "Coupez les pommes Golden en fines lamelles.",
+          "Disposez les lamelles sur la compote en les faisant se chevaucher.",
+        ],
+      },
+      glaze: {
+        title: "Dorer les pommes",
+        instructions: [
+          "Mélangez le jaune restant avec 15 g d’eau (1 c. à soupe).",
+          "Badigeonnez légèrement les lamelles de pomme de dorure.",
         ],
       },
       bake: {
-        title: "Terminer la cuisson",
-        timing: "180 °C · environ 30 min",
+        title: "Cuire la tarte",
+        timing: "Environ 30 min",
+        heat: "180 °C",
         instructions: [
-          "Enfournez à 180 °C pendant environ 30 minutes, jusqu’à ce que la pâte soit dorée et les lamelles de pomme tendres. Laissez refroidir la tarte avant de la démouler.",
+          "Enfournez à 180 °C pour environ 30 minutes, jusqu’à ce que la pâte soit dorée et les pommes tendres.",
         ],
+      },
+      cool: {
+        title: "Refroidir avant de démouler",
+        wait: "Jusqu’à refroidissement",
+        instructions: ["Laissez refroidir la tarte dans son moule.", "Démoulez la tarte refroidie."],
       },
     },
     notes: [
@@ -215,6 +378,8 @@ export default {
   },
 
   "bavarois-aux-fraises": {
+    totalTime: "Prepare the day before serving",
+    cookingTime: "About 18 min for the sponge, plus heating the two fruit mixtures",
     title: "Strawberry bavarois",
     description: "A thin genoise topped with strawberry mousse and a strawberry coulis that sets overnight in the fridge.",
     times: [
@@ -238,57 +403,161 @@ export default {
       "topping-gelatin": { name: "200 Bloom powdered gelatine", note: "or 3 g of leaf gelatine of the same strength (about 1½ leaves)" },
       "topping-water": { name: "very cold water", note: "for the powdered gelatine" },
     },
+    yield: "One 18 cm bavarois (6–8 portions)",
+    restTime: "2½–3 h for the mousse, then overnight, plus cooling",
+    allergens: ["Wheat (gluten)", "Egg", "Milk", "Fish (if using fish gelatine)"],
+    setup: [
+      "Bake in an 18 cm tin. Cut a 16 cm sponge disc and assemble in a ring 18 cm across and 4.5 cm high.",
+      "Preheat the fan oven to 160 °C before baking.",
+    ],
     steps: {
       bloom: {
-        title: "Bloom both portions of gelatine",
-        timing: "At least 20 min",
+        title: "Hydrate the gelatine",
+        wait: "At least 20 min in cold water",
         instructions: [
-          "In separate bowls, mix 8 g of powdered gelatine with 40 g of water and 3 g of powdered gelatine with 15 g of water. Leave to bloom for at least 20 minutes.",
-          "If using leaves, soak 8 g (about 4 leaves) and 3 g (about 1½ leaves) separately in two bowls of very cold water. Squeeze them out before adding them.",
+          "Keep the 8 g mousse portion separate from the 3 g coulis portion.",
+          "Allow at least 20 minutes from the moment both portions are in cold water.",
         ],
-        timerLabels: ["Bloom the gelatine"],
+        options: [
+          {
+            title: "Powdered gelatine",
+            instructions: [
+              "Mix 8 g of powder with 40 g of very cold water in one bowl.",
+              "Mix 3 g of powder with 15 g of very cold water in another bowl.",
+            ],
+          },
+          {
+            title: "Leaf gelatine",
+            instructions: [
+              "Soak 8 g of leaves (about 4 leaves) in a bowl of very cold water.",
+              "Soak 3 g of leaves (about 1½ leaves) in a second bowl of very cold water.",
+              "Squeeze out each portion just before adding it to the hot fruit.",
+            ],
+          },
+        ],
+        timerLabels: ["Check the hydrated gelatine"],
+      },
+      "make-sponge": {
+        title: "Mix the sponge batter",
+        timing: "Whisk for about 10 min",
+        instructions: [
+          "Preheat the fan oven to 160 °C.",
+          "Grease an 18 cm tin.",
+          "Whisk the egg and sugar for about 10 minutes.",
+          "Sift the flour with the salt, if using.",
+          "Fold the flour into the whipped egg with a spatula.",
+          "Pour the batter into the tin.",
+        ],
       },
       sponge: {
         title: "Bake the sponge",
-        timing: "160 °C fan · about 18 min",
-        instructions: [
-          "Whisk the egg and sugar for about 10 minutes, then fold in the sifted flour and the salt, if using, with a spatula. Pour into a greased 18 cm tin.",
-          "Bake for about 18 minutes at 160 °C fan. Cool on a rack before cutting out a 16 cm disc.",
-        ],
+        timing: "About 18 min",
+        heat: "160 °C fan",
+        instructions: ["Bake the sponge for about 18 minutes at 160 °C fan."],
         timerLabels: ["Bake the sponge"],
       },
-      mousse: {
-        title: "Prepare the mousse",
+      "cut-sponge": {
+        title: "Cool and cut the sponge disc",
+        wait: "Until cool before cutting",
+        instructions: ["Cool the sponge on a wire rack.", "Cut a 16 cm disc from the cooled sponge."],
+      },
+      "heat-mousse-fruit": {
+        title: "Heat the mousse purée",
+        heat: "Hob · first boil",
         instructions: [
-          "Blend the 350 g of strawberries with the 75 g of sugar. Heat until it just comes to the boil. Remove from the heat, add the larger portion of gelatine and stir until it dissolves.",
-          "Pour into a wide dish and let cool to room temperature. Whip the cold cream, gradually increasing the speed, then fold in the purée with a spatula.",
+          "Blend 350 g of strawberries with 75 g of sugar.",
+          "Heat the purée in a saucepan until it just comes to the boil.",
         ],
-        tip: "On a 25 cm plate, the purée can cool in about 40 minutes.",
+      },
+      "dissolve-mousse": {
+        title: "Dissolve the mousse gelatine",
+        heat: "Off the heat",
+        instructions: [
+          "Take the pan off the heat.",
+          "Add the larger portion of hydrated gelatine to the hot purée.",
+          "Stir until dissolved.",
+        ],
+      },
+      "cool-puree": {
+        title: "Cool the purée",
+        timing: "About 40 min on a 25 cm plate",
+        wait: "Until at room temperature",
+        instructions: [
+          "Pour the purée into a wide dish.",
+          "Leave it to cool to room temperature before folding it into the cream.",
+        ],
+      },
+      mousse: {
+        title: "Fold the mousse",
+        instructions: [
+          "Whip the cold cream, gradually increasing the speed.",
+          "Fold the room-temperature purée into the whipped cream with a spatula.",
+        ],
       },
       "set-mousse": {
-        title: "Assemble and chill the mousse",
-        timing: "Chill · 2 hr 30 min to 3 hr",
+        title: "Assemble the mousse layer",
         instructions: [
-          "Stretch cling film tightly across the base of an 18 cm cake ring and place it on a flat surface. Line the sides with acetate if you have it.",
-          "Centre the 16 cm sponge disc inside the ring. Pour in the mousse, leaving about 3 mm at the top for the coulis. Refrigerate until the surface is firm, 2 hours 30 minutes to 3 hours.",
+          "Stretch cling film tightly across the base of an 18 cm cake ring.",
+          "Set the ring on a flat surface.",
+          "Line the sides with acetate if available.",
+          "Centre the 16 cm sponge disc inside the ring.",
+          "Pour in the mousse, leaving about 3 mm at the top for the coulis.",
         ],
         tip: "Serve any leftover mousse in a small glass with the sponge trimmings.",
+      },
+      "chill-mousse": {
+        title: "Chill until the mousse sets",
+        wait: "In the fridge · until firm",
+        instructions: [
+          "Refrigerate for 2½–3 hours, until the surface is firm enough to support the coulis.",
+        ],
+        tip: "Make and cool the coulis while the mousse sets. Wait until the surface is firm before pouring it on.",
         timerLabels: ["Check whether the mousse has set"],
       },
-      coulis: {
-        title: "Prepare and add the coulis",
+      "heat-coulis": {
+        title: "Heat the coulis",
+        heat: "Hob · bring to the boil",
         instructions: [
-          "Blend the 150 g of strawberries with the 20 g of sugar and bring to the boil. Take off the heat, stir in the smaller portion of gelatine until it dissolves and leave to cool to room temperature.",
-          "Once the mousse is set, gently pour the cooled coulis into the centre and let it spread to the edges.",
+          "Blend the remaining 150 g of strawberries with the 20 g of sugar for the coulis.",
+          "Bring the purée to the boil.",
+        ],
+      },
+      "dissolve-coulis": {
+        title: "Dissolve the coulis gelatine",
+        heat: "Off the heat",
+        wait: "Until at room temperature",
+        instructions: [
+          "Take the purée off the heat.",
+          "Stir the smaller portion of hydrated gelatine into the hot purée until dissolved.",
+          "Let the coulis cool to room temperature.",
+        ],
+      },
+      coulis: {
+        title: "Top the set mousse",
+        instructions: [
+          "Pour the room-temperature coulis gently into the centre of the firm mousse.",
+          "Let it spread to the edges.",
+        ],
+      },
+      "rest-overnight": {
+        title: "Refrigerate overnight",
+        wait: "Overnight in the fridge",
+        instructions: [
+          "Cover the bavarois with a cake dome or an overturned bowl.",
+          "Refrigerate overnight before unmoulding.",
         ],
       },
       serve: {
-        title: "Chill overnight and unmould",
-        timing: "Overnight in the fridge",
+        title: "Unmould the bavarois",
         instructions: [
-          "Cover the bavarois with a cake dome or an overturned bowl and refrigerate overnight. Remove the cling film from underneath, lift off the ring and peel away the acetate.",
+          "Remove the film from underneath the ring.",
+          "Lift off the ring.",
+          "Peel away the acetate if used.",
         ],
       },
+    },
+    storage: {
+      fridge: "Keep covered overnight before serving the next day.",
     },
     source: {
       credit: "Method adapted from",

@@ -6,9 +6,47 @@ import { recipes } from "../public/recipes/index.js";
 import { stepIllustrations } from "../public/step-illustrations/index.js";
 import { stepImagePath } from "../public/src/step-illustration.js";
 
-test("every numbered step has distinct illustrated frames with bilingual captions", () => {
+const publicDirectory = new URL("../public/", import.meta.url);
+
+function readRecipeImage(path) {
+  assert.match(path, /\.webp$/, path);
+  const bytes = readFileSync(new URL(path, publicDirectory));
+  assert.equal(bytes.toString("ascii", 0, 4), "RIFF", path);
+  assert.equal(bytes.toString("ascii", 8, 12), "WEBP", path);
+
+  // Read the image dimensions from the lossless, lossy or extended WebP header.
+  let size;
+  switch (bytes.toString("ascii", 12, 16)) {
+    case "VP8L": {
+      assert.equal(bytes[20], 0x2f, path);
+      const packed = bytes.readUInt32LE(21);
+      size = [(packed & 0x3fff) + 1, ((packed >>> 14) & 0x3fff) + 1];
+      break;
+    }
+    case "VP8 ":
+      assert.equal(bytes.toString("hex", 23, 26), "9d012a", path);
+      size = [bytes.readUInt16LE(26) & 0x3fff, bytes.readUInt16LE(28) & 0x3fff];
+      break;
+    case "VP8X":
+      size = [bytes.readUIntLE(24, 3) + 1, bytes.readUIntLE(27, 3) + 1];
+      break;
+    default:
+      assert.fail(`Unrecognised WebP header in ${path}`);
+  }
+  assert.deepEqual(size, [640, 480], path);
+  return bytes;
+}
+
+test("every recipe hero and thumbnail is a 640 × 480 WebP", () => {
+  for (const recipe of recipes) {
+    for (const path of new Set([recipe.image?.src, recipe.thumbnail].filter(Boolean))) {
+      readRecipeImage(path);
+    }
+  }
+});
+
+test("every numbered step has one distinct 640 × 480 WebP and bilingual captions", () => {
   const illustratedRecipes = recipes.filter(recipe => recipe.steps?.length);
-  const publicDirectory = new URL("../public/", import.meta.url);
   const stepAssetDirectory = new URL("assets/illustrations/steps/", publicDirectory);
   const artworkHashes = new Map();
   const files = [];
@@ -19,18 +57,15 @@ test("every numbered step has distinct illustrated frames with bilingual caption
     assert.deepEqual(Object.keys(scenes).sort(), recipe.steps.map(step => step.id).sort(), recipe.id);
     for (const [step, frames] of Object.entries(scenes)) {
       const label = `${recipe.id}/${step}`;
-      assert.ok(Array.isArray(frames) && frames.length, `${label} needs at least one illustrated frame`);
-      for (const [index, { en, fr }] of frames.entries()) {
-        const assetPath = stepImagePath(recipe.id, step, index, frames.length);
-        assert.ok(en?.trim() && fr?.trim(), `${assetPath} needs two captions`);
-        const bytes = readFileSync(new URL(assetPath, publicDirectory));
-        assert.equal(bytes.toString("ascii", 0, 4), "RIFF", assetPath);
-        assert.equal(bytes.toString("ascii", 8, 12), "WEBP", assetPath);
-        const hash = createHash("sha256").update(bytes).digest("hex");
-        assert.ok(!artworkHashes.has(hash), `${assetPath} repeats ${artworkHashes.get(hash)}`);
-        artworkHashes.set(hash, assetPath);
-        files.push(assetPath.slice("assets/illustrations/steps/".length));
-      }
+      assert.ok(Array.isArray(frames), label);
+      assert.equal(frames.length, 1, label);
+      const [{ en, fr }] = frames;
+      const assetPath = stepImagePath(recipe.id, step, 0, 1);
+      assert.ok(en?.trim() && fr?.trim(), `${assetPath} needs two captions`);
+      const hash = createHash("sha256").update(readRecipeImage(assetPath)).digest("hex");
+      assert.ok(!artworkHashes.has(hash), `${assetPath} repeats ${artworkHashes.get(hash)}`);
+      artworkHashes.set(hash, assetPath);
+      files.push(assetPath.slice("assets/illustrations/steps/".length));
     }
   }
 

@@ -3,6 +3,7 @@ export default {
     title: "Poulet du général Tso",
     description: "Des hauts de cuisse dorés à la poêle, enrobés d’une sauce aigre-douce au gingembre, à l’ail et au piment.",
     times: [
+      { label: "Total", value: "30 min" },
       { label: "Préparation", value: "15 min" },
       { label: "Cuisson", value: "15 min" },
     ],
@@ -22,31 +23,73 @@ export default {
       sugar: { name: "sucre en poudre", unit: "c. à soupe" },
       thickener: { name: "fécule de maïs", unit: "c. à soupe", note: "amidon de maïs" },
     },
+    storage: {
+      counter: "Réfrigérez dans les 2 heures suivant la cuisson.",
+      fridge: "48 heures entre 0 et 5 °C.",
+      freezer: "2 à 6 mois pour le poulet cuit à −18 °C ou moins, pour une qualité optimale.",
+    },
+    setup: ["Utilisez une grande poêle antiadhésive."],
+    allergens: [
+      "Soja",
+      "Les sauces soja et hoisin peuvent contenir du blé et du sésame. Vérifiez leurs étiquettes.",
+      "Sésame si vous ajoutez la garniture",
+    ],
     steps: {
       prep: {
-        title: "Enrober le poulet et préparer la sauce",
+        title: "Enrober le poulet",
         instructions: [
-          "Coupez les hauts de cuisse en morceaux d’environ 2,5 cm. Enrobez-les légèrement de fécule de maïs et secouez-les pour retirer l’excédent.",
-          "Dans un bol, fouettez l’eau, la sauce soja, le vinaigre, la sauce hoisin, le sucre et la fécule prévue pour la sauce. Le mélange doit être lisse.",
+          "Coupez les hauts de cuisse en morceaux de 2,5 cm.",
+          "Enrobez légèrement les morceaux de fécule de maïs.",
+          "Secouez les morceaux pour retirer l’excédent de fécule.",
+        ],
+      },
+      "mix-sauce": {
+        title: "Mélanger la sauce",
+        instructions: [
+          "Réunissez dans un bol l’eau froide, la sauce soja, le vinaigre, la sauce hoisin, le sucre et la fécule prévue pour la sauce.",
+          "Fouettez jusqu’à obtenir un mélange lisse.",
         ],
       },
       fry: {
         title: "Dorer le poulet en plusieurs fois",
+        heat: "À la poêle",
         instructions: [
-          "Chauffez un peu d’huile dans une grande poêle antiadhésive. Faites revenir le poulet en deux ou trois fois en retournant les morceaux pour les dorer des deux côtés. Ajoutez de l’huile au besoin.",
-          "Vérifiez que les morceaux les plus épais atteignent 74 °C (165 °F) à cœur, puis transférez chaque fournée dans un bol propre. Gardez environ 13 g d’huile dans la poêle.",
+          "Chauffez un peu d’huile dans la poêle.",
+          "Faites revenir le poulet en deux ou trois fois.",
+          "Retournez les morceaux pour les dorer des deux côtés.",
+          "Ajoutez de l’huile au besoin.",
+          "Vérifiez au thermomètre que le morceau le plus épais de chaque fournée atteint 74 °C (165 °F) à cœur.",
+          "Déposez chaque fournée cuite dans un bol propre.",
+          "Gardez environ 13 g d’huile dans la poêle.",
         ],
       },
+      aromatics: {
+        title: "Faire revenir les aromates",
+        heat: "À la poêle",
+        timing: "Environ 30 s",
+        instructions: ["Faites revenir l’ail, le gingembre et le piment environ 30 secondes dans l’huile restante, jusqu’à ce qu’ils dégagent leur parfum."],
+      },
       sauce: {
-        title: "Enrober le poulet de sauce",
-        timing: "30 s pour les aromates · 1 min pour la sauce",
+        title: "Napper le poulet",
+        heat: "Frémissement",
+        timing: "Environ 1 min à frémissement",
         instructions: [
-          "Faites revenir l’ail, le gingembre et le piment environ 30 secondes dans l’huile restante. Mélangez de nouveau la sauce et versez-la dans la poêle.",
-          "Remuez jusqu’aux premiers frémissements, puis laissez mijoter environ une minute. Rectifiez l’assaisonnement avec de la sauce soja ou du vinaigre de riz selon votre goût. Remettez le poulet dans la poêle et mélangez pour l’enrober. Parsemez de sésame si vous le souhaitez.",
+          "Mélangez de nouveau la sauce.",
+          "Versez-la dans la poêle avec les aromates.",
+          "Remuez jusqu’aux premiers frémissements.",
+          "Laissez frémir environ 1 minute.",
+          "Rectifiez l’assaisonnement avec de la sauce soja ou du vinaigre de riz.",
+          "Remettez le poulet dans la poêle.",
+          "Mélangez jusqu’à ce que la sauce nappe chaque morceau.",
+          "Parsemez de graines de sésame si vous en utilisez.",
         ],
       },
     },
-    notes: ["Servez aussitôt pour conserver le croustillant. Du riz ou du brocoli vapeur accompagne bien ce plat."],
+    notes: [
+      "Servez aussitôt pour conserver le croustillant. Du riz ou du brocoli vapeur accompagne bien ce plat.",
+      { text: "Répartissez les restes en petites portions pour les refroidir. Réfrigérez-les dans les 2 heures suivant la cuisson.", source: { label: "Food Standards Agency · Conservation des restes", url: "https://www.gov.uk/government/publications/how-to-chill-freeze-and-defrost-food-safely/how-to-chill-freeze-and-defrost-food-safely" } },
+      { text: "La durée au congélateur correspond à la qualité du plat cuit.", source: { label: "FoodSafety.gov · Conservation au froid", url: "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts" } },
+    ],
     safety: {
       title: "Vérifier la cuisson du poulet",
       notes: [{ text: "À l’aide d’un thermomètre de cuisine, vérifiez qu’un gros morceau de chaque fournée atteint 74 °C (165 °F) à cœur." }],
@@ -61,6 +104,7 @@ export default {
     title: "Porc effiloché au barbecue",
     description: "De l’épaule de porc cuite lentement avec un mélange d’épices au paprika fumé, du vinaigre de cidre et un peu de miel.",
     times: [
+      { label: "Cuisson et repos", value: "Environ 7 h 40, hors préparation" },
       { label: "Cuisson", value: "Environ 7 h" },
       { label: "Repos", value: "40 min" },
     ],
@@ -79,43 +123,87 @@ export default {
       garlic: { name: "ail granulé" },
       onion: { name: "oignon granulé" },
     },
+    storage: {
+      counter: "Réfrigérez dans les 2 heures suivant la cuisson.",
+      fridge: "48 heures entre 0 et 5 °C.",
+      freezer: "2 à 6 mois pour le porc cuit à −18 °C ou moins, pour une qualité optimale.",
+    },
+    setup: [
+      "Préparez le barbecue pour une cuisson indirecte à 135 °C (275 °F).",
+      "Dès que l’enceinte dépasse 93 °C (200 °F), commencez à refermer progressivement les évents pour éviter de dépasser la température voulue.",
+    ],
+    allergens: ["Moutarde"],
+    source: { label: "Carnet de recettes de l’auteur" },
     steps: {
       heat: {
-        title: "Préparer le barbecue et les épices",
-        timing: "135 °C / 275 °F",
+        title: "Enrober l’épaule d’épices",
         instructions: [
-          "Préparez le barbecue pour une cuisson indirecte et maintenez l’enceinte autour de 135 °C (275 °F). Pendant la chauffe, dès que la température dépasse 93 °C (200 °F), commencez à refermer progressivement les évents pour éviter de dépasser la température voulue.",
-          "Mélangez les épices et enrobez uniformément la surface du porc.",
+          "Préparez le barbecue pour une cuisson indirecte à 135 °C (275 °F).",
+          "Commencez à refermer progressivement les évents quand l’enceinte dépasse 93 °C (200 °F).",
+          "Mélangez les ingrédients du mélange d’épices pendant la chauffe.",
+          "Pressez les épices sur toutes les faces de l’épaule pour la recouvrir uniformément.",
         ],
       },
       spritz: {
-        title: "Cuire et vaporiser",
-        timing: "Première vaporisation après 1 à 2 h",
+        title: "Cuire l’épaule au barbecue",
+        heat: "Barbecue en cuisson indirecte · 135 °C (275 °F)",
+        wait: "1 à 2 h avant la première vaporisation",
+        timing: "Premier contrôle de température vers 4 h",
         instructions: [
-          "Déposez le porc sur le barbecue et laissez-le cuire sans y toucher pendant 1 à 2 heures. Vaporisez-le de vinaigre de cidre, puis recommencez toutes les 45 à 60 minutes.",
-          "Poursuivez la cuisson jusqu’à ce que le porc atteigne environ 71 °C (160 °F) à cœur. Commencez à vérifier après environ quatre heures.",
+          "Déposez le porc sur la zone de cuisson indirecte.",
+          "Laissez-le cuire sans y toucher pendant les 1 à 2 premières heures.",
+          "Vaporisez du vinaigre de cidre sur la viande.",
+          "Renouvelez la vaporisation toutes les 45 à 60 minutes.",
+          "Commencez à vérifier la température à cœur environ 4 heures après le début de la cuisson.",
+          "Poursuivez la cuisson jusqu’à environ 71 °C (160 °F) à cœur.",
         ],
       },
       wrap: {
-        title: "Envelopper et poursuivre la cuisson",
-        timing: "96 °C / 205 °F à cœur",
+        title: "Envelopper le porc avec le vinaigre et le miel",
+        heat: "Hors du feu",
         instructions: [
-          "Enveloppez bien le porc dans du papier aluminium avec un dernier trait de vinaigre et un peu de miel. Remettez-le sur le barbecue.",
-          "Lorsque la température à cœur approche 96 °C (205 °F), vérifiez qu’une sonde s’enfonce dans la viande presque sans résistance. Prolongez la cuisson si la viande est encore ferme. Comptez environ sept heures de cuisson au total.",
+          "Déposez l’épaule sur une feuille de papier aluminium.",
+          "Ajoutez un dernier trait de vinaigre et un peu de miel.",
+          "Refermez bien le papier aluminium autour de l’épaule.",
         ],
+      },
+      "finish-cooking": {
+        title: "Poursuivre la cuisson jusqu’à tendreté",
+        heat: "Barbecue en cuisson indirecte · 135 °C (275 °F)",
+        timing: "Environ 7 h pour l’ensemble de la cuisson",
+        instructions: [
+          "Remettez l’épaule enveloppée sur le barbecue.",
+          "Vérifiez la température à cœur à l’aide d’une sonde.",
+          "Testez la tendreté vers 96 °C (205 °F) à cœur en enfonçant la sonde dans la viande.",
+          "Prolongez la cuisson jusqu’à ce que la sonde s’enfonce presque sans résistance.",
+        ],
+      },
+      rest: {
+        title: "Laisser échapper la vapeur puis reposer",
+        heat: "Hors du feu",
+        wait: "10 min à découvert + 30 min couvert",
+        instructions: [
+          "Retirez le porc du barbecue.",
+          "Ouvrez le papier aluminium pendant 10 minutes pour laisser échapper la vapeur.",
+          "Recouvrez l’épaule.",
+          "Laissez reposer 30 minutes avant d’effilocher.",
+        ],
+        timerLabels: ["Laisser échapper la vapeur", "Laisser reposer le porc"],
       },
       pull: {
-        title: "Ouvrir la papillote, laisser reposer et effilocher",
-        timing: "10 min à découvert · 30 min de repos",
-        instructions: [
-          "Retirez le porc du barbecue et ouvrez la papillote pendant 10 minutes pour laisser la vapeur s’échapper. Couvrez de nouveau et laissez reposer 30 minutes, puis effilochez la viande.",
-        ],
-        timerLabels: ["Laisser la vapeur s’échapper", "Laisser reposer le porc"],
+        title: "Effilocher le porc",
+        instructions: ["Effilochez l’épaule reposée à l’aide de deux fourchettes."],
       },
     },
-    notes: ["La durée de cuisson varie selon la taille de la pièce et la régularité de la température du barbecue."],
+    notes: [
+      "La durée de cuisson varie selon la taille de la pièce et la régularité de la température du barbecue.",
+      { text: "Répartissez les restes en petites portions pour les refroidir. Réfrigérez-les dans les 2 heures suivant la cuisson.", source: { label: "Food Standards Agency · Conservation des restes", url: "https://www.gov.uk/government/publications/how-to-chill-freeze-and-defrost-food-safely/how-to-chill-freeze-and-defrost-food-safely" } },
+      { text: "La durée au congélateur correspond à la qualité du plat cuit.", source: { label: "FoodSafety.gov · Conservation au froid", url: "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts" } },
+    ],
   },
   "chicken-nuggets": {
+    cookingTime: "Compote 12 à 15 min, pommes de terre 25 à 32 min, nuggets frais 10 à 12 min par fournée",
+    restTime: "2 min pour sécher les pommes de terre. Prévoir le refroidissement de la compote.",
     title: "Nuggets de poulet à la friteuse à air",
     description: "Des nuggets de poulet à la carotte et à l’oignon, avec des pommes de terre persillées et une compote de pommes avec des morceaux.",
     groupTitles: ["Nuggets de poulet", "Pommes de terre persillées", "Compote de pommes"],
@@ -140,47 +228,130 @@ export default {
       water: { name: "eau", unit: "ml" },
       cinnamon: { name: "cannelle", quantity: "Une toute petite pincée", note: "facultative, une toute petite pincée si utilisée" },
     },
+    storage: {
+      counter: "Réfrigérez dans les 2 heures suivant la cuisson.",
+      fridge: "48 heures entre 0 et 5 °C.",
+      freezer: "1 à 3 mois pour les nuggets cuits à −18 °C ou moins, pour une qualité optimale.",
+    },
+    setup: [
+      "Faites rôtir les pommes de terre à 200 °C (180 °C en chaleur tournante).",
+      "Faites cuire les nuggets à 180 °C en une seule couche dans la friteuse à air.",
+    ],
+    allergens: ["Œuf", "Lait", "Blé", "Céleri si vous remplacez la carotte par du céleri-rave"],
+    source: { label: "Carnet de recettes de l’auteur" },
     steps: {
       compote: {
         title: "Faire mijoter les pommes",
-        timing: "12 à 15 min",
+        heat: "Feu moyen",
         instructions: [
-          "Épluchez et évidez les pommes, puis coupez-les en morceaux de 1 à 2 cm. Mettez-les dans une casserole avec l’eau et, si vous le souhaitez, la cannelle.",
-          "Couvrez et faites cuire à feu moyen de 12 à 15 minutes. Écrasez les pommes tendres à la fourchette en laissant quelques morceaux, puis laissez refroidir la compote.",
+          "Épluchez les pommes.",
+          "Évidez-les.",
+          "Coupez-les en morceaux de 1 à 2 cm.",
+          "Réunissez les pommes, l’eau et éventuellement la cannelle dans une casserole.",
+          "Couvrez la casserole.",
+          "Faites cuire à feu moyen de 12 à 15 minutes, jusqu’à ce que les pommes s’écrasent à la fourchette.",
         ],
         timerLabels: ["Faire mijoter la compote"],
       },
-      potatoes: {
-        title: "Précuire puis rôtir les pommes de terre",
-        timing: "10 à 12 min à l’eau · 15 à 20 min au four",
+      "mash-apples": {
+        title: "Écraser la compote",
+        heat: "Hors du feu",
+        wait: "Jusqu’à refroidissement",
         instructions: [
-          "Coupez les pommes de terre en cubes de 1,5 cm. Plongez-les dans l’eau froide salée et portez à petite ébullition. Faites cuire de 10 à 12 minutes, égouttez-les et laissez-les sécher à la vapeur pendant 2 minutes.",
-          "Préchauffez le four à 200 °C (180 °C en chaleur tournante). Mélangez les pommes de terre avec le beurre et l’huile et enfournez-les de 15 à 20 minutes en les retournant à mi-cuisson. Mélangez-les délicatement avec le persil à la sortie du four.",
+          "Retirez la casserole du feu.",
+          "Écrasez les pommes à la fourchette en laissant quelques morceaux.",
+          "Laissez refroidir la compote pendant la préparation des pommes de terre.",
         ],
-        timerLabels: ["Précuire les pommes de terre", "Rôtir les pommes de terre"],
+      },
+      potatoes: {
+        title: "Précuire les pommes de terre",
+        heat: "Petite ébullition",
+        timing: "10 à 12 min à partir de l’ébullition",
+        instructions: [
+          "Coupez les pommes de terre épluchées en dés de 1,5 cm.",
+          "Plongez les dés dans de l’eau froide salée.",
+          "Portez à petite ébullition.",
+          "Faites cuire à petite ébullition de 10 à 12 minutes avant d’égoutter.",
+        ],
+        timerLabels: ["Précuire les pommes de terre"],
+      },
+      "steam-dry": {
+        title: "Laisser sécher les pommes de terre",
+        heat: "Hors du feu",
+        wait: "2 min après égouttage",
+        instructions: [
+          "Égouttez les pommes de terre.",
+          "Laissez-les sécher 2 minutes au contact de l’air.",
+          "Préchauffez le four à 200 °C (180 °C en chaleur tournante).",
+        ],
+      },
+      "roast-potatoes": {
+        title: "Rôtir les pommes de terre",
+        heat: "Four à 200 °C / 180 °C en chaleur tournante",
+        instructions: [
+          "Enrobez les dés de pommes de terre de beurre et d’huile.",
+          "Enfournez pour 15 à 20 minutes.",
+          "Retournez les dés à mi-cuisson.",
+          "Sortez les pommes de terre du four.",
+          "Mélangez-les délicatement avec le persil haché.",
+        ],
+        timerLabels: ["Rôtir les pommes de terre"],
+      },
+      blend: {
+        title: "Mixer la farce des nuggets",
+        instructions: [
+          "Mettez le poulet, l’œuf, le lait ou la crème, le sel, le paprika et le thym dans un mixeur ou un robot.",
+          "Mixez en 5 à 7 impulsions courtes jusqu’à obtenir une pâte épaisse.",
+          "Pressez la carotte et l’oignon râpés pour en retirer l’eau.",
+          "Incorporez les légumes râpés au poulet.",
+        ],
       },
       shape: {
-        title: "Mixer, façonner et paner",
-        instructions: [
-          "Mixez le poulet, l’œuf, le lait, le sel, le paprika et le thym en 5 à 7 impulsions courtes au mixeur ou au robot, jusqu’à obtenir une pâte épaisse.",
-          "Pressez la carotte et l’oignon râpés pour en retirer l’eau, puis mélangez-les au poulet. Avec les mains légèrement humides, façonnez de petits nuggets. Passez-les dans une fine couche de farine, puis dans la chapelure.",
+        title: "Façonner et paner les nuggets",
+        instructions: ["Façonnez de petits nuggets avec les mains humides."],
+        options: [
+          {
+            title: "Farine et chapelure",
+            instructions: ["Farinez légèrement chaque nugget.", "Roulez-le dans la chapelure."],
+          },
+          {
+            title: "Croûte plus tendre",
+            instructions: ["Roulez chaque nugget directement dans la chapelure."],
+          },
         ],
       },
       fry: {
-        title: "Cuire les nuggets à la friteuse à air",
-        timing: "180 °C · 10 à 12 min",
+        title: "Cuire les nuggets en une seule couche",
+        heat: "Friteuse à air · 180 °C",
+        timing: "10 à 12 min par fournée de nuggets frais, après préchauffage",
         instructions: [
-          "Préchauffez la friteuse à air à 180 °C pendant 3 à 5 minutes. Badigeonnez légèrement les nuggets d’huile et disposez-les en une seule couche. Procédez en plusieurs fournées au besoin.",
-          "Faites cuire de 10 à 12 minutes en les retournant à mi-cuisson. Vérifiez que les nuggets les plus épais atteignent 74 °C (165 °F) à cœur. Prolongez la cuisson au besoin. Servez avec les pommes de terre et la compote.",
+          "Préchauffez la friteuse à air à 180 °C pendant 3 à 5 minutes.",
+          "Badigeonnez légèrement les nuggets d’huile.",
+          "Disposez les nuggets en une seule couche dans le panier, en plusieurs fournées au besoin.",
+          "Faites cuire les nuggets frais de 10 à 12 minutes.",
+          "Retournez-les à mi-cuisson.",
         ],
-        timerLabels: ["Vérifier la cuisson des nuggets"],
+        timerLabels: ["Vérifier la cuisson des nuggets frais"],
+      },
+      check: {
+        title: "Vérifier la cuisson à cœur",
+        heat: "Friteuse à air · 180 °C si nécessaire",
+        instructions: [
+          "Piquez un thermomètre de cuisine dans le nugget le plus épais de chaque fournée.",
+          "Vérifiez qu’il atteint 74 °C (165 °F) à cœur.",
+          "Poursuivez la cuisson si la température à cœur est inférieure à ce seuil.",
+          "Servez avec les pommes de terre persillées et la compote refroidie.",
+        ],
       },
     },
     notes: [
+      "Vous pouvez préparer les nuggets pendant que les pommes de terre rôtissent.",
       "Assaisonnez les portions adultes de poivre noir ou de paprika fumé après cuisson.",
       "Pour une croûte plus tendre, panez les nuggets avec de la chapelure seule.",
       "Remplacez la carotte par le même poids de courgette ou de céleri-rave et pressez bien le légume râpé. De la semoule de couscous au beurre ou de petites pâtes en coquille peuvent remplacer les pommes de terre.",
       "Pour cuire les nuggets surgelés crus, commencez à vérifier la cuisson environ 3 à 4 minutes plus tard, à la même température. Poursuivez jusqu’à ce que chaque fournée atteigne la même température à cœur.",
+      { text: "Répartissez les restes en petites portions pour les refroidir. Réfrigérez-les dans les 2 heures suivant la cuisson.", source: { label: "Food Standards Agency · Conservation des restes", url: "https://www.gov.uk/government/publications/how-to-chill-freeze-and-defrost-food-safely/how-to-chill-freeze-and-defrost-food-safely" } },
+      { text: "La durée au congélateur correspond à la qualité du plat cuit.", source: { label: "FoodSafety.gov · Conservation au froid", url: "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts" } },
     ],
     safety: {
       title: "Vérifier la cuisson des nuggets",
@@ -192,6 +363,7 @@ export default {
     title: "Mijoté de poulet et de haricots blancs à l’espagnole",
     description: "Un mijoté au paprika fumé, avec du poulet tendre, de gros haricots blancs entiers et une sauce onctueuse aux haricots cannellini.",
     servings: "4 portions adultes + 2 portions pour jeunes enfants",
+    times: [{ label: "Cuisson", value: "41 à 44 min, plus la montée en température" }],
     groupTitles: ["Sauce aux haricots et à la tomate", "Poulet et légumes"],
     ingredients: {
       cannellini: { name: "haricots cannellini", note: "une boîte de 400 g, poids égoutté" },
@@ -208,35 +380,83 @@ export default {
       oil: { name: "huile d’avocat", note: "environ 1 c. à soupe" },
       seasoning: { name: "sel de mer et poivre noir", quantity: "Au goût", note: "quantité totale indicative. Commencez par en mettre peu, puis ajustez au goût" },
     },
+    storage: {
+      counter: "Réfrigérez dans les 2 heures suivant la cuisson.",
+      fridge: "48 heures entre 0 et 5 °C.",
+      freezer: "2 à 3 mois pour le mijoté à −18 °C ou moins, pour une qualité optimale.",
+    },
+    setup: [
+      "Utilisez une sauteuse profonde de 3,5 à 4 litres avec un couvercle.",
+      "Répartissez le bouillon en 75 g pour la sauce mixée et 125 g pour la cuisson.",
+    ],
+    allergens: [
+      "Vérifiez les allergènes du bouillon de volaille, notamment la présence de céleri.",
+      "Lait si vous servez avec du yaourt grec",
+    ],
+    source: { label: "Carnet de recettes de l’auteur" },
     steps: {
       blend: {
-        title: "Mixer la sauce",
-        instructions: ["Mixez les haricots cannellini égouttés avec le coulis de tomates et 75 g de bouillon jusqu’à obtenir une sauce lisse. Réservez."],
+        title: "Mixer la sauce aux haricots",
+        instructions: [
+          "Mixez les haricots cannellini égouttés avec le coulis de tomates et 75 g de bouillon jusqu’à obtenir une sauce lisse.",
+          "Réservez la sauce.",
+        ],
       },
       brown: {
         title: "Dorer le poulet",
-        timing: "4 à 5 min",
-        instructions: ["Chauffez l’huile à feu moyen-vif dans une sauteuse profonde de 3,5 à 4 litres. Faites dorer le poulet pendant 4 à 5 minutes, puis transférez-le dans une assiette."],
+        heat: "Feu moyen-vif",
+        instructions: [
+          "Chauffez l’huile à feu moyen-vif dans la sauteuse.",
+          "Faites dorer le poulet de 4 à 5 minutes.",
+          "Déposez le poulet doré dans une assiette.",
+        ],
       },
       vegetables: {
         title: "Faire revenir les légumes",
-        timing: "6 à 8 min · 1 min pour l’ail et le paprika",
-        instructions: ["Baissez à feu moyen. Faites revenir l’oignon, la carotte et les poivrons de 6 à 8 minutes, jusqu’à ce qu’ils soient tendres. Ajoutez l’ail et le paprika et poursuivez la cuisson 1 minute."],
+        heat: "Feu moyen",
+        instructions: [
+          "Baissez à feu moyen.",
+          "Faites revenir l’oignon, la carotte et les poivrons de 6 à 8 minutes, jusqu’à ce qu’ils soient tendres.",
+          "Incorporez l’ail et le paprika.",
+          "Poursuivez la cuisson 1 minute.",
+        ],
       },
       simmer: {
-        title: "Faire mijoter le plat",
-        timing: "20 min à couvert · 10 min à découvert",
+        title: "Faire mijoter à couvert",
+        heat: "Feu doux",
         instructions: [
-          "Remettez le poulet et son jus dans la sauteuse. Ajoutez la sauce mixée, les tomates concassées et les 125 g de bouillon restants. Couvrez et laissez mijoter à feu doux pendant 20 minutes.",
-          "Incorporez les gros haricots blancs égouttés et laissez mijoter 10 minutes supplémentaires à découvert pour épaissir le tout. Vérifiez que le poulet atteint 74 °C (165 °F) à cœur. Assaisonnez au goût.",
+          "Remettez le poulet et son jus dans la sauteuse.",
+          "Incorporez la sauce mixée, les tomates concassées et les 125 g de bouillon restants.",
+          "Couvrez la sauteuse.",
+          "Laissez mijoter à feu doux 20 minutes avant d’ajouter les gros haricots blancs.",
         ],
-        timerLabels: ["Faire mijoter à couvert", "Laisser réduire à découvert"],
+        timerLabels: ["Faire mijoter à couvert"],
+      },
+      reduce: {
+        title: "Faire réduire avec les gros haricots",
+        heat: "Feu doux",
+        instructions: [
+          "Retirez le couvercle.",
+          "Incorporez les gros haricots blancs égouttés.",
+          "Laissez mijoter à découvert 10 minutes de plus, jusqu’à ce que la sauce épaississe.",
+        ],
+        timerLabels: ["Laisser réduire à découvert"],
+      },
+      finish: {
+        title: "Vérifier la cuisson et assaisonner",
+        heat: "Feu doux",
+        instructions: [
+          "Vérifiez au thermomètre qu’un gros morceau de poulet atteint 74 °C (165 °F) à cœur avant de servir.",
+          "Salez et poivrez à votre goût.",
+        ],
       },
     },
     notes: [
       "Les notes d’origine estiment le poids du plat cuit à environ 2,4 kg. Elles suggèrent des portions d’environ 450 g pour les adultes et de 300 g pour les jeunes enfants. Écrasez légèrement les gros haricots blancs avant de les servir à un jeune enfant.",
       "Pour un repas plus copieux, accompagnez une portion adulte de 150 g de quinoa cuit et de 50 g de yaourt grec sans matière grasse.",
       "Réfrigérez la demi-brique de coulis restante pour la frittata aux tomates et aux épinards.",
+      { text: "Répartissez les restes en petites portions pour les refroidir. Réfrigérez-les dans les 2 heures suivant la cuisson.", source: { label: "Food Standards Agency · Conservation des restes", url: "https://www.gov.uk/government/publications/how-to-chill-freeze-and-defrost-food-safely/how-to-chill-freeze-and-defrost-food-safely" } },
+      { text: "La durée au congélateur correspond à la qualité du plat cuit.", source: { label: "FoodSafety.gov · Conservation au froid", url: "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts" } },
     ],
     safety: {
       title: "Vérifier la cuisson du poulet",
@@ -245,6 +465,7 @@ export default {
     },
   },
   "tomato-spinach-frittata": {
+    cookingTime: "12 à 14 min, davantage si le centre est à moins de 71 °C",
     title: "Frittata aux tomates et aux épinards à l’espagnole",
     description: "Une frittata aux tomates et aux épinards pour utiliser le coulis restant du mijoté de poulet et de haricots blancs.",
     servings: "2 portions adultes + 1 portion pour jeune enfant",
@@ -259,33 +480,61 @@ export default {
       oregano: { name: "origan séché", unit: "c. à café" },
       seasoning: { name: "sel de mer et poivre noir", quantity: "Au goût", note: "quantité totale indicative. Commencez par en mettre peu, puis ajustez au goût" },
     },
+    setup: [
+      "Préchauffez le gril du four à puissance moyenne à forte, autour de 200 °C. Prévoyez une poêle allant au four.",
+    ],
+    allergens: ["Œufs", "Lait"],
     steps: {
-      wilt: {
-        title: "Faire tomber les épinards et chauffer le coulis",
-        timing: "Gril à 200 °C · 4 min à la poêle",
+      whisk: {
+        title: "Fouetter les œufs",
         instructions: [
-          "Préchauffez le gril du four à puissance moyenne à forte, autour de 200 °C. Chauffez l’huile à feu moyen dans une poêle allant au four et faites tomber les épinards pendant 2 minutes.",
-          "Ajoutez le coulis et l’origan, puis laissez cuire encore 2 minutes, jusqu’aux premiers bouillons.",
+          "Cassez les cinq œufs dans un bol.",
+          "Ajoutez les deux œufs supplémentaires ou 100 g de blancs liquides.",
+          "Battez le tout avec le sel et le poivre.",
         ],
+      },
+      wilt: {
+        title: "Préparer la base aux épinards et à la tomate",
+        instructions: [
+          "Chauffez l’huile à feu moyen dans la poêle allant au four.",
+          "Faites tomber les épinards dans l’huile pendant 2 minutes.",
+          "Ajoutez le coulis de tomates et l’origan.",
+          "Laissez cuire encore 2 minutes, jusqu’aux premiers bouillons.",
+        ],
+        heat: "Feu moyen",
       },
       eggs: {
-        title: "Faire prendre les œufs à la poêle",
-        timing: "4 à 5 min",
+        title: "Faire prendre les bords à la poêle",
         instructions: [
-          "Fouettez les cinq œufs et les œufs ou blancs supplémentaires avec le sel et le poivre. Versez-les dans le mélange de tomates et d’épinards frémissant, puis remuez délicatement à la spatule.",
-          "Laissez cuire la frittata de 4 à 5 minutes sans y toucher, jusqu’à ce que les bords soient pris.",
+          "Versez les œufs battus dans le mélange frémissant de tomates et d’épinards.",
+          "Remuez délicatement à la spatule.",
+          "Laissez cuire 4 à 5 minutes sans remuer, jusqu’à ce que les bords soient pris.",
         ],
+        heat: "Feu moyen",
+        timerLabels: ["Vérifier les bords"],
       },
       grill: {
-        title: "Passer sous le gril et découper",
-        timing: "4 à 5 min",
+        title: "Cuire la frittata sous le gril",
         instructions: [
-          "Répartissez le fromage sur la frittata et placez la poêle sous le gril pendant 4 à 5 minutes. La frittata doit gonfler et prendre. Prolongez la cuisson si le centre n’a pas atteint 71 °C (160 °F).",
-          "Coupez-la en parts. Pour les petites mains, découpez une portion en lanières faciles à saisir.",
+          "Répartissez le fromage sur la frittata.",
+          "Placez la poêle sous le gril préchauffé pendant 4 à 5 minutes, jusqu’à ce que la frittata gonfle et prenne.",
+          "Vérifiez que le centre atteint 71 °C (160 °F) avec un thermomètre de cuisine.",
+          "Prolongez la cuisson sous le gril si le centre est en dessous de cette température.",
         ],
+        heat: "Gril moyen à fort · environ 200 °C",
         timerLabels: ["Vérifier la cuisson de la frittata"],
       },
+      slice: {
+        title: "Découper la frittata",
+        instructions: [
+          "Sortez la poêle du four.",
+          "Découpez la frittata en parts.",
+          "Découpez la portion destinée à un jeune enfant en lanières faciles à saisir.",
+        ],
+        heat: "Hors du feu",
+      },
     },
+    notes: ["Si vous avez préparé le mijoté de poulet et de haricots blancs, utilisez ici la demi-brique de coulis restante."],
     safety: {
       title: "Vérifier la cuisson à cœur",
       notes: [{ text: "Avant de découper la frittata, vérifiez qu’elle atteint 71 °C (160 °F) à cœur à l’aide d’un thermomètre de cuisine." }],
@@ -293,6 +542,7 @@ export default {
     },
   },
   "apple-sauce": {
+    cookingTime: "15 min après ébullition, puis environ 5 min si vous sucrez",
     title: "Compote de pommes à la cannelle",
     description: "Une compote de pommes toute simple, à écraser pour garder quelques morceaux ou à mixer pour une purée lisse.",
     times: [{ label: "Cuisson à feu doux", value: "15 à 20 min" }],
@@ -304,23 +554,75 @@ export default {
       sugar: { name: "sucre en poudre", quantity: "Jusqu’à 150", unit: "g", note: "à doser au goût" },
       lemon: { name: "jus de citron", unit: "c. à soupe" },
     },
+    setup: [
+      "Comptez 200 ml d’eau pour la recette de base, 100 ml pour une compote avec des morceaux ou 300 ml pour une purée lisse.",
+    ],
+    allergens: [],
+    storage: {
+      counter: "Réfrigérez dans les 2 heures suivant la cuisson.",
+      fridge: "Couvrez et consommez dans les 48 heures.",
+      freezer: "Congelez en petites portions. Consommez dans les 3 mois pour une qualité optimale. Décongelez au réfrigérateur pendant la nuit.",
+    },
     steps: {
+      boil: {
+        title: "Porter les pommes à ébullition",
+        instructions: [
+          "Évidez les pommes.",
+          "Coupez les pommes en morceaux.",
+          "Mettez les morceaux de pomme et la cannelle dans une casserole.",
+          "Versez la quantité d’eau correspondant à la texture souhaitée.",
+          "Portez à ébullition.",
+        ],
+        heat: "Ébullition",
+      },
       cook: {
         title: "Faire mijoter les pommes",
-        timing: "15 min",
-        instructions: ["Mettez les pommes coupées, l’eau et la cannelle dans une casserole. Portez à ébullition, puis baissez le feu et laissez mijoter 15 minutes, jusqu’à ce que les pommes soient tendres."],
-        timerLabels: ["Faire mijoter les pommes"],
+        instructions: [
+          "Baissez le feu pour maintenir un frémissement.",
+          "Faites mijoter pendant 15 minutes, jusqu’à ce que les pommes soient tendres.",
+        ],
+        heat: "Frémissement",
+        timerLabels: ["Vérifier les pommes"],
       },
       texture: {
         title: "Écraser ou mixer",
-        instructions: ["Retirez la casserole du feu et ôtez le bâton de cannelle si vous en avez utilisé un. Écrasez les pommes pour garder quelques morceaux ou mixez-les pour obtenir une purée lisse."],
+        instructions: [
+          "Retirez la casserole du feu.",
+          "Retirez le bâton de cannelle si vous en avez utilisé un.",
+        ],
+        heat: "Hors du feu",
+        options: [
+          {
+            title: "Compote avec des morceaux",
+            instructions: [
+              "Écrasez les pommes en laissant quelques morceaux.",
+            ],
+          },
+          {
+            title: "Purée lisse",
+            instructions: [
+              "Mixez les pommes cuites jusqu’à obtenir une purée lisse.",
+            ],
+          },
+        ],
       },
       season: {
-        title: "Sucrer au goût",
-        timing: "5 min si vous ajoutez du sucre",
+        title: "Ajuster l’assaisonnement",
         instructions: [
-          "Goûtez et, au besoin, ajoutez le sucre par petites doses d’environ 12 g. Si vous le souhaitez, ajoutez le jus de citron pour apporter une note acidulée. Si vous avez ajouté du sucre, remettez la casserole à feu doux pendant environ 5 minutes pour le dissoudre.",
+          "Goûtez la compote.",
+          "Ajoutez du sucre par doses d’environ 12 g si vous préférez une compote plus sucrée.",
+          "Incorporez le jus de citron si vous souhaitez une note acidulée.",
         ],
+        heat: "Hors du feu",
+      },
+      dissolve: {
+        title: "Dissoudre le sucre ajouté",
+        instructions: [
+          "Remettez la compote sur feu doux si vous avez ajouté du sucre.",
+          "Réchauffez environ 5 minutes, jusqu’à dissolution du sucre.",
+        ],
+        heat: "Feu doux",
+        timing: "Environ 5 min avec du sucre ajouté",
       },
     },
     notes: [
@@ -334,6 +636,7 @@ export default {
     },
   },
   "riz-au-lait": {
+    cookingTime: "Environ 22 min de frémissement, plus le chauffage du lait puis de l’œuf à 72 °C",
     title: "Riz au lait à la vanille",
     description: "Un riz au lait parfumé à la vanille, enrichi de beurre et allégé par un blanc d’œuf monté en neige.",
     times: [{ label: "Cuisson du riz", value: "22 min" }],
@@ -348,29 +651,56 @@ export default {
       salt: { name: "sel", quantity: "Une pincée" },
       butter: { name: "beurre" },
     },
+    setup: [
+      "Séparez le blanc du jaune. Réservez le blanc dans un bol propre.",
+    ],
+    allergens: ["Lait", "Œuf"],
+    storage: {
+      counter: "Faites refroidir rapidement les restes, idéalement dans l’heure, puis réfrigérez-les.",
+      fridge: "Consommez dans la journée.",
+    },
     steps: {
       simmer: {
         title: "Cuire le riz dans le lait vanillé",
-        timing: "22 min",
         instructions: [
-          "Chauffez le lait avec la vanille et le sel dans une casserole. Ajoutez le riz et laissez mijoter doucement environ 22 minutes, en remuant de temps en temps, jusqu’à ce que les grains soient tendres.",
-          "Si vous avez utilisé une gousse de vanille, retirez-la une fois le riz cuit.",
+          "Chauffez le lait avec la vanille et le sel dans une casserole.",
+          "Ajoutez le riz.",
+          "Faites mijoter environ 22 minutes en remuant de temps en temps, jusqu’à ce que le riz soit tendre.",
+          "Retirez la gousse de vanille si vous en avez utilisé une.",
         ],
-        timerLabels: ["Faire cuire le riz"],
+        heat: "Frémissement",
+        timing: "Environ 22 min de cuisson à frémissement",
+        timerLabels: ["Vérifier la cuisson du riz"],
       },
       yolk: {
-        title: "Incorporer le jaune et le beurre",
+        title: "Tempérer le jaune",
         instructions: [
-          "Fouettez le jaune d’œuf avec les deux quantités de sucre, en délayant peu à peu le mélange avec des cuillerées de lait chaud prélevé dans la casserole. Incorporez ce mélange tiédi au riz cuit, puis ajoutez le beurre.",
+          "Retirez la casserole du feu.",
+          "Fouettez le jaune avec les deux quantités de sucre.",
+          "Incorporez au fouet le lait chaud prélevé dans la casserole, une cuillerée à la fois.",
+          "Incorporez le mélange au jaune d’œuf dans le riz cuit.",
+          "Incorporez le beurre.",
         ],
+        heat: "Hors du feu",
       },
       finish: {
-        title: "Incorporer le blanc monté en neige",
+        title: "Incorporer le blanc en neige",
         instructions: [
-          "Dans un bol propre, fouettez le blanc jusqu’à ce qu’il forme des pics. Incorporez-le délicatement au riz au lait, puis remuez à feu doux jusqu’à ce que toute la préparation atteigne 72 °C (162 °F). Gardez le feu doux pour éviter que l’œuf ne coagule en morceaux.",
+          "Montez le blanc réservé en neige jusqu’à ce qu’il forme des pics.",
+          "Incorporez délicatement le blanc au riz au lait à l’aide d’une spatule souple.",
         ],
+        heat: "Hors du feu",
+      },
+      "heat-through": {
+        title: "Terminer la cuisson à feu doux",
+        instructions: [
+          "Remuez doucement le riz au lait à feu doux.",
+          "Vérifiez avec un thermomètre de cuisine que le riz au lait atteint 72 °C (162 °F) dans toute la casserole.",
+        ],
+        heat: "Feu doux",
       },
     },
+    notes: ["Une fois l’œuf incorporé, gardez le feu doux pour réchauffer le riz au lait sans former de grumeaux."],
     safety: {
       title: "Cuire et conserver le riz au lait",
       notes: [

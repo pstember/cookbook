@@ -1,6 +1,13 @@
+const filling = ["filling-strawberries", "filling-raspberries", "filling-sugar", "lemon-juice", "glucose", "cornflour", "slurry-water"];
+const batter = ["flour", "baking-powder", "batter-sugar", "egg", "butter", "milk", "yoghurt", "vanilla", "batter-strawberries", "batter-raspberries"];
+const filledMuffins = [...filling, ...batter, "extra-berries"];
+const toppedMuffins = [...filledMuffins, "topping-sugar"];
+
 export default {
   id: "strawberry-raspberry-muffins",
   category: "Desserts",
+  cookingTime: "29–33 min, plus 1 min if thickening the filling",
+  restTime: "Until the berry filling cools completely",
   title: "Strawberry & Raspberry Bakery Muffins",
   description: "Large buttery muffins with fresh berries, homemade berry filling and a crisp sugar top.",
   thumbnail: "assets/illustrations/recipes/strawberry-raspberry-muffins.webp",
@@ -45,50 +52,134 @@ export default {
       ],
     },
   ],
+  setup: ["Line a six-hole tin with large muffin cases.", "Preheat to 210°C conventional or 190°C fan."],
+  allergens: ["Wheat", "Egg", "Milk"],
+  storage: {
+    counter: "Best within 2–3 days. Cool completely before storing in an airtight container.",
+  },
+  source: {
+    label: "The author’s cookbook",
+  },
   steps: [
     {
-      id: "filling", title: "Cook the berry filling", art: "saucepan", tone: "pink",
-      timing: "10–12 min, plus cooling",
+      id: "filling",
+      title: "Cook the berry filling",
+      activity: "cooking",
+      tone: "pink",
+      uses: filling,
+      duration: [10, 12],
+      timing: "10–12 min, plus 1 min if thickened",
+      heat: "Medium hob",
       instructions: [
-        "Put the diced strawberries, whole raspberries, caster sugar, lemon juice and glucose syrup into a small saucepan. Cook over medium heat for 10–12 minutes, stirring regularly and lightly crushing some of the strawberries. The filling should be thick and glossy with a few pieces of fruit still visible.",
-        "If the filling is still runny, mix about 1.2–2.3 g cornflour with about 5 g cold water, stir it in and cook for another minute. Cool the filling completely. Refrigerate it while you prepare the batter if it has already cooled.",
-      ],
-      timers: [{ label: "Check the filling", minutes: 10, afterInstruction: 1 }],
-    },
-    {
-      id: "batter", title: "Mix the batter", art: "whisk", tone: "yellow",
-      timing: "Heat the oven to 210°C / 190°C fan",
-      instructions: [
-        "Heat the oven to 210°C conventional (190°C fan). Line a six-hole tin with large muffin cases.",
-        "Mix the flour, baking powder and caster sugar. In another bowl, whisk the egg with the melted salted butter, milk, Greek yoghurt and optional vanilla.",
-        "Pour the wet mixture into the dry ingredients and fold gently until almost combined. Fold in the diced strawberries and raspberries.",
-      ],
-      tip: "Stop mixing while the batter is still slightly uneven. This keeps the crumb tender and limits how much the berries bleed into it.",
-    },
-    {
-      id: "fill", title: "Layer the batter and fruit", art: "pie", tone: "pink",
-      instructions: [
-        "Spoon about 40–45 g batter into each case. Add about 20 g chilled filling to the centre. If you like, add a few tiny strawberry pieces and a raspberry on top of the filling.",
-        "Cover with another 35–40 g batter, so the filling is completely enclosed. Use the weights as a guide and aim for cases around 90% full.",
-      ],
-    },
-    {
-      id: "topping", title: "Add the topping", art: "pie", tone: "yellow",
-      instructions: [
-        "Place a couple of small berry pieces on each muffin and sprinkle each top with about 1 g sugar.",
-      ],
-    },
-    {
-      id: "bake", title: "Bake at two temperatures", art: "oven", tone: "blue",
-      timing: "5 min hot · 14–16 min lower",
-      instructions: [
-        "Put the muffins in the oven at 210°C conventional (190°C fan) and start the 5-minute timer.",
-        "After 5 minutes, lower the heat to 180°C conventional (160°C fan) without opening the oven. Start the second timer as soon as you lower the heat. Bake at the lower setting for 14–16 minutes.",
-        "The muffins are ready when the tops are golden and spring back lightly. A skewer inserted through the cake beside the berry centre should come out free of wet batter.",
+        "Put the diced strawberries, whole raspberries, filling sugar, lemon juice and glucose syrup into a small saucepan.",
+        "Cook over medium heat for 10–12 minutes until thick and glossy.",
+        "Stir regularly during cooking.",
+        "Crush a few strawberries lightly, leaving visible pieces of fruit.",
+        "If the filling is still runny, mix about 1.2–2.3 g cornflour with about 5 g cold water.",
+        "Stir the slurry into the runny filling.",
+        "Cook for one more minute if you added the slurry.",
       ],
       timers: [
-        { label: "Lower oven temperature", minutes: 5, afterInstruction: 1 },
-        { label: "Check the muffins", minutes: 14, afterInstruction: 2 },
+        {
+          label: "Check the filling",
+          minutes: 10,
+          afterInstruction: 2,
+        },
+      ],
+    },
+    {
+      id: "cool-filling",
+      title: "Cool the filling",
+      activity: "wait",
+      tone: "pink",
+      uses: filling,
+      wait: "Until completely cool",
+      instructions: ["Take the filling off the heat.", "Let it cool completely.", "Refrigerate the cooled filling while you make the batter."],
+    },
+    {
+      id: "batter",
+      during: "cool-filling",
+      title: "Mix the batter",
+      activity: "prep",
+      tone: "yellow",
+      uses: batter,
+      tip: "Stop while the batter is slightly uneven for a tender crumb and fewer streaks of berry juice.",
+      instructions: [
+        "Preheat the oven to 210°C conventional or 190°C fan.",
+        "Line a six-hole tin with large muffin cases.",
+        "Mix the flour, baking powder and batter sugar in a bowl.",
+        "Whisk the egg, melted salted butter, milk, Greek yoghurt and optional vanilla in another bowl.",
+        "Pour the wet mixture into the dry ingredients.",
+        "Fold gently until almost combined.",
+        "Fold in the diced strawberries and raspberries.",
+      ],
+    },
+    {
+      id: "fill",
+      title: "Fill the centres",
+      activity: "prep",
+      tone: "green",
+      uses: filledMuffins,
+      instructions: [
+        "Spoon about 40–45 g batter into each case.",
+        "Spoon about 20 g cold filling into the centre of each portion.",
+        "Add tiny strawberry pieces and a raspberry to the filling if you like.",
+      ],
+    },
+    {
+      id: "cover",
+      title: "Cover the filling",
+      activity: "prep",
+      tone: "green",
+      uses: filledMuffins,
+      instructions: ["Cover each berry centre completely with another 35–40 g batter, aiming for cases about 90% full."],
+    },
+    {
+      id: "topping",
+      title: "Add the topping",
+      activity: "prep",
+      tone: "blue",
+      uses: ["extra-berries", "topping-sugar"],
+      instructions: ["Place a couple of small berry pieces on each muffin.", "Sprinkle each top with about 1 g sugar."],
+    },
+    {
+      id: "bake",
+      title: "Start in a hot oven",
+      activity: "cooking",
+      tone: "green",
+      uses: toppedMuffins,
+      duration: [5, 5],
+      heat: "210°C conventional / 190°C fan",
+      instructions: ["Bake the muffins for 5 minutes at 210°C conventional or 190°C fan before lowering the heat."],
+      timers: [
+        {
+          label: "Lower oven temperature",
+          minutes: 5,
+          afterInstruction: 1,
+        },
+      ],
+    },
+    {
+      id: "finish-baking",
+      title: "Finish at the lower temperature",
+      activity: "cooking",
+      tone: "green",
+      uses: toppedMuffins,
+      duration: [14, 16],
+      heat: "180°C conventional / 160°C fan",
+      instructions: [
+        "Lower the oven to 180°C conventional or 160°C fan without opening the door.",
+        "Bake for 14–16 minutes from the change of temperature.",
+        "Check at 14 minutes for golden tops that spring back lightly.",
+        "Insert a skewer into the crumb beside the berry centre.",
+        "Remove the muffins when the skewer comes out free of wet batter.",
+      ],
+      timers: [
+        {
+          label: "Check the muffins",
+          minutes: 14,
+          afterInstruction: 1,
+        },
       ],
     },
   ],

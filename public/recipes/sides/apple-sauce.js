@@ -2,6 +2,7 @@ export default {
   id: "apple-sauce",
   title: "Cinnamon Apple Sauce",
   category: "Sides",
+  cookingTime: "15 min after boiling, plus about 5 min if sweetening",
   description: "A simple apple sauce you can mash for texture or blend to a smooth purée.",
   thumbnail: "assets/illustrations/recipes/apple-sauce.webp",
   times: [{ label: "Simmer", value: "15–20 min", icon: "clock" }],
@@ -25,23 +26,100 @@ export default {
       ],
     },
   ],
+  setup: [
+    "Start with 200 ml water. Use 100 ml for a chunky sauce or 300 ml for a smooth purée.",
+  ],
+  allergens: [],
+  storage: {
+    counter: "Refrigerate within 2 hours of cooking.",
+    fridge: "Cover and use within 48 hours.",
+    freezer: "Freeze in small portions. Use within 3 months for best quality. Thaw overnight in the fridge.",
+  },
   steps: [
     {
-      id: "cook", title: "Simmer the apples", art: "saucepan",
-      timing: "15 min",
-      instructions: ["Put the chopped apples, water and cinnamon in a saucepan. Bring to a boil, then lower the heat and simmer for 15 minutes until the apples are soft."],
-      timers: [{ label: "Simmer the apples", minutes: 15 }],
-    },
-    {
-      id: "texture", title: "Mash or blend",
-      instructions: ["Take the pan off the heat and lift out the cinnamon stick if using. Mash for a chunky sauce, or blend for a smooth purée."],
-    },
-    {
-      id: "season", title: "Sweeten to taste",
-      timing: "5 min if adding sugar",
+      id: "boil",
+      title: "Bring the apples to the boil",
+      tone: "yellow",
+      activity: "cooking",
+      uses: ["apples", "water", "cinnamon"],
       instructions: [
-        "Taste and, if needed, add sugar about 12 g at a time. Stir in the optional lemon juice for brightness. If you added sugar, return the pan to low heat for about 5 minutes to dissolve it.",
+        "Core the apples.",
+        "Chop the apples.",
+        "Put the chopped apples and cinnamon in a saucepan.",
+        "Pour in the water for your chosen texture.",
+        "Bring to the boil.",
       ],
+      heat: "Bring to the boil",
+    },
+    {
+      id: "cook",
+      title: "Simmer the apples",
+      tone: "yellow",
+      activity: "cooking",
+      uses: ["apples", "water", "cinnamon"],
+      instructions: [
+        "Lower the heat to a simmer.",
+        "Simmer for 15 minutes, until the apples are soft.",
+      ],
+      heat: "Gentle simmer",
+      duration: [15, 15],
+      timers: [
+        { label: "Check the apples", minutes: 15, afterInstruction: 2 },
+      ],
+    },
+    {
+      id: "texture",
+      title: "Mash or blend",
+      tone: "yellow",
+      activity: "prep",
+      uses: ["apples", "water", "cinnamon"],
+      instructions: [
+        "Take the pan off the heat.",
+        "Lift out the cinnamon stick if you used one.",
+      ],
+      heat: "Off the heat",
+      options: [
+        {
+          title: "Chunky sauce",
+          instructions: [
+            "Mash the soft apples, leaving some pieces intact.",
+          ],
+        },
+        {
+          title: "Smooth purée",
+          instructions: [
+            "Blend the cooked apples until smooth.",
+          ],
+        },
+      ],
+    },
+    {
+      id: "season",
+      title: "Season to taste",
+      tone: "pink",
+      activity: "prep",
+      uses: ["apples", "water", "cinnamon", "sugar", "lemon"],
+      instructions: [
+        "Taste the sauce.",
+        "Add sugar about 12 g at a time if you want a sweeter sauce.",
+        "Stir in the optional lemon juice for a sharper flavour.",
+      ],
+      heat: "Off the heat",
+    },
+    {
+      id: "dissolve",
+      title: "Dissolve any added sugar",
+      tone: "pink",
+      activity: "cooking",
+      uses: ["apples", "water", "cinnamon", "sugar", "lemon"],
+      instructions: [
+        "Return the sauce to low heat if you added sugar.",
+        "Warm for about 5 minutes, until the sugar dissolves.",
+      ],
+      heat: "Low hob",
+      duration: [5, 5],
+      timing: "About 5 min if adding sugar",
+      optional: true,
     },
   ],
   notes: [

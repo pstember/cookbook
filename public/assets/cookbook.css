@@ -344,31 +344,6 @@ button:disabled { cursor: default; }
 }
 
 .recipe-section { margin-top: 4.4rem; scroll-margin-top: 1.5rem; }
-.recipe-plan {
-  margin-top: 2.2rem;
-  padding: clamp(1rem, 3vw, 2rem);
-}
-.recipe-plan h2 { font-size: clamp(1.55rem, 3.5vw, 2.25rem); }
-.plan-stages, .plan-branches { display: grid; list-style: none; padding: 0; }
-.plan-stages { margin: .9rem 0 0; }
-.plan-stage { min-width: 0; }
-.plan-stages > .plan-stage { padding: .72rem 0 .72rem 1rem; border-left: 3px solid var(--sage); }
-.plan-stages > .plan-stage + .plan-stage { border-top: 1px solid var(--rule); }
-.plan-stage-title { font-weight: 700; }
-.plan-stage-title a { text-decoration-color: var(--control-border); }
-.plan-stage-title a:hover { color: var(--green); text-decoration-color: currentColor; }
-.plan-stage-detail { margin-top: .15rem; color: var(--muted); }
-.plan-branches {
-  grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
-  gap: .5rem;
-  margin: .65rem 0 .25rem;
-}
-.plan-branches .plan-stage {
-  padding: .55rem .75rem;
-  border: 1px solid var(--rule);
-  border-radius: 9px;
-  background: var(--canvas);
-}
 .section-heading {
   display: flex;
   justify-content: space-between;
@@ -697,12 +672,6 @@ progress::-moz-progress-bar { background: #657c56; }
   .site-header, .skip-link, .hero-art, .jump-button, .servings-picker, .check, .text-button,
   .step-check, .step-progress, .timers, .step-art, .ingredient-art, .safety-icon, .brand, .back-link { display: none !important; }
   .recipe-hero, .recipe-section, .site-footer { margin-top: 13pt; }
-  .recipe-plan { padding: 6pt 8pt; border-radius: 0; box-shadow: none; break-inside: avoid; }
-  .recipe-plan h2 { font-size: 14pt; }
-  .plan-stages { margin-top: 3pt; }
-  .plan-stages > .plan-stage, .plan-branches .plan-stage { padding: 3pt 5pt; }
-  .plan-branches { grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 3pt 0 0; }
-  .plan-stage-title a { text-decoration: none; }
   .hero { display: block; min-height: auto; border: 0; background: white; text-align: left; }
   .hero::after { display: none; }
   .hero-copy { padding: 0; }

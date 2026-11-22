@@ -7,6 +7,7 @@
   <meta name="description" content="An illustrated cookbook with ingredient checklists and step-by-step recipes.">
   <title>Recipe | The Little Cookbook</title>
   <link rel="stylesheet" href="assets/cookbook.css">
+  <link rel="stylesheet" href="assets/recipe-template.css">
   <link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
   <script type="module" src="src/recipe-page.js"></script>
 </head>
@@ -48,6 +49,7 @@
     <article id="recipe-content" aria-labelledby="recipe-title" hidden>
       <p class="recipe-return"><a href="./#recipes" data-catalogue-link="#recipes" data-fr="Répertoire des recettes">Recipe index</a></p>
       <header class="recipe-hero">
+        <div class="binder-band" aria-hidden="true"><span id="binder-category"></span><span data-fr="Le petit livre de cuisine">The Little Cookbook</span></div>
         <div class="hero" id="recipe-hero-panel">
           <div class="hero-copy">
             <p class="category" id="recipe-category"></p>
@@ -55,14 +57,20 @@
             <p class="hero-description" id="recipe-description" hidden></p>
             <a class="button jump-button" id="recipe-jump" href="#ingredients" hidden>Jump to recipe</a>
           </div>
-          <img class="hero-art" id="recipe-image" alt="" width="1200" height="800" fetchpriority="high" hidden>
+          <img class="hero-art" id="recipe-image" alt="" width="640" height="480" fetchpriority="high" hidden>
         </div>
         <dl class="facts" id="recipe-facts" aria-label="Recipe timings and yield" data-fr-aria-label="Durées et quantité" hidden></dl>
       </header>
 
-      <section class="recipe-section recipe-plan panel" id="recipe-plan" aria-labelledby="recipe-plan-title" hidden>
+      <section class="recipe-section timeline-section" aria-labelledby="timeline-title">
+        <h2 id="timeline-title" data-fr="Déroulement">Timeline</h2>
+        <div id="recipe-timeline"></div>
+      </section>
+
+      <section class="recipe-section" id="recipe-plan" aria-labelledby="recipe-plan-title">
         <h2 id="recipe-plan-title" data-fr="En un coup d’œil">At a glance</h2>
-        <ol class="plan-stages" id="recipe-plan-stages" role="list"></ol>
+        <p class="section-hint" data-fr="Suivez chaque ingrédient de gauche à droite jusqu’à son utilisation.">Follow each ingredient from left to right to see where it is used.</p>
+        <div id="recipe-chart"></div>
       </section>
 
       <section class="recipe-section" id="ingredients" aria-labelledby="ingredients-title" hidden>
@@ -98,7 +106,7 @@
       </section>
 
       <section class="recipe-section recipe-notes" id="recipe-notes" aria-labelledby="recipe-notes-title" hidden>
-        <div class="section-heading"><h2 id="recipe-notes-title">Notes</h2></div>
+        <div class="section-heading"><h2 id="recipe-notes-title" data-fr="Notes de cuisine">Notes from the kitchen</h2></div>
         <div class="recipe-notes-copy" id="recipe-notes-copy"></div>
       </section>
 
@@ -116,6 +124,16 @@
           <div id="nutrition-method"></div>
         </div>
         <div class="nutrition-card" id="nutrition-card"></div>
+      </section>
+
+      <section class="recipe-section" id="allergens" aria-labelledby="allergens-title">
+        <h2 id="allergens-title" data-fr="Allergènes">Allergens</h2>
+        <ul id="allergen-list" class="allergen-list"></ul>
+      </section>
+
+      <section class="recipe-section" id="storage" aria-labelledby="storage-title">
+        <h2 id="storage-title" data-fr="Conservation">Storage</h2>
+        <dl id="storage-list" class="storage-list"></dl>
       </section>
 
       <section class="recipe-section recipe-notes" id="recipe-source" aria-labelledby="recipe-source-title" hidden>

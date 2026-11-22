@@ -29,18 +29,16 @@ Catalogue-specific layout lives in `public/assets/catalogue.css`. Keep colour an
 
 ## Recipe template
 
-The agreed layout for every recipe page and its print sheet is in the [recipe template spec](product/specs/recipe-template.md), with a prototype of each. It is the base for the site revamp. The sections below describe the page as built today.
+The [recipe template spec](product/specs/recipe-template.md) describes the screen page and binder sheet. Both use the selected language, ingredient amounts and recipe artwork. Screen colours follow the ingredient components. Each category has its own print colour.
 
-## Recipe overview and timers
+## Chart, timeline and timers
 
-Use the At a glance panel above the ingredients for recipes with components that come together, work that can overlap, or waits that affect the serving time. Show stages in order. Use side-by-side branches for components prepared separately, with the next stage explaining when they come together. Branches stack when space is limited. Link to the detailed method where the cook can act on the summary.
+The chart groups ingredient rows by component and shows the actions each ingredient passes through. Separate components can share a column. A mixing or assembly step spans the ingredients it combines. Action links jump to the numbered method. The timeline colours stages by activity and sizes them by their recorded durations. When an earlier stage has an open duration, the next stage names the preceding step as its starting point.
 
-Place a countdown immediately after its starting instruction. The instructions include the duration and follow-up action so the sequence also works in print. The authoring conventions are in the [recipe guide](recipe-authoring.md).
+Keep heat and wait pills with their step or option. Place each timer beside its starting instruction. Include the duration, readiness cue and next action in the method for cooks using the print sheet. The [recipe authoring guide](recipe-authoring.md) describes the fields.
 
 ## Step illustrations
 
-Each step card pairs close-up artwork with the full written instructions. Wide screens put them side by side within a single step. Narrow screens show the artwork first. Use the actual equipment, ingredient texture, hand position and cooking stage from the recipe. Match the collection’s warm gouache and coloured-pencil style. Draw one frame for a single action and use separate frames when a step has distinct stages to learn.
+Use 640 × 480 WebP files for recipe heroes, thumbnails and method illustrations. Match the collection’s warm gouache and coloured-pencil style. Frame the equipment, hand position and ingredient texture that illustrate the action. Check the finished crop at phone and print sizes.
 
-Add a caption array for every step ID in `public/step-illustrations/` and register the recipe in that directory’s `index.js`. Give each frame matching short `en` and `fr` captions that describe the illustrated cue. The written recipe remains the source for quantities, temperatures and times.
-
-Save each distinct WebP in `public/assets/illustrations/steps/<recipe-id>/`. Name a single frame `<step-id>.webp`. For multiple frames, name them `<step-id>-1.webp`, `<step-id>-2.webp` and so on in caption order. Check the finished crop against the recipe. Keep important tools and actions inside the frame, and keep text in the captions. The browser includes the artwork and captions in print.
+Use one distinct image per numbered step. Save it as `public/assets/illustrations/steps/<recipe-id>/<step-id>.webp`. In `public/step-illustrations/<recipe-id>.js`, give the step ID a single-entry array containing its short `en` and `fr` captions. Register the recipe in that directory’s `index.js`. Captions describe the visible cue. The method supplies quantities, temperatures and times.

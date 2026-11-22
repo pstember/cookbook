@@ -4,6 +4,7 @@ import { catalogueHref, categoryLabel, locale, recipeForLocale, ui } from "./loc
 import { nutritionPer100g } from "./nutrition.js";
 import { recipeHref } from "./recipe-links.js";
 import { renderStepIllustration } from "./step-illustration.js";
+import { durationText, element, pills, renderChart, renderTimeline, sourceVolumeMl, stageTime } from "./recipe-guide.js";
 import { addTimer } from "./timers.js";
 
 const recipeId = new URLSearchParams(window.location.search).get("recipe");
@@ -13,13 +14,6 @@ const bookTitle = ui("The Little Cookbook", "Le petit livre de cuisine");
 const iconsPath = "assets/illustrations/icons.svg";
 const svgNamespace = "http://www.w3.org/2000/svg";
 const byId = id => document.getElementById(id);
-
-function element(tag, className, text) {
-  const node = document.createElement(tag);
-  if (className) node.className = className;
-  if (text !== undefined) node.textContent = text;
-  return node;
-}
 
 function icon(name, className = "icon") {
   const svg = document.createElementNS(svgNamespace, "svg");
@@ -97,6 +91,9 @@ function renderRecipe(recipe) {
     steps: new Set(Array.isArray(saved.steps) ? saved.steps : []),
   };
   const ingredientRows = [];
+  const chartAmounts = [];
+  const setupLines = [];
+  article.dataset.category = recipe.category;
   const stepRows = [];
 
   function saveProgress() {
@@ -120,7 +117,7 @@ function renderRecipe(recipe) {
   function renderHero() {
     const fullTitle = [recipe.qualifier, recipe.title].filter(Boolean).join(" ");
     document.title = `${fullTitle} | ${bookTitle}`;
-    byId("recipe-category").textContent = categoryLabel(recipe.category);
+    byId("recipe-category").textContent = byId("binder-category").textContent = categoryLabel(recipe.category);
     const title = byId("recipe-title");
     if (recipe.qualifier) {
       const badge = element("span", "hero-badge");
@@ -151,15 +148,16 @@ function renderRecipe(recipe) {
     } else {
       hero.classList.add("hero--text-only");
     }
-    const entries = [...(recipe.times ?? [])];
-    if (state.servings != null) {
-      entries.push({ label: ui("Serves", "Portions"), value: state.servings, icon: "servings", isServings: true });
-    } else if (recipe.yield) {
-      entries.push({ label: ui("Yield", "Quantité"), value: recipe.yield, icon: "servings" });
-    }
+    const times = recipe.times ?? [];
+    const missing = ui("Not recorded", "Non relevé");
+    const entries = [
+      { label: ui("Total time", "Durée totale"), value: recipe.totalTime || times.find(t => t.highlight === "total")?.value || missing },
+      { label: ui("Cooking", "Cuisson"), value: recipe.cookingTime || times.find(t => t.highlight === "cook")?.value || activityTime(["cooking"]) },
+      { label: ui("Chill & rest", "Froid et repos"), value: recipe.restTime || times.find(t => t.highlight === "rest")?.value || activityTime(["wait", "chill"]) },
+      { label: recipe.yield ? ui("Yield", "Quantité") : ui("Serves", "Portions"), value: state.servings ?? recipe.yield ?? missing, isServings: state.servings != null },
+    ];
     const facts = byId("recipe-facts");
-    facts.hidden = !entries.length;
-    facts.style.setProperty("--fact-count", Math.min(entries.length, 4));
+    facts.hidden = false;
     for (const fact of entries) {
       const row = element("div", "fact");
       const value = element("dd", null, typeof fact.value === "number" ? number.format(fact.value) : fact.value);
@@ -168,38 +166,38 @@ function renderRecipe(recipe) {
         value.setAttribute("aria-live", "polite");
       }
       const label = element("dt", null, fact.label);
-      label.prepend(icon(fact.icon ?? "clock", "fact-icon"));
+
       row.append(label, value);
       facts.append(row);
     }
   }
 
-  function renderPlan() {
-    if (!recipe.plan?.length) return;
-    const list = byId("recipe-plan-stages");
-    function addStages(container, stages) {
-      for (const stage of stages) {
-        const item = element("li", "plan-stage");
-        const title = element("strong", "plan-stage-title");
-        if (stage.step) {
-          const link = element("a", null, stage.title);
-          link.href = `#step-${stage.step}`;
-          title.append(link);
-        } else {
-          title.textContent = stage.title;
-        }
-        item.append(title, element("p", "plan-stage-detail", stage.detail));
-        if (stage.branches?.length) {
-          const branches = element("ul", "plan-branches");
-          branches.setAttribute("role", "list");
-          addStages(branches, stage.branches);
-          item.append(branches);
-        }
-        container.append(item);
+  function activityTime(activities) {
+    const relevant = steps.filter(step => activities.includes(step.activity) && !step.optional);
+    if (!relevant.length) return ui("None", "Aucun");
+    if (relevant.some(step => !step.duration || step.durationPerBatch || step.options?.length)) {
+      return ui("See stages", "Voir les étapes");
+    }
+    const range = relevant.reduce(([low, high], { duration }) => [low + duration[0], high + duration[1]], [0, 0]);
+    return durationText(range, relevant.some(step => step.durationMinimum));
+  }
+
+  function renderGuide() {
+    renderTimeline(byId("recipe-timeline"), steps);
+    const chart = byId("recipe-chart");
+    const setup = element("div", "chart-setup");
+    for (const line of recipe.setup ?? []) {
+      const node = element("p", null, line);
+      setupLines.push({ node, line });
+      setup.append(node);
+    }
+    for (const time of recipe.times ?? []) {
+      if (!time.highlight) {
+        setup.append(element("p", "setup-fact", [time.label, time.value].join(" · ")));
       }
     }
-    addStages(list, recipe.plan);
-    byId("recipe-plan").hidden = false;
+    if (setup.childElementCount) chart.append(setup);
+    renderChart(chart, recipe, chartAmounts);
   }
 
   function renderIngredients() {
@@ -226,10 +224,11 @@ function renderRecipe(recipe) {
         const description = element("span", "ingredient-name", ingredient.name);
         const note = element("small", "ingredient-note");
         description.append(note);
-        label.append(checkbox, amount, description);
+        const volume = element("span", "ingredient-volume");
+        label.append(checkbox, amount, description, volume);
         row.append(label);
         list.append(row);
-        ingredientRows.push({ ingredient, label, amount, note, checkbox });
+        ingredientRows.push({ ingredient, label, amount, note, volume, checkbox });
         checkbox.addEventListener("change", () => {
           updateCheck(state.ingredients, ingredient.id, checkbox.checked);
           updateClearIngredients();
@@ -266,12 +265,32 @@ function renderRecipe(recipe) {
     byId("clear-ingredients").disabled = ingredientRows.every(({ checkbox }) => !checkbox.checked);
   }
 
+  function appendInstructions(container, stage, title) {
+    const list = element("ol", "step-instructions");
+    const lines = stage.instructions.map((instruction, index) => {
+      const item = element("li");
+      const text = element("span", null, instruction);
+      item.append(text);
+      for (const timer of stage.timers ?? []) {
+        if (timer.afterInstruction !== index + 1) continue;
+        const controls = element("div", "timers inline-timers");
+        addTimer(controls, title, timer, icon("clock"));
+        item.append(controls);
+      }
+      list.append(item);
+      return text;
+    });
+    if (lines.length) container.append(list);
+    return lines;
+  }
+
   function renderSteps() {
     if (!steps.length) return;
     const list = byId("recipe-steps");
     for (const [index, step] of steps.entries()) {
       const item = element("li", `step-card tone-${step.tone ?? "yellow"}`);
       item.id = `step-${step.id}`;
+      item.classList.toggle("component-start", !index || steps[index - 1].tone !== step.tone);
       const top = element("div", "step-top");
       const stepNumber = number.format(index + 1);
       const badge = element("span", "step-number", stepNumber);
@@ -288,49 +307,31 @@ function renderRecipe(recipe) {
 
       item.append(top);
       const illustration = renderStepIllustration(recipe.id, step.id);
-      if (step.title || step.timing || step.art) {
-        const heading = element("div", "step-heading");
-        const copy = element("div");
-        if (step.title) copy.append(element("h3", null, step.title));
-        if (step.timing) {
-          const timing = element("p", "step-timing");
-          timing.append(icon("clock"), element("span", null, step.timing));
-          copy.append(timing);
-        }
-        heading.append(copy);
-        if (step.art && !illustration) heading.append(icon(`art-${step.art}`, "step-art"));
-        item.append(heading);
-      }
-
+      const heading = element("div", "step-heading");
+      heading.append(element("h3", null, step.title), element("p", "step-timing", stageTime(step)));
+      item.append(heading);
       if (illustration) item.append(illustration);
-      const instructions = step.instructions.map(() => element("p"));
-      const body = element("div", "step-body");
-      const trailingTimers = element("div", "timers");
-      const inlineTimers = new Map();
-      for (const timer of step.timers ?? []) {
-        const position = timer.afterInstruction;
-        let container = trailingTimers;
-        if (Number.isInteger(position) && position >= 1 && position <= instructions.length) {
-          if (!inlineTimers.has(position)) inlineTimers.set(position, element("div", "timers inline-timers"));
-          container = inlineTimers.get(position);
+      const details = element("div", "step-details");
+      details.append(pills(step));
+      const instructions = appendInstructions(details, step, step.title ?? stepLabel);
+      if (step.options?.length) {
+        const choices = element("div", "step-choice");
+        choices.append(element("strong", "choice-label", ui("Choose one", "Au choix")));
+        const options = element("div", "step-options");
+        for (const option of step.options) {
+          const box = element("section", "step-option");
+          box.append(element("h4", null, option.title), pills(option));
+          appendInstructions(box, option, option.title);
+          options.append(box);
         }
-        addTimer(container, step.title ?? stepLabel, timer, icon("clock"));
-      }
-      for (const [index, instruction] of instructions.entries()) {
-        body.append(instruction);
-        const timers = inlineTimers.get(index + 1);
-        if (timers) body.append(timers);
+        choices.append(options);
+        details.append(choices);
       }
       if (step.tip) {
         const tip = element("p", "step-tip");
-        const label = element("strong", null, ui("Tip", "Astuce"));
-        tip.append(label, document.createTextNode(` ${step.tip}`));
-        body.append(tip);
+        tip.append(element("strong", null, ui("Tip", "Astuce")), document.createTextNode(" " + step.tip));
+        details.append(tip);
       }
-      const details = element("div", "step-details");
-      details.append(body);
-
-      if (trailingTimers.childElementCount) details.append(trailingTimers);
       item.append(details);
 
       stepRows.push({ step, instructions, checkbox });
@@ -346,7 +347,7 @@ function renderRecipe(recipe) {
       });
       list.append(item);
     }
-    if (steps.some(step => step.timers?.length)) {
+    if (steps.some(step => step.timers?.length || step.options?.some(option => option.timers?.length))) {
       byId("method-intro").textContent = ui("Mark each step when it’s done, and use the timers if you like.", "Cochez chaque étape une fois terminée. Utilisez les minuteurs si vous le souhaitez.");
     }
     byId("step-progress").max = steps.length;
@@ -395,7 +396,9 @@ function renderRecipe(recipe) {
     const scale = canScale ? state.servings / recipe.servings : 1;
     const servings = byId("hero-servings");
     if (servings) servings.textContent = typeof state.servings === "number" ? number.format(state.servings) : state.servings;
-    for (const { ingredient, label, amount, note } of ingredientRows) {
+    for (const { node, line } of setupLines) node.textContent = line.replaceAll("{tins}", batch?.tins ?? "");
+    for (const { ingredient, amount } of chartAmounts) amount.textContent = formatGramAmount(ingredient, scale);
+    for (const { ingredient, label, amount, note, volume } of ingredientRows) {
       const grams = formatGramAmount(ingredient, scale);
       const sourceAmount = formatSourceAmount(ingredient, scale);
       amount.textContent = grams || sourceAmount;
@@ -409,7 +412,10 @@ function renderRecipe(recipe) {
           detail = ui(`about ${number.format(count)} ${eggName}`, `environ ${number.format(count)} ${eggName}`);
         }
       }
-      const original = grams ? originalMeasureNote(ingredient, sourceAmount) : "";
+      const ml = sourceVolumeMl(ingredient);
+      volume.hidden = !ml;
+      if (ml) volume.textContent = number.format(ml * scale) + " ml";
+      const original = grams && !(ml && ingredient.unit?.toLowerCase() === "ml") ? originalMeasureNote(ingredient, sourceAmount) : "";
       note.textContent = [...new Set([original, detail].filter(Boolean))].join(" · ");
       note.hidden = !note.textContent;
     }
@@ -433,12 +439,13 @@ function renderRecipe(recipe) {
   }
 
   function renderNotes() {
-    if (!recipe.notes?.length) return;
-    for (const note of recipe.notes) {
+    const notes = recipe.notes?.length ? recipe.notes : steps.filter(step => step.tip).map(step => step.tip);
+    for (const note of notes) {
       const paragraph = element("p", null, typeof note === "string" ? note : note.text);
       if (note.source) paragraph.append(" ", sourceLink(note.source));
       byId("recipe-notes-copy").append(paragraph);
     }
+    if (!notes.length) byId("recipe-notes-copy").append(element("p", "empty-note", ui("No additional notes recorded.", "Aucune note complémentaire.")));
     byId("recipe-notes").hidden = false;
   }
 
@@ -489,7 +496,11 @@ function renderRecipe(recipe) {
   }
 
   function renderSource() {
-    if (!recipe.source?.label && !recipe.source?.url) return;
+    if (!recipe.source?.label && !recipe.source?.url) {
+      byId("recipe-source-copy").textContent = ui("The author’s cookbook", "Le carnet de recettes de l’auteur");
+      byId("recipe-source").hidden = false;
+      return;
+    }
     const source = byId("recipe-source-copy");
     if (recipe.source.credit) source.append(`${recipe.source.credit} `);
     source.append(sourceLink(recipe.source));
@@ -497,7 +508,12 @@ function renderRecipe(recipe) {
   }
 
   function renderNutrition() {
-    if (!recipe.nutrition) return;
+    if (!recipe.nutrition) {
+      byId("nutrition-card").append(element("p", "nutrition-unavailable", ui(
+        "Values per 100 g are unavailable for this recipe.", "Les valeurs pour 100 g ne sont pas disponibles pour cette recette.")));
+      byId("nutrition").hidden = false;
+      return;
+    }
     const values = nutritionPer100g(recipe);
     const formatNutrient = (value, digits) => value.toLocaleString(languageTag, {
       minimumFractionDigits: digits,
@@ -564,7 +580,7 @@ function renderRecipe(recipe) {
   }
 
   renderHero();
-  renderPlan();
+  renderGuide();
   renderIngredients();
   renderSteps();
   updateBatch();
@@ -572,6 +588,13 @@ function renderRecipe(recipe) {
   renderSafety();
   renderRelated();
   renderNutrition();
+  const allergens = recipe.allergens?.length ? recipe.allergens : [ui("None identified in the listed ingredients.", "Aucun identifié dans les ingrédients indiqués.")];
+  for (const allergen of allergens) byId("allergen-list").append(element("li", null, allergen));
+  for (const [key, label] of [["counter", ui("Counter", "À température ambiante")], ["fridge", ui("Fridge", "Réfrigérateur")], ["freezer", ui("Freezer", "Congélateur")]]) {
+    const row = element("div");
+    row.append(element("dt", null, label), element("dd", null, recipe.storage?.[key] ?? ui("Not tested", "Durée non testée")));
+    byId("storage-list").append(row);
+  }
   renderSource();
   byId("print").addEventListener("click", () => window.print());
   article.hidden = false;

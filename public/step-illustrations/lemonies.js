@@ -17,11 +17,16 @@ export default {
       fr: "Vérifiez que la surface est légèrement dorée.",
     },
   ],
+  cool: [
+    { en: "Leave the unglazed lemon slab to cool in the lined tin.", fr: "Laissez refroidir le gâteau au citron dans le moule chemisé avant de le glacer." },
+  ],
   glaze: [
     {
       en: "Smooth the lemon glaze over the cooled slab with a spatula.",
       fr: "Étalez le glaçage au citron sur le gâteau refroidi à l’aide d’une spatule.",
     },
+  ],
+  slice: [
     {
       en: "Let the glaze set before cutting the slab into squares.",
       fr: "Laissez le glaçage figer avant de découper le gâteau en carrés.",

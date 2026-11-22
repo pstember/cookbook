@@ -18,8 +18,8 @@ export function renderStepIllustration(recipeId, stepId) {
     const image = document.createElement("img");
     image.src = stepImagePath(recipeId, stepId, index, frames.length);
     image.alt = "";
-    image.width = 540;
-    image.height = 360;
+    image.width = 640;
+    image.height = 480;
     image.decoding = "async";
     const caption = document.createElement("figcaption");
     caption.textContent = frame[locale];
