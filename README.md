@@ -42,5 +42,6 @@ Grams are required in both languages. Use the recipe’s stated weight where ava
 | --- | --- |
 | Repository conventions | [AGENTS.md](AGENTS.md) |
 | Recipe authoring | [docs/recipe-authoring.md](docs/recipe-authoring.md) |
+| Recipe template spec | [docs/product/specs/recipe-template.md](docs/product/specs/recipe-template.md) |
 | Agent workflows | [docs/agents/](docs/agents/) |
 | Accepted decisions | [.brain/decisions/](.brain/decisions/) |

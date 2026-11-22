@@ -27,6 +27,10 @@ Use `.wrap` as the shared page container. Hero copy uses display typography with
 
 Catalogue-specific layout lives in `public/assets/catalogue.css`. Keep colour and control behaviour shared so additions to the collection feel consistent.
 
+## Recipe template
+
+The agreed layout for every recipe page and its print sheet is in the [recipe template spec](product/specs/recipe-template.md), with a prototype of each. It is the base for the site revamp. The sections below describe the page as built today.
+
 ## Recipe overview and timers
 
 Use the At a glance panel above the ingredients for recipes with components that come together, work that can overlap, or waits that affect the serving time. Show stages in order. Use side-by-side branches for components prepared separately, with the next stage explaining when they come together. Branches stack when space is limited. Link to the detailed method where the cook can act on the summary.
