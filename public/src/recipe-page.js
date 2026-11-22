@@ -134,13 +134,22 @@ function renderRecipe(recipe) {
       description.textContent = recipe.description;
       description.hidden = false;
     }
-    if (recipe.image?.src) {
+    const hero = byId("recipe-hero-panel");
+    const heroImage = recipe.image?.src;
+    const imageSrc = heroImage ?? recipe.thumbnail;
+    if (imageSrc) {
       const image = byId("recipe-image");
-      image.src = recipe.image.src;
-      image.alt = recipe.image.alt ?? "";
+      image.addEventListener("error", () => {
+        image.hidden = true;
+        hero.classList.remove("hero--thumbnail");
+        hero.classList.add("hero--text-only");
+      }, { once: true });
+      hero.classList.toggle("hero--thumbnail", !heroImage);
+      image.alt = heroImage ? recipe.image.alt ?? "" : "";
+      image.src = imageSrc;
       image.hidden = false;
     } else {
-      byId("recipe-hero-panel").classList.add("hero--text-only");
+      hero.classList.add("hero--text-only");
     }
     const entries = [...(recipe.times ?? [])];
     if (state.servings != null) {

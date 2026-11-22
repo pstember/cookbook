@@ -124,7 +124,6 @@ function renderCatalogue() {
           artwork.removeAttribute("hidden");
         }, { once: true });
         media.src = thumbnail;
-        media.classList.toggle("catalogue-card-thumbnail", Boolean(recipe.thumbnail));
         media.hidden = false;
         artwork.setAttribute("hidden", "");
       }

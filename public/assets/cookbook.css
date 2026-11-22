@@ -295,6 +295,15 @@ button:disabled { cursor: default; }
   mask-composite: intersect;
 }
 
+.hero--thumbnail .hero-title { width: auto; overflow-wrap: anywhere; }
+.hero--thumbnail .hero-art {
+  justify-self: center;
+  width: min(calc(100% - 2rem), 480px);
+  margin: 1rem 0;
+  border-radius: var(--radius-panel);
+  mask-image: none;
+}
+
 .facts {
   --fact-inset: clamp(.75rem, 2vw, 1.9rem);
   position: relative;
