@@ -174,6 +174,34 @@ function renderRecipe(recipe) {
     }
   }
 
+  function renderPlan() {
+    if (!recipe.plan?.length) return;
+    const list = byId("recipe-plan-stages");
+    function addStages(container, stages) {
+      for (const stage of stages) {
+        const item = element("li", "plan-stage");
+        const title = element("strong", "plan-stage-title");
+        if (stage.step) {
+          const link = element("a", null, stage.title);
+          link.href = `#step-${stage.step}`;
+          title.append(link);
+        } else {
+          title.textContent = stage.title;
+        }
+        item.append(title, element("p", "plan-stage-detail", stage.detail));
+        if (stage.branches?.length) {
+          const branches = element("ul", "plan-branches");
+          branches.setAttribute("role", "list");
+          addStages(branches, stage.branches);
+          item.append(branches);
+        }
+        container.append(item);
+      }
+    }
+    addStages(list, recipe.plan);
+    byId("recipe-plan").hidden = false;
+  }
+
   function renderIngredients() {
     if (!groups.length) return;
     const grid = byId("ingredient-groups");
@@ -243,6 +271,7 @@ function renderRecipe(recipe) {
     const list = byId("recipe-steps");
     for (const [index, step] of steps.entries()) {
       const item = element("li", `step-card tone-${step.tone ?? "yellow"}`);
+      item.id = `step-${step.id}`;
       const top = element("div", "step-top");
       const stepNumber = number.format(index + 1);
       const badge = element("span", "step-number", stepNumber);
@@ -276,7 +305,22 @@ function renderRecipe(recipe) {
       if (illustration) item.append(illustration);
       const instructions = step.instructions.map(() => element("p"));
       const body = element("div", "step-body");
-      body.append(...instructions);
+      const trailingTimers = element("div", "timers");
+      const inlineTimers = new Map();
+      for (const timer of step.timers ?? []) {
+        const position = timer.afterInstruction;
+        let container = trailingTimers;
+        if (Number.isInteger(position) && position >= 1 && position <= instructions.length) {
+          if (!inlineTimers.has(position)) inlineTimers.set(position, element("div", "timers inline-timers"));
+          container = inlineTimers.get(position);
+        }
+        addTimer(container, step.title ?? stepLabel, timer, icon("clock"));
+      }
+      for (const [index, instruction] of instructions.entries()) {
+        body.append(instruction);
+        const timers = inlineTimers.get(index + 1);
+        if (timers) body.append(timers);
+      }
       if (step.tip) {
         const tip = element("p", "step-tip");
         const label = element("strong", null, ui("Tip", "Astuce"));
@@ -286,11 +330,7 @@ function renderRecipe(recipe) {
       const details = element("div", "step-details");
       details.append(body);
 
-      if (step.timers?.length) {
-        const timers = element("div", "timers");
-        for (const timer of step.timers) addTimer(timers, step.title ?? stepLabel, timer, icon("clock"));
-        details.append(timers);
-      }
+      if (trailingTimers.childElementCount) details.append(trailingTimers);
       item.append(details);
 
       stepRows.push({ step, instructions, checkbox });
@@ -394,7 +434,11 @@ function renderRecipe(recipe) {
 
   function renderNotes() {
     if (!recipe.notes?.length) return;
-    byId("recipe-notes-copy").append(...recipe.notes.map(note => element("p", null, note)));
+    for (const note of recipe.notes) {
+      const paragraph = element("p", null, typeof note === "string" ? note : note.text);
+      if (note.source) paragraph.append(" ", sourceLink(note.source));
+      byId("recipe-notes-copy").append(paragraph);
+    }
     byId("recipe-notes").hidden = false;
   }
 
@@ -520,6 +564,7 @@ function renderRecipe(recipe) {
   }
 
   renderHero();
+  renderPlan();
   renderIngredients();
   renderSteps();
   updateBatch();

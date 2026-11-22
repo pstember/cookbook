@@ -344,6 +344,31 @@ button:disabled { cursor: default; }
 }
 
 .recipe-section { margin-top: 4.4rem; scroll-margin-top: 1.5rem; }
+.recipe-plan {
+  margin-top: 2.2rem;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+.recipe-plan h2 { font-size: clamp(1.55rem, 3.5vw, 2.25rem); }
+.plan-stages, .plan-branches { display: grid; list-style: none; padding: 0; }
+.plan-stages { margin: .9rem 0 0; }
+.plan-stage { min-width: 0; }
+.plan-stages > .plan-stage { padding: .72rem 0 .72rem 1rem; border-left: 3px solid var(--sage); }
+.plan-stages > .plan-stage + .plan-stage { border-top: 1px solid var(--rule); }
+.plan-stage-title { font-weight: 700; }
+.plan-stage-title a { text-decoration-color: var(--control-border); }
+.plan-stage-title a:hover { color: var(--green); text-decoration-color: currentColor; }
+.plan-stage-detail { margin-top: .15rem; color: var(--muted); }
+.plan-branches {
+  grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
+  gap: .5rem;
+  margin: .65rem 0 .25rem;
+}
+.plan-branches .plan-stage {
+  padding: .55rem .75rem;
+  border: 1px solid var(--rule);
+  border-radius: 9px;
+  background: var(--canvas);
+}
 .section-heading {
   display: flex;
   justify-content: space-between;
@@ -489,7 +514,7 @@ progress::-webkit-progress-value { background: #657c56; }
 progress::-moz-progress-bar { background: #657c56; }
 
 .step-list { margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.1rem; list-style: none; }
-.step-card { display: flex; flex-direction: column; gap: .9rem; padding: 1.2rem 1.35rem 1.35rem; }
+.step-card { display: flex; flex-direction: column; gap: .9rem; padding: 1.2rem 1.35rem 1.35rem; scroll-margin-top: 1rem; }
 .step-card.is-complete { border-color: #9aaf8c; }
 .step-top { display: flex; align-items: center; justify-content: space-between; gap: .25rem; }
 .step-number {
@@ -542,11 +567,13 @@ progress::-moz-progress-bar { background: #657c56; }
     align-items: start;
   }
 }
-.step-body p + p { margin-top: .65rem; }
+.step-body p + p, .step-body .inline-timers + p { margin-top: .65rem; }
 .step-tip { padding: .63rem .8rem; border-radius: 9px; background: var(--tint); font-size: .91rem; }
 .step-tip strong { margin-right: .23rem; }
 .timers { display: flex; flex-wrap: wrap; gap: .4rem; }
+.inline-timers { margin-top: .4rem; }
 .timer-button { min-height: 38px; border-color: #c9b9a3; padding-inline: .72rem; font-size: .82rem; }
+.inline-timers .timer-button { min-height: var(--tap-min); }
 .timer-button .icon { width: 16px; height: 16px; }
 
 .safety-section { padding: clamp(1.2rem, 3.7vw, 2.6rem); border: 1px solid #d0b7a7; border-radius: var(--radius-panel); background: #f7e4df; }
@@ -670,6 +697,12 @@ progress::-moz-progress-bar { background: #657c56; }
   .site-header, .skip-link, .hero-art, .jump-button, .servings-picker, .check, .text-button,
   .step-check, .step-progress, .timers, .step-art, .ingredient-art, .safety-icon, .brand, .back-link { display: none !important; }
   .recipe-hero, .recipe-section, .site-footer { margin-top: 13pt; }
+  .recipe-plan { padding: 6pt 8pt; border-radius: 0; box-shadow: none; break-inside: avoid; }
+  .recipe-plan h2 { font-size: 14pt; }
+  .plan-stages { margin-top: 3pt; }
+  .plan-stages > .plan-stage, .plan-branches .plan-stage { padding: 3pt 5pt; }
+  .plan-branches { grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 3pt 0 0; }
+  .plan-stage-title a { text-decoration: none; }
   .hero { display: block; min-height: auto; border: 0; background: white; text-align: left; }
   .hero::after { display: none; }
   .hero-copy { padding: 0; }
@@ -681,7 +714,7 @@ progress::-moz-progress-bar { background: #657c56; }
   .facts > .fact:nth-child(n) { padding: 2pt 6pt; min-height: auto; border: 0; }
   .fact-icon { display: none; }
   .fact dd { font-size: 12pt; }
-  .section-heading { margin-bottom: 5pt; }
+  .section-heading { margin-bottom: 5pt; break-after: avoid; }
   .section-heading p { display: none; }
   h2 { font-size: 21pt; }
   .ingredient-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6pt; }
@@ -710,7 +743,7 @@ progress::-moz-progress-bar { background: #657c56; }
   .step-illustration img { max-height: 95pt; background: white; }
   .step-illustration figcaption { padding: 3pt 4pt; font-size: 8.5pt; }
   .step-body { clear: both; padding-top: 4pt; }
-  .step-body p + p { margin-top: 3pt; }
+  .step-body p + p, .step-body .inline-timers + p { margin-top: 3pt; }
   .step-tip { padding: 0; background: none; font-size: 9pt; }
   .safety-section, .nutrition-section { background: white; padding: 8pt; break-inside: avoid; border-radius: 0; }
   .safety-notes { gap: 7pt; margin-top: 7pt; }

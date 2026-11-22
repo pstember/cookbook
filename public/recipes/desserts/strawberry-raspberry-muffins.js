@@ -53,7 +53,7 @@ export default {
         "Put the diced strawberries, whole raspberries, caster sugar, lemon juice and glucose syrup into a small saucepan. Cook over medium heat for 10–12 minutes, stirring regularly and lightly crushing some of the strawberries. The filling should be thick and glossy with a few pieces of fruit still visible.",
         "If the filling is still runny, mix about 1.2–2.3 g cornflour with about 5 g cold water, stir it in and cook for another minute. Cool the filling completely. Refrigerate it while you prepare the batter if it has already cooled.",
       ],
-      timers: [{ label: "Check the filling", minutes: 10 }],
+      timers: [{ label: "Check the filling", minutes: 10, afterInstruction: 1 }],
     },
     {
       id: "batter", title: "Mix the batter", art: "whisk", tone: "yellow",
@@ -82,10 +82,14 @@ export default {
       id: "bake", title: "Bake at two temperatures", art: "oven", tone: "blue",
       timing: "5 min hot · 14–16 min lower",
       instructions: [
-        "Bake for 5 minutes at 210°C conventional (190°C fan). Without opening the oven, turn it down to 180°C conventional (160°C fan) and bake for another 14–16 minutes.",
+        "Put the muffins in the oven at 210°C conventional (190°C fan) and start the 5-minute timer.",
+        "After 5 minutes, lower the heat to 180°C conventional (160°C fan) without opening the oven. Start the second timer as soon as you lower the heat. Bake at the lower setting for 14–16 minutes.",
         "The muffins are ready when the tops are golden and spring back lightly. A skewer inserted through the cake beside the berry centre should come out free of wet batter.",
       ],
-      timers: [{ label: "Reduce the oven temperature", minutes: 5 }, { label: "Check the muffins after reducing the heat", minutes: 14 }],
+      timers: [
+        { label: "Lower oven temperature", minutes: 5, afterInstruction: 1 },
+        { label: "Check the muffins", minutes: 14, afterInstruction: 2 },
+      ],
     },
   ],
   notes: [

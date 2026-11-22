@@ -20,6 +20,7 @@ In the repository’s **Settings → Pages**, set **Build and deployment → Sou
 
 ## Edit or add a recipe
 
+- Follow the [recipe authoring guide](docs/recipe-authoring.md) for timing, doneness cues and the at-a-glance overview.
 - Edit `public/recipes/desserts/lemon-meringue-pie.js` for ingredients, steps, safety notes and the estimated finished weight. Ingredient weights in grams drive both the checklist and the nutrition calculation.
 - Add data files under category directories such as `public/recipes/breads/` and register them in `public/recipes/index.js`. Registered recipes appear on the home page grouped by category. Each recipe has a direct link at `/recipe.html?recipe=<id>` relative to the site’s root. Add `&lang=fr` to share a French recipe link.
 - Give each recipe a stable `id`, a `title`, and a `category`. Put ingredient checklists in `groups` and numbered instructions in `steps`. A recipe can also include `times`, `servings` or `yield`, `notes`, `related` recipe IDs and a public `source`. Give every ingredient a gram weight. Use `grams` for a single weight, `gramRange: [min, max]` for a range, or `gramVariants` for ordered batch options. Keep `quantity` and `unit` when the source measure adds useful context. Set `lang: "fr"` for French recipe copy.
@@ -40,5 +41,7 @@ Grams are required in both languages. Use the recipe’s stated weight where ava
 | Topic | Location |
 | --- | --- |
 | Repository conventions | [AGENTS.md](AGENTS.md) |
+| Recipe authoring | [docs/recipe-authoring.md](docs/recipe-authoring.md) |
+| Recipe template spec | [docs/product/specs/recipe-template.md](docs/product/specs/recipe-template.md) |
 | Agent workflows | [docs/agents/](docs/agents/) |
 | Accepted decisions | [.brain/decisions/](.brain/decisions/) |

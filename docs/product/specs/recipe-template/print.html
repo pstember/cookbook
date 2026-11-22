@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recipe template: print layout</title>
+<!-- Design prototype. Static sample content. Not part of the published site. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#14201a}a:hover{color:#52655a}
+.e{--cat:#a12a5e;--cat-tint:#f9e9f0;--cat-line:#e3b9cd;--cat-wash:#fdf6f9}
+.e.cat-mains{--cat:#1d5a9e;--cat-tint:#e8f0fa;--cat-line:#b7cdea;--cat-wash:#f6f9fd}
+.e.cat-sides{--cat:#1b6b2e;--cat-tint:#eaf4ea;--cat-line:#b9d6bd;--cat-wash:#f6faf6}
+.e.cat-breakfast{--cat:#a85400;--cat-tint:#fbeedd;--cat-line:#ecc99b;--cat-wash:#fef9f2}
+.e.cat-basics{--cat:#6b4a2b;--cat-tint:#f3ebe2;--cat-line:#d6c2ad;--cat-wash:#fbf8f4}
+.e *{box-sizing:border-box}
+.e a{color:var(--cat)}
+.e .st.gsr{border-top:2.5px solid var(--cat)}
+.e .sw{display:inline-flex;align-items:center;gap:.4rem}
+.e .sw i{width:1.6rem;height:.7rem;display:inline-block}
+.e .acts{list-style:decimal;padding-left:1.35rem;display:flex;flex-direction:column;gap:.15rem}
+.e .opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.5rem}
+.e .opt{border:1px dashed var(--cat);padding:.45rem .55rem;display:flex;flex-direction:column;gap:.35rem}
+.e .opt-h{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cat)}
+.e h1,.e h2,.e h3,.e p,.e ol,.e ul{margin:0;padding:0}
+.e h2{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cat);padding:.45rem .7rem;background:var(--cat-tint);border-bottom:1.5px solid var(--cat)}
+.e .box{border:2.5px solid var(--cat);background:#fff}
+.e .mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.e .fact{padding:.6rem .8rem;border-left:1px solid var(--cat);border-top:1px solid var(--cat);display:flex;flex-direction:column;gap:.1rem;flex:1 1 140px}
+.e .fact .k{font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cat)}
+.e .fact .v{font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:600;font-size:1.25rem}
+.e .fact.total{background:#fff6bf}
+.e .tb{display:grid;grid-template-columns:96px minmax(190px,2fr) 60px repeat(5,minmax(92px,1fr));gap:1px;background:var(--cat);min-width:880px;font-size:.86rem;line-height:1.25}
+.e .tb>div{background:#fff;padding:.38rem .55rem;display:flex;align-items:center}
+.e .tb .ch{justify-content:center;font-weight:500}
+.e .tb .cgrp{font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cat);background:var(--cat-tint)}
+.e .tb .cg{justify-content:flex-end;font-family:'IBM Plex Mono',ui-monospace,monospace}
+.e .tb .ca{justify-content:center;text-align:center}
+.e .tb .fin{background:#fff6bf;font-weight:600}
+.e .row{display:grid;grid-template-columns:3.6rem 4.4rem 1fr;gap:0;border-bottom:1px solid var(--cat-line);font-size:.9rem}
+.e .row>span{padding:.3rem .6rem}
+.e .row .num{text-align:right;font-family:'IBM Plex Mono',ui-monospace,monospace;border-right:1px solid var(--cat-line)}
+.e .row small{color:#52655a}
+.e .ghead{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .6rem;background:var(--cat-wash);border-bottom:1px solid var(--cat-line);color:var(--cat)}
+.e .chead{display:grid;grid-template-columns:3.6rem 4.4rem 1fr;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#52655a;border-bottom:1.5px solid var(--cat)}
+.e .chead span{padding:.3rem .6rem}
+.e .st{display:grid;grid-template-columns:2.6rem 190px minmax(0,1fr) minmax(150px,14rem);border-bottom:1px solid var(--cat-line);font-size:.9rem;break-inside:avoid}
+.e .st:last-child{border-bottom:0}
+.e .figs{border-right:1px solid var(--cat-line)}
+.e .figs figure{margin:0;display:flex;flex-direction:column;gap:.25rem}
+.e .figs img{width:100%;height:auto;aspect-ratio:4 / 3;object-fit:cover;border:1px solid var(--cat-line)}
+.e .figs figcaption{font-size:.74rem;line-height:1.3;color:#52655a}
+.e .todo{border:1.5px dashed var(--cat);aspect-ratio:4 / 3;display:flex;align-items:center;justify-content:center;text-align:center;padding:.6rem;color:#52655a;font-size:.78rem}
+.e .seg{height:1.9rem;display:flex;align-items:center;padding:0 .6rem;font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:600;font-size:.76rem;white-space:nowrap;overflow:hidden;min-width:0;border-right:2.5px solid var(--cat)}
+.e .seg:last-child{border-right:0}
+.e .tb .cx{background:#e6e6e1}
+.e .tl{display:flex;min-width:780px}
+.e .tl-seg{padding:.4rem .55rem;display:flex;flex-direction:column;min-width:0;font-size:.8rem;line-height:1.3;white-space:nowrap;border-right:2.5px solid var(--cat)}
+.e .tl-seg b{font-weight:600;font-size:.86rem}
+.e .tl-seg span,.e .tl-seg small{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.74rem}
+.e .tl-seg small{color:#52655a}
+.e .tl-seg.end{background:var(--cat);color:#ffffff;border-right:0}
+.e .tl-seg.end small{color:#ffffff;font-weight:600}
+.e .tb .gs{box-shadow:inset 0 2.5px 0 var(--cat)}
+.e .igrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+.e .igrid>div{border-right:2.5px solid var(--cat);min-width:0}
+.e .igrid>div:last-child{border-right:0}
+.e .note{background:#fff6bf;border:1px solid #d9c96a;padding:.8rem .9rem 1.1rem;box-shadow:0 5px 8px #14201a1f;font-size:.9rem;line-height:1.35}
+.e .note b{display:block;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#52655a;margin-bottom:.25rem}
+.e .st>*{padding:.6rem .7rem}
+.e .st .n{font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:600;font-size:1.1rem;color:var(--cat);border-right:1px solid var(--cat-line)}
+.e .st h3{font-size:.98rem;font-weight:600;margin-bottom:.25rem}
+.e .st .side{border-left:1px solid var(--cat-line);background:var(--cat-wash);display:flex;flex-direction:column;gap:.3rem;font-size:.82rem}
+.e .st .side .t{font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:600;font-size:.86rem}
+.e .pill{display:inline-flex;align-items:baseline;gap:.4rem;align-self:flex-start;border:1.5px solid #c9692a;border-radius:999px;padding:.12rem .65rem;background:#fbe6d6;color:#5e2c0c;font-size:.8rem;font-weight:500}
+.e .pill b{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.66rem;text-transform:uppercase;letter-spacing:.06em;color:#a04a12}
+.e .pill.wait{border-color:#3f7fa3;background:#dcebf4;color:#173a4f}
+.e .pill.wait b{color:#22607f}
+.e .kv{display:flex;justify-content:space-between;gap:.8rem;padding:.3rem .7rem;border-bottom:1px solid var(--cat-line);font-size:.88rem}
+.e .kv.in{padding-left:1.5rem;color:#52655a}
+.e .kv span:last-child{font-family:'IBM Plex Mono',ui-monospace,monospace;white-space:nowrap}
+.e .li{padding:.4rem .7rem;border-bottom:1px solid var(--cat-line);font-size:.88rem}
+@media (max-width:820px){.e .st{grid-template-columns:2.6rem minmax(0,1fr)}.e .st .figs{grid-column:1 / -1;border-right:0;border-bottom:1px solid var(--cat-line)}.e .st .side{grid-column:1 / -1;border-left:0;border-top:1px solid var(--cat-line)}}
+</style>
+</head>
+<body>
+<div class="e " style="background: #ffffff; color: #14201a; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; line-height: 1.45; padding: 1.5rem 0 3rem">
+<div style="width: min(1180px, calc(100% - 2rem)); margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem">
+<div class="noprint" style="display: flex; flex-wrap: wrap; gap: .6rem; justify-content: space-between; align-items: center"><a href="screen.html">Back to the recipe</a><button type="button" onclick="window.print()" style="min-height: 44px; padding: 0 1.2rem; border: 2.5px solid var(--cat); background: #fff; color: var(--cat); font: inherit; font-weight: 600; cursor: pointer">Print</button></div>
+<style>@media print{.noprint{display:none !important}}</style>
+
+<div style="background: var(--cat); color: #ffffff; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem 1rem; padding: .45rem .8rem; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 600; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: -1.25rem"><span>Desserts</span><span>The Little Cookbook</span></div>
+<header class="box" style="display: flex; flex-wrap: wrap">
+<img src="../../../../public/assets/illustrations/lemon-meringue-pie.webp" alt="Illustrated lemon meringue pie on a blue plate" style="flex: 0 1 300px; width: 300px; min-width: 0; height: 190px; object-fit: cover; background: #fae7a4">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; min-width: 0; border-left: 2.5px solid var(--cat)">
+<div style="padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: .3rem; flex-grow: 1">
+<span class="mono" style="font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--cat)">Desserts / sheet 01</span>
+<h1 style="font-size: 2rem; font-weight: 600; line-height: 1.1; letter-spacing: -.01em">Lemon Meringue Pie</h1>
+<p style="color: #52655a">A buttery shortcrust, a bright lemon filling and soft swirls of toasted Swiss meringue.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; margin-left: -1px">
+<div class="fact total"><span class="k">Total</span><span class="v">4 h 25</span></div>
+<div class="fact"><span class="k">Cooking</span><span class="v">40 min</span></div>
+<div class="fact"><span class="k">Chill &amp; rest</span><span class="v">3 h 15</span></div>
+<div class="fact"><span class="k">Serves</span><span class="v">8</span></div>
+</div>
+</div>
+</header>
+
+<section class="box">
+<h2 style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem 1rem"><span>Timeline</span><span style="display: flex; flex-wrap: wrap; gap: .3rem 1rem; color: #14201a"><span style="display: inline-flex; align-items: center; gap: .35rem"><i style="width: .9rem; height: .9rem; border-radius: 3px; display: inline-block; background: #fff0a6"></i>Prep</span><span style="display: inline-flex; align-items: center; gap: .35rem"><i style="width: .9rem; height: .9rem; border-radius: 3px; display: inline-block; background: #fbd3b3"></i>Cooking</span><span style="display: inline-flex; align-items: center; gap: .35rem"><i style="width: .9rem; height: .9rem; border-radius: 3px; display: inline-block; background: #dfe8d4"></i>Wait</span><span style="display: inline-flex; align-items: center; gap: .35rem"><i style="width: .9rem; height: .9rem; border-radius: 3px; display: inline-block; background: #cfe3f0"></i>Chill</span></span></h2>
+<div style="overflow-x: auto"><div class="tl">
+<div class="tl-seg" style="flex: 18 1 70px; background: #fff0a6"><b>Pastry</b><span>16–20 min</span><small>at 0:00</small></div>
+<div class="tl-seg" style="flex: 30 1 70px; background: #cfe3f0"><b>Chill</b><span>30 min</span><small>at 0:18</small></div>
+<div class="tl-seg" style="flex: 22 1 70px; background: #fbd3b3"><b>Bake shell</b><span>20–23 min</span><small>at 0:48</small></div>
+<div class="tl-seg" style="flex: 14 1 70px; background: #fbd3b3"><b>Filling</b><span>11–17 min</span><small>at 1:10</small></div>
+<div class="tl-seg" style="flex: 16 1 70px; background: #fbd3b3"><b>Meringue</b><span>14–21 min</span><small>at 1:24</small></div>
+<div class="tl-seg" style="flex: 45 1 70px; background: #dfe8d4"><b>Cool</b><span>45 min</span><small>at 1:40</small></div>
+<div class="tl-seg" style="flex: 120 1 70px; background: #cfe3f0"><b>Chill</b><span>2 hr</span><small>at 2:25</small></div>
+<div class="tl-seg end" style="flex: 0 0 auto"><b>Serve</b><span>about</span><small>4:25</small></div>
+</div></div>
+</section>
+
+<section style="overflow-x: auto">
+<div class="tb" style="border: 2.5px solid var(--cat)">
+<div class="ch" style="grid-area: 1 / 1 / 2 / 9">Line a 23 cm loose-bottomed tart tin, about 2.5 cm deep</div>
+<div class="ch" style="grid-area: 2 / 1 / 3 / 9">Heat the oven to 200°C (180°C fan) with a baking tray inside</div>
+<div class="cgrp gs" style="grid-area: 3 / 1 / 8 / 2">Pastry</div>
+<div class="gs" style="grid-area: 3 / 2">plain flour</div><div class="cg gs" style="grid-area: 3 / 3">175 g</div>
+<div style="grid-area: 4 / 2">unsalted butter, cold</div><div class="cg" style="grid-area: 4 / 3">100 g</div>
+<div style="grid-area: 5 / 2">caster sugar</div><div class="cg" style="grid-area: 5 / 3">12 g</div>
+<div style="grid-area: 6 / 2">egg yolk</div><div class="cg" style="grid-area: 6 / 3">18 g</div>
+<div style="grid-area: 7 / 2">cold water</div><div class="cg" style="grid-area: 7 / 3">15 g</div>
+<div class="ca gs" style="grid-area: 3 / 4 / 6 / 5">rub to crumbs</div>
+<div class="cx" style="grid-area: 6 / 4 / 8 / 5"></div>
+<div class="ca gs" style="grid-area: 3 / 5 / 8 / 6">press into a dough</div>
+<div class="ca gs" style="grid-area: 3 / 6 / 8 / 7">roll 3 mm, line tin, chill 30 min</div>
+<div class="ca gs" style="grid-area: 3 / 7 / 8 / 8">blind bake 15 min, then 5–8 min</div>
+<div class="cgrp gs" style="grid-area: 8 / 1 / 16 / 2">Lemon filling</div>
+<div class="gs" style="grid-area: 8 / 2">cornflour</div><div class="cg gs" style="grid-area: 8 / 3">24 g</div>
+<div style="grid-area: 9 / 2">caster sugar</div><div class="cg" style="grid-area: 9 / 3">100 g</div>
+<div style="grid-area: 10 / 2">lemon zest</div><div class="cg" style="grid-area: 10 / 3">6 g</div>
+<div style="grid-area: 11 / 2">fresh lemon juice</div><div class="cg" style="grid-area: 11 / 3">125 g</div>
+<div style="grid-area: 12 / 2">water</div><div class="cg" style="grid-area: 12 / 3">200 g</div>
+<div style="grid-area: 13 / 2">egg yolks</div><div class="cg" style="grid-area: 13 / 3">54 g</div>
+<div style="grid-area: 14 / 2">beaten whole egg</div><div class="cg" style="grid-area: 14 / 3">50 g</div>
+<div style="grid-area: 15 / 2">unsalted butter, cubed</div><div class="cg" style="grid-area: 15 / 3">85 g</div>
+<div class="ca gs" style="grid-area: 8 / 4 / 13 / 5">whisk, boil 1 min</div>
+<div class="ca" style="grid-area: 13 / 4 / 15 / 5">whisk</div>
+<div class="ca gs" style="grid-area: 8 / 5 / 15 / 6">temper, cook to 72°C</div>
+<div class="cx" style="grid-area: 15 / 4 / 16 / 6"></div>
+<div class="ca gs" style="grid-area: 8 / 6 / 16 / 7">stir in off the heat</div>
+<div class="ca gs" style="grid-area: 8 / 7 / 16 / 8">pour into the baked shell</div>
+<div class="cgrp gs" style="grid-area: 16 / 1 / 18 / 2">Swiss meringue</div>
+<div class="gs" style="grid-area: 16 / 2">egg whites</div><div class="cg gs" style="grid-area: 16 / 3">120 g</div>
+<div style="grid-area: 17 / 2">caster sugar</div><div class="cg" style="grid-area: 17 / 3">200 g</div>
+<div class="ca gs" style="grid-area: 16 / 4 / 18 / 5">whisk over simmering water to 72°C</div>
+<div class="ca gs" style="grid-area: 16 / 5 / 18 / 6">beat to stiff peaks, 5–8 min</div>
+<div class="ca gs" style="grid-area: 16 / 6 / 18 / 7">swirl over the warm filling</div>
+<div class="ca gs" style="grid-area: 16 / 7 / 18 / 8">grill or blowtorch until golden</div>
+<div class="ca fin gs" style="grid-area: 3 / 8 / 18 / 9">cool 45 min, chill 2 hr, slice</div>
+</div>
+</section>
+
+<section class="box">
+<h2>Ingredients</h2>
+<div class="igrid">
+
+<div>
+<div class="ghead">Pastry</div>
+<div class="chead"><span style="text-align: right">g</span><span style="text-align: right">ml</span><span>Item</span></div>
+
+<div class="row"><span class="num">175</span><span class="num"></span><span>plain flour <small></small></span></div>
+
+<div class="row"><span class="num">100</span><span class="num"></span><span>unsalted butter <small>cold, cubed</small></span></div>
+
+<div class="row"><span class="num">12</span><span class="num"></span><span>caster sugar <small></small></span></div>
+
+<div class="row"><span class="num">18</span><span class="num"></span><span>egg yolk <small>about 1 large yolk</small></span></div>
+
+<div class="row"><span class="num">15</span><span class="num">15</span><span>cold water <small></small></span></div>
+
+</div>
+
+<div>
+<div class="ghead">Lemon filling</div>
+<div class="chead"><span style="text-align: right">g</span><span style="text-align: right">ml</span><span>Item</span></div>
+
+<div class="row"><span class="num">125</span><span class="num">≈120</span><span>fresh lemon juice <small></small></span></div>
+
+<div class="row"><span class="num">6</span><span class="num"></span><span>finely grated lemon zest <small></small></span></div>
+
+<div class="row"><span class="num">200</span><span class="num">200</span><span>water <small></small></span></div>
+
+<div class="row"><span class="num">24</span><span class="num"></span><span>cornflour <small>cornstarch</small></span></div>
+
+<div class="row"><span class="num">100</span><span class="num"></span><span>caster sugar <small></small></span></div>
+
+<div class="row"><span class="num">85</span><span class="num"></span><span>unsalted butter <small>cubed</small></span></div>
+
+<div class="row"><span class="num">54</span><span class="num"></span><span>egg yolks <small>about 3 large yolks</small></span></div>
+
+<div class="row"><span class="num">50</span><span class="num"></span><span>beaten whole egg <small>about 1 egg</small></span></div>
+
+</div>
+
+<div>
+<div class="ghead">Swiss meringue</div>
+<div class="chead"><span style="text-align: right">g</span><span style="text-align: right">ml</span><span>Item</span></div>
+
+<div class="row"><span class="num">120</span><span class="num"></span><span>egg whites <small>about 4 whites</small></span></div>
+
+<div class="row"><span class="num">200</span><span class="num"></span><span>caster sugar <small></small></span></div>
+
+</div>
+
+</div>
+</section>
+
+<section class="box">
+<h2>Method: one action, one heat setting, one picture per step</h2>
+<ol style="list-style: none">
+<li class="st">
+<span class="n">1</span>
+<div class="figs" style="padding: .6rem"><figure><img src="../../../../public/assets/illustrations/steps/lemon-meringue-pie/pastry-1.webp" alt="Fingertips rubbing cold butter into flour"><figcaption>Rub to fine crumbs.</figcaption></figure></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Make the pastry dough</h3><ol class="acts"><li>Put the flour and sugar in a bowl.</li><li>Add the cold, cubed butter.</li><li>Rub the butter in with your fingertips until the mix looks like fine breadcrumbs.</li><li>Add the yolk and the cold water.</li><li>Press gently until it comes together as a dough.</li></ol>
+</div>
+<div class="side"><span class="t">8–10 min</span></div>
+</li>
+<li class="st">
+<span class="n">2</span>
+<div class="figs" style="padding: .6rem"><figure><img src="../../../../public/assets/illustrations/steps/lemon-meringue-pie/pastry-2.webp" alt="Dough rolled between sheets of baking parchment"><figcaption>Roll to about 3 mm.</figcaption></figure></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Roll, line and chill</h3><ol class="acts"><li>Roll the dough between two sheets of baking parchment, to about 3 mm thick.</li><li>Line one 23 cm loose-bottomed tin, about 2.5 cm deep.</li><li>Trim the rim.</li><li>Patch any cracks with spare dough.</li><li>Prick the base with a fork.</li><li>Chill for 30 minutes.</li></ol>
+</div>
+<div class="side"><span class="t">8–10 min + 30 min chill</span><span class="pill wait"><b>Wait</b>chill 30 min</span></div>
+</li>
+<li class="st">
+<span class="n">3</span>
+<div class="figs" style="padding: .6rem"><figure><img src="../../../../public/assets/illustrations/steps/lemon-meringue-pie/blind-bake.webp" alt="Parchment and baking beads lifted out of the pastry shell"><figcaption>Lift parchment and beads out together.</figcaption></figure></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Bake the shell</h3><ol class="acts"><li>Put a baking tray in the oven.</li><li>Heat the oven to 200°C (180°C fan).</li><li>Line the chilled pastry with baking parchment.</li><li>Fill it to the rim with baking beans.</li><li>Put the tin on the hot tray.</li><li>Bake for 15 minutes.</li><li>Lift out the parchment and beans together.</li><li>Bake for 5–8 minutes more, until the base is dry and golden.</li></ol>
+</div>
+<div class="side"><span class="t">20–23 min</span><span class="pill"><b>Heat</b>oven 200°C / 180°C fan</span><span class="pill wait"><b>Wait</b>15 min with beans</span><span class="pill wait"><b>Wait</b>5–8 min uncovered</span></div>
+</li>
+<li class="st gsr">
+<span class="n">4</span>
+<div class="figs" style="padding: .6rem"><div class="todo">Illustration to draw: the lemon base thickening as it bubbles</div></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Thicken the lemon base</h3><ol class="acts"><li>Put the cornflour, sugar, zest, lemon juice and water in a saucepan.</li><li>Whisk them together.</li><li>Set the pan over medium heat.</li><li>Stir until the mix is thick and bubbling.</li><li>Simmer for 1 minute, stirring all the time.</li></ol>
+</div>
+<div class="side"><span class="t">4–6 min</span><span class="pill"><b>Heat</b>medium</span><span class="pill wait"><b>Wait</b>bubble 1 min</span></div>
+</li>
+<li class="st">
+<span class="n">5</span>
+<div class="figs" style="padding: .6rem"><figure><img src="../../../../public/assets/illustrations/steps/lemon-meringue-pie/curd-1.webp" alt="Hot lemon mixture whisked into the eggs a little at a time"><figcaption>Warm the eggs a little at a time.</figcaption></figure></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Warm the eggs</h3><ol class="acts"><li>Whisk the yolks and the whole egg together in a separate bowl.</li><li>Add a spoonful of the hot lemon mix to the eggs.</li><li>Whisk it in.</li><li>Repeat with a few more spoonfuls, so the eggs warm up slowly.</li><li>Pour the warmed eggs back into the pan.</li></ol>
+</div>
+<div class="side"><span class="t">2–3 min</span></div>
+</li>
+<li class="st">
+<span class="n">6</span>
+<div class="figs" style="padding: .6rem"><figure><img src="../../../../public/assets/illustrations/steps/lemon-meringue-pie/curd-2.webp" alt="Thermometer probe checking the curd in the pan"><figcaption>At least 72°C. Probe off the bottom.</figcaption></figure></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Cook the filling through</h3><ol class="acts"><li>Reduce the heat to medium-low.</li><li>Stir until the filling bubbles gently.</li><li>Measure the temperature with a thermometer, keeping the probe off the bottom of the pan.</li><li>Keep cooking until it reads at least 72°C all the way through.</li></ol>
+</div>
+<div class="side"><span class="t">3–5 min</span><span class="pill"><b>Reduce</b>medium-low</span><span class="pill wait"><b>Wait</b>until 72°C throughout</span></div>
+</li>
+<li class="st">
+<span class="n">7</span>
+<div class="figs" style="padding: .6rem"><div class="todo">Illustration to draw: butter stirred in, filling poured into the shell</div></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Finish the filling</h3><ol class="acts"><li>Take the pan off the heat.</li><li>Add the cubed butter.</li><li>Stir it in.</li><li>Pour the filling into the baked shell.</li></ol>
+</div>
+<div class="side"><span class="t">2–3 min</span><span class="pill"><b>Off heat</b>take the pan off</span></div>
+</li>
+<li class="st gsr">
+<span class="n">8</span>
+<div class="figs" style="padding: .6rem"><figure><img src="../../../../public/assets/illustrations/steps/lemon-meringue-pie/meringue-1.webp" alt="Whites and sugar whisked in a bowl above simmering water"><figcaption>Leave a gap below the bowl.</figcaption></figure></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Warm the whites and sugar</h3><ol class="acts"><li>Put the egg whites and sugar in a clean heatproof bowl.</li><li>Set the bowl over a pan of barely simmering water, leaving a gap between the bowl and the water.</li><li>Whisk all the time, for 5–7 minutes.</li><li>Stir the mix.</li><li>Measure the temperature, keeping the thermometer tip off the bowl.</li><li>Stop when the sugar has dissolved and the mix reads at least 72°C.</li></ol>
+</div>
+<div class="side"><span class="t">5–7 min</span><span class="pill"><b>Heat</b>barely simmering water</span><span class="pill wait"><b>Wait</b>5–7 min, to 72°C</span></div>
+</li>
+<li class="st">
+<span class="n">9</span>
+<div class="figs" style="padding: .6rem"><figure><img src="../../../../public/assets/illustrations/steps/lemon-meringue-pie/meringue-2.webp" alt="Whisk lifted from glossy meringue with an upright peak"><figcaption>Whip until a peak stands upright.</figcaption></figure></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Whip to stiff peaks</h3><ol class="acts"><li>Lift the bowl off the pan.</li><li>Beat with an electric mixer for 5–8 minutes.</li><li>Stop when the meringue is glossy and a peak stands upright.</li></ol>
+</div>
+<div class="side"><span class="t">5–8 min</span><span class="pill"><b>Off heat</b>lift the bowl off</span><span class="pill wait"><b>Wait</b>beat 5–8 min</span></div>
+</li>
+<li class="st">
+<span class="n">10</span>
+<div class="figs" style="padding: .6rem"><figure><img src="../../../../public/assets/illustrations/steps/lemon-meringue-pie/brown-1.webp" alt="Spoon pulling meringue into peaks at the pastry edge"><figcaption>Spread to the edge, pull up peaks.</figcaption></figure></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Spread the meringue</h3><ol class="acts"><li>Spoon the meringue onto the warm filling.</li><li>Spread it right to the pastry edge.</li><li>Lift the spoon as you go to pull up wavy peaks.</li></ol>
+</div>
+<div class="side"><span class="t">3–4 min</span></div>
+</li>
+<li class="st">
+<span class="n">11</span>
+<div class="figs" style="padding: .6rem"><figure><img src="../../../../public/assets/illustrations/steps/lemon-meringue-pie/brown-2.webp" alt="Pie under the grill with golden meringue tips"><figcaption>Option A: out as soon as the tips turn golden.</figcaption></figure></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Toast the peaks</h3><div class="opts">
+<div class="opt"><span class="opt-h">Option A · oven grill</span><ol class="acts"><li>Preheat the grill until hot.</li><li>Put the pie about 15 cm below the element.</li><li>Grill for 1–2 minutes, watching all the time.</li><li>Turn the tin as needed.</li><li>Take it out as soon as the tips turn golden.</li></ol><span class="pill"><b>Heat</b>hot grill</span><span class="pill wait"><b>Wait</b>1–2 min, until tips turn golden</span></div>
+<div class="opt"><span class="opt-h">Option B · kitchen blowtorch</span><ol class="acts"><li>Put the pie on a heatproof surface.</li><li>Hold the torch about 15 cm from the meringue.</li><li>Sweep the flame over the peaks, keeping it moving.</li><li>Stop when the tips turn golden.</li></ol><span class="pill"><b>Heat</b>blowtorch, flame moving</span><span class="pill wait"><b>Wait</b>until tips turn golden</span></div>
+</div></div>
+<div class="side"><span class="t">1–2 min</span><span style="font-weight: 600">Choose one: A or B</span></div>
+</li>
+<li class="st gsr">
+<span class="n">12</span>
+<div class="figs" style="padding: .6rem"><figure><img src="../../../../public/assets/illustrations/steps/lemon-meringue-pie/chill.webp" alt="Slice cut from the chilled pie with a set lemon layer"><figcaption>Slice once the lemon layer is set.</figcaption></figure></div>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: .35rem"><h3>Chill, then slice</h3><ol class="acts"><li>Cool the pie in its tin on a rack for about 45 minutes.</li><li>Chill in the fridge for at least 2 hours, so the filling sets. It must be in the fridge within 2 hours of cooking.</li><li>Lift the set pie out of the tin.</li><li>Slice with a sharp knife.</li><li>Wipe the knife between cuts.</li></ol>
+</div>
+<div class="side"><span class="t">2 hr 45 min</span><span class="pill wait"><b>Wait</b>cool 45 min on a rack</span><span class="pill wait"><b>Wait</b>chill 2 hr</span></div>
+</li>
+</ol>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: .7rem">
+<h2 style="border: 1.5px solid var(--cat)">Notes from the kitchen</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.25rem; padding: .3rem .2rem">
+<div class="note" style="transform: rotate(-1deg)"><b>Pastry</b>Fill the shell with baking beans right up to the rim to support the sides.</div>
+<div class="note" style="transform: rotate(.7deg)"><b>Filling</b>Add the hot lemon mixture to the eggs a spoonful at a time.</div>
+<div class="note" style="transform: rotate(-.5deg)"><b>Meringue</b>Spread it right to the pastry edge.</div>
+<div class="note" style="transform: rotate(.9deg)"><b>Serving</b>Wipe the knife between cuts.</div>
+</div>
+</section>
+
+<section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; align-items: start">
+<div class="box">
+<h2>Nutrition, per 100 g</h2>
+<div class="kv"><span>Energy</span><span>1286 kJ / 307 kcal</span></div><div class="kv"><span>Fat</span><span>15.1 g</span></div><div class="kv in"><span>of which saturates</span><span>8.7 g</span></div><div class="kv"><span>Carbohydrates</span><span>38.3 g</span></div><div class="kv in"><span>of which sugars</span><span>26.5 g</span></div><div class="kv"><span>Fibre</span><span>0.5 g</span></div><div class="kv"><span>Protein</span><span>4.2 g</span></div><div class="kv"><span>Salt</span><span>0.08 g</span></div>
+</div>
+<div class="box">
+<h2>Allergens</h2>
+<div class="kv"><span>Wheat (gluten)</span><span>contains</span></div>
+<div class="kv"><span>Egg</span><span>contains</span></div>
+<div class="kv"><span>Milk</span><span>contains</span></div>
+<div class="li" style="border-bottom: 0; color: #52655a">From the ingredient list. Check your own labels.</div>
+</div>
+<div class="box">
+<h2>Storage</h2>
+<div class="kv"><span>Counter</span><span>max 2 h</span></div>
+<div class="kv"><span>Fridge</span><span>max 48 h</span></div>
+<div class="kv"><span>Freezer</span><span>[not tested]</span></div>
+<div class="li" style="border-bottom: 0; color: #52655a">Refrigerate within 2 hours of cooking.</div>
+</div>
+</section>
+
+<footer class="mono" style="font-size: .78rem; color: #52655a; border-top: 2.5px solid var(--cat); padding-top: .6rem; display: flex; flex-direction: column; gap: .4rem">
+<p>SOURCE: adapted from <a href="https://www.bbcgoodfood.com/recipes/ultimate-lemon-meringue-pie">Angela Nilsen’s lemon meringue pie in Good Food</a></p>
+<div style="display: flex; flex-wrap: wrap; gap: .3rem 1.2rem"><span>BINDER COLOURS:</span><span class="sw"><i style="background: #a12a5e"></i>Desserts</span><span class="sw"><i style="background: #1d5a9e"></i>Main dishes</span><span class="sw"><i style="background: #1b6b2e"></i>Sides</span><span class="sw"><i style="background: #a85400"></i>Breakfast and brunch</span><span class="sw"><i style="background: #6b4a2b"></i>Baking basics</span></div>
+</footer>
+
+</div>
+</div>
+</body>
+</html>
