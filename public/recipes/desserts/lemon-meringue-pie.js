@@ -116,12 +116,13 @@ export default {
     },
     {
       id: "brown", title: "Swirl and toast", art: "pie", tone: "blue",
-      timing: "Hot grill · about 1–2 min",
+      timing: "Oven grill or kitchen blowtorch",
       instructions: [
-        "Spoon the fresh meringue onto the room-temperature filling and spread it right to the pastry edge. Lift your spoon as you go to make wavy peaks.",
-        "Set the pie under a preheated hot grill, about 15 cm from the element. Watch constantly and turn the tin if needed. Take it out as soon as the peaks turn golden.",
+        "Spoon the fresh meringue onto the room-temperature filling and spread it right to the pastry edge. Lift your spoon as you go to make wavy peaks. Choose one method to toast it.",
+        "For the oven grill, set the pie about 15 cm below the preheated hot element. Watch constantly and turn the tin as needed. Remove as soon as the tips turn golden, usually 1–2 minutes.",
+        "For a kitchen blowtorch, set the pie on a heatproof surface. Hold the torch about 15 cm from the meringue and keep the flame moving over the peaks. Stop when the tips turn golden.",
       ],
-      tip: "The grill adds colour. The thermometer check in the previous step is what verifies the meringue temperature.",
+      tip: "Both methods brown the surface. Check the meringue temperature while heating it in the previous step.",
     },
     {
       id: "chill", title: "Chill, then slice", art: "slice", tone: "pink",

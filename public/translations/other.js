@@ -94,12 +94,13 @@ export default {
       },
       brown: {
         title: "Former des volutes et dorer la meringue",
-        timing: "Gril bien chaud · environ 1–2 min",
+        timing: "Gril du four ou chalumeau de cuisine",
         instructions: [
-          "À la cuillère, déposez la meringue fraîchement montée sur la crème au citron à température ambiante et étalez-la jusqu’au bord de la pâte. Soulevez la cuillère par endroits pour former des pics.",
-          "Placez la tarte sous le gril préchauffé, à environ 15 cm de la résistance. Surveillez-la sans interruption et tournez le moule si nécessaire. Sortez la tarte dès que les pointes sont dorées.",
+          "À la cuillère, déposez la meringue fraîchement montée sur la crème au citron à température ambiante et étalez-la jusqu’au bord de la pâte. Soulevez la cuillère par endroits pour former des pics. Choisissez l’une des deux méthodes pour la dorer.",
+          "Au gril du four, placez la tarte à environ 15 cm de la résistance préchauffée. Surveillez-la sans interruption et tournez le moule si nécessaire. Sortez-la dès que les pointes sont dorées, généralement au bout de 1 à 2 minutes.",
+          "Au chalumeau de cuisine, placez la tarte sur une surface résistante à la chaleur. Tenez le chalumeau à environ 15 cm de la meringue et balayez les pics sans immobiliser la flamme. Arrêtez dès que les pointes sont dorées.",
         ],
-        tip: "Le gril sert à dorer la meringue. Le thermomètre utilisé à l’étape précédente permet de vérifier sa température.",
+        tip: "Les deux méthodes dorent la surface. Vérifiez la température de la meringue pendant le chauffage à l’étape précédente.",
       },
       chill: {
         title: "Réfrigérer puis servir",

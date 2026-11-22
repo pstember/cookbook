@@ -71,8 +71,12 @@ export default {
       fr: "Étalez la meringue sur la crème refroidie jusqu’au bord de la pâte. Soulevez la cuillère pour former des pics.",
     },
     {
-      en: "Watch the pie under the grill and take it out as soon as the tips turn golden.",
-      fr: "Surveillez la tarte sous le gril et sortez-la dès que les pointes sont dorées.",
+      en: "Oven grill option. Watch the pie closely and take it out as soon as the tips turn golden.",
+      fr: "Au gril du four. Surveillez la tarte et sortez-la dès que les pointes sont dorées.",
+    },
+    {
+      en: "Blowtorch option. Sweep the flame across the tips until they turn golden.",
+      fr: "Au chalumeau. Balayez les pointes avec la flamme jusqu’à ce qu’elles soient dorées.",
     },
   ],
   chill: [
