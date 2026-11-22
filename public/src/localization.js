@@ -24,12 +24,24 @@ export function catalogueHref(language = locale) {
   return language === "fr" ? "./?lang=fr" : "./";
 }
 
+function localizePlan(stages, copy) {
+  return stages.map((stage, index) => {
+    const translated = copy?.[index];
+    return {
+      ...stage,
+      title: translated?.title ?? stage.title,
+      detail: translated?.detail ?? stage.detail,
+      ...(stage.branches && { branches: localizePlan(stage.branches, translated?.branches) }),
+    };
+  });
+}
+
 export function recipeForLocale(recipe, language = locale) {
   const original = recipe.lang === "fr" ? "fr" : "en";
   const translation = translations[recipe.id];
   if (original === language || !translation) return recipe;
 
-  const { groupTitles, ingredients, steps, times, batchTins, safety, source, nutrition, image, ...text } = translation;
+  const { groupTitles, ingredients, steps, times, plan, batchTins, safety, source, nutrition, image, ...text } = translation;
   const result = { ...recipe, ...text, lang: language === "fr" ? "fr" : "en-GB" };
   if (recipe.groups) {
     result.groups = recipe.groups.map((group, index) => ({
@@ -49,6 +61,7 @@ export function recipeForLocale(recipe, language = locale) {
     });
   }
   if (recipe.times) result.times = recipe.times.map((time, index) => ({ ...time, ...times?.[index] }));
+  if (recipe.plan) result.plan = localizePlan(recipe.plan, plan);
   if (recipe.batches) result.batches = recipe.batches.map((batch, index) => ({ ...batch, tins: batchTins?.[index] ?? batch.tins }));
   if (recipe.source) result.source = { ...recipe.source, ...source };
   if (recipe.nutrition) result.nutrition = { ...recipe.nutrition, ...nutrition };

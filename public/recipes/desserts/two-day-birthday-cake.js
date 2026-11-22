@@ -5,9 +5,26 @@ export default {
   description: "Two layers of génoise filled with strawberries and raspberries and finished with whipped mascarpone icing.",
   thumbnail: "assets/illustrations/recipes/two-day-birthday-cake.webp",
   times: [
-    { label: "Schedule", value: "2 days", icon: "clock" },
+    { label: "Start ahead", value: "The day before serving", icon: "clock" },
     { label: "Tin diameter", value: "20 or 23 cm", icon: "oven" },
-    { label: "Final chill", value: "At least 2 hr", icon: "snow" },
+    { label: "Day 2 chilling", value: "At least 3½ hr, plus prep", icon: "snow" },
+  ],
+  plan: [
+    {
+      step: "make-sponge",
+      title: "Day 1 · Bake the sponge",
+      detail: "Let the sponge cool completely before wrapping it for the overnight rest.",
+    },
+    {
+      step: "filling",
+      title: "Day 2 · Start with the fruit filling",
+      detail: "Chill the filling for 1–2 hr, until it holds its shape when spread. Slice the cooled sponge while you wait.",
+    },
+    {
+      step: "assemble",
+      title: "Day 2 · Fill, frost and chill",
+      detail: "Chill the crumb coat for 30–60 min. Add the final coat, then chill for at least 2 hr before serving.",
+    },
   ],
   ingredientTip: "Where two quantities appear, use the first for a 20 cm cake and the second for a 23 cm cake.",
   related: [{ id: "genoise" }, { id: "creme-au-beurre" }],
@@ -58,7 +75,10 @@ export default {
         "Leave the sponge in the tin for 10 minutes, then transfer to a wire rack. Once completely cool, wrap it tightly and leave it overnight at room temperature. Refrigerate it if the kitchen is very warm.",
       ],
       tip: "Let the sponge rest overnight so the crumb holds together when you slice it.",
-      timers: [{ label: "Check the 20 cm sponge", minutes: 25 }, { label: "Check the 23 cm sponge", minutes: 35 }],
+      timers: [
+        { label: "Check the 20 cm sponge", minutes: 25, afterInstruction: 1 },
+        { label: "Check the 23 cm sponge", minutes: 35, afterInstruction: 1 },
+      ],
     },
     {
       id: "filling", title: "Day 2 · Make the fruit filling", art: "saucepan", tone: "pink",
@@ -68,7 +88,8 @@ export default {
         "Take the pan off the heat. Squeeze the water from the gelatine and stir it into the warm fruit until dissolved. Gently fold in the whole raspberries.",
         "Refrigerate the filling for 1–2 hours, until thick enough to spread without running.",
       ],
-      timers: [{ label: "Chill the fruit filling", minutes: 60 }],
+      tip: "Slice the cooled sponge while the filling chills.",
+      timers: [{ label: "Check the fruit filling", minutes: 60, afterInstruction: 3 }],
     },
     {
       id: "slice-and-whip", title: "Day 2 · Slice the sponge and whip the icing", art: "whisk", tone: "blue",
@@ -85,7 +106,7 @@ export default {
         "Pipe a tall ring of icing around the bottom layer. Spread the chilled filling inside the ring and place the second layer on top.",
         "Spread a thin coat of icing over the top and sides to hold the crumbs in place. Refrigerate for 30–60 minutes before finishing.",
       ],
-      timers: [{ label: "Chill the crumb coat", minutes: 30 }],
+      timers: [{ label: "Check the crumb coat", minutes: 30, afterInstruction: 2 }],
     },
     {
       id: "finish", title: "Day 2 · Finish and chill", art: "slice", tone: "pink",
@@ -94,7 +115,7 @@ export default {
         "Coat the top and sides with the remaining mascarpone icing. Refrigerate for at least 2 hours or until ready to serve.",
       ],
       tip: "Dip the knife in hot water and wipe it dry between slices.",
-      timers: [{ label: "Chill the finished cake", minutes: 120 }],
+      timers: [{ label: "Minimum final chill", minutes: 120, afterInstruction: 1 }],
     },
   ],
 };

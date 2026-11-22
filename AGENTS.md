@@ -4,6 +4,7 @@ Start with [README.md](README.md). The cookbook is a static site with no runtime
 
 - Check `.brain/decisions/` before changing established behavior. Preserve accepted decisions and follow the decision log’s supersession guidance if one changes.
 - Keep recipe content in `public/recipes/` and shared presentation in `public/src/` and `public/assets/`.
+- Use the [author-recipe skill](.agents/skills/author-recipe/SKILL.md) when adding or updating recipes. Follow the [recipe authoring guide](docs/recipe-authoring.md) for timing, handoffs and the optional overview.
 - Give every ingredient a weight in grams. Label converted weights and suggested starting amounts as estimates. Keep source measures as secondary references and run the gram-weight invariant in `npm run check`.
 - Pair each numbered step with recipe-specific artwork and English and French captions. Use extra frames when they clarify a distinct stage. Follow the shared visual conventions in [the design system](docs/design-system.md).
 - Check recipe safety claims against named sources. Keep nutrition expressed per 100 g of finished food and derive it from ingredient data and cooked yield.

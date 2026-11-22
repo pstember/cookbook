@@ -26,12 +26,12 @@ export function addTimer(container, stepTitle, { label, minutes }, clockIcon) {
   function update() {
     const seconds = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
     if (seconds === 0) {
-      reset(ui("Done · restart", "Terminé · relancer"));
+      reset(`${ui("Time’s up", "Temps écoulé")} · ${label}`);
       status.textContent = ui(`${stepTitle}. Timer finished for ${task}.`, `${stepTitle}. Le minuteur a sonné pour ${task}.`);
       return;
     }
     const display = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
-    text.textContent = `${display} · ${ui("Cancel", "Annuler")}`;
+    text.textContent = `${label} · ${display} · ${ui("Cancel", "Annuler")}`;
   }
 
   const idleLabel = `${label} · ${duration}`;

@@ -27,6 +27,12 @@ Use `.wrap` as the shared page container. Hero copy uses display typography with
 
 Catalogue-specific layout lives in `public/assets/catalogue.css`. Keep colour and control behaviour shared so additions to the collection feel consistent.
 
+## Recipe overview and timers
+
+Use the At a glance panel above the ingredients for recipes with components that come together, work that can overlap, or waits that affect the serving time. Show stages in order. Use side-by-side branches for components prepared separately, with the next stage explaining when they come together. Branches stack when space is limited. Link to the detailed method where the cook can act on the summary.
+
+Place a countdown immediately after its starting instruction. The instructions include the duration and follow-up action so the sequence also works in print. The authoring conventions are in the [recipe guide](recipe-authoring.md).
+
 ## Step illustrations
 
 Each step card pairs close-up artwork with the full written instructions. Wide screens put them side by side within a single step. Narrow screens show the artwork first. Use the actual equipment, ingredient texture, hand position and cooking stage from the recipe. Match the collection’s warm gouache and coloured-pencil style. Draw one frame for a single action and use separate frames when a step has distinct stages to learn.

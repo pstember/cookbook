@@ -3,9 +3,23 @@ export default {
     title: "Gâteau d’anniversaire sur deux jours",
     description: "Deux disques de génoise garnis de fraises et de framboises, puis recouverts de crème fouettée au mascarpone.",
     times: [
-      { label: "Organisation", value: "2 jours" },
+      { label: "À commencer", value: "La veille du service" },
       { label: "Diamètre du moule", value: "20 ou 23 cm" },
-      { label: "Repos final au frais", value: "Au moins 2 h" },
+      { label: "Jour 2 au frais", value: "Au moins 3 h 30, hors préparation" },
+    ],
+    plan: [
+      {
+        title: "Jour 1 · Cuire la génoise",
+        detail: "Laissez refroidir complètement la génoise avant de l’emballer pour la nuit.",
+      },
+      {
+        title: "Jour 2 · Commencer par la garniture aux fruits",
+        detail: "Réfrigérez la garniture 1 à 2 h, jusqu’à ce qu’elle puisse être étalée sans couler. Pendant ce temps, découpez la génoise refroidie.",
+      },
+      {
+        title: "Jour 2 · Garnir, recouvrir et réfrigérer",
+        detail: "Réfrigérez la première couche de crème 30 à 60 min. Ajoutez la dernière couche, puis réfrigérez au moins 2 h avant de servir.",
+      },
     ],
     ingredientTip: "Lorsque deux quantités sont indiquées, la première correspond à un gâteau de 20 cm et la seconde à un gâteau de 23 cm.",
     groupTitles: ["Génoise", "Garniture aux fruits", "Crème au mascarpone"],
@@ -51,7 +65,8 @@ export default {
           "Retirez la casserole du feu. Essorez la gélatine et remuez-la dans les fruits chauds jusqu’à dissolution. Incorporez délicatement les framboises entières.",
           "Réfrigérez 1 à 2 heures, jusqu’à ce que la garniture puisse être étalée sans couler.",
         ],
-        timerLabels: ["Réfrigérer la garniture"],
+        tip: "Découpez la génoise refroidie pendant que la garniture est au frais.",
+        timerLabels: ["Vérifier la garniture aux fruits"],
       },
       "slice-and-whip": {
         title: "Jour 2 · Couper la génoise et fouetter la crème",
@@ -68,7 +83,7 @@ export default {
           "Pochez un cordon épais de crème au bord du disque inférieur. Étalez la garniture froide à l’intérieur du cordon et posez le second disque par-dessus.",
           "Étalez une fine couche de crème sur le dessus et les côtés pour fixer les miettes. Réfrigérez 30 à 60 minutes avant la finition.",
         ],
-        timerLabels: ["Réfrigérer la première couche de crème"],
+        timerLabels: ["Vérifier la première couche de crème"],
       },
       finish: {
         title: "Jour 2 · Terminer et mettre au frais",
@@ -77,7 +92,7 @@ export default {
           "Recouvrez le dessus et les côtés avec le reste de la crème au mascarpone. Réfrigérez au moins 2 heures ou jusqu’au moment de servir.",
         ],
         tip: "Trempez la lame du couteau dans l’eau chaude et essuyez-la entre chaque part.",
-        timerLabels: ["Réfrigérer le gâteau terminé"],
+        timerLabels: ["Repos final minimum"],
       },
     },
   },
@@ -283,10 +298,11 @@ export default {
         title: "Cuire à deux températures",
         timing: "5 min à four chaud · 14 à 16 min à température réduite",
         instructions: [
-          "Faites cuire 5 minutes à 210 °C en chaleur statique (190 °C en chaleur tournante). Sans ouvrir le four, baissez à 180 °C en chaleur statique (160 °C en chaleur tournante) et poursuivez la cuisson 14 à 16 minutes.",
+          "Enfournez les muffins à 210 °C en chaleur statique (190 °C en chaleur tournante) et lancez le minuteur de 5 minutes.",
+          "Au bout de 5 minutes, baissez à 180 °C en chaleur statique (160 °C en chaleur tournante) sans ouvrir le four. Lancez aussitôt le second minuteur. Poursuivez la cuisson 14 à 16 minutes à cette température.",
           "Les muffins sont cuits lorsque le dessus est doré et reprend légèrement sa forme sous le doigt. Une pique enfoncée dans la mie à côté du cœur de fruits doit ressortir sans pâte crue.",
         ],
-        timerLabels: ["Baisser la température du four", "Vérifier les muffins après avoir baissé la température"],
+        timerLabels: ["Baisser la température du four", "Vérifier les muffins"],
       },
     },
     notes: [
@@ -364,6 +380,21 @@ export default {
       { label: "Tin", value: "10 cm" },
       { label: "Bake", value: "20–25 min" },
     ],
+    plan: [
+      { title: "Oven and tin", detail: "Preheat to 200°C and butter a 10 cm tin." },
+      {
+        title: "Prepare two mixtures",
+        detail: "Make these separately before combining them.",
+        branches: [
+          { title: "Egg + sugar", detail: "Whisk for about 10 min, until tripled in volume." },
+          { title: "Chocolate + butter", detail: "Melt over simmering water, then remove from the heat." },
+        ],
+      },
+      {
+        title: "Combine, bake and cool",
+        detail: "Fold the flour, cocoa, peanuts and melted chocolate into the whisked egg. Check at 20 min. Cool before slicing.",
+      },
+    ],
     groupTitles: ["Brownie batter"],
     ingredients: {
       oeuf: { name: "egg", note: "weighed without the shell" },
@@ -382,6 +413,7 @@ export default {
           "Preheat the oven to 200°C and butter a 10 cm tin.",
           "Whisk the egg and sugar for about 10 minutes, until creamy and tripled in volume.",
         ],
+        timerLabels: ["Check the whisked mixture"],
       },
       fondre: {
         title: "Melt the chocolate",
@@ -396,10 +428,16 @@ export default {
         instructions: [
           "Sift the flour and cocoa powder over the whisked egg and fold in with a spatula. Add the chopped peanuts and the chocolate and butter mixture.",
           "Pour the batter into the buttered tin and bake for 20–25 minutes.",
+          "Check at 20 minutes. A skewer inserted in the centre can come out with a few moist crumbs. Keep baking if you see wet batter on the skewer.",
+          "Let the brownie cool completely in the tin before slicing.",
         ],
         timerLabels: ["Check the brownie"],
       },
     },
+    notes: [{
+      text: "The skewer test and complete cooling are general brownie-making guidance.",
+      source: { label: "King Arthur Baking guidance", url: "https://www.kingarthurbaking.com/recipes/quick-and-easy-brownies-recipe" },
+    }],
     source: { label: "Recipe video" },
   },
 };

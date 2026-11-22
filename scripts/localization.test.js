@@ -43,3 +43,50 @@ test("recipe links retain the selected language", () => {
   assert.equal(recipeHref("lemon-meringue-pie", "en"), "recipe.html?recipe=lemon-meringue-pie");
   assert.equal(recipeHref("lemon-meringue-pie", "fr"), "recipe.html?recipe=lemon-meringue-pie&lang=fr");
 });
+
+test("recipe plans preserve their step links and have complete translations", () => {
+  function checkStages(stages, copy, localized, stepIds, path) {
+    assert.ok(stages.length, path);
+    assert.equal(copy?.length, stages.length, path);
+    for (const [index, stage] of stages.entries()) {
+      const key = `${path}/${index}`;
+      assert.ok(stage.title && stage.detail, key);
+      assert.ok(copy[index].title && copy[index].detail, key);
+      assert.equal(localized[index].title, copy[index].title, key);
+      assert.equal(localized[index].detail, copy[index].detail, key);
+      assert.equal(localized[index].step, stage.step, key);
+      if (stage.step) assert.ok(stepIds.has(stage.step), key);
+      if (stage.branches) {
+        checkStages(stage.branches, copy[index].branches, localized[index].branches, stepIds, key);
+      }
+    }
+  }
+
+  for (const recipe of recipes.filter(recipe => recipe.plan)) {
+    const alternate = recipe.lang === "fr" ? "en" : "fr";
+    const localized = recipeForLocale(recipe, alternate);
+    const stepIds = new Set(recipe.steps.map(step => step.id));
+    checkStages(recipe.plan, translations[recipe.id].plan, localized.plan, stepIds, recipe.id);
+  }
+});
+
+test("instruction-linked timers have the same valid position and duration in both languages", () => {
+  for (const recipe of recipes) {
+    const alternate = recipe.lang === "fr" ? "en" : "fr";
+    const localized = recipeForLocale(recipe, alternate);
+    for (const [stepIndex, step] of recipe.steps.entries()) {
+      for (const [timerIndex, timer] of (step.timers ?? []).entries()) {
+        if (timer.afterInstruction === undefined) continue;
+        const path = `${recipe.id}/${step.id}/${timerIndex}`;
+        const translatedStep = localized.steps[stepIndex];
+        const translatedTimer = translatedStep.timers[timerIndex];
+        assert.ok(Number.isInteger(timer.afterInstruction), path);
+        assert.ok(timer.afterInstruction >= 1 && timer.afterInstruction <= step.instructions.length, path);
+        assert.ok(translatedStep.instructions[timer.afterInstruction - 1], path);
+        assert.equal(translatedTimer.afterInstruction, timer.afterInstruction, path);
+        assert.equal(translatedTimer.minutes, timer.minutes, path);
+        assert.ok(translations[recipe.id].steps[step.id].timerLabels[timerIndex], path);
+      }
+    }
+  }
+});
