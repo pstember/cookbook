@@ -29,7 +29,7 @@ In the repository’s **Settings → Pages**, set **Build and deployment → Sou
 - The [design system](docs/design-system.md) describes the shared typography, colours, cards and controls.
 - The catalogue and recipe templates live in `public/index.html` and `public/recipe.html`. Their styling and interactions live in `public/assets/` and `public/src/`.
 
-The pie is adapted from Angela Nilsen’s Good Food recipe with original illustration and a Swiss meringue topping. The page’s nutrition notes name the reference data and explain the estimated yield. [Good Food recipe](https://www.bbcgoodfood.com/recipes/ultimate-lemon-meringue-pie)
+The pie uses a shortcrust adapted from Angela Nilsen’s Good Food recipe, an oven-baked lemon filling from the supplied recipe, and Swiss meringue. The page’s nutrition notes name the reference data and explain the estimated yield. [Good Food recipe](https://www.bbcgoodfood.com/recipes/ultimate-lemon-meringue-pie)
 
 ## Ingredient weight conventions
 

@@ -1,14 +1,14 @@
 export default {
   "lemon-meringue-pie": {
     title: "Tarte au citron meringuée",
-    description: "Une pâte brisée au beurre garnie d’une crème au citron acidulée et de volutes de meringue suisse dorée.",
+    description: "Une pâte brisée au beurre garnie d’une crème au citron cuite au four et de volutes de meringue suisse dorée.",
     image: {
       alt: "Illustration d’une tarte au citron meringuée sur une assiette bleue, avec une part avancée pour montrer la garniture.",
     },
     times: [
-      { label: "Préparation", value: "30 min" },
-      { label: "Cuisson", value: "40 min" },
-      { label: "Repos et réfrigération", value: "3 h 15 min" },
+      { label: "Préparation", value: "40 min" },
+      { label: "Cuisson", value: "51–67 min" },
+      { label: "Repos et réfrigération", value: "2 h à 3 h 30" },
     ],
     batchTins: ["un moule de 16 cm", "un moule de 23 cm", "deux moules de 20 cm", "deux moules de 23 cm"],
     groupTitles: ["Pâte brisée", "Crème au citron", "Meringue suisse"],
@@ -18,18 +18,17 @@ export default {
       "pastry-sugar": { name: "de sucre en poudre" },
       "pastry-yolk": { name: "de jaune d’œuf", eggName: "gros jaune", eggPlural: "gros jaunes" },
       "pastry-water": { name: "d’eau froide" },
-      juice: { name: "de jus de citron frais" },
-      zest: { name: "de zeste de citron finement râpé" },
-      water: { name: "d’eau" },
-      cornflour: { name: "de fécule de maïs", note: "amidon de maïs" },
-      "curd-sugar": { name: "de sucre en poudre" },
-      "curd-butter": { name: "de beurre doux", note: "coupé en dés" },
-      "curd-yolks": { name: "de jaunes d’œufs", eggName: "gros jaune", eggPlural: "gros jaunes" },
-      "whole-egg": { name: "d’œuf entier battu", eggName: "œuf", eggPlural: "œufs" },
+      "filling-eggs": { name: "d’œufs entiers battus", eggName: "œuf", eggPlural: "œufs" },
+      "filling-yolk": { name: "de jaune d’œuf", eggName: "gros jaune", eggPlural: "gros jaunes" },
+      "filling-sugar": { name: "de sucre en poudre" },
+      "filling-juice": { name: "de jus de citron frais", note: "filtré, environ 4 citrons" },
+      "filling-zest": { name: "de zeste de citron finement râpé", unit: "citrons", note: "partie jaune seulement" },
+      "filling-butter": { name: "de beurre salé", note: "fondu puis laissé tiédir" },
+      "filling-cornflour": { name: "de fécule de maïs", note: "amidon de maïs" },
       white: { name: "de blancs d’œufs", eggName: "blanc", eggPlural: "blancs" },
       "meringue-sugar": { name: "de sucre en poudre" },
     },
-    ingredientTip: "Réservez les blancs lorsque vous séparez les jaunes destinés à la pâte et à la crème au citron. Pesez les œufs sans leur coquille. Si vous utilisez des blancs en brique, choisissez-en qui peuvent être montés en neige.",
+    ingredientTip: "Réservez les blancs des jaunes utilisés pour la pâte et la crème, puis complétez jusqu’au poids indiqué pour la meringue. Pesez les œufs sans leur coquille. Si vous utilisez des blancs en brique, choisissez-en qui peuvent être montés en neige.",
     steps: {
       pastry: {
         title: "Étaler la pâte brisée",
@@ -51,14 +50,37 @@ export default {
         tip: "Remplissez le fond de tarte de billes de cuisson jusqu’au bord pour maintenir les côtés.",
         timerLabels: ["Cuire avec les billes", "Terminer la cuisson sans les billes"],
       },
-      curd: {
-        title: "Préparer la crème au citron",
-        timing: "72 °C / 162 °F minimum",
+      "prep-lemons": {
+        title: "Zester et presser les citrons",
         instructions: [
-          "Fouettez la fécule de maïs, le sucre, le zeste, le jus de citron et l’eau dans une casserole. Remuez à feu moyen jusqu’à épaississement et apparition de bulles. Laissez bouillonner 1 minute en remuant sans arrêt.",
-          "Fouettez les jaunes et l’œuf entier dans un autre récipient. Incorporez progressivement quelques cuillerées du mélange chaud au citron, puis reversez le tout dans la casserole. Remuez à feu moyen-doux jusqu’à frémissement et jusqu’à ce que toute la crème atteigne au moins 72 °C (162 °F). Hors du feu, incorporez le beurre et versez dans le fond de tarte cuit.",
+          "Lavez et séchez les citrons. Râpez finement le zeste pour la crème en ne prélevant que la partie jaune. Pressez les citrons, filtrez les pépins et pesez le jus.",
         ],
-        tip: "Ajoutez le mélange chaud aux œufs une cuillerée à la fois pour les réchauffer uniformément.",
+      },
+      "mix-filling": {
+        title: "Mélanger la crème au citron",
+        timing: "Fouetter doucement 30–45 s",
+        instructions: [
+          "Faites fondre le beurre salé et laissez-le tiédir. Mélangez le sucre et la fécule dans un saladier, puis ajoutez les œufs entiers et le jaune supplémentaire. Fouettez doucement pendant 30 à 45 secondes, jusqu’à ce que le mélange soit lisse.",
+          "Incorporez progressivement le jus de citron au fouet, puis ajoutez le zeste. Versez le beurre fondu en filet en fouettant juste assez pour l’incorporer. La crème doit rester liquide. Fouettez délicatement pour limiter les bulles d’air.",
+        ],
+      },
+      "bake-filling": {
+        title: "Cuire la crème dans le fond de tarte",
+        timing: "150 °C en chaleur tournante · 25–35 min",
+        instructions: [
+          "Baissez le four à 150 °C en chaleur tournante. Posez le fond de tarte encore chaud sur une plaque et versez la crème juste sous le bord. Enfournez à mi-hauteur et vérifiez la cuisson au bout de 25 minutes.",
+          "Secouez doucement la plaque. Les bords doivent être pris et le centre encore légèrement tremblotant, comme une gelée. Vérifiez avec un thermomètre de cuisine que le centre atteint 75 °C (167 °F). S’il est encore liquide ou trop froid, poursuivez la cuisson 3 à 5 minutes avant de vérifier de nouveau.",
+        ],
+        tip: "Si vous faites cuire plusieurs tartes, vérifiez chacune séparément. Protégez les bords de pâte avec des bandes de papier aluminium s’ils commencent à trop dorer.",
+        timerLabels: ["Vérifier la cuisson de la crème", "Vérifier à nouveau après la cuisson supplémentaire"],
+      },
+      "cool-filling": {
+        title: "Laisser refroidir la tarte",
+        timing: "30–60 min sur une grille",
+        instructions: [
+          "Laissez la tarte dans son moule sur une grille pendant 30 à 60 minutes, jusqu’à ce que la crème soit prise et à température ambiante. Préparez la meringue lorsque la tarte est prête à garnir.",
+        ],
+        timerLabels: ["Vérifier que la tarte a refroidi"],
       },
       meringue: {
         title: "Monter la meringue suisse",
@@ -74,28 +96,28 @@ export default {
         title: "Former des volutes et dorer la meringue",
         timing: "Gril bien chaud · environ 1–2 min",
         instructions: [
-          "À la cuillère, déposez la meringue sur la crème au citron encore chaude et étalez-la jusqu’au bord de la pâte. Soulevez la cuillère par endroits pour former des pics.",
+          "À la cuillère, déposez la meringue fraîchement montée sur la crème au citron à température ambiante et étalez-la jusqu’au bord de la pâte. Soulevez la cuillère par endroits pour former des pics.",
           "Placez la tarte sous le gril préchauffé, à environ 15 cm de la résistance. Surveillez-la sans interruption et tournez le moule si nécessaire. Sortez la tarte dès que les pointes sont dorées.",
         ],
         tip: "Le gril sert à dorer la meringue. Le thermomètre utilisé à l’étape précédente permet de vérifier sa température.",
       },
       chill: {
         title: "Réfrigérer puis servir",
-        timing: "Refroidissement 45 min · réfrigération 2 h",
+        timing: "Réfrigération 1–2 h",
         instructions: [
-          "Laissez refroidir la tarte dans son moule sur une grille environ 45 minutes, puis réfrigérez-la au moins 2 heures pour que la crème prenne. Placez-la au réfrigérateur dans les 2 heures suivant la cuisson.",
-          "Démoulez la tarte bien froide et découpez-la avec un couteau bien aiguisé. Conservez les restes au réfrigérateur et consommez-les dans les 48 heures.",
+          "Réfrigérez la tarte garnie pendant 1 à 2 heures avant de la servir. Placez-la au réfrigérateur dans les 2 heures suivant la cuisson de la crème.",
+          "Démoulez la tarte froide et tranchez-la verticalement avec un couteau bien aiguisé. Conservez-la au réfrigérateur et servez-la dans les 24 heures pour une texture optimale.",
         ],
         tip: "Essuyez la lame entre chaque part pour obtenir des couches bien nettes.",
-        timerLabels: ["Refroidir sur la grille", "Réfrigérer la tarte"],
+        timerLabels: ["Vérifier que la tarte est froide"],
       },
     },
     nutrition: {
-      yieldAssumptions: "Le poids final tient compte de la perte d’humidité pendant la cuisson et le refroidissement, ainsi que de la pâte retirée des bords. Il est estimé à partir du poids des ingrédients, sans pesée du produit fini.",
-      dataAssumptions: "Le calcul suppose que la perte de poids correspond principalement à de l’eau et que les nutriments des ingrédients sont conservés. Les valeurs du blanc d’œuf cru servent à estimer celles du blanc pasteurisé. Les valeurs de l’écorce de citron crue servent à estimer celles du zeste, après déduction des fibres des glucides totaux. Pour le jus de citron frais, les fibres NSP de la base CoFID remplacent la valeur AOAC indisponible. Les traces signalées dans CoFID sont comptées comme nulles. L’eau du robinet est considérée comme n’apportant aucun des nutriments indiqués.",
+      yieldAssumptions: "Le poids final estimé de 1 150 g suppose une perte d’environ 90 g, due à la pâte retirée des bords et à l’humidité perdue pendant la cuisson, le chauffage et le refroidissement. Pesez la tarte froide pour connaître son poids réel.",
+      dataAssumptions: "Le calcul suppose que la perte de poids correspond principalement à de l’eau et que les nutriments des ingrédients sont conservés. Les valeurs du blanc d’œuf cru servent à estimer celles du blanc pasteurisé. Les valeurs de l’écorce de citron crue servent à estimer celles du zeste, après déduction des fibres des glucides totaux. Pour le jus de citron frais, les fibres NSP de la base CoFID remplacent la valeur AOAC indisponible. Le volume de jus de citron est converti en poids à partir des données de l’USDA. Le poids du zeste correspond à une estimation pour trois citrons moyens. Les traces signalées dans CoFID et les nutriments de l’eau du robinet sont comptés comme nuls.",
     },
     source: {
-      credit: "Recette adaptée de",
+      credit: "Pâte brisée adaptée de",
       label: "la tarte au citron meringuée d’Angela Nilsen, publiée dans Good Food",
     },
   },
