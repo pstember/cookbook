@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: read
   pages: write
   id-token: write
@@ -37,6 +38,19 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: public
+      - name: Wait for the Pages artifact to be listed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in {1..12}; do
+            if [[ $(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages" \
+              --jq 'any(.artifacts[]; .expired == false)') == true ]]; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::The GitHub Pages artifact was not listed within 60 seconds."
+          exit 1
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

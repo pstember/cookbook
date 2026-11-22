@@ -15,14 +15,44 @@ export default {
       fr: "Retirez ensemble le papier cuisson et les billes quand les bords de la pâte se tiennent.",
     },
   ],
-  curd: [
+  "prep-lemons": [
     {
-      en: "Whisk a little of the hot lemon mixture into the eggs at a time to bring them up to temperature.",
-      fr: "Incorporez le mélange chaud au citron aux œufs petit à petit en fouettant pour les réchauffer.",
+      en: "Rasp off the thin yellow zest before squeezing the lemons.",
+      fr: "Râpez la fine couche de zeste jaune avant de presser les citrons.",
     },
     {
-      en: "Check the curd in the pan reaches at least 72°C (162°F). Keep the probe off the bottom.",
-      fr: "Vérifiez que la crème atteint au moins 72 °C (162 °F). Évitez de toucher le fond avec la sonde.",
+      en: "Juice the lemons and strain out any seeds.",
+      fr: "Pressez les citrons et filtrez le jus pour retirer les pépins.",
+    },
+  ],
+  "mix-filling": [
+    {
+      en: "Whisk the eggs and extra yolk with the sugar and cornflour just until smooth.",
+      fr: "Fouettez doucement les œufs et le jaune supplémentaire avec le sucre et la fécule, jusqu’à obtenir un mélange lisse.",
+    },
+    {
+      en: "Drizzle in the warm melted salted butter while whisking. The filling stays runny.",
+      fr: "Versez le beurre salé fondu et tiède en filet tout en fouettant. La crème reste liquide.",
+    },
+  ],
+  "bake-filling": [
+    {
+      en: "Pour the runny filling into the warm shell until it sits just below the rim.",
+      fr: "Versez la crème liquide dans le fond de tarte chaud en vous arrêtant juste sous le bord.",
+    },
+    {
+      en: "Bake on the middle shelf at 150°C fan. Start checking after 25 minutes.",
+      fr: "Enfournez à mi-hauteur à 150 °C en chaleur tournante. Vérifiez la cuisson au bout de 25 minutes.",
+    },
+    {
+      en: "The edges should be set and the centre should wobble slightly. Check that it reaches 75°C (167°F).",
+      fr: "Les bords doivent être pris et le centre légèrement tremblotant. Vérifiez qu’il atteint 75 °C (167 °F).",
+    },
+  ],
+  "cool-filling": [
+    {
+      en: "Cool the baked tart in its tin on a wire rack before adding the meringue.",
+      fr: "Laissez refroidir la tarte cuite dans son moule sur une grille avant d’ajouter la meringue.",
     },
   ],
   meringue: [
@@ -37,12 +67,16 @@ export default {
   ],
   brown: [
     {
-      en: "Spread the meringue to the pastry edge and lift the spoon to pull up peaks.",
-      fr: "Étalez la meringue jusqu’au bord de la pâte et soulevez la cuillère pour former des pics.",
+      en: "Spread the meringue over the cooled filling to the pastry edge. Lift the spoon to pull up peaks.",
+      fr: "Étalez la meringue sur la crème refroidie jusqu’au bord de la pâte. Soulevez la cuillère pour former des pics.",
     },
     {
-      en: "Watch the pie under the grill and take it out as soon as the tips turn golden.",
-      fr: "Surveillez la tarte sous le gril et sortez-la dès que les pointes sont dorées.",
+      en: "Oven grill option. Watch the pie closely and take it out as soon as the tips turn golden.",
+      fr: "Au gril du four. Surveillez la tarte et sortez-la dès que les pointes sont dorées.",
+    },
+    {
+      en: "Blowtorch option. Sweep the flame across the tips until they turn golden.",
+      fr: "Au chalumeau. Balayez les pointes avec la flamme jusqu’à ce qu’elles soient dorées.",
     },
   ],
   chill: [

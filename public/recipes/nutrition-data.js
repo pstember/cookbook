@@ -15,6 +15,11 @@ export const foodData = {
     sourceFr: "CoFID 17-661, beurre doux", url: cofid,
     kj: 3059, kcal: 744, fat: 82.2, saturates: 52.09, carbs: 0.6, sugars: 0.6, fibre: 0, protein: 0.6, salt: 8 * 0.0025,
   },
+  saltedButter: {
+    source: "CoFID 17-685, salted butter",
+    sourceFr: "CoFID 17-685, beurre salé", url: cofid,
+    kj: 3059, kcal: 744, fat: 82.2, saturates: 52.09, carbs: 0.6, sugars: 0.6, fibre: 0, protein: 0.6, salt: 730 * 0.0025,
+  },
   sugar: {
     source: "Silver Spoon caster sugar label",
     sourceFr: "Étiquette du sucre en poudre Silver Spoon",

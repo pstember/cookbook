@@ -2,15 +2,15 @@ export default {
   id: "lemon-meringue-pie",
   category: "Desserts",
   title: "Lemon Meringue Pie",
-  description: "A buttery shortcrust, a bright lemon filling and soft swirls of toasted Swiss meringue.",
+  description: "Buttery shortcrust with an oven-baked lemon filling and soft swirls of toasted Swiss meringue.",
   image: {
     src: "assets/illustrations/lemon-meringue-pie.webp",
     alt: "Illustrated lemon meringue pie on a blue plate, with a slice pulled forward to show the lemon filling.",
   },
   times: [
-    { label: "Prep", value: "30 min", icon: "clock" },
-    { label: "Cook", value: "40 min", icon: "oven" },
-    { label: "Chill & rest", value: "3 hr 15 min", icon: "snow" },
+    { label: "Prep", value: "40 min", icon: "clock" },
+    { label: "Cook", value: "51–67 min", icon: "oven" },
+    { label: "Chill & rest", value: "2–3½ hr", icon: "snow" },
   ],
   servings: 8,
   batches: [
@@ -33,14 +33,13 @@ export default {
     {
       title: "Lemon filling", art: "lemon", tone: "blue",
       ingredients: [
-        { id: "juice", name: "fresh lemon juice", grams: 125, food: "juice" },
-        { id: "zest", name: "finely grated lemon zest", grams: 6, food: "zest" },
-        { id: "water", name: "water", grams: 200, food: "water" },
-        { id: "cornflour", name: "cornflour", note: "cornstarch", grams: 24, food: "cornflour" },
-        { id: "curd-sugar", name: "caster sugar", grams: 100, food: "sugar" },
-        { id: "curd-butter", name: "unsalted butter", note: "cubed", grams: 85, food: "butter" },
-        { id: "curd-yolks", name: "egg yolks", grams: 54, food: "yolk", eggGrams: 18, eggName: "large yolk" },
-        { id: "whole-egg", name: "beaten whole egg", grams: 50, food: "egg", eggGrams: 50, eggName: "egg" },
+        { id: "filling-eggs", name: "beaten whole eggs", grams: 150, food: "egg", eggGrams: 50, eggName: "egg" },
+        { id: "filling-yolk", name: "egg yolk", grams: 18, food: "yolk", eggGrams: 18, eggName: "large yolk" },
+        { id: "filling-sugar", name: "caster sugar", grams: 150, food: "sugar" },
+        { id: "filling-juice", name: "fresh lemon juice", grams: 155, food: "juice", weightEstimate: true, quantity: 150, unit: "ml", note: "strained, from about 4 lemons" },
+        { id: "filling-zest", name: "finely grated lemon zest", grams: 18, food: "zest", weightEstimate: true, quantity: 3, unit: "lemons", note: "yellow peel only" },
+        { id: "filling-butter", name: "salted butter", grams: 100, food: "saltedButter", note: "melted and cooled until just warm" },
+        { id: "filling-cornflour", name: "cornflour", grams: 10, food: "cornflour", note: "cornstarch" },
       ],
     },
     {
@@ -51,7 +50,7 @@ export default {
       ],
     },
   ],
-  ingredientTip: "Save the whites when you separate the pastry and filling yolks. Weigh the eggs without their shells. If using carton whites, choose ones suitable for whipping.",
+  ingredientTip: "Save the whites from the pastry and filling yolks and top up to the listed weight for the meringue. Weigh the eggs without their shells. If using carton whites, choose ones suitable for whipping.",
   steps: [
     {
       id: "pastry", title: "Roll the pastry", art: "rolling", tone: "yellow",
@@ -74,13 +73,36 @@ export default {
       timers: [{ label: "Bake with weights", minutes: 15 }, { label: "Bake uncovered", minutes: 5 }],
     },
     {
-      id: "curd", title: "Make the lemon filling", art: "saucepan", tone: "pink",
-      timing: "72°C / 162°F minimum",
+      id: "prep-lemons", title: "Zest and juice the lemons", tone: "yellow",
       instructions: [
-        "Whisk the cornflour, sugar, zest, juice and water in a saucepan. Stir over medium heat until thickened and bubbling, then let it bubble for 1 minute, stirring constantly.",
-        "Whisk the yolks and whole egg separately. Gradually whisk in a few spoonfuls of the hot lemon mixture, then return everything to the pan. Stir over medium-low heat until it bubbles gently and reaches at least 72°C (162°F) throughout. Take off the heat, stir in the butter and pour into the baked shell.",
+        "Wash and dry the lemons. Finely grate the zest for the filling, taking only the yellow peel. Squeeze the lemons, strain out the seeds and weigh the juice.",
       ],
-      tip: "Add the hot mixture to the eggs a spoonful at a time so they warm up evenly.",
+    },
+    {
+      id: "mix-filling", title: "Mix the lemon filling", tone: "pink",
+      timing: "Whisk gently for 30–45 sec",
+      instructions: [
+        "Melt the salted butter and let it cool until just warm. In a mixing bowl, stir the caster sugar and cornflour together, then add the whole eggs and extra yolk. Whisk gently for 30–45 seconds until smooth.",
+        "Whisk in the lemon juice gradually, followed by the zest. Drizzle in the melted butter while whisking just until combined. The filling should be runny. Use a light hand to keep air bubbles to a minimum.",
+      ],
+    },
+    {
+      id: "bake-filling", title: "Bake the filling in the shell", tone: "blue",
+      timing: "150°C fan · 25–35 min",
+      instructions: [
+        "Lower the oven to 150°C fan. Put the warm baked pastry shell on a tray and pour in the filling to just below the rim. Bake on the middle shelf for 25 minutes before checking.",
+        "Gently nudge the tray. The edges should be set and the centre should wobble slightly like jelly. Check that the centre reaches 75°C (167°F) with a food thermometer. If the centre is still liquid or below temperature, bake for another 3–5 minutes and check again.",
+      ],
+      tip: "Check each tart separately if baking more than one. Loosely shield the pastry rim with strips of foil if it starts to darken.",
+      timers: [{ label: "Check the baked filling", minutes: 25 }, { label: "Recheck after extra baking", minutes: 3 }],
+    },
+    {
+      id: "cool-filling", title: "Cool the baked tart", tone: "pink",
+      timing: "30–60 min on a wire rack",
+      instructions: [
+        "Leave the tart in its tin on a wire rack for 30–60 minutes, until the filling is set and has cooled to room temperature. Make the meringue when the tart is ready to top.",
+      ],
+      timers: [{ label: "Check the tart has cooled", minutes: 30 }],
     },
     {
       id: "meringue", title: "Whisk the meringue", art: "whisk", tone: "yellow",
@@ -94,31 +116,32 @@ export default {
     },
     {
       id: "brown", title: "Swirl and toast", art: "pie", tone: "blue",
-      timing: "Hot grill · about 1–2 min",
+      timing: "Oven grill or kitchen blowtorch",
       instructions: [
-        "Spoon the meringue onto the warm filling and spread it right to the pastry edge. Lift your spoon as you go to make wavy peaks.",
-        "Set the pie under a preheated hot grill, about 15 cm from the element. Watch constantly and turn the tin if needed. Take it out as soon as the peaks turn golden.",
+        "Spoon the fresh meringue onto the room-temperature filling and spread it right to the pastry edge. Lift your spoon as you go to make wavy peaks. Choose one method to toast it.",
+        "For the oven grill, set the pie about 15 cm below the preheated hot element. Watch constantly and turn the tin as needed. Remove as soon as the tips turn golden, usually 1–2 minutes.",
+        "For a kitchen blowtorch, set the pie on a heatproof surface. Hold the torch about 15 cm from the meringue and keep the flame moving over the peaks. Stop when the tips turn golden.",
       ],
-      tip: "The grill adds colour. The thermometer check in the previous step is what verifies the meringue temperature.",
+      tip: "Both methods brown the surface. Check the meringue temperature while heating it in the previous step.",
     },
     {
       id: "chill", title: "Chill, then slice", art: "slice", tone: "pink",
-      timing: "Cool 45 min · chill 2 hr",
+      timing: "Chill for 1–2 hr",
       instructions: [
-        "Cool the pie in its tin on a rack for about 45 minutes, then refrigerate for at least 2 hours so the filling sets. Get it into the fridge within 2 hours of cooking.",
-        "Lift the set pie from the tin and slice with a sharp knife. Chill leftovers and eat within 48 hours.",
+        "Refrigerate the finished pie for 1–2 hours before serving. Get it into the fridge within 2 hours of baking the filling.",
+        "Lift the chilled pie from the tin and slice straight down with a sharp knife. Keep the pie refrigerated and serve within 24 hours for the best texture.",
       ],
       tip: "Wipe the knife between cuts to keep the lemon and meringue layers neat.",
-      timers: [{ label: "Cool on the rack", minutes: 45 }, { label: "Chill the finished pie", minutes: 120 }],
+      timers: [{ label: "Check the chilled pie", minutes: 60 }],
     },
   ],
   nutrition: {
-    finishedWeightGrams: 1200,
-    yieldAssumptions: "The finished weight allows for moisture lost during cooking and cooling, plus a small amount of pastry trimming. The yield is estimated from the ingredient weights and has not been weighed.",
-    dataAssumptions: "The calculation treats the weight loss as predominantly water and retains all ingredient nutrients. Raw egg white is a proxy for pasteurised white. Raw lemon peel is a proxy for zest, with fibre subtracted from total carbohydrate. Fresh lemon juice uses CoFID’s NSP fibre as a proxy because its AOAC value is unavailable. CoFID trace values are treated as zero. Tap water is modelled as zero for the listed nutrients.",
+    finishedWeightGrams: 1150,
+    yieldAssumptions: "The 1,150 g finished yield assumes roughly 90 g lost to pastry trimming and moisture loss during baking, heating and cooling. Weigh the chilled pie for a more accurate yield.",
+    dataAssumptions: "The calculation treats the weight loss as predominantly water and retains all ingredient nutrients. Raw egg white is a proxy for pasteurised white. Raw lemon peel is a proxy for zest, with fibre subtracted from total carbohydrate. Fresh lemon juice uses CoFID’s NSP fibre as a proxy because its AOAC value is unavailable. The lemon juice weight is converted from volume using USDA data. The zest weight assumes three medium lemons. CoFID trace values and tap-water nutrients are treated as zero.",
   },
   source: {
-    credit: "Recipe adapted from",
+    credit: "Shortcrust adapted from",
     label: "Angela Nilsen’s lemon meringue pie in Good Food",
     url: "https://www.bbcgoodfood.com/recipes/ultimate-lemon-meringue-pie",
   },

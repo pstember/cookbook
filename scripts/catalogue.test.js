@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readdirSync } from "node:fs";
+import { readdirSync, statSync } from "node:fs";
 import test from "node:test";
 import { recipes } from "../public/recipes/index.js";
 
@@ -26,6 +26,17 @@ test("recipe links and checklist identifiers refer to distinct entries", () => {
     }
     for (const link of recipe.related ?? []) {
       assert.ok(ids.has(link.id) && link.id !== recipe.id, `${recipe.id} links to ${link.id}`);
+    }
+  }
+});
+
+test("every recipe has a local illustration for the catalogue and detail page", () => {
+  const publicDirectory = new URL("../public/", import.meta.url);
+  for (const recipe of recipes) {
+    assert.ok(recipe.image?.src || recipe.thumbnail, `Missing illustration: ${recipe.id}`);
+    for (const path of [recipe.thumbnail, recipe.image?.src].filter(Boolean)) {
+      const file = statSync(new URL(path, publicDirectory), { throwIfNoEntry: false });
+      assert.ok(file?.isFile(), `Missing illustration file for ${recipe.id}: ${path}`);
     }
   }
 });
