@@ -326,6 +326,18 @@
       }
     }
   ],
+  "storage": {
+    "copy": {
+      "en": {
+        "counter": "Refrigerate within 2 hours of cooking, or within 1 hour above 32°C.",
+        "fridge": "Keep covered for up to 72 hours at 4°C or below."
+      },
+      "fr": {
+        "counter": "Réfrigérez dans les 2 heures suivant la cuisson, ou dans l’heure s’il fait plus de 32 °C.",
+        "fridge": "Conservez dans un récipient couvert jusqu’à 72 heures à 4 °C ou moins."
+      }
+    }
+  },
   "notes": [
     {
       "copy": {
@@ -355,6 +367,19 @@
         "fr": {
           "text": "Pour une crêpe sucrée, garnissez-la de confiture ou de Nutella. Pour une version salée, ajoutez du jambon et du fromage râpé sur une crêpe cuite dans la poêle et repliez-la quand le fromage a fondu."
         }
+      }
+    },
+    {
+      "source": {
+        "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+        "copy": {
+          "en": { "label": "FoodSafety.gov · Refrigeration guidance" },
+          "fr": { "label": "FoodSafety.gov · Conseils de réfrigération" }
+        }
+      },
+      "copy": {
+        "en": { "text": "The storage times are for plain cooked crêpes." },
+        "fr": { "text": "Les durées de conservation concernent les crêpes cuites nature." }
       }
     }
   ],
