@@ -4,6 +4,7 @@ import chickenNuggets from "./chicken-nuggets.js";
 import chickenButterBeanStew from "./chicken-butter-bean-stew.js";
 import appleSauce from "./apple-sauce.js";
 import waffles from "./waffles.js";
+import crepes from "./crepes.js";
 import tomatoSpinachFrittata from "./tomato-spinach-frittata.js";
 import pateBrisee from "./pate-brisee.js";
 import genoise from "./genoise.js";
@@ -32,6 +33,7 @@ export const stepIllustrations = {
   "chicken-butter-bean-stew": chickenButterBeanStew,
   "apple-sauce": appleSauce,
   "waffles": waffles,
+  "crepes": crepes,
   "tomato-spinach-frittata": tomatoSpinachFrittata,
   "pate-brisee": pateBrisee,
   "genoise": genoise,

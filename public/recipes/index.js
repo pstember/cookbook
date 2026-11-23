@@ -4,6 +4,7 @@ import chickenNuggets from "./main-dishes/chicken-nuggets.js";
 import chickenButterBeanStew from "./main-dishes/chicken-butter-bean-stew.js";
 import appleSauce from "./sides/apple-sauce.js";
 import waffles from "./breakfast-brunch/waffles.js";
+import crepes from "./breakfast-brunch/crepes.js";
 import tomatoSpinachFrittata from "./breakfast-brunch/tomato-spinach-frittata.js";
 import pateBrisee from "./baking-basics/pate-brisee.js";
 import genoise from "./baking-basics/genoise.js";
@@ -28,7 +29,7 @@ import twoDayBirthdayCake from "./desserts/two-day-birthday-cake.js";
 export const recipes = [
   generalTsoChicken, pulledPork, chickenNuggets, chickenButterBeanStew,
   appleSauce,
-  waffles, tomatoSpinachFrittata,
+  waffles, crepes, tomatoSpinachFrittata,
   pateBrisee, genoise, cremePatissiere, cremeAuBeurre,
   lemonMeringuePie, rizAuLait, easyChocolateChipCookies, tarteAuxPommes,
   pannaCotta, cremeBrulee, bavaroisAuxFraises, browniesAuChocolat, lemonies,

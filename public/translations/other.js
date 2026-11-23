@@ -619,6 +619,81 @@ export default {
       "Essayez d’ajouter de l’extrait de vanille, de la cannelle ou du zeste d’agrume. Les notes d’origine suggèrent aussi de remplacer la moitié du beurre par de l’huile neutre ou de la crème légère pour varier la texture.",
     ],
   },
+  crepes: {
+    title: "Crêpes",
+    qualifier: "Recette préférée de la famille",
+    description: "Des crêpes fines et moelleuses, préparées avec une pâte reposée et cuites dans une crêpière sans matière grasse ajoutée.",
+    image: { alt: "Des crêpes dorées pliées en quatre sur une assiette, à côté de quartiers de citron." },
+    restTime: "Au moins 20 min, idéalement 24 h",
+    groupTitles: ["Pâte à crêpes"],
+    ingredients: {
+      flour: { name: "de farine de blé" },
+      eggs: { name: "d’œufs", note: "pesés sans coquille" },
+      milk: { name: "de lait", note: "quantité de départ, à ajuster selon la consistance" },
+      butter: { name: "de beurre fondu", note: "tiède" },
+    },
+    setup: ["Utilisez une crêpière antiadhésive ou bien culottée, sans la graisser."],
+    allergens: ["Blé (gluten)", "Œufs", "Lait"],
+    steps: {
+      sift: {
+        title: "Tamiser la farine",
+        instructions: ["Tamisez les 400 g de farine dans un grand saladier."],
+      },
+      "whisk-eggs": {
+        title: "Incorporer les œufs au fouet",
+        instructions: [
+          "Creusez un puits au centre de la farine.",
+          "Cassez les six œufs dans le puits.",
+          "Fouettez en partant du centre pour incorporer la farine peu à peu.",
+        ],
+      },
+      "add-milk": {
+        title: "Délayer la pâte avec le lait",
+        instructions: [
+          "Incorporez progressivement 500 ml de lait au fouet jusqu’à obtenir une pâte lisse.",
+          "Ajoutez un peu de lait à la fois en fouettant, jusqu’à ce que la pâte coule en un filet fin et continu et laisse une fine pellicule au dos d’une cuillère.",
+        ],
+      },
+      "add-butter": {
+        title: "Incorporer le beurre fondu",
+        instructions: ["Incorporez le beurre fondu tiède au fouet jusqu’à ce que la pâte soit homogène."],
+      },
+      rest: {
+        title: "Laisser reposer la pâte",
+        instructions: [
+          "Couvrez le saladier.",
+          "Réfrigérez la pâte au moins 20 minutes, de préférence toute une nuit et idéalement 24 heures, avant de vérifier de nouveau sa consistance.",
+        ],
+        wait: "Au moins 20 min au réfrigérateur",
+        timerLabels: ["Vérifier la pâte après le repos"],
+      },
+      spread: {
+        title: "Répartir la pâte dans la crêpière",
+        heat: "Feu moyen",
+        instructions: [
+          "Chauffez la crêpière à feu moyen sans la graisser.",
+          "Versez une petite louche de pâte au centre.",
+          "Inclinez aussitôt la crêpière pour étaler la pâte en une couche fine et régulière.",
+        ],
+      },
+      cook: {
+        title: "Cuire et retourner chaque crêpe",
+        heat: "Feu moyen",
+        instructions: [
+          "Cuisez la première face jusqu’à ce que la surface soit prise et que les bords se décollent facilement.",
+          "Retournez la crêpe à l’aide d’une spatule fine.",
+          "Cuisez la seconde face jusqu’à ce qu’elle soit légèrement dorée par endroits.",
+          "Déposez la crêpe sur une assiette.",
+          "Recommencez avec le reste de la pâte.",
+        ],
+      },
+    },
+    notes: [
+      "Remuez doucement la pâte reposée avant la cuisson. Si elle a épaissi ou si elle ne couvre pas la crêpière d’un mouvement rapide, incorporez un trait de lait au fouet et réessayez.",
+      "Empilez les crêpes cuites sur une assiette sous un torchon propre pour les garder moelleuses pendant la cuisson des suivantes.",
+      "Pour une crêpe sucrée, garnissez-la de confiture ou de Nutella. Pour une version salée, ajoutez du jambon et du fromage râpé sur une crêpe cuite dans la poêle et repliez-la quand le fromage a fondu.",
+    ],
+  },
   "strawberry-yoghurt-lollies": {
     totalTime: "Au moins 6 h, plus le mixage et le démoulage",
     restTime: "Au moins 6 h au congélateur, puis 10 à 15 min pour assouplir si souhaité",
