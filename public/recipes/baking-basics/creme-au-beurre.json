@@ -1,0 +1,218 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "creme-au-beurre",
+  "category": "Baking basics",
+  "thumbnail": "assets/illustrations/recipes/creme-au-beurre.webp",
+  "groups": [
+    {
+      "art": "whisk",
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "butter",
+          "grams": 150,
+          "copy": {
+            "en": {
+              "name": "unsalted butter",
+              "note": "softened"
+            },
+            "fr": {
+              "name": "beurre doux",
+              "note": "ramolli"
+            }
+          }
+        },
+        {
+          "id": "sugar",
+          "grams": 340,
+          "copy": {
+            "en": {
+              "name": "icing sugar",
+              "note": "sifted"
+            },
+            "fr": {
+              "name": "sucre glace",
+              "note": "tamisé"
+            }
+          }
+        },
+        {
+          "id": "liquid",
+          "gramRange": [
+            45,
+            60
+          ],
+          "quantity": "3–4",
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "whole milk",
+              "unit": "tbsp",
+              "note": "or infused milk, juice or another liquid"
+            },
+            "fr": {
+              "name": "lait entier",
+              "unit": "c. à soupe",
+              "note": "ou du lait infusé, du jus ou un autre liquide"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Buttercream"
+        },
+        "fr": {
+          "title": "Crème au beurre"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "beat-butter",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "butter"
+      ],
+      "illustration": "assets/illustrations/steps/creme-au-beurre/beat-butter.webp",
+      "copy": {
+        "en": {
+          "title": "Beat the butter",
+          "instructions": [
+            "Beat the softened butter until smooth and pale."
+          ],
+          "caption": "Beat the softened butter until it turns pale and the beaters leave smooth, even ridges."
+        },
+        "fr": {
+          "title": "Fouetter le beurre",
+          "instructions": [
+            "Fouettez le beurre ramolli jusqu’à ce qu’il soit lisse et pâle."
+          ],
+          "caption": "Battez le beurre mou jusqu’à ce qu’il pâlisse et que les fouets laissent des sillons réguliers."
+        }
+      }
+    },
+    {
+      "id": "add-sugar",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "butter",
+        "sugar"
+      ],
+      "illustration": "assets/illustrations/steps/creme-au-beurre/add-sugar.webp",
+      "copy": {
+        "en": {
+          "title": "Add the icing sugar",
+          "instructions": [
+            "Beat in the sifted icing sugar in batches.",
+            "Scrape down the sides of the bowl between additions."
+          ],
+          "caption": "Add the sifted icing sugar in batches and scrape the sides of the bowl as you go."
+        },
+        "fr": {
+          "title": "Incorporer le sucre glace",
+          "instructions": [
+            "Incorporez le sucre glace tamisé en plusieurs fois, en fouettant.",
+            "Raclez les parois du bol entre les ajouts."
+          ],
+          "caption": "Ajoutez le sucre glace tamisé en plusieurs fois et raclez les parois du bol au fur et à mesure."
+        }
+      }
+    },
+    {
+      "id": "adjust",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "butter",
+        "sugar",
+        "liquid"
+      ],
+      "illustration": "assets/illustrations/steps/creme-au-beurre/adjust.webp",
+      "copy": {
+        "en": {
+          "title": "Adjust the consistency",
+          "instructions": [
+            "Beat in the liquid about 15 g (1 tbsp) at a time, until the buttercream is smooth and soft enough to spread or pipe."
+          ],
+          "caption": "Add the liquid about 15 g at a time, stopping once the buttercream is soft enough to spread."
+        },
+        "fr": {
+          "title": "Ajuster la consistance",
+          "instructions": [
+            "Incorporez le liquide en fouettant, environ 15 g (1 c. à soupe) à la fois, jusqu’à ce que la crème soit lisse et assez souple pour être étalée ou dressée à la poche."
+          ],
+          "caption": "Ajoutez le liquide par portions d’environ 15 g, jusqu’à ce que la crème soit assez souple pour être étalée."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Add the liquid a spoonful at a time. Stop when the cream is soft enough for your piping bag or palette knife."
+        },
+        "fr": {
+          "text": "Dosez le liquide cuillerée par cuillerée. Arrêtez dès que la crème se travaille à la poche ou à la spatule."
+        }
+      }
+    },
+    {
+      "source": {
+        "url": "https://cupcakejemma.com/products/classic-american-buttercream-recipe",
+        "copy": {
+          "en": {
+            "label": "Classic American Buttercream"
+          },
+          "fr": {
+            "label": "Crème au beurre américaine"
+          }
+        }
+      },
+      "copy": {
+        "en": {
+          "text": "The batch size and preparation time are from Cupcake Jemma’s written recipe."
+        },
+        "fr": {
+          "text": "Le rendement et le temps de préparation proviennent de la fiche de Cupcake Jemma."
+        }
+      }
+    }
+  ],
+  "source": {
+    "url": "https://www.youtube.com/watch?v=O4qazwRvO6E",
+    "copy": {
+      "en": {
+        "label": "Cupcake Jemma · Buttercream Masterclass"
+      },
+      "fr": {
+        "label": "Cupcake Jemma – Cours de crème au beurre"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Crème au beurre",
+      "description": "A simple buttercream for icing cakes or piping onto cupcakes.",
+      "yield": "Ices 12 cupcakes or 1 layer cake",
+      "totalTime": "About 15 min",
+      "allergens": [
+        "Milk"
+      ]
+    },
+    "fr": {
+      "title": "Crème au beurre",
+      "description": "Une crème au beurre simple pour glacer les gâteaux ou décorer les cupcakes à la poche.",
+      "yield": "Pour glacer 12 cupcakes ou 1 gâteau à étages",
+      "totalTime": "Environ 15 min",
+      "allergens": [
+        "Lait"
+      ]
+    }
+  }
+}

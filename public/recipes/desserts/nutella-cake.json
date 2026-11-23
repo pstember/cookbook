@@ -1,0 +1,848 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "nutella-cake",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/nutella-cake.webp",
+  "times": [
+    {
+      "icon": "oven",
+      "copy": {
+        "en": {
+          "label": "Tin diameter",
+          "value": "10 cm"
+        },
+        "fr": {
+          "label": "Diamètre du moule",
+          "value": "10 cm"
+        }
+      }
+    },
+    {
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Bake",
+          "value": "15–18 min"
+        },
+        "fr": {
+          "label": "Cuisson",
+          "value": "15 à 18 min"
+        }
+      }
+    },
+    {
+      "icon": "snow",
+      "copy": {
+        "en": {
+          "label": "Chill filling",
+          "value": "At least 30 min"
+        },
+        "fr": {
+          "label": "Repos de la ganache au frais",
+          "value": "Au moins 30 min"
+        }
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "genoise"
+    }
+  ],
+  "groups": [
+    {
+      "art": "whisk",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "egg",
+          "quantity": 1,
+          "grams": 50,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "large egg",
+              "note": "room temperature, weighed without the shell"
+            },
+            "fr": {
+              "name": "gros œuf",
+              "note": "à température ambiante, pesé sans coquille"
+            }
+          }
+        },
+        {
+          "id": "caster-sugar",
+          "grams": 30,
+          "copy": {
+            "en": {
+              "name": "caster sugar"
+            },
+            "fr": {
+              "name": "sucre en poudre fin"
+            }
+          }
+        },
+        {
+          "id": "flour",
+          "grams": 30,
+          "copy": {
+            "en": {
+              "name": "plain flour",
+              "note": "sifted"
+            },
+            "fr": {
+              "name": "farine de blé",
+              "note": "tamisée"
+            }
+          }
+        },
+        {
+          "id": "butter",
+          "grams": 10,
+          "copy": {
+            "en": {
+              "name": "unsalted butter",
+              "note": "melted and cooled"
+            },
+            "fr": {
+              "name": "beurre doux",
+              "note": "fondu et refroidi"
+            }
+          }
+        },
+        {
+          "id": "vanilla",
+          "quantity": "¼",
+          "grams": 1.1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "vanilla extract",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "extrait de vanille",
+              "unit": "c. à café"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Génoise sponge"
+        },
+        "fr": {
+          "title": "Génoise"
+        }
+      }
+    },
+    {
+      "art": "saucepan",
+      "tone": "blue",
+      "ingredients": [
+        {
+          "id": "white-sugar",
+          "quantity": 1,
+          "grams": 12.4,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "white sugar",
+              "unit": "tbsp"
+            },
+            "fr": {
+              "name": "sucre blanc",
+              "unit": "c. à soupe"
+            }
+          }
+        },
+        {
+          "id": "water",
+          "quantity": 1,
+          "grams": 15,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "hot water",
+              "unit": "tbsp"
+            },
+            "fr": {
+              "name": "eau chaude",
+              "unit": "c. à soupe"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Simple syrup"
+        },
+        "fr": {
+          "title": "Sirop de sucre"
+        }
+      }
+    },
+    {
+      "art": "whisk",
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "ganache-nutella",
+          "grams": 40,
+          "copy": {
+            "en": {
+              "name": "Nutella"
+            },
+            "fr": {
+              "name": "Nutella"
+            }
+          }
+        },
+        {
+          "id": "cream",
+          "quantity": 40,
+          "unit": "ml",
+          "grams": 40,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "double cream"
+            },
+            "fr": {
+              "name": "crème double"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Whipped ganache"
+        },
+        "fr": {
+          "title": "Ganache montée"
+        }
+      }
+    },
+    {
+      "art": "pie",
+      "tone": "oat",
+      "ingredients": [
+        {
+          "id": "mascarpone",
+          "grams": 60,
+          "copy": {
+            "en": {
+              "name": "mascarpone or full-fat cream cheese",
+              "note": "cold"
+            },
+            "fr": {
+              "name": "mascarpone ou fromage frais entier",
+              "note": "bien froid"
+            }
+          }
+        },
+        {
+          "id": "frosting-nutella",
+          "grams": 40,
+          "copy": {
+            "en": {
+              "name": "Nutella"
+            },
+            "fr": {
+              "name": "Nutella"
+            }
+          }
+        },
+        {
+          "id": "garnish",
+          "gramRange": [
+            0.4,
+            5
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "sea salt or crushed hazelnuts",
+              "note": "optional garnish, about 0.4 g sea salt or 5 g crushed hazelnuts"
+            },
+            "fr": {
+              "name": "sel marin ou noisettes concassées",
+              "note": "décoration facultative, environ 0,4 g de sel marin ou 5 g de noisettes concassées"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Frosting and garnish"
+        },
+        "fr": {
+          "title": "Glaçage et décoration"
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "fridge": "Keep the finished cake refrigerated. Storage time not tested."
+      },
+      "fr": {
+        "fridge": "Gardez le gâteau terminé au réfrigérateur. Durée de conservation non testée."
+      }
+    }
+  },
+  "source": {
+    "copy": {
+      "en": {
+        "label": "The author’s cookbook"
+      },
+      "fr": {
+        "label": "Le carnet de recettes de l’auteur"
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "warm-cream",
+      "tone": "pink",
+      "activity": "cooking",
+      "uses": [
+        "cream"
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/warm-cream.webp",
+      "copy": {
+        "en": {
+          "title": "Warm the cream",
+          "heat": "Bring just to a simmer",
+          "instructions": [
+            "Heat the cream in a small pan until it just starts to simmer."
+          ],
+          "caption": "Heat the cream just until small bubbles begin to form."
+        },
+        "fr": {
+          "title": "Chauffer la crème",
+          "heat": "Chauffer jusqu’aux premiers frémissements",
+          "instructions": [
+            "Chauffez la crème dans une petite casserole jusqu’aux premiers frémissements."
+          ],
+          "caption": "Chauffez la crème jusqu’à l’apparition des premières petites bulles."
+        }
+      }
+    },
+    {
+      "id": "ganache",
+      "tone": "pink",
+      "activity": "prep",
+      "uses": [
+        "ganache-nutella",
+        "cream"
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/ganache.webp",
+      "copy": {
+        "en": {
+          "title": "Mix the ganache",
+          "heat": "Off the heat",
+          "instructions": [
+            "Pour the hot cream over the Nutella in a bowl.",
+            "Stir until smooth and glossy."
+          ],
+          "caption": "Pour the warm cream over the Nutella, then stir until smooth and glossy."
+        },
+        "fr": {
+          "title": "Mélanger la ganache",
+          "heat": "Hors du feu",
+          "instructions": [
+            "Versez la crème chaude sur le Nutella dans un bol.",
+            "Remuez jusqu’à obtenir une ganache lisse et brillante."
+          ],
+          "caption": "Versez la crème chaude sur le Nutella, puis remuez jusqu’à obtenir une ganache lisse et brillante."
+        }
+      }
+    },
+    {
+      "id": "chill-ganache",
+      "tone": "pink",
+      "activity": "chill",
+      "uses": [
+        "ganache-nutella",
+        "cream"
+      ],
+      "duration": [
+        30,
+        30
+      ],
+      "durationMinimum": true,
+      "timers": [
+        {
+          "minutes": 30,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the chilled ganache"
+            },
+            "fr": {
+              "label": "Vérifier la ganache froide"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/chill-ganache.webp",
+      "copy": {
+        "en": {
+          "title": "Chill the ganache",
+          "wait": "At least 30 min in the fridge",
+          "tip": "Start the sponge while the ganache chills.",
+          "instructions": [
+            "Refrigerate the ganache for at least 30 minutes before whipping."
+          ],
+          "caption": "Refrigerate the mixed ganache before whipping."
+        },
+        "fr": {
+          "title": "Réfrigérer la ganache",
+          "wait": "Au moins 30 min au réfrigérateur",
+          "tip": "Commencez la génoise pendant que la ganache est au frais.",
+          "instructions": [
+            "Réfrigérez la ganache pendant au moins 30 minutes avant de la fouetter."
+          ],
+          "caption": "Mettez la ganache au réfrigérateur avant de la monter."
+        }
+      }
+    },
+    {
+      "id": "warm-egg",
+      "during": "chill-ganache",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "egg",
+        "caster-sugar"
+      ],
+      "duration": [
+        2,
+        2
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/warm-egg.webp",
+      "copy": {
+        "en": {
+          "title": "Warm the egg and sugar",
+          "heat": "Simmering water",
+          "timing": "About 2 min over the water",
+          "instructions": [
+            "Heat the oven to 170°C (340°F).",
+            "Grease a 10 cm round tin.",
+            "Line the tin with baking parchment.",
+            "Whisk the egg and caster sugar in a bowl over simmering water for about 2 minutes, until lukewarm."
+          ],
+          "caption": "Warm the whole egg and caster sugar together over simmering water."
+        },
+        "fr": {
+          "title": "Tiédir l’œuf et le sucre",
+          "heat": "Bain-marie frémissant",
+          "timing": "Environ 2 min au bain-marie",
+          "instructions": [
+            "Préchauffez le four à 170 °C (340 °F).",
+            "Graissez un moule rond de 10 cm.",
+            "Chemisez-le de papier cuisson.",
+            "Fouettez l’œuf et le sucre fin dans un bol au-dessus d’une eau frémissante pendant environ 2 minutes, jusqu’à ce que le mélange soit tiède."
+          ],
+          "caption": "Fouettez l’œuf entier et le sucre fin au-dessus d’une eau frémissante."
+        }
+      }
+    },
+    {
+      "id": "sponge",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "egg",
+        "caster-sugar"
+      ],
+      "duration": [
+        5,
+        7
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Beat to the ribbon stage",
+          "heat": "Off the heat",
+          "instructions": [
+            "Take the bowl off the heat.",
+            "Beat for 5–7 minutes, until pale, thick and about tripled in volume.",
+            "Lift the whisk to check for a thick ribbon on the surface."
+          ],
+          "caption": "Lift the whisk. The pale batter should fall in a thick ribbon that leaves a trail on the surface."
+        },
+        "fr": {
+          "title": "Fouetter jusqu’au ruban",
+          "heat": "Hors du feu",
+          "instructions": [
+            "Retirez le bol du bain-marie.",
+            "Fouettez pendant 5 à 7 minutes, jusqu’à ce que le mélange blanchisse, épaississe et triple à peu près de volume.",
+            "Soulevez le fouet pour vérifier que la pâte retombe en ruban épais."
+          ],
+          "caption": "Soulevez le fouet. La préparation pâle doit retomber en ruban épais et laisser une trace à la surface."
+        }
+      }
+    },
+    {
+      "id": "fold-sponge",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "egg",
+        "caster-sugar",
+        "flour",
+        "butter",
+        "vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/fold-sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Fold in the flour",
+          "instructions": [
+            "Fold in the sifted flour in two batches.",
+            "Fold in the melted butter and vanilla.",
+            "Pour the batter into the lined tin."
+          ],
+          "caption": "Pour the batter into the parchment-lined tin after folding in the flour, butter and vanilla."
+        },
+        "fr": {
+          "title": "Incorporer la farine",
+          "instructions": [
+            "Incorporez délicatement la farine tamisée en deux fois.",
+            "Incorporez délicatement le beurre fondu et la vanille.",
+            "Versez la pâte dans le moule chemisé."
+          ],
+          "caption": "Après avoir incorporé délicatement la farine, le beurre et la vanille, versez la pâte dans le moule chemisé."
+        }
+      }
+    },
+    {
+      "id": "bake-sponge",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "egg",
+        "caster-sugar",
+        "flour",
+        "butter",
+        "vanilla"
+      ],
+      "duration": [
+        15,
+        18
+      ],
+      "timers": [
+        {
+          "minutes": 15,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the sponge"
+            },
+            "fr": {
+              "label": "Vérifier la cuisson de la génoise"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/bake-sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Bake the génoise",
+          "heat": "Oven at 170°C (340°F)",
+          "instructions": [
+            "Bake the sponge at 170°C (340°F) for 15–18 minutes, checking from 15 minutes."
+          ],
+          "caption": "Bake the small génoise in the lined round tin."
+        },
+        "fr": {
+          "title": "Cuire la génoise",
+          "heat": "Four à 170 °C (340 °F)",
+          "instructions": [
+            "Faites cuire la génoise à 170 °C (340 °F) pendant 15 à 18 minutes, en vérifiant la cuisson dès 15 minutes."
+          ],
+          "caption": "Faites cuire la petite génoise dans le moule rond chemisé."
+        }
+      }
+    },
+    {
+      "id": "cool-sponge",
+      "tone": "yellow",
+      "activity": "wait",
+      "uses": [
+        "egg",
+        "caster-sugar",
+        "flour",
+        "butter",
+        "vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/cool-sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the sponge",
+          "wait": "Until completely cool",
+          "instructions": [
+            "Let the sponge cool completely before slicing it."
+          ],
+          "caption": "Let the génoise cool before cutting the layers."
+        },
+        "fr": {
+          "title": "Laisser refroidir la génoise",
+          "wait": "Jusqu’à refroidissement complet",
+          "instructions": [
+            "Laissez refroidir complètement la génoise avant de la découper."
+          ],
+          "caption": "Laissez refroidir la génoise avant de la couper en disques."
+        }
+      }
+    },
+    {
+      "id": "syrup-and-frosting",
+      "tone": "blue",
+      "activity": "prep",
+      "uses": [
+        "white-sugar",
+        "water"
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/syrup-and-frosting.webp",
+      "copy": {
+        "en": {
+          "title": "Make the syrup",
+          "wait": "Until the syrup is cool",
+          "instructions": [
+            "Stir the white sugar into the hot water until dissolved.",
+            "Let the syrup cool."
+          ],
+          "caption": "Stir the sugar into the hot water until the syrup is clear."
+        },
+        "fr": {
+          "title": "Préparer le sirop",
+          "wait": "Jusqu’à refroidissement du sirop",
+          "instructions": [
+            "Mélangez le sucre blanc à l’eau chaude jusqu’à dissolution.",
+            "Laissez refroidir le sirop."
+          ],
+          "caption": "Remuez le sucre dans l’eau chaude jusqu’à ce que le sirop soit limpide."
+        }
+      }
+    },
+    {
+      "id": "whip-ganache",
+      "tone": "pink",
+      "activity": "prep",
+      "uses": [
+        "ganache-nutella",
+        "cream"
+      ],
+      "duration": [
+        0.5,
+        0.5
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/whip-ganache.webp",
+      "copy": {
+        "en": {
+          "title": "Whip the chilled ganache",
+          "timing": "About 30 sec",
+          "instructions": [
+            "Whisk the chilled ganache vigorously for about 30 seconds, until lighter and fluffy."
+          ],
+          "caption": "Whisk the chilled ganache until it lightens and becomes fluffy."
+        },
+        "fr": {
+          "title": "Monter la ganache froide",
+          "timing": "Environ 30 s",
+          "instructions": [
+            "Fouettez vigoureusement la ganache froide pendant environ 30 secondes, jusqu’à ce qu’elle s’éclaircisse et devienne mousseuse."
+          ],
+          "caption": "Fouettez la ganache froide jusqu’à ce qu’elle s’éclaircisse et devienne mousseuse."
+        }
+      }
+    },
+    {
+      "id": "whip-frosting",
+      "tone": "oat",
+      "activity": "prep",
+      "uses": [
+        "mascarpone",
+        "frosting-nutella"
+      ],
+      "duration": [
+        1,
+        1
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/whip-frosting.webp",
+      "copy": {
+        "en": {
+          "title": "Whip the mascarpone frosting",
+          "timing": "About 1 min",
+          "instructions": [
+            "Whisk the cold mascarpone or cream cheese with the Nutella in a separate bowl for about 1 minute, until thick enough to spread."
+          ],
+          "caption": "In a separate bowl, whip the mascarpone and Nutella until thick enough to spread."
+        },
+        "fr": {
+          "title": "Monter le glaçage au mascarpone",
+          "timing": "Environ 1 min",
+          "instructions": [
+            "Fouettez le mascarpone ou le fromage frais bien froid avec le Nutella dans un autre bol pendant environ 1 minute, jusqu’à ce que le glaçage soit assez épais pour être étalé."
+          ],
+          "caption": "Dans un autre bol, fouettez le mascarpone et le Nutella jusqu’à obtenir une crème assez épaisse pour être étalée."
+        }
+      }
+    },
+    {
+      "id": "slice-sponge",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "egg",
+        "caster-sugar",
+        "flour",
+        "butter",
+        "vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/slice-sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Cut three layers",
+          "instructions": [
+            "Cut the cooled sponge horizontally into three even layers."
+          ],
+          "caption": "Cut the cooled sponge horizontally into three even layers."
+        },
+        "fr": {
+          "title": "Couper trois disques",
+          "instructions": [
+            "Coupez la génoise refroidie à l’horizontale en trois disques de même épaisseur."
+          ],
+          "caption": "Coupez la génoise refroidie à l’horizontale en trois disques de même épaisseur."
+        }
+      }
+    },
+    {
+      "id": "layer",
+      "tone": "green",
+      "activity": "prep",
+      "uses": [
+        "egg",
+        "caster-sugar",
+        "flour",
+        "butter",
+        "vanilla",
+        "white-sugar",
+        "water",
+        "ganache-nutella",
+        "cream"
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/layer.webp",
+      "copy": {
+        "en": {
+          "title": "Fill and stack the cake",
+          "instructions": [
+            "Brush each sponge layer with the cooled syrup.",
+            "Spread whipped ganache over the bottom and middle layers.",
+            "Stack the layers."
+          ],
+          "caption": "Brush each layer with syrup and spread the whipped ganache between the sponge discs."
+        },
+        "fr": {
+          "title": "Garnir et monter le gâteau",
+          "instructions": [
+            "Imbibez chaque disque de sirop refroidi au pinceau.",
+            "Étalez la ganache montée sur les disques inférieur et central.",
+            "Superposez les disques."
+          ],
+          "caption": "Imbibez chaque disque de sirop au pinceau, puis garnissez les couches de ganache montée."
+        }
+      }
+    },
+    {
+      "id": "frost-cake",
+      "tone": "oat",
+      "activity": "prep",
+      "uses": [
+        "egg",
+        "caster-sugar",
+        "flour",
+        "butter",
+        "vanilla",
+        "white-sugar",
+        "water",
+        "ganache-nutella",
+        "cream",
+        "mascarpone",
+        "frosting-nutella",
+        "garnish"
+      ],
+      "illustration": "assets/illustrations/steps/nutella-cake/frost-cake.webp",
+      "copy": {
+        "en": {
+          "title": "Frost the cake",
+          "instructions": [
+            "Spread the mascarpone frosting over the top and sides.",
+            "Scatter a little sea salt or crushed hazelnuts over the cake, if using."
+          ],
+          "caption": "Spread the mascarpone frosting over the assembled cake’s top and sides."
+        },
+        "fr": {
+          "title": "Glacer le gâteau",
+          "instructions": [
+            "Étalez le glaçage au mascarpone sur le dessus et les côtés.",
+            "Parsemez le gâteau d’un peu de sel marin ou de noisettes concassées si vous le souhaitez."
+          ],
+          "caption": "Étalez le glaçage au mascarpone sur le dessus et les côtés du gâteau monté."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Keep the finished cake refrigerated. Let it stand for 15 minutes before serving so the filling softens."
+        },
+        "fr": {
+          "text": "Conservez le gâteau terminé au réfrigérateur. Sortez-le 15 minutes avant de servir pour que la garniture s’assouplisse."
+        }
+      }
+    }
+  ],
+  "copy": {
+    "en": {
+      "cookingTime": "15–18 min baking, plus warming the cream and eggs",
+      "restTime": "Chill ganache at least 30 min. Cool the sponge and syrup. Take the cake out 15 min before serving.",
+      "title": "Nutella Cake",
+      "description": "A small three-layer génoise with whipped hazelnut chocolate ganache and mascarpone frosting.",
+      "setup": [
+        "Grease a 10 cm round tin and line it with baking parchment. Heat the oven to 170°C (340°F) for the sponge."
+      ],
+      "allergens": [
+        "Egg",
+        "Wheat (gluten)",
+        "Milk",
+        "Hazelnuts",
+        "Check the spread label for soya"
+      ]
+    },
+    "fr": {
+      "cookingTime": "15 à 18 min au four, plus le chauffage de la crème et de l’œuf",
+      "restTime": "Au moins 30 min au frais pour la ganache. Laisser refroidir génoise et sirop, puis sortir le gâteau 15 min avant de servir.",
+      "title": "Gâteau au Nutella",
+      "description": "Une petite génoise à trois étages avec une ganache montée au chocolat et aux noisettes et un glaçage au mascarpone.",
+      "setup": [
+        "Graissez un moule rond de 10 cm et chemisez-le de papier cuisson. Préchauffez le four à 170 °C (340 °F) pour la génoise."
+      ],
+      "allergens": [
+        "Œuf",
+        "Blé (gluten)",
+        "Lait",
+        "Noisettes",
+        "Vérifiez la présence de soja sur l’étiquette de la pâte à tartiner"
+      ]
+    }
+  }
+}

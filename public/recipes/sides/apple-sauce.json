@@ -1,0 +1,464 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "apple-sauce",
+  "category": "Sides",
+  "thumbnail": "assets/illustrations/recipes/apple-sauce.webp",
+  "times": [
+    {
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Simmer",
+          "value": "15–20 min"
+        },
+        "fr": {
+          "label": "Cuisson à feu doux",
+          "value": "15 à 20 min"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "tone": "yellow",
+      "art": "saucepan",
+      "ingredients": [
+        {
+          "id": "apples",
+          "gramVariants": [
+            800,
+            1100
+          ],
+          "weightEstimate": true,
+          "quantity": 4,
+          "copy": {
+            "en": {
+              "name": "Bramley apples",
+              "note": "4 Bramley apples (about 800 g) or 6 medium eating apples (about 1,100 g), weighed before coring and chopping"
+            },
+            "fr": {
+              "name": "pommes Bramley",
+              "note": "4 pommes Bramley (environ 800 g) ou 6 pommes à croquer de taille moyenne (environ 1 100 g), pesées avant de les évider et de les couper"
+            }
+          }
+        },
+        {
+          "id": "water",
+          "grams": 200,
+          "weightEstimate": true,
+          "quantity": 200,
+          "unit": "ml",
+          "copy": {
+            "en": {
+              "name": "water",
+              "note": "100 g for chunky sauce or 300 g for smooth purée"
+            },
+            "fr": {
+              "name": "eau",
+              "note": "100 g pour une compote avec des morceaux ou 300 g pour une purée lisse"
+            }
+          }
+        },
+        {
+          "id": "cinnamon",
+          "gramVariants": [
+            3,
+            1.3
+          ],
+          "weightEstimate": true,
+          "quantity": 1,
+          "copy": {
+            "en": {
+              "name": "cinnamon stick",
+              "note": "one stick about 7.5 cm long (about 3 g), or ½ tsp ground cinnamon (about 1.3 g)"
+            },
+            "fr": {
+              "name": "bâton de cannelle",
+              "note": "un bâton d’environ 7,5 cm (environ 3 g), ou ½ c. à café de cannelle moulue (environ 1,3 g)"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Apple sauce"
+        },
+        "fr": {
+          "title": "Compote de pommes"
+        }
+      }
+    },
+    {
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "sugar",
+          "gramRange": [
+            0,
+            150
+          ],
+          "unit": "g",
+          "copy": {
+            "en": {
+              "name": "granulated sugar",
+              "quantity": "Up to 150",
+              "note": "add to taste"
+            },
+            "fr": {
+              "name": "sucre en poudre",
+              "quantity": "Jusqu’à 150",
+              "note": "à doser au goût"
+            }
+          }
+        },
+        {
+          "id": "lemon",
+          "gramRange": [
+            0,
+            15
+          ],
+          "weightEstimate": true,
+          "quantity": 1,
+          "copy": {
+            "en": {
+              "name": "lemon juice",
+              "unit": "tbsp"
+            },
+            "fr": {
+              "name": "jus de citron",
+              "unit": "c. à soupe"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Optional to finish"
+        },
+        "fr": {
+          "title": "Pour la finition, au choix"
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "counter": "Refrigerate within 2 hours of cooking.",
+        "fridge": "Cover and use within 48 hours.",
+        "freezer": "Freeze in small portions. Use within 3 months for best quality. Thaw overnight in the fridge."
+      },
+      "fr": {
+        "counter": "Réfrigérez dans les 2 heures suivant la cuisson.",
+        "fridge": "Couvrez et consommez dans les 48 heures.",
+        "freezer": "Congelez en petites portions. Consommez dans les 3 mois pour une qualité optimale. Décongelez au réfrigérateur pendant la nuit."
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "boil",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "apples",
+        "water",
+        "cinnamon"
+      ],
+      "illustration": "assets/illustrations/steps/apple-sauce/boil.webp",
+      "copy": {
+        "en": {
+          "title": "Bring the apples to the boil",
+          "instructions": [
+            "Core the apples.",
+            "Chop the apples.",
+            "Put the chopped apples and cinnamon in a saucepan.",
+            "Pour in the water for your chosen texture.",
+            "Bring to the boil."
+          ],
+          "heat": "Bring to the boil",
+          "caption": "Bring the apple pieces, cinnamon and water to the boil."
+        },
+        "fr": {
+          "title": "Porter les pommes à ébullition",
+          "instructions": [
+            "Évidez les pommes.",
+            "Coupez les pommes en morceaux.",
+            "Mettez les morceaux de pomme et la cannelle dans une casserole.",
+            "Versez la quantité d’eau correspondant à la texture souhaitée.",
+            "Portez à ébullition."
+          ],
+          "heat": "Ébullition",
+          "caption": "Portez les morceaux de pomme, la cannelle et l’eau à ébullition."
+        }
+      }
+    },
+    {
+      "id": "cook",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "apples",
+        "water",
+        "cinnamon"
+      ],
+      "duration": [
+        15,
+        15
+      ],
+      "timers": [
+        {
+          "minutes": 15,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the apples"
+            },
+            "fr": {
+              "label": "Vérifier les pommes"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/apple-sauce/cook.webp",
+      "copy": {
+        "en": {
+          "title": "Simmer the apples",
+          "instructions": [
+            "Lower the heat to a simmer.",
+            "Simmer for 15 minutes, until the apples are soft."
+          ],
+          "heat": "Gentle simmer",
+          "caption": "Simmer the chopped apples with the cinnamon until they soften."
+        },
+        "fr": {
+          "title": "Faire mijoter les pommes",
+          "instructions": [
+            "Baissez le feu pour maintenir un frémissement.",
+            "Faites mijoter pendant 15 minutes, jusqu’à ce que les pommes soient tendres."
+          ],
+          "heat": "Frémissement",
+          "caption": "Faites mijoter les morceaux de pomme avec la cannelle jusqu’à ce qu’ils soient tendres."
+        }
+      }
+    },
+    {
+      "id": "texture",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "apples",
+        "water",
+        "cinnamon"
+      ],
+      "options": [
+        {
+          "copy": {
+            "en": {
+              "title": "Chunky sauce",
+              "instructions": [
+                "Mash the soft apples, leaving some pieces intact."
+              ]
+            },
+            "fr": {
+              "title": "Compote avec des morceaux",
+              "instructions": [
+                "Écrasez les pommes en laissant quelques morceaux."
+              ]
+            }
+          }
+        },
+        {
+          "copy": {
+            "en": {
+              "title": "Smooth purée",
+              "instructions": [
+                "Blend the cooked apples until smooth."
+              ]
+            },
+            "fr": {
+              "title": "Purée lisse",
+              "instructions": [
+                "Mixez les pommes cuites jusqu’à obtenir une purée lisse."
+              ]
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/apple-sauce/texture.webp",
+      "copy": {
+        "en": {
+          "title": "Mash or blend",
+          "instructions": [
+            "Take the pan off the heat.",
+            "Lift out the cinnamon stick if you used one."
+          ],
+          "heat": "Off the heat",
+          "caption": "Lift out the cinnamon stick, then mash the soft apples to the texture you like."
+        },
+        "fr": {
+          "title": "Écraser ou mixer",
+          "instructions": [
+            "Retirez la casserole du feu.",
+            "Retirez le bâton de cannelle si vous en avez utilisé un."
+          ],
+          "heat": "Hors du feu",
+          "caption": "Retirez le bâton de cannelle, puis écrasez les pommes jusqu’à la texture souhaitée."
+        }
+      }
+    },
+    {
+      "id": "season",
+      "tone": "pink",
+      "activity": "prep",
+      "uses": [
+        "apples",
+        "water",
+        "cinnamon",
+        "sugar",
+        "lemon"
+      ],
+      "illustration": "assets/illustrations/steps/apple-sauce/season.webp",
+      "copy": {
+        "en": {
+          "title": "Season to taste",
+          "instructions": [
+            "Taste the sauce.",
+            "Add sugar about 12 g at a time if you want a sweeter sauce.",
+            "Stir in the optional lemon juice for a sharper flavour."
+          ],
+          "heat": "Off the heat",
+          "caption": "Taste the sauce before adding a little sugar or lemon juice."
+        },
+        "fr": {
+          "title": "Ajuster l’assaisonnement",
+          "instructions": [
+            "Goûtez la compote.",
+            "Ajoutez du sucre par doses d’environ 12 g si vous préférez une compote plus sucrée.",
+            "Incorporez le jus de citron si vous souhaitez une note acidulée."
+          ],
+          "heat": "Hors du feu",
+          "caption": "Goûtez la compote avant d’ajouter un peu de sucre ou de jus de citron."
+        }
+      }
+    },
+    {
+      "id": "dissolve",
+      "tone": "pink",
+      "activity": "cooking",
+      "uses": [
+        "apples",
+        "water",
+        "cinnamon",
+        "sugar",
+        "lemon"
+      ],
+      "duration": [
+        5,
+        5
+      ],
+      "optional": true,
+      "illustration": "assets/illustrations/steps/apple-sauce/dissolve.webp",
+      "copy": {
+        "en": {
+          "title": "Dissolve any added sugar",
+          "instructions": [
+            "Return the sauce to low heat if you added sugar.",
+            "Warm for about 5 minutes, until the sugar dissolves."
+          ],
+          "heat": "Low hob",
+          "timing": "About 5 min if adding sugar",
+          "caption": "Warm the sweetened sauce over low heat to dissolve the sugar."
+        },
+        "fr": {
+          "title": "Dissoudre le sucre ajouté",
+          "instructions": [
+            "Remettez la compote sur feu doux si vous avez ajouté du sucre.",
+            "Réchauffez environ 5 minutes, jusqu’à dissolution du sucre."
+          ],
+          "heat": "Feu doux",
+          "timing": "Environ 5 min avec du sucre ajouté",
+          "caption": "Réchauffez la compote sucrée à feu doux pour dissoudre le sucre."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Serve alongside roast pork, spoon over ice cream or use in baking."
+        },
+        "fr": {
+          "text": "Servez avec un rôti de porc, versez sur une glace ou utilisez la compote en pâtisserie."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "Cool promptly, cover and refrigerate. Use within 48 hours or freeze in ice cube trays. Transfer the cubes to a freezer bag and use within three months for best quality. Thaw individual portions overnight in the fridge."
+        },
+        "fr": {
+          "text": "Laissez refroidir rapidement, couvrez et réfrigérez. Consommez la compote dans les 48 heures ou congelez-la dans des bacs à glaçons. Transférez les cubes dans un sac de congélation et utilisez-les dans les trois mois pour une qualité optimale. Décongelez les portions au réfrigérateur pendant la nuit."
+        }
+      }
+    }
+  ],
+  "safety": {
+    "notes": [
+      {
+        "copy": {
+          "en": {
+            "text": "Refrigerate within two hours of cooking. Use refrigerated leftovers within 48 hours, or freeze them in small portions."
+          },
+          "fr": {
+            "text": "Réfrigérez la compote dans les deux heures suivant la cuisson. Consommez les restes réfrigérés dans les 48 heures ou congelez-les en petites portions."
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.food.gov.uk/safety-hygiene/cooking-your-food",
+        "copy": {
+          "en": {
+            "label": "Food Standards Agency leftovers guidance"
+          },
+          "fr": {
+            "label": "Food Standards Agency · Conseils de conservation des restes"
+          }
+        }
+      }
+    ],
+    "copy": {
+      "en": {
+        "title": "Storing apple sauce"
+      },
+      "fr": {
+        "title": "Conserver la compote"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Cinnamon Apple Sauce",
+      "cookingTime": "15 min after boiling, plus about 5 min if sweetening",
+      "description": "A simple apple sauce you can mash for texture or blend to a smooth purée.",
+      "setup": [
+        "Start with 200 ml water. Use 100 ml for a chunky sauce or 300 ml for a smooth purée."
+      ],
+      "allergens": []
+    },
+    "fr": {
+      "title": "Compote de pommes à la cannelle",
+      "cookingTime": "15 min après ébullition, puis environ 5 min si vous sucrez",
+      "description": "Une compote de pommes toute simple, à écraser pour garder quelques morceaux ou à mixer pour une purée lisse.",
+      "setup": [
+        "Comptez 200 ml d’eau pour la recette de base, 100 ml pour une compote avec des morceaux ou 300 ml pour une purée lisse."
+      ],
+      "allergens": []
+    }
+  }
+}

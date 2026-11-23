@@ -1,0 +1,496 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "brownies-au-chocolat",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/brownies-au-chocolat.webp",
+  "servings": 3,
+  "times": [
+    {
+      "icon": "oven",
+      "copy": {
+        "en": {
+          "label": "Tin",
+          "value": "10 cm"
+        },
+        "fr": {
+          "label": "Moule",
+          "value": "10 cm"
+        }
+      }
+    },
+    {
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Bake",
+          "value": "20–25 min"
+        },
+        "fr": {
+          "label": "Cuisson",
+          "value": "20–25 min"
+        }
+      }
+    }
+  ],
+  "plan": [
+    {
+      "copy": {
+        "en": {
+          "title": "Oven and tin",
+          "detail": "Preheat to 200°C and butter a 10 cm tin."
+        },
+        "fr": {
+          "title": "Four et moule",
+          "detail": "Préchauffez à 200 °C et beurrez un moule de 10 cm."
+        }
+      }
+    },
+    {
+      "branches": [
+        {
+          "step": "fouetter",
+          "copy": {
+            "en": {
+              "title": "Egg + sugar",
+              "detail": "Whisk for about 10 min, until tripled in volume."
+            },
+            "fr": {
+              "title": "Œuf + sucre",
+              "detail": "Fouettez environ 10 min, jusqu’à ce que le mélange triple de volume."
+            }
+          }
+        },
+        {
+          "step": "fondre",
+          "copy": {
+            "en": {
+              "title": "Chocolate + butter",
+              "detail": "Melt over simmering water, then remove from the heat."
+            },
+            "fr": {
+              "title": "Chocolat + beurre",
+              "detail": "Faites fondre au bain-marie, puis retirez du feu."
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Prepare two mixtures",
+          "detail": "Make these separately before combining them."
+        },
+        "fr": {
+          "title": "Préparez deux mélanges",
+          "detail": "Préparez-les séparément avant de les réunir."
+        }
+      }
+    },
+    {
+      "step": "melanger",
+      "copy": {
+        "en": {
+          "title": "Combine, bake and cool",
+          "detail": "Fold the flour, cocoa, peanuts and melted chocolate into the whisked egg. Check at 20 min. Cool before slicing."
+        },
+        "fr": {
+          "title": "Assemblez, cuisez et laissez refroidir",
+          "detail": "Incorporez la farine, le cacao, les cacahuètes et le chocolat fondu à l’œuf fouetté. Vérifiez la cuisson dès 20 min. Laissez refroidir avant de découper."
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "art": "whisk",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "oeuf",
+          "quantity": 1,
+          "grams": 50,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "egg",
+              "note": "weighed without the shell"
+            },
+            "fr": {
+              "name": "œuf",
+              "note": "pesé sans coquille"
+            }
+          }
+        },
+        {
+          "id": "farine",
+          "grams": 15,
+          "copy": {
+            "en": {
+              "name": "flour"
+            },
+            "fr": {
+              "name": "farine"
+            }
+          }
+        },
+        {
+          "id": "sucre",
+          "grams": 25,
+          "copy": {
+            "en": {
+              "name": "sugar"
+            },
+            "fr": {
+              "name": "sucre"
+            }
+          }
+        },
+        {
+          "id": "cacao",
+          "grams": 8,
+          "copy": {
+            "en": {
+              "name": "cocoa powder"
+            },
+            "fr": {
+              "name": "cacao"
+            }
+          }
+        },
+        {
+          "id": "cacahuetes",
+          "grams": 30,
+          "copy": {
+            "en": {
+              "name": "peanuts",
+              "note": "or roasted almonds"
+            },
+            "fr": {
+              "name": "cacahuètes",
+              "note": "ou amandes torréfiées"
+            }
+          }
+        },
+        {
+          "id": "beurre",
+          "grams": 35,
+          "copy": {
+            "en": {
+              "name": "butter"
+            },
+            "fr": {
+              "name": "beurre"
+            }
+          }
+        },
+        {
+          "id": "chocolat",
+          "grams": 62.5,
+          "copy": {
+            "en": {
+              "name": "dark chocolate"
+            },
+            "fr": {
+              "name": "chocolat noir"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Brownie batter"
+        },
+        "fr": {
+          "title": "Pâte à brownie"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "fouetter",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "oeuf",
+        "sucre"
+      ],
+      "duration": [
+        10,
+        10
+      ],
+      "timers": [
+        {
+          "minutes": 10,
+          "afterInstruction": 3,
+          "copy": {
+            "en": {
+              "label": "Check the whisked mixture"
+            },
+            "fr": {
+              "label": "Vérifier le volume du mélange"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/brownies-au-chocolat/fouetter.webp",
+      "copy": {
+        "en": {
+          "title": "Whisk the egg and sugar",
+          "timing": "About 10 min of whisking",
+          "instructions": [
+            "Preheat the oven to 200°C.",
+            "Butter a 10 cm tin.",
+            "Whisk the egg and sugar for about 10 minutes, until creamy and tripled in volume."
+          ],
+          "caption": "Lift the whisk to see the thick ribbon of whipped egg and sugar."
+        },
+        "fr": {
+          "title": "Fouetter l’œuf et le sucre",
+          "timing": "Environ 10 min au fouet",
+          "instructions": [
+            "Préchauffez le four à 200 °C.",
+            "Beurrez un moule de 10 cm.",
+            "Fouettez l’œuf et le sucre environ 10 minutes, jusqu’à ce que le mélange soit crémeux et ait triplé de volume."
+          ],
+          "caption": "Soulevez le fouet pour voir le ruban épais formé par l’œuf et le sucre fouettés."
+        }
+      }
+    },
+    {
+      "id": "fondre",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "beurre",
+        "chocolat"
+      ],
+      "illustration": "assets/illustrations/steps/brownies-au-chocolat/fondre.webp",
+      "copy": {
+        "en": {
+          "title": "Melt the chocolate",
+          "heat": "Simmering water",
+          "tip": "Heat the chocolate and butter just enough to melt them.",
+          "instructions": [
+            "Set a bowl over a pan of simmering water.",
+            "Melt the chocolate and butter together in the bowl."
+          ],
+          "caption": "Stir the chocolate and butter in the bowl over simmering water until melted."
+        },
+        "fr": {
+          "title": "Faire fondre le chocolat",
+          "heat": "Bain-marie frémissant",
+          "tip": "Chauffez juste assez pour faire fondre le chocolat et le beurre.",
+          "instructions": [
+            "Posez un bol au-dessus d’une casserole d’eau frémissante.",
+            "Faites fondre le chocolat et le beurre dans le bol."
+          ],
+          "caption": "Mélangez le chocolat et le beurre dans le bol au-dessus de l’eau frémissante, jusqu’à ce qu’ils fondent."
+        }
+      }
+    },
+    {
+      "id": "melanger",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "oeuf",
+        "farine",
+        "sucre",
+        "cacao",
+        "cacahuetes",
+        "beurre",
+        "chocolat"
+      ],
+      "illustration": "assets/illustrations/steps/brownies-au-chocolat/melanger.webp",
+      "copy": {
+        "en": {
+          "title": "Fold the batter",
+          "heat": "Off the heat",
+          "instructions": [
+            "Lift the bowl of melted chocolate off the heat.",
+            "Stir the melted chocolate and butter together.",
+            "Sift the flour and cocoa over the whisked egg.",
+            "Fold them in with a spatula.",
+            "Fold in the chopped peanuts and the melted chocolate mixture."
+          ],
+          "caption": "Fold the chopped peanuts and melted chocolate into the batter."
+        },
+        "fr": {
+          "title": "Mélanger la pâte",
+          "heat": "Hors du feu",
+          "instructions": [
+            "Retirez le bol de chocolat fondu du bain-marie.",
+            "Mélangez le chocolat et le beurre fondus.",
+            "Tamisez la farine et le cacao sur l’œuf fouetté.",
+            "Incorporez-les à la spatule.",
+            "Incorporez les cacahuètes concassées et le mélange de chocolat et de beurre."
+          ],
+          "caption": "Incorporez les cacahuètes concassées et le chocolat fondu à la pâte."
+        }
+      }
+    },
+    {
+      "id": "cuire",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "oeuf",
+        "farine",
+        "sucre",
+        "cacao",
+        "cacahuetes",
+        "beurre",
+        "chocolat"
+      ],
+      "duration": [
+        20,
+        25
+      ],
+      "timers": [
+        {
+          "minutes": 20,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the brownie"
+            },
+            "fr": {
+              "label": "Vérifier la cuisson"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/brownies-au-chocolat/cuire.webp",
+      "copy": {
+        "en": {
+          "title": "Bake the brownie",
+          "heat": "200°C",
+          "instructions": [
+            "Scrape the batter into the buttered tin.",
+            "Bake at 200°C for 20–25 minutes.",
+            "Insert a skewer in the centre at 20 minutes.",
+            "Continue baking if the skewer carries wet batter.",
+            "Remove the tin when the skewer comes out clean or with a few moist crumbs."
+          ],
+          "caption": "Scrape the thick batter into the greased tin."
+        },
+        "fr": {
+          "title": "Cuire le brownie",
+          "heat": "200 °C",
+          "instructions": [
+            "Versez la pâte dans le moule beurré à l’aide d’une spatule.",
+            "Enfournez à 200 °C pour 20 à 25 minutes.",
+            "Plantez une pique au centre au bout de 20 minutes.",
+            "Poursuivez la cuisson si de la pâte liquide adhère à la pique.",
+            "Sortez le moule lorsque la pique ressort propre ou avec quelques miettes humides."
+          ],
+          "caption": "Versez la pâte épaisse dans le moule beurré à l’aide d’une spatule."
+        }
+      }
+    },
+    {
+      "id": "refroidir",
+      "activity": "wait",
+      "tone": "yellow",
+      "uses": [
+        "oeuf",
+        "farine",
+        "sucre",
+        "cacao",
+        "cacahuetes",
+        "beurre",
+        "chocolat"
+      ],
+      "illustration": "assets/illustrations/steps/brownies-au-chocolat/refroidir.webp",
+      "copy": {
+        "en": {
+          "title": "Cool in the tin",
+          "wait": "Until completely cool",
+          "instructions": [
+            "Leave the brownie in the tin until completely cool before slicing."
+          ],
+          "caption": "Cool the brownie completely in its tin before slicing."
+        },
+        "fr": {
+          "title": "Laisser refroidir dans le moule",
+          "wait": "Jusqu’à refroidissement complet",
+          "instructions": [
+            "Laissez le brownie refroidir complètement dans le moule avant de le découper."
+          ],
+          "caption": "Laissez refroidir complètement le brownie dans son moule avant de le découper."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "source": {
+        "url": "https://www.kingarthurbaking.com/recipes/quick-and-easy-brownies-recipe",
+        "copy": {
+          "en": {
+            "label": "King Arthur Baking guidance"
+          },
+          "fr": {
+            "label": "Conseils de King Arthur Baking"
+          }
+        }
+      },
+      "copy": {
+        "en": {
+          "text": "The skewer test and complete cooling are general brownie-making guidance."
+        },
+        "fr": {
+          "text": "Le test à la pique et le refroidissement complet sont des repères généraux pour les brownies."
+        }
+      }
+    }
+  ],
+  "source": {
+    "url": "https://www.youtube.com/watch?v=IwQLHARXUFo",
+    "copy": {
+      "en": {
+        "label": "Recipe video"
+      },
+      "fr": {
+        "label": "Vidéo de la recette"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "cookingTime": "20–25 min baking, plus melting the chocolate",
+      "restTime": "Until completely cool in the tin",
+      "title": "Chocolate Brownies",
+      "description": "A small dark chocolate brownie with peanuts, baked in a 10 cm tin.",
+      "setup": [
+        "Preheat the oven to 200°C.",
+        "Butter a 10 cm tin."
+      ],
+      "allergens": [
+        "Wheat",
+        "Egg",
+        "Milk",
+        "Peanuts, or almonds if substituted",
+        "Check the dark chocolate label for additional allergens."
+      ]
+    },
+    "fr": {
+      "cookingTime": "20 à 25 min au four, plus la fonte du chocolat",
+      "restTime": "Jusqu’à refroidissement complet dans le moule",
+      "title": "Brownies au chocolat",
+      "description": "Un petit brownie au chocolat noir et aux cacahuètes, à cuire dans un moule de 10 cm.",
+      "setup": [
+        "Préchauffez le four à 200 °C.",
+        "Beurrez un moule de 10 cm."
+      ],
+      "allergens": [
+        "Blé",
+        "Œuf",
+        "Lait",
+        "Cacahuètes, ou amandes en cas de substitution",
+        "Vérifiez les autres allergènes éventuels sur l’emballage du chocolat noir."
+      ]
+    }
+  }
+}

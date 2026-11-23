@@ -1,10 +1,3 @@
-import savoury from "../translations/savoury.js";
-import pastry from "../translations/pastry.js";
-import cakes from "../translations/cakes.js";
-import other from "../translations/other.js";
-
-export const translations = { ...savoury, ...pastry, ...cakes, ...other };
-
 export const locale = new URLSearchParams(globalThis.location?.search).get("lang") === "fr" ? "fr" : "en";
 export const ui = (english, french) => locale === "fr" ? french : english;
 
@@ -24,58 +17,18 @@ export function catalogueHref(language = locale) {
   return language === "fr" ? "./?lang=fr" : "./";
 }
 
-function localizePlan(stages, copy) {
-  return stages.map((stage, index) => {
-    const translated = copy?.[index];
-    return {
-      ...stage,
-      title: translated?.title ?? stage.title,
-      detail: translated?.detail ?? stage.detail,
-      ...(stage.branches && { branches: localizePlan(stage.branches, translated?.branches) }),
-    };
-  });
+function localize(value, language) {
+  if (Array.isArray(value)) return value.map(item => localize(item, language));
+  if (value === null || typeof value !== "object") return value;
+
+  const { copy, ...shared } = value;
+  return {
+    ...Object.fromEntries(Object.entries(shared).map(([key, entry]) => [key, localize(entry, language)])),
+    ...copy?.[language],
+  };
 }
 
 export function recipeForLocale(recipe, language = locale) {
-  const original = recipe.lang === "fr" ? "fr" : "en";
-  const translation = translations[recipe.id];
-  if (original === language || !translation) return recipe;
-
-  const { groupTitles, ingredients, steps, times, plan, batchTins, safety, source, nutrition, image, ...text } = translation;
-  const result = { ...recipe, ...text, lang: language === "fr" ? "fr" : "en-GB" };
-  if (recipe.groups) {
-    result.groups = recipe.groups.map((group, index) => ({
-      ...group,
-      title: groupTitles?.[index] ?? group.title,
-      ingredients: group.ingredients.map(ingredient => ({ ...ingredient, ...ingredients?.[ingredient.id] })),
-    }));
-  }
-  if (recipe.steps) {
-    result.steps = recipe.steps.map(step => {
-      const { timerLabels, ...copy } = steps?.[step.id] ?? {};
-      return {
-        ...step,
-        ...copy,
-        timers: step.timers?.map((timer, index) => ({ ...timer, label: timerLabels?.[index] ?? timer.label })),
-      };
-    });
-  }
-  if (recipe.times) result.times = recipe.times.map((time, index) => ({ ...time, ...times?.[index] }));
-  if (recipe.plan) result.plan = localizePlan(recipe.plan, plan);
-  if (recipe.batches) result.batches = recipe.batches.map((batch, index) => ({ ...batch, tins: batchTins?.[index] ?? batch.tins }));
-  if (recipe.source) result.source = { ...recipe.source, ...source };
-  if (recipe.nutrition) result.nutrition = { ...recipe.nutrition, ...nutrition };
-  if (recipe.image) result.image = { ...recipe.image, ...image };
-  if (recipe.safety && safety) {
-    result.safety = {
-      ...recipe.safety,
-      title: safety.title,
-      notes: safety.notes,
-      sources: recipe.safety.sources?.map((entry, index) => ({
-        ...entry,
-        label: safety.sourceLabels?.[index] ?? entry.label,
-      })),
-    };
-  }
-  return result;
+  const { $schema, schemaVersion, ...fields } = recipe;
+  return { ...localize(fields, language), lang: language === "fr" ? "fr" : "en-GB" };
 }

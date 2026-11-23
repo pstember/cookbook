@@ -1,0 +1,562 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "easy-chocolate-chip-cookies",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/easy-chocolate-chip-cookies.webp",
+  "times": [
+    {
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Mix",
+          "value": "About 10 min"
+        },
+        "fr": {
+          "label": "Préparation de la pâte",
+          "value": "Environ 10 min"
+        }
+      }
+    },
+    {
+      "icon": "snow",
+      "copy": {
+        "en": {
+          "label": "Chill",
+          "value": "1–24 hr"
+        },
+        "fr": {
+          "label": "Repos au frais",
+          "value": "1 à 24 h"
+        }
+      }
+    },
+    {
+      "icon": "oven",
+      "copy": {
+        "en": {
+          "label": "Bake",
+          "value": "15–20 min"
+        },
+        "fr": {
+          "label": "Cuisson",
+          "value": "15 à 20 min"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "art": "rolling",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "butter",
+          "grams": 115,
+          "copy": {
+            "en": {
+              "name": "softened butter",
+              "note": "½ cup, preferably salted"
+            },
+            "fr": {
+              "name": "beurre ramolli",
+              "note": "½ tasse, de préférence salé"
+            }
+          }
+        },
+        {
+          "id": "sugar",
+          "grams": 200,
+          "copy": {
+            "en": {
+              "name": "sugar",
+              "note": "1 cup"
+            },
+            "fr": {
+              "name": "sucre",
+              "note": "1 tasse"
+            }
+          }
+        },
+        {
+          "id": "egg",
+          "quantity": 1,
+          "grams": 50,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "egg",
+              "note": "beaten, weighed without the shell"
+            },
+            "fr": {
+              "name": "œuf",
+              "note": "battu, pesé sans coquille"
+            }
+          }
+        },
+        {
+          "id": "vanilla",
+          "quantity": 1,
+          "grams": 4.2,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "vanilla extract",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "extrait de vanille",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "flour",
+          "grams": 220,
+          "copy": {
+            "en": {
+              "name": "plain flour",
+              "note": "1¾ cups, plus a little for shaping"
+            },
+            "fr": {
+              "name": "farine de blé",
+              "note": "1¾ tasse, plus un peu pour le façonnage"
+            }
+          }
+        },
+        {
+          "id": "baking-soda",
+          "quantity": "½",
+          "grams": 3,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "bicarbonate of soda",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "bicarbonate de soude",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "salt",
+          "grams": 0.4,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "fine salt",
+              "quantity": "1 pinch",
+              "note": "use about 1.5 g (¼ tsp) instead if using unsalted butter"
+            },
+            "fr": {
+              "name": "sel fin",
+              "quantity": "1 pincée",
+              "note": "utilisez environ 1,5 g (¼ de c. à café) si vous prenez du beurre doux"
+            }
+          }
+        },
+        {
+          "id": "chocolate-chips",
+          "grams": 150,
+          "copy": {
+            "en": {
+              "name": "chocolate chips",
+              "note": "1 cup of milk, dark or white chocolate chips"
+            },
+            "fr": {
+              "name": "pépites de chocolat",
+              "note": "1 tasse de pépites de chocolat au lait, noir ou blanc"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Cookie dough"
+        },
+        "fr": {
+          "title": "Pâte à cookies"
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "counter": "3–5 days in an airtight container, with parchment between the layers.",
+        "freezer": "Up to 3 months in a freezer-safe bag or container."
+      },
+      "fr": {
+        "counter": "3 à 5 jours en boîte hermétique, avec du papier cuisson entre les couches.",
+        "freezer": "Jusqu’à 3 mois dans une boîte ou un sachet de congélation."
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "cream",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "butter",
+        "sugar",
+        "egg",
+        "vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/easy-chocolate-chip-cookies/cream.webp",
+      "copy": {
+        "en": {
+          "title": "Beat the butter",
+          "timing": "Beat the butter for 2–3 min",
+          "instructions": [
+            "Beat the softened butter and sugar for 2–3 minutes.",
+            "Add the beaten egg and vanilla.",
+            "Beat until combined."
+          ],
+          "caption": "Beat the softened butter and sugar together before adding the egg and vanilla."
+        },
+        "fr": {
+          "title": "Battre le beurre",
+          "timing": "Battre le beurre pendant 2 à 3 min",
+          "instructions": [
+            "Battez le beurre ramolli avec le sucre pendant 2 à 3 minutes.",
+            "Ajoutez l’œuf battu et la vanille.",
+            "Battez jusqu’à obtenir un mélange homogène."
+          ],
+          "caption": "Battez le beurre mou avec le sucre avant d’ajouter l’œuf et la vanille."
+        }
+      }
+    },
+    {
+      "id": "mix",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "butter",
+        "sugar",
+        "egg",
+        "vanilla",
+        "flour",
+        "baking-soda",
+        "salt",
+        "chocolate-chips"
+      ],
+      "illustration": "assets/illustrations/steps/easy-chocolate-chip-cookies/mix.webp",
+      "copy": {
+        "en": {
+          "title": "Mix the dough",
+          "instructions": [
+            "Whisk the flour, bicarbonate of soda and salt in a separate bowl.",
+            "Stir the chocolate chips into the dry mixture.",
+            "Beat the dry mixture into the butter mixture in three batches on low speed, just until the dough comes together."
+          ],
+          "caption": "Work the dry mix and chips into the dough in three batches. Stop as soon as it comes together."
+        },
+        "fr": {
+          "title": "Mélanger la pâte",
+          "instructions": [
+            "Mélangez au fouet la farine, le bicarbonate et le sel dans un autre bol.",
+            "Ajoutez les pépites de chocolat aux ingrédients secs.",
+            "Incorporez les ingrédients secs au beurre en trois fois, à petite vitesse, juste assez pour que la pâte se rassemble."
+          ],
+          "caption": "Incorporez le mélange sec et les pépites en trois fois. Arrêtez dès que la pâte se tient."
+        }
+      }
+    },
+    {
+      "id": "chill",
+      "activity": "chill",
+      "tone": "yellow",
+      "uses": [
+        "butter",
+        "sugar",
+        "egg",
+        "vanilla",
+        "flour",
+        "baking-soda",
+        "salt",
+        "chocolate-chips"
+      ],
+      "duration": [
+        60,
+        1440
+      ],
+      "timers": [
+        {
+          "minutes": 60,
+          "afterInstruction": 4,
+          "copy": {
+            "en": {
+              "label": "Chill the dough"
+            },
+            "fr": {
+              "label": "Réfrigérer la pâte"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/easy-chocolate-chip-cookies/chill.webp",
+      "copy": {
+        "en": {
+          "title": "Chill the dough",
+          "wait": "1–24 hours in the fridge",
+          "tip": "An overnight chill gives thicker cookies and a fuller flavour.",
+          "instructions": [
+            "Turn the dough out onto a lightly floured worktop.",
+            "Gently gather it into a ball.",
+            "Wrap the ball.",
+            "Refrigerate for 1–24 hours before shaping."
+          ],
+          "caption": "Gather the dough into one ball and wrap it before refrigerating."
+        },
+        "fr": {
+          "title": "Réfrigérer la pâte",
+          "wait": "1 à 24 h au réfrigérateur",
+          "tip": "Une nuit au réfrigérateur donne des cookies plus épais et plus savoureux.",
+          "instructions": [
+            "Déposez la pâte sur un plan de travail légèrement fariné.",
+            "Rassemblez-la délicatement en boule.",
+            "Emballez la boule.",
+            "Réfrigérez 1 à 24 heures avant le façonnage."
+          ],
+          "caption": "Rassemblez la pâte en une seule boule et filmez-la avant de la placer au réfrigérateur."
+        }
+      }
+    },
+    {
+      "id": "shape",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "butter",
+        "sugar",
+        "egg",
+        "vanilla",
+        "flour",
+        "baking-soda",
+        "salt",
+        "chocolate-chips"
+      ],
+      "illustration": "assets/illustrations/steps/easy-chocolate-chip-cookies/shape.webp",
+      "copy": {
+        "en": {
+          "title": "Shape the cookies",
+          "wait": "Keep chilled until the oven is ready",
+          "instructions": [
+            "Divide the chilled dough into golf-ball-sized portions.",
+            "Space the portions apart on the lined trays.",
+            "Flatten the tops lightly with a flour-dusted fork.",
+            "Press extra chocolate chips into the tops if you like.",
+            "Refrigerate the trays while the oven preheats to 175–180°C."
+          ],
+          "caption": "Space the dough balls well apart. Press the tops lightly with a flour-dusted fork."
+        },
+        "fr": {
+          "title": "Façonner les cookies",
+          "wait": "Au frais jusqu’à ce que le four soit chaud",
+          "instructions": [
+            "Divisez la pâte froide en portions de la taille d’une balle de golf.",
+            "Espacez les portions sur les plaques tapissées de papier cuisson.",
+            "Aplatissez légèrement le dessus avec une fourchette farinée.",
+            "Enfoncez quelques pépites supplémentaires sur le dessus si vous le souhaitez.",
+            "Replacez les plaques au réfrigérateur pendant le préchauffage du four à 175–180 °C."
+          ],
+          "caption": "Espacez bien les boules de pâte. Aplatissez légèrement le dessus avec une fourchette farinée."
+        }
+      }
+    },
+    {
+      "id": "bake",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "butter",
+        "sugar",
+        "egg",
+        "vanilla",
+        "flour",
+        "baking-soda",
+        "salt",
+        "chocolate-chips"
+      ],
+      "duration": [
+        15,
+        20
+      ],
+      "timers": [
+        {
+          "minutes": 15,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the cookies"
+            },
+            "fr": {
+              "label": "Vérifier la cuisson des cookies"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/easy-chocolate-chip-cookies/bake.webp",
+      "copy": {
+        "en": {
+          "title": "Bake the cookies",
+          "heat": "175–180°C",
+          "instructions": [
+            "Bake the cookies at 175–180°C for about 15–20 minutes.",
+            "Check them after 15 minutes.",
+            "Allow up to 20 minutes for larger or colder cookies."
+          ],
+          "caption": "Space the cookies apart on their lined tray for baking."
+        },
+        "fr": {
+          "title": "Cuire les cookies",
+          "heat": "175–180 °C",
+          "instructions": [
+            "Enfournez les cookies à 175–180 °C pour environ 15 à 20 minutes.",
+            "Vérifiez la cuisson au bout de 15 minutes.",
+            "Comptez jusqu’à 20 minutes pour des cookies plus gros ou plus froids."
+          ],
+          "caption": "Espacez les cookies sur la plaque tapissée de papier cuisson."
+        }
+      }
+    },
+    {
+      "id": "cool",
+      "activity": "wait",
+      "tone": "yellow",
+      "uses": [
+        "butter",
+        "sugar",
+        "egg",
+        "vanilla",
+        "flour",
+        "baking-soda",
+        "salt",
+        "chocolate-chips"
+      ],
+      "options": [
+        {
+          "copy": {
+            "en": {
+              "title": "Crisper outside",
+              "instructions": [
+                "Leave the cookies on the tray to cool."
+              ],
+              "wait": "On the tray"
+            },
+            "fr": {
+              "title": "Bords plus croustillants",
+              "instructions": [
+                "Laissez refroidir les cookies sur la plaque."
+              ],
+              "wait": "Sur la plaque"
+            }
+          }
+        },
+        {
+          "copy": {
+            "en": {
+              "title": "Softer finish",
+              "instructions": [
+                "Transfer the cookies to a rack once they are firm enough to lift.",
+                "Leave them on the rack to cool."
+              ],
+              "wait": "On a wire rack"
+            },
+            "fr": {
+              "title": "Cookies plus moelleux",
+              "instructions": [
+                "Transférez les cookies sur une grille dès qu’ils se tiennent assez pour être déplacés.",
+                "Laissez-les refroidir sur la grille."
+              ],
+              "wait": "Sur une grille"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/easy-chocolate-chip-cookies/cool.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the cookies",
+          "wait": "Until completely cool",
+          "instructions": [
+            "Remove the tray from the oven."
+          ],
+          "caption": "Once the cookies are firm enough to lift, move them to a rack for a softer finish."
+        },
+        "fr": {
+          "title": "Laisser refroidir les cookies",
+          "wait": "Jusqu’à refroidissement complet",
+          "instructions": [
+            "Sortez la plaque du four."
+          ],
+          "caption": "Quand les cookies se tiennent assez pour être soulevés, transférez-les sur une grille pour qu’ils restent tendres."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "If you chill the dough overnight, give it a few minutes at room temperature if it is too firm to shape."
+        },
+        "fr": {
+          "text": "Après une nuit au réfrigérateur, si la pâte est trop ferme pour être façonnée, laissez-la quelques minutes à température ambiante."
+        }
+      }
+    }
+  ],
+  "source": {
+    "url": "https://anitalianinmykitchen.com/thick-chocolate-chip-cookies/",
+    "copy": {
+      "en": {
+        "label": "Easy Chocolate Chip Cookies by Rosemary Molloy",
+        "credit": "Adapted from the recipe published by An Italian in My Kitchen."
+      },
+      "fr": {
+        "label": "Cookies faciles aux pépites de chocolat par Rosemary Molloy",
+        "credit": "Adapté de la recette publiée par An Italian in My Kitchen."
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "totalTime": "From about 1 hr 30 min, plus preheating and cooling",
+      "cookingTime": "15–20 min per tray",
+      "restTime": "1–24 hr in the fridge, then chill during preheating and cool after baking",
+      "title": "Easy Chocolate Chip Cookies",
+      "description": "Thick chocolate chip cookies with crisp edges and a soft middle.",
+      "yield": "18 cookies",
+      "setup": [
+        "Line baking trays with parchment."
+      ],
+      "allergens": [
+        "Wheat",
+        "Egg",
+        "Milk",
+        "Check the chocolate chips for soya and other allergens."
+      ]
+    },
+    "fr": {
+      "totalTime": "À partir d’environ 1 h 30, plus le préchauffage et le refroidissement",
+      "cookingTime": "15 à 20 min par plaque",
+      "restTime": "1 à 24 h au frais, puis au frais pendant le préchauffage et refroidissement après cuisson",
+      "title": "Cookies faciles aux pépites de chocolat",
+      "description": "Des cookies épais aux pépites de chocolat, croustillants sur les bords et moelleux au cœur.",
+      "yield": "18 cookies",
+      "setup": [
+        "Tapissez les plaques de papier cuisson."
+      ],
+      "allergens": [
+        "Blé",
+        "Œuf",
+        "Lait",
+        "Vérifiez la présence de soja et d’autres allergènes sur l’emballage des pépites."
+      ]
+    }
+  }
+}

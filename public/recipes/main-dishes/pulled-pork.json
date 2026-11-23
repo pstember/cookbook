@@ -1,0 +1,640 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "pulled-pork",
+  "category": "Main dishes",
+  "thumbnail": "assets/illustrations/recipes/pulled-pork.webp",
+  "times": [
+    {
+      "highlight": "total",
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Cook and rest",
+          "value": "About 7 hr 40 min, plus prep"
+        },
+        "fr": {
+          "label": "Cuisson et repos",
+          "value": "Environ 7 h 40, hors préparation"
+        }
+      }
+    },
+    {
+      "highlight": "cook",
+      "icon": "oven",
+      "copy": {
+        "en": {
+          "label": "Cook",
+          "value": "About 7 hr"
+        },
+        "fr": {
+          "label": "Cuisson",
+          "value": "Environ 7 h"
+        }
+      }
+    },
+    {
+      "highlight": "rest",
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Rest",
+          "value": "40 min"
+        },
+        "fr": {
+          "label": "Repos",
+          "value": "40 min"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "tone": "blue",
+      "ingredients": [
+        {
+          "id": "pork",
+          "gramRange": [
+            1800,
+            2300
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "pork shoulder",
+              "note": "suggested joint size, since the original notes gave no weight"
+            },
+            "fr": {
+              "name": "épaule de porc",
+              "note": "poids conseillé, les notes d’origine ne précisant pas la taille de la pièce"
+            }
+          }
+        },
+        {
+          "id": "vinegar",
+          "gramRange": [
+            60,
+            120
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "apple cider vinegar",
+              "note": "suggested total to have on hand for spritzing and wrapping. Use as needed"
+            },
+            "fr": {
+              "name": "vinaigre de cidre",
+              "note": "quantité totale indicative pour vaporiser et pour la papillote. Utilisez-en au besoin"
+            }
+          }
+        },
+        {
+          "id": "honey",
+          "gramRange": [
+            5,
+            15
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "honey",
+              "note": "suggested range, to taste when wrapping"
+            },
+            "fr": {
+              "name": "miel",
+              "note": "quantité indicative, à doser au goût pour la papillote"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Pork"
+        },
+        "fr": {
+          "title": "Porc"
+        }
+      }
+    },
+    {
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "paprika",
+          "grams": 30,
+          "copy": {
+            "en": {
+              "name": "paprika"
+            },
+            "fr": {
+              "name": "paprika"
+            }
+          }
+        },
+        {
+          "id": "sugar",
+          "grams": 35,
+          "copy": {
+            "en": {
+              "name": "dark brown sugar"
+            },
+            "fr": {
+              "name": "cassonade foncée"
+            }
+          }
+        },
+        {
+          "id": "salt",
+          "grams": 20,
+          "copy": {
+            "en": {
+              "name": "kosher salt"
+            },
+            "fr": {
+              "name": "sel casher"
+            }
+          }
+        },
+        {
+          "id": "mustard",
+          "grams": 8,
+          "weightEstimate": true,
+          "quantity": 4,
+          "copy": {
+            "en": {
+              "name": "ground mustard",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "moutarde en poudre",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "pepper",
+          "grams": 4,
+          "copy": {
+            "en": {
+              "name": "freshly ground black pepper"
+            },
+            "fr": {
+              "name": "poivre noir fraîchement moulu"
+            }
+          }
+        },
+        {
+          "id": "chipotle",
+          "grams": 2,
+          "copy": {
+            "en": {
+              "name": "chipotle flakes"
+            },
+            "fr": {
+              "name": "flocons de chipotle"
+            }
+          }
+        },
+        {
+          "id": "oregano",
+          "grams": 3,
+          "copy": {
+            "en": {
+              "name": "dried oregano"
+            },
+            "fr": {
+              "name": "origan séché"
+            }
+          }
+        },
+        {
+          "id": "garlic",
+          "grams": 5,
+          "copy": {
+            "en": {
+              "name": "granulated garlic powder"
+            },
+            "fr": {
+              "name": "ail granulé"
+            }
+          }
+        },
+        {
+          "id": "onion",
+          "grams": 5,
+          "copy": {
+            "en": {
+              "name": "granulated onion powder"
+            },
+            "fr": {
+              "name": "oignon granulé"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Dry rub"
+        },
+        "fr": {
+          "title": "Mélange d’épices"
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "counter": "Refrigerate within 2 hours of cooking.",
+        "fridge": "48 hours at 0–5°C.",
+        "freezer": "2–6 months for cooked pork at −18°C or colder for best quality."
+      },
+      "fr": {
+        "counter": "Réfrigérez dans les 2 heures suivant la cuisson.",
+        "fridge": "48 heures entre 0 et 5 °C.",
+        "freezer": "2 à 6 mois pour le porc cuit à −18 °C ou moins, pour une qualité optimale."
+      }
+    }
+  },
+  "source": {
+    "copy": {
+      "en": {
+        "label": "The author’s cookbook notes"
+      },
+      "fr": {
+        "label": "Carnet de recettes de l’auteur"
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "heat",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "pork",
+        "paprika",
+        "sugar",
+        "salt",
+        "mustard",
+        "pepper",
+        "chipotle",
+        "oregano",
+        "garlic",
+        "onion"
+      ],
+      "illustration": "assets/illustrations/steps/pulled-pork/heat.webp",
+      "copy": {
+        "en": {
+          "title": "Season the shoulder",
+          "instructions": [
+            "Set the barbecue up for indirect cooking at 135°C (275°F).",
+            "Start easing the vents closed as the chamber passes 93°C (200°F).",
+            "Mix the dry rub ingredients while the barbecue heats up.",
+            "Press the rub evenly onto all sides of the pork."
+          ],
+          "caption": "Press the paprika rub onto every side of the shoulder before it goes on the barbecue."
+        },
+        "fr": {
+          "title": "Enrober l’épaule d’épices",
+          "instructions": [
+            "Préparez le barbecue pour une cuisson indirecte à 135 °C (275 °F).",
+            "Commencez à refermer progressivement les évents quand l’enceinte dépasse 93 °C (200 °F).",
+            "Mélangez les ingrédients du mélange d’épices pendant la chauffe.",
+            "Pressez les épices sur toutes les faces de l’épaule pour la recouvrir uniformément."
+          ],
+          "caption": "Pressez le mélange au paprika sur toutes les faces de l’épaule avant de la mettre au barbecue."
+        }
+      }
+    },
+    {
+      "id": "spritz",
+      "activity": "cooking",
+      "tone": "blue",
+      "uses": [
+        "pork",
+        "paprika",
+        "sugar",
+        "salt",
+        "mustard",
+        "pepper",
+        "chipotle",
+        "oregano",
+        "garlic",
+        "onion",
+        "vinegar"
+      ],
+      "illustration": "assets/illustrations/steps/pulled-pork/spritz.webp",
+      "copy": {
+        "en": {
+          "title": "Barbecue the shoulder",
+          "heat": "Indirect barbecue · 135°C (275°F)",
+          "wait": "1–2 hr before the first spray",
+          "timing": "First temperature check around 4 hr",
+          "instructions": [
+            "Place the pork over indirect heat.",
+            "Leave it undisturbed for the first 1–2 hours.",
+            "Spritz the surface with cider vinegar.",
+            "Repeat the spritz every 45–60 minutes.",
+            "Start checking the centre with a probe about 4 hours after the pork went on.",
+            "Cook until the centre reaches about 71°C (160°F)."
+          ],
+          "caption": "Mist the surface of the pork with cider vinegar as the crust darkens."
+        },
+        "fr": {
+          "title": "Cuire l’épaule au barbecue",
+          "heat": "Barbecue en cuisson indirecte · 135 °C (275 °F)",
+          "wait": "1 à 2 h avant la première vaporisation",
+          "timing": "Premier contrôle de température vers 4 h",
+          "instructions": [
+            "Déposez le porc sur la zone de cuisson indirecte.",
+            "Laissez-le cuire sans y toucher pendant les 1 à 2 premières heures.",
+            "Vaporisez du vinaigre de cidre sur la viande.",
+            "Renouvelez la vaporisation toutes les 45 à 60 minutes.",
+            "Commencez à vérifier la température à cœur environ 4 heures après le début de la cuisson.",
+            "Poursuivez la cuisson jusqu’à environ 71 °C (160 °F) à cœur."
+          ],
+          "caption": "Vaporisez du vinaigre de cidre sur le porc pendant que la croûte fonce."
+        }
+      }
+    },
+    {
+      "id": "wrap",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "pork",
+        "vinegar",
+        "honey",
+        "paprika",
+        "sugar",
+        "salt",
+        "mustard",
+        "pepper",
+        "chipotle",
+        "oregano",
+        "garlic",
+        "onion"
+      ],
+      "illustration": "assets/illustrations/steps/pulled-pork/wrap.webp",
+      "copy": {
+        "en": {
+          "title": "Wrap with vinegar and honey",
+          "heat": "Off the heat",
+          "instructions": [
+            "Lift the shoulder onto a sheet of foil.",
+            "Add a final splash of vinegar and a little honey.",
+            "Wrap the foil snugly around the shoulder."
+          ],
+          "caption": "Add the final splash of vinegar and a little honey, then fold the foil snugly around the joint."
+        },
+        "fr": {
+          "title": "Envelopper le porc avec le vinaigre et le miel",
+          "heat": "Hors du feu",
+          "instructions": [
+            "Déposez l’épaule sur une feuille de papier aluminium.",
+            "Ajoutez un dernier trait de vinaigre et un peu de miel.",
+            "Refermez bien le papier aluminium autour de l’épaule."
+          ],
+          "caption": "Ajoutez un dernier trait de vinaigre et un peu de miel, puis repliez le papier aluminium autour du rôti."
+        }
+      }
+    },
+    {
+      "id": "finish-cooking",
+      "activity": "cooking",
+      "tone": "blue",
+      "uses": [
+        "pork",
+        "vinegar",
+        "honey",
+        "paprika",
+        "sugar",
+        "salt",
+        "mustard",
+        "pepper",
+        "chipotle",
+        "oregano",
+        "garlic",
+        "onion"
+      ],
+      "illustration": "assets/illustrations/steps/pulled-pork/finish-cooking.webp",
+      "copy": {
+        "en": {
+          "title": "Cook until probe-tender",
+          "heat": "Indirect barbecue · 135°C (275°F)",
+          "timing": "About 7 hr for the whole cook",
+          "instructions": [
+            "Return the wrapped shoulder to the barbecue.",
+            "Check the centre with a probe.",
+            "Test the texture at about 96°C (205°F) by pushing the probe into the meat.",
+            "Continue cooking until the probe slides in with very little resistance."
+          ],
+          "caption": "At about 96°C (205°F) in the centre, the probe should slide into the meat easily."
+        },
+        "fr": {
+          "title": "Poursuivre la cuisson jusqu’à tendreté",
+          "heat": "Barbecue en cuisson indirecte · 135 °C (275 °F)",
+          "timing": "Environ 7 h pour l’ensemble de la cuisson",
+          "instructions": [
+            "Remettez l’épaule enveloppée sur le barbecue.",
+            "Vérifiez la température à cœur à l’aide d’une sonde.",
+            "Testez la tendreté vers 96 °C (205 °F) à cœur en enfonçant la sonde dans la viande.",
+            "Prolongez la cuisson jusqu’à ce que la sonde s’enfonce presque sans résistance."
+          ],
+          "caption": "À environ 96 °C (205 °F) à cœur, la sonde doit s’enfoncer facilement dans la viande."
+        }
+      }
+    },
+    {
+      "id": "rest",
+      "activity": "wait",
+      "tone": "blue",
+      "uses": [
+        "pork",
+        "vinegar",
+        "honey",
+        "paprika",
+        "sugar",
+        "salt",
+        "mustard",
+        "pepper",
+        "chipotle",
+        "oregano",
+        "garlic",
+        "onion"
+      ],
+      "duration": [
+        40,
+        40
+      ],
+      "timers": [
+        {
+          "minutes": 10,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Vent the foil"
+            },
+            "fr": {
+              "label": "Laisser échapper la vapeur"
+            }
+          }
+        },
+        {
+          "minutes": 30,
+          "afterInstruction": 4,
+          "copy": {
+            "en": {
+              "label": "Rest the pork"
+            },
+            "fr": {
+              "label": "Laisser reposer le porc"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/pulled-pork/rest.webp",
+      "copy": {
+        "en": {
+          "title": "Vent the foil and rest",
+          "heat": "Off the heat",
+          "wait": "10 min open + 30 min covered",
+          "instructions": [
+            "Take the pork off the barbecue.",
+            "Open the foil for 10 minutes to let steam escape.",
+            "Cover the shoulder again.",
+            "Rest for 30 minutes before shredding."
+          ],
+          "caption": "Open the foil to release steam before covering the pork again for its rest."
+        },
+        "fr": {
+          "title": "Laisser échapper la vapeur puis reposer",
+          "heat": "Hors du feu",
+          "wait": "10 min à découvert + 30 min couvert",
+          "instructions": [
+            "Retirez le porc du barbecue.",
+            "Ouvrez le papier aluminium pendant 10 minutes pour laisser échapper la vapeur.",
+            "Recouvrez l’épaule.",
+            "Laissez reposer 30 minutes avant d’effilocher."
+          ],
+          "caption": "Ouvrez le papier aluminium pour laisser échapper la vapeur avant de recouvrir le porc pour le repos."
+        }
+      }
+    },
+    {
+      "id": "pull",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "pork",
+        "vinegar",
+        "honey",
+        "paprika",
+        "sugar",
+        "salt",
+        "mustard",
+        "pepper",
+        "chipotle",
+        "oregano",
+        "garlic",
+        "onion"
+      ],
+      "illustration": "assets/illustrations/steps/pulled-pork/pull.webp",
+      "copy": {
+        "en": {
+          "title": "Shred the pork",
+          "instructions": [
+            "Pull the rested shoulder into shreds with two forks."
+          ],
+          "caption": "After resting, pull the tender meat apart with two forks."
+        },
+        "fr": {
+          "title": "Effilocher le porc",
+          "instructions": [
+            "Effilochez l’épaule reposée à l’aide de deux fourchettes."
+          ],
+          "caption": "Après le repos, effilochez la viande tendre avec deux fourchettes."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Cook time varies with the size of the joint and how steadily the barbecue holds its heat."
+        },
+        "fr": {
+          "text": "La durée de cuisson varie selon la taille de la pièce et la régularité de la température du barbecue."
+        }
+      }
+    },
+    {
+      "source": {
+        "url": "https://www.gov.uk/government/publications/how-to-chill-freeze-and-defrost-food-safely/how-to-chill-freeze-and-defrost-food-safely",
+        "copy": {
+          "en": {
+            "label": "Food Standards Agency · Chilling leftovers"
+          },
+          "fr": {
+            "label": "Food Standards Agency · Conservation des restes"
+          }
+        }
+      },
+      "copy": {
+        "en": {
+          "text": "Cool leftovers in small portions. Refrigerate within 2 hours of cooking."
+        },
+        "fr": {
+          "text": "Répartissez les restes en petites portions pour les refroidir. Réfrigérez-les dans les 2 heures suivant la cuisson."
+        }
+      }
+    },
+    {
+      "source": {
+        "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+        "copy": {
+          "en": {
+            "label": "FoodSafety.gov · Cold food storage chart"
+          },
+          "fr": {
+            "label": "FoodSafety.gov · Conservation au froid"
+          }
+        }
+      },
+      "copy": {
+        "en": {
+          "text": "The freezer time is a quality guideline for the cooked dish."
+        },
+        "fr": {
+          "text": "La durée au congélateur correspond à la qualité du plat cuit."
+        }
+      }
+    }
+  ],
+  "copy": {
+    "en": {
+      "title": "Barbecue Pulled Pork",
+      "description": "Slow-cooked pork with a smoky paprika rub, cider vinegar and a little honey.",
+      "setup": [
+        "Set up the barbecue for indirect cooking at 135°C (275°F).",
+        "As the chamber passes 93°C (200°F), start easing the vents closed to avoid overshooting."
+      ],
+      "allergens": [
+        "Mustard"
+      ]
+    },
+    "fr": {
+      "title": "Porc effiloché au barbecue",
+      "description": "De l’épaule de porc cuite lentement avec un mélange d’épices au paprika fumé, du vinaigre de cidre et un peu de miel.",
+      "setup": [
+        "Préparez le barbecue pour une cuisson indirecte à 135 °C (275 °F).",
+        "Dès que l’enceinte dépasse 93 °C (200 °F), commencez à refermer progressivement les évents pour éviter de dépasser la température voulue."
+      ],
+      "allergens": [
+        "Moutarde"
+      ]
+    }
+  }
+}

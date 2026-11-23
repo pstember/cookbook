@@ -1,0 +1,404 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "genoise",
+  "category": "Baking basics",
+  "thumbnail": "assets/illustrations/recipes/genoise.webp",
+  "servings": 3,
+  "times": [
+    {
+      "icon": "oven",
+      "highlight": "cook",
+      "copy": {
+        "en": {
+          "label": "Baking",
+          "value": "25 min"
+        },
+        "fr": {
+          "label": "Cuisson",
+          "value": "25 min"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "art": "whisk",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "egg",
+          "grams": 50,
+          "quantity": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "egg",
+              "note": "without shell"
+            },
+            "fr": {
+              "name": "œuf",
+              "note": "sans coquille"
+            }
+          }
+        },
+        {
+          "id": "flour",
+          "grams": 30,
+          "copy": {
+            "en": {
+              "name": "flour"
+            },
+            "fr": {
+              "name": "farine"
+            }
+          }
+        },
+        {
+          "id": "sugar",
+          "grams": 30,
+          "copy": {
+            "en": {
+              "name": "sugar"
+            },
+            "fr": {
+              "name": "sucre"
+            }
+          }
+        },
+        {
+          "id": "fat",
+          "grams": 10,
+          "copy": {
+            "en": {
+              "name": "butter or oil",
+              "note": "for preparing the tin"
+            },
+            "fr": {
+              "name": "beurre ou huile",
+              "note": "pour préparer le moule"
+            }
+          }
+        },
+        {
+          "id": "tin-flour",
+          "grams": 5,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "flour",
+              "note": "for dusting the tin if you aren’t lining it"
+            },
+            "fr": {
+              "name": "farine",
+              "note": "pour fariner le moule s’il n’est pas chemisé"
+            }
+          }
+        },
+        {
+          "id": "salt",
+          "gramRange": [
+            0,
+            0.4
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "salt",
+              "note": "optional, up to 1 pinch"
+            },
+            "fr": {
+              "name": "sel",
+              "note": "facultatif, jusqu’à 1 pincée"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Sponge"
+        },
+        "fr": {
+          "title": "Biscuit"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "prepare",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "fat",
+        "tin-flour"
+      ],
+      "options": [
+        {
+          "copy": {
+            "en": {
+              "title": "Grease and flour",
+              "instructions": [
+                "Grease the 20 cm tin with butter or oil.",
+                "Dust the greased tin with the 5 g of flour set aside for it."
+              ]
+            },
+            "fr": {
+              "title": "Beurre et farine",
+              "instructions": [
+                "Graissez le moule de 20 cm avec le beurre ou l’huile.",
+                "Farinez le moule avec les 5 g de farine prévus à cet effet."
+              ]
+            }
+          }
+        },
+        {
+          "copy": {
+            "en": {
+              "title": "Baking parchment",
+              "instructions": [
+                "Line the base and sides of the 20 cm tin with baking parchment."
+              ]
+            },
+            "fr": {
+              "title": "Papier cuisson",
+              "instructions": [
+                "Chemisez le fond et les bords du moule de 20 cm de papier cuisson."
+              ]
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/genoise/prepare.webp",
+      "copy": {
+        "en": {
+          "title": "Prepare the tin",
+          "instructions": [
+            "Preheat the oven to 180 °C."
+          ],
+          "caption": "Line the base and sides of the round tin."
+        },
+        "fr": {
+          "title": "Préparer le moule",
+          "instructions": [
+            "Préchauffez le four à 180 °C."
+          ],
+          "caption": "Chemisez le fond et les parois du moule rond."
+        }
+      }
+    },
+    {
+      "id": "whip",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "egg",
+        "sugar"
+      ],
+      "duration": [
+        10,
+        10
+      ],
+      "timers": [
+        {
+          "minutes": 10,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Whisk the egg and sugar"
+            },
+            "fr": {
+              "label": "Fouetter l’œuf et le sucre"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/genoise/whip.webp",
+      "copy": {
+        "en": {
+          "title": "Whip the egg and sugar",
+          "instructions": [
+            "Whisk the egg and sugar for 10 minutes, until creamy and tripled in volume."
+          ],
+          "caption": "Lift the whisk. The thick ribbon should sit on the surface for a moment."
+        },
+        "fr": {
+          "title": "Fouetter l’œuf et le sucre",
+          "instructions": [
+            "Fouettez l’œuf et le sucre pendant 10 minutes, jusqu’à obtenir un mélange crémeux qui a triplé de volume."
+          ],
+          "caption": "Soulevez le fouet. Le ruban épais doit rester un instant à la surface."
+        }
+      }
+    },
+    {
+      "id": "fold",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "egg",
+        "flour",
+        "sugar",
+        "salt"
+      ],
+      "illustration": "assets/illustrations/steps/genoise/fold.webp",
+      "copy": {
+        "en": {
+          "title": "Fold in the flour",
+          "instructions": [
+            "Sift the flour with the salt, if using.",
+            "Fold it gently into the whipped egg with a spatula.",
+            "Pour the batter into the prepared tin."
+          ],
+          "caption": "Pass the spatula down the side and lift the mixture over the sifted flour."
+        },
+        "fr": {
+          "title": "Incorporer la farine",
+          "instructions": [
+            "Tamisez la farine avec le sel, si vous en utilisez.",
+            "Incorporez-la délicatement à l’œuf fouetté avec une spatule.",
+            "Versez la pâte dans le moule préparé."
+          ],
+          "caption": "Faites glisser la spatule le long du bol, puis soulevez la pâte pour recouvrir la farine tamisée."
+        }
+      }
+    },
+    {
+      "id": "bake",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "egg",
+        "flour",
+        "sugar",
+        "salt",
+        "fat",
+        "tin-flour"
+      ],
+      "duration": [
+        25,
+        25
+      ],
+      "timers": [
+        {
+          "minutes": 25,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Bake the genoise"
+            },
+            "fr": {
+              "label": "Cuisson de la génoise"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/genoise/bake.webp",
+      "copy": {
+        "en": {
+          "title": "Bake the sponge",
+          "heat": "180 °C",
+          "instructions": [
+            "Bake at 180 °C for 25 minutes."
+          ],
+          "caption": "Bake the genoise in the prepared 20 cm tin."
+        },
+        "fr": {
+          "title": "Cuire la génoise",
+          "heat": "180 °C",
+          "instructions": [
+            "Enfournez à 180 °C pour 25 minutes."
+          ],
+          "caption": "Faites cuire la génoise dans le moule de 20 cm préparé."
+        }
+      }
+    },
+    {
+      "id": "cool",
+      "activity": "wait",
+      "tone": "yellow",
+      "uses": [
+        "egg",
+        "flour",
+        "sugar",
+        "salt",
+        "fat",
+        "tin-flour"
+      ],
+      "illustration": "assets/illustrations/steps/genoise/cool.webp",
+      "copy": {
+        "en": {
+          "title": "Cool on a rack",
+          "wait": "Until cool",
+          "instructions": [
+            "Turn the sponge out onto a wire rack.",
+            "Leave it to cool before filling or decorating."
+          ],
+          "caption": "Turn out the baked sponge and cool it on a wire rack."
+        },
+        "fr": {
+          "title": "Refroidir sur une grille",
+          "wait": "Jusqu’à refroidissement",
+          "instructions": [
+            "Démoulez la génoise sur une grille.",
+            "Laissez-la refroidir avant de la garnir ou de la décorer."
+          ],
+          "caption": "Démoulez la génoise cuite et laissez-la refroidir sur une grille."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Keep the air in the eggs by folding the flour in gently with a spatula."
+        },
+        "fr": {
+          "text": "Incorporez la farine délicatement à la spatule pour préserver le volume des œufs."
+        }
+      }
+    }
+  ],
+  "source": {
+    "url": "https://www.youtube.com/watch?v=flKwZOZRnJI",
+    "copy": {
+      "en": {
+        "credit": "Video",
+        "label": "Les Secrets de Muriel – Genoise sponge"
+      },
+      "fr": {
+        "credit": "Vidéo",
+        "label": "Les Secrets de Muriel · Génoise"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Genoise sponge",
+      "restTime": "Cool on a rack before filling",
+      "description": "A light sponge made by whipping the egg and sugar together until airy, ready to fill or decorate.",
+      "allergens": [
+        "Wheat (gluten)",
+        "Egg",
+        "Milk (if using butter)"
+      ],
+      "setup": [
+        "Use a 20 cm tin. Preheat the oven to 180 °C."
+      ]
+    },
+    "fr": {
+      "title": "Génoise",
+      "restTime": "Sur grille jusqu’à refroidissement avant de garnir",
+      "description": "Une génoise légère à garnir, préparée en fouettant longuement l’œuf avec le sucre.",
+      "allergens": [
+        "Blé (gluten)",
+        "Œuf",
+        "Lait (si vous utilisez du beurre)"
+      ],
+      "setup": [
+        "Utilisez un moule de 20 cm. Préchauffez le four à 180 °C."
+      ]
+    }
+  }
+}

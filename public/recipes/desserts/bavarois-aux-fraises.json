@@ -1,0 +1,976 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "bavarois-aux-fraises",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/bavarois-aux-fraises.webp",
+  "times": [
+    {
+      "icon": "oven",
+      "copy": {
+        "en": {
+          "label": "Baking the genoise",
+          "value": "18 min"
+        },
+        "fr": {
+          "label": "Cuisson de la génoise",
+          "value": "18 min"
+        }
+      }
+    },
+    {
+      "icon": "snow",
+      "copy": {
+        "en": {
+          "label": "Chilling",
+          "value": "Overnight"
+        },
+        "fr": {
+          "label": "Repos",
+          "value": "Une nuit"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "art": "whisk",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "sponge-egg",
+          "grams": 50,
+          "quantity": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "egg",
+              "note": "without shell"
+            },
+            "fr": {
+              "name": "œuf",
+              "note": "sans coquille"
+            }
+          }
+        },
+        {
+          "id": "sponge-flour",
+          "grams": 30,
+          "copy": {
+            "en": {
+              "name": "flour"
+            },
+            "fr": {
+              "name": "farine"
+            }
+          }
+        },
+        {
+          "id": "sponge-sugar",
+          "grams": 30,
+          "copy": {
+            "en": {
+              "name": "sugar"
+            },
+            "fr": {
+              "name": "sucre"
+            }
+          }
+        },
+        {
+          "id": "sponge-fat",
+          "grams": 10,
+          "copy": {
+            "en": {
+              "name": "butter or oil",
+              "note": "for greasing the tin"
+            },
+            "fr": {
+              "name": "beurre ou huile",
+              "note": "pour graisser le moule"
+            }
+          }
+        },
+        {
+          "id": "sponge-salt",
+          "gramRange": [
+            0,
+            0.4
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "salt",
+              "note": "optional, up to 1 pinch"
+            },
+            "fr": {
+              "name": "sel",
+              "note": "facultatif, jusqu’à 1 pincée"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Genoise sponge"
+        },
+        "fr": {
+          "title": "Génoise"
+        }
+      }
+    },
+    {
+      "art": "whisk",
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "mousse-fruit",
+          "grams": 350,
+          "copy": {
+            "en": {
+              "name": "strawberries"
+            },
+            "fr": {
+              "name": "fraises"
+            }
+          }
+        },
+        {
+          "id": "mousse-sugar",
+          "grams": 75,
+          "copy": {
+            "en": {
+              "name": "granulated sugar"
+            },
+            "fr": {
+              "name": "sucre en poudre"
+            }
+          }
+        },
+        {
+          "id": "mousse-cream",
+          "grams": 225,
+          "copy": {
+            "en": {
+              "name": "full-fat whipping cream",
+              "note": "very cold, weighed"
+            },
+            "fr": {
+              "name": "crème liquide entière",
+              "note": "très froide, à peser"
+            }
+          }
+        },
+        {
+          "id": "mousse-gelatin",
+          "grams": 8,
+          "copy": {
+            "en": {
+              "name": "200 Bloom powdered gelatine",
+              "note": "or 8 g of leaf gelatine of the same strength (about 4 leaves)"
+            },
+            "fr": {
+              "name": "gélatine en poudre 200 Bloom",
+              "note": "ou 8 g de gélatine en feuilles de même force (environ 4 feuilles)"
+            }
+          }
+        },
+        {
+          "id": "mousse-water",
+          "grams": 40,
+          "copy": {
+            "en": {
+              "name": "very cold water",
+              "note": "for the powdered gelatine"
+            },
+            "fr": {
+              "name": "eau très froide",
+              "note": "pour la gélatine en poudre"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Strawberry mousse"
+        },
+        "fr": {
+          "title": "Mousse aux fraises"
+        }
+      }
+    },
+    {
+      "art": "saucepan",
+      "tone": "blue",
+      "ingredients": [
+        {
+          "id": "topping-fruit",
+          "grams": 150,
+          "copy": {
+            "en": {
+              "name": "strawberries"
+            },
+            "fr": {
+              "name": "fraises"
+            }
+          }
+        },
+        {
+          "id": "topping-sugar",
+          "grams": 20,
+          "copy": {
+            "en": {
+              "name": "granulated sugar",
+              "note": "adjust to suit the strawberries"
+            },
+            "fr": {
+              "name": "sucre en poudre",
+              "note": "à ajuster selon les fraises"
+            }
+          }
+        },
+        {
+          "id": "topping-gelatin",
+          "grams": 3,
+          "copy": {
+            "en": {
+              "name": "200 Bloom powdered gelatine",
+              "note": "or 3 g of leaf gelatine of the same strength (about 1½ leaves)"
+            },
+            "fr": {
+              "name": "gélatine en poudre 200 Bloom",
+              "note": "ou 3 g de gélatine en feuilles de même force (environ 1½ feuille)"
+            }
+          }
+        },
+        {
+          "id": "topping-water",
+          "grams": 15,
+          "copy": {
+            "en": {
+              "name": "very cold water",
+              "note": "for the powdered gelatine"
+            },
+            "fr": {
+              "name": "eau très froide",
+              "note": "pour la gélatine en poudre"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Strawberry coulis"
+        },
+        "fr": {
+          "title": "Coulis aux fraises"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "bloom",
+      "activity": "wait",
+      "tone": "green",
+      "uses": [
+        "mousse-gelatin",
+        "mousse-water",
+        "topping-gelatin",
+        "topping-water"
+      ],
+      "duration": [
+        20,
+        20
+      ],
+      "durationMinimum": true,
+      "options": [
+        {
+          "copy": {
+            "en": {
+              "title": "Powdered gelatine",
+              "instructions": [
+                "Mix 8 g of powder with 40 g of very cold water in one bowl.",
+                "Mix 3 g of powder with 15 g of very cold water in another bowl."
+              ]
+            },
+            "fr": {
+              "title": "Gélatine en poudre",
+              "instructions": [
+                "Mélangez 8 g de poudre avec 40 g d’eau très froide dans un bol.",
+                "Mélangez 3 g de poudre avec 15 g d’eau très froide dans un autre bol."
+              ]
+            }
+          }
+        },
+        {
+          "copy": {
+            "en": {
+              "title": "Leaf gelatine",
+              "instructions": [
+                "Soak 8 g of leaves (about 4 leaves) in a bowl of very cold water.",
+                "Soak 3 g of leaves (about 1½ leaves) in a second bowl of very cold water.",
+                "Squeeze out each portion just before adding it to the hot fruit."
+              ]
+            },
+            "fr": {
+              "title": "Gélatine en feuilles",
+              "instructions": [
+                "Faites tremper 8 g de feuilles (environ 4 feuilles) dans un bol d’eau très froide.",
+                "Faites tremper 3 g de feuilles (environ 1½ feuille) dans un second bol d’eau très froide.",
+                "Essorez chaque portion juste avant de l’incorporer aux fruits chauds."
+              ]
+            }
+          }
+        }
+      ],
+      "timers": [
+        {
+          "minutes": 20,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the hydrated gelatine"
+            },
+            "fr": {
+              "label": "Vérifier la gélatine hydratée"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/bloom.webp",
+      "copy": {
+        "en": {
+          "title": "Hydrate the gelatine",
+          "wait": "At least 20 min in cold water",
+          "instructions": [
+            "Keep the 8 g mousse portion separate from the 3 g coulis portion.",
+            "Allow at least 20 minutes from the moment both portions are in cold water."
+          ],
+          "caption": "Hydrate the larger and smaller gelatine portions in separate bowls."
+        },
+        "fr": {
+          "title": "Hydrater la gélatine",
+          "wait": "Au moins 20 min dans l’eau froide",
+          "instructions": [
+            "Gardez les 8 g pour la mousse séparés des 3 g pour le coulis.",
+            "Comptez au moins 20 minutes dès que les deux portions sont dans l’eau froide."
+          ],
+          "caption": "Hydratez la grande et la petite portion de gélatine dans des bols séparés."
+        }
+      }
+    },
+    {
+      "id": "make-sponge",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "sponge-egg",
+        "sponge-flour",
+        "sponge-sugar",
+        "sponge-fat",
+        "sponge-salt"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/make-sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Mix the sponge batter",
+          "timing": "Whisk for about 10 min",
+          "instructions": [
+            "Preheat the fan oven to 160 °C.",
+            "Grease an 18 cm tin.",
+            "Whisk the egg and sugar for about 10 minutes.",
+            "Sift the flour with the salt, if using.",
+            "Fold the flour into the whipped egg with a spatula.",
+            "Pour the batter into the tin."
+          ],
+          "caption": "Fold the sifted flour through the whipped egg and sugar with a spatula."
+        },
+        "fr": {
+          "title": "Préparer la pâte à génoise",
+          "timing": "Fouetter environ 10 min",
+          "instructions": [
+            "Préchauffez le four à 160 °C en chaleur tournante.",
+            "Graissez un moule de 18 cm.",
+            "Fouettez l’œuf et le sucre pendant environ 10 minutes.",
+            "Tamisez la farine avec le sel, si vous en utilisez.",
+            "Incorporez la farine à l’œuf fouetté avec une spatule.",
+            "Versez la pâte dans le moule."
+          ],
+          "caption": "Incorporez la farine tamisée à l’œuf fouetté avec le sucre, à l’aide d’une spatule."
+        }
+      }
+    },
+    {
+      "id": "sponge",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "sponge-egg",
+        "sponge-flour",
+        "sponge-sugar",
+        "sponge-fat",
+        "sponge-salt"
+      ],
+      "duration": [
+        18,
+        18
+      ],
+      "timers": [
+        {
+          "minutes": 18,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Bake the sponge"
+            },
+            "fr": {
+              "label": "Cuisson du biscuit"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Bake the sponge",
+          "timing": "About 18 min",
+          "heat": "160 °C fan",
+          "instructions": [
+            "Bake the sponge for about 18 minutes at 160 °C fan."
+          ],
+          "caption": "Bake the thin sponge in an 18 cm round tin."
+        },
+        "fr": {
+          "title": "Cuire la génoise",
+          "timing": "Environ 18 min",
+          "heat": "160 °C chaleur tournante",
+          "instructions": [
+            "Enfournez la génoise pour environ 18 minutes à 160 °C en chaleur tournante."
+          ],
+          "caption": "Faites cuire la fine génoise dans un moule rond de 18 cm."
+        }
+      }
+    },
+    {
+      "id": "cut-sponge",
+      "activity": "wait",
+      "tone": "yellow",
+      "uses": [
+        "sponge-egg",
+        "sponge-flour",
+        "sponge-sugar",
+        "sponge-fat",
+        "sponge-salt"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/cut-sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Cool and cut the sponge disc",
+          "wait": "Until cool before cutting",
+          "instructions": [
+            "Cool the sponge on a wire rack.",
+            "Cut a 16 cm disc from the cooled sponge."
+          ],
+          "caption": "Centre the smaller ring on the cooled sponge and cut out a 16 cm disc."
+        },
+        "fr": {
+          "title": "Refroidir et découper le disque",
+          "wait": "Jusqu’à refroidissement avant la découpe",
+          "instructions": [
+            "Laissez refroidir la génoise sur une grille.",
+            "Découpez un disque de 16 cm dans la génoise refroidie."
+          ],
+          "caption": "Centrez le petit cercle sur la génoise refroidie et découpez un disque de 16 cm."
+        }
+      }
+    },
+    {
+      "id": "heat-mousse-fruit",
+      "activity": "cooking",
+      "tone": "pink",
+      "uses": [
+        "mousse-fruit",
+        "mousse-sugar"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/heat-mousse-fruit.webp",
+      "copy": {
+        "en": {
+          "title": "Heat the mousse purée",
+          "heat": "Hob · first boil",
+          "instructions": [
+            "Blend 350 g of strawberries with 75 g of sugar.",
+            "Heat the purée in a saucepan until it just comes to the boil."
+          ],
+          "caption": "Take the strawberry purée for the mousse to its first boil."
+        },
+        "fr": {
+          "title": "Chauffer la purée pour la mousse",
+          "heat": "Sur le feu · premier bouillon",
+          "instructions": [
+            "Mixez 350 g de fraises avec 75 g de sucre.",
+            "Chauffez la purée dans une casserole jusqu’au premier bouillon."
+          ],
+          "caption": "Chauffez la purée de fraises destinée à la mousse jusqu’au premier bouillon."
+        }
+      }
+    },
+    {
+      "id": "dissolve-mousse",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "mousse-fruit",
+        "mousse-sugar",
+        "mousse-gelatin",
+        "mousse-water"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/dissolve-mousse.webp",
+      "copy": {
+        "en": {
+          "title": "Dissolve the mousse gelatine",
+          "heat": "Off the heat",
+          "instructions": [
+            "Take the pan off the heat.",
+            "Add the larger portion of hydrated gelatine to the hot purée.",
+            "Stir until dissolved."
+          ],
+          "caption": "Take the pan off the heat and stir the larger portion of hydrated gelatine into the hot purée."
+        },
+        "fr": {
+          "title": "Dissoudre la gélatine de la mousse",
+          "heat": "Hors du feu",
+          "instructions": [
+            "Retirez la casserole du feu.",
+            "Ajoutez la grande portion de gélatine hydratée à la purée chaude.",
+            "Remuez jusqu’à dissolution."
+          ],
+          "caption": "Hors du feu, faites dissoudre la grande portion de gélatine hydratée dans la purée chaude."
+        }
+      }
+    },
+    {
+      "id": "cool-puree",
+      "activity": "wait",
+      "tone": "pink",
+      "uses": [
+        "mousse-fruit",
+        "mousse-sugar",
+        "mousse-gelatin",
+        "mousse-water"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/cool-puree.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the purée",
+          "timing": "About 40 min on a 25 cm plate",
+          "wait": "Until at room temperature",
+          "instructions": [
+            "Pour the purée into a wide dish.",
+            "Leave it to cool to room temperature before folding it into the cream."
+          ],
+          "caption": "Cool the purée in a wide, shallow dish."
+        },
+        "fr": {
+          "title": "Refroidir la purée",
+          "timing": "Environ 40 min dans une assiette de 25 cm",
+          "wait": "Jusqu’à température ambiante",
+          "instructions": [
+            "Versez la purée dans un plat large.",
+            "Laissez-la revenir à température ambiante avant de l’incorporer à la crème."
+          ],
+          "caption": "Faites refroidir la purée dans un plat large et peu profond."
+        }
+      }
+    },
+    {
+      "id": "mousse",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "mousse-fruit",
+        "mousse-sugar",
+        "mousse-gelatin",
+        "mousse-water",
+        "mousse-cream"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/mousse.webp",
+      "copy": {
+        "en": {
+          "title": "Fold the mousse",
+          "instructions": [
+            "Whip the cold cream, gradually increasing the speed.",
+            "Fold the room-temperature purée into the whipped cream with a spatula."
+          ],
+          "caption": "Gently fold the cooled strawberry purée into the whipped cream."
+        },
+        "fr": {
+          "title": "Incorporer la purée à la crème",
+          "instructions": [
+            "Fouettez la crème très froide en augmentant progressivement la vitesse.",
+            "Incorporez la purée à température ambiante dans la crème fouettée à la spatule."
+          ],
+          "caption": "Incorporez délicatement la purée de fraises refroidie à la crème fouettée."
+        }
+      }
+    },
+    {
+      "id": "set-mousse",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "sponge-egg",
+        "sponge-flour",
+        "sponge-sugar",
+        "sponge-fat",
+        "sponge-salt",
+        "mousse-fruit",
+        "mousse-sugar",
+        "mousse-gelatin",
+        "mousse-water",
+        "mousse-cream"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/set-mousse.webp",
+      "copy": {
+        "en": {
+          "title": "Assemble the mousse layer",
+          "instructions": [
+            "Stretch cling film tightly across the base of an 18 cm cake ring.",
+            "Set the ring on a flat surface.",
+            "Line the sides with acetate if available.",
+            "Centre the 16 cm sponge disc inside the ring.",
+            "Pour in the mousse, leaving about 3 mm at the top for the coulis."
+          ],
+          "tip": "Serve any leftover mousse in a small glass with the sponge trimmings.",
+          "caption": "Pour the mousse over the centred sponge, leaving about 3 mm at the top for the coulis."
+        },
+        "fr": {
+          "title": "Monter la couche de mousse",
+          "instructions": [
+            "Tendez un film alimentaire sous un cercle de 18 cm pour fermer le fond.",
+            "Posez le cercle sur un support plat.",
+            "Chemisez les parois de rhodoïd si vous en avez.",
+            "Centrez le disque de génoise de 16 cm dans le cercle.",
+            "Versez la mousse en laissant environ 3 mm libres en haut pour le coulis."
+          ],
+          "tip": "Servez un éventuel reste de mousse en verrine avec les chutes de génoise.",
+          "caption": "Versez la mousse sur la génoise centrée en laissant environ 3 mm en haut pour le coulis."
+        }
+      }
+    },
+    {
+      "id": "chill-mousse",
+      "activity": "chill",
+      "tone": "pink",
+      "uses": [
+        "sponge-egg",
+        "sponge-flour",
+        "sponge-sugar",
+        "sponge-fat",
+        "sponge-salt",
+        "mousse-fruit",
+        "mousse-sugar",
+        "mousse-gelatin",
+        "mousse-water",
+        "mousse-cream"
+      ],
+      "duration": [
+        150,
+        180
+      ],
+      "timers": [
+        {
+          "minutes": 150,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check whether the mousse has set"
+            },
+            "fr": {
+              "label": "Vérifier la prise de la mousse"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/chill-mousse.webp",
+      "copy": {
+        "en": {
+          "title": "Chill until the mousse sets",
+          "wait": "In the fridge · until firm",
+          "instructions": [
+            "Refrigerate for 2½–3 hours, until the surface is firm enough to support the coulis."
+          ],
+          "tip": "Make and cool the coulis while the mousse sets. Wait until the surface is firm before pouring it on.",
+          "caption": "Leave space above the mousse for the coulis as it sets in the fridge."
+        },
+        "fr": {
+          "title": "Faire prendre la mousse",
+          "wait": "Au réfrigérateur · jusqu’à prise",
+          "instructions": [
+            "Réfrigérez de 2 h 30 à 3 h, jusqu’à ce que la surface soit assez ferme pour recevoir le coulis."
+          ],
+          "tip": "Préparez le coulis pendant que la mousse prend. Laissez-le refroidir et attendez que la surface de la mousse soit ferme avant de le verser.",
+          "caption": "Gardez un espace pour le coulis au-dessus de la mousse pendant la prise au frais."
+        }
+      }
+    },
+    {
+      "id": "heat-coulis",
+      "during": "chill-mousse",
+      "activity": "cooking",
+      "tone": "blue",
+      "uses": [
+        "topping-fruit",
+        "topping-sugar"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/heat-coulis.webp",
+      "copy": {
+        "en": {
+          "title": "Heat the coulis",
+          "heat": "Hob · bring to the boil",
+          "instructions": [
+            "Blend the remaining 150 g of strawberries with the 20 g of sugar for the coulis.",
+            "Bring the purée to the boil."
+          ],
+          "caption": "Bring the smaller batch of strawberry purée to the boil for the coulis."
+        },
+        "fr": {
+          "title": "Chauffer le coulis",
+          "heat": "Sur le feu · jusqu’à ébullition",
+          "instructions": [
+            "Mixez les 150 g de fraises restantes avec les 20 g de sucre destinés au coulis.",
+            "Portez la purée à ébullition."
+          ],
+          "caption": "Portez à ébullition la petite portion de purée de fraises destinée au coulis."
+        }
+      }
+    },
+    {
+      "id": "dissolve-coulis",
+      "activity": "wait",
+      "tone": "blue",
+      "uses": [
+        "topping-fruit",
+        "topping-sugar",
+        "topping-gelatin",
+        "topping-water"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/dissolve-coulis.webp",
+      "copy": {
+        "en": {
+          "title": "Dissolve the coulis gelatine",
+          "heat": "Off the heat",
+          "wait": "Until at room temperature",
+          "instructions": [
+            "Take the purée off the heat.",
+            "Stir the smaller portion of hydrated gelatine into the hot purée until dissolved.",
+            "Let the coulis cool to room temperature."
+          ],
+          "caption": "Stir the smaller portion of gelatine into the hot coulis off the heat."
+        },
+        "fr": {
+          "title": "Dissoudre la gélatine du coulis",
+          "heat": "Hors du feu",
+          "wait": "Jusqu’à température ambiante",
+          "instructions": [
+            "Retirez la purée du feu.",
+            "Incorporez la petite portion de gélatine hydratée en remuant jusqu’à dissolution.",
+            "Laissez le coulis revenir à température ambiante."
+          ],
+          "caption": "Dissolvez la petite portion de gélatine dans le coulis chaud hors du feu."
+        }
+      }
+    },
+    {
+      "id": "coulis",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "sponge-egg",
+        "sponge-flour",
+        "sponge-sugar",
+        "sponge-fat",
+        "sponge-salt",
+        "mousse-fruit",
+        "mousse-sugar",
+        "mousse-gelatin",
+        "mousse-water",
+        "mousse-cream",
+        "topping-fruit",
+        "topping-sugar",
+        "topping-gelatin",
+        "topping-water"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/coulis.webp",
+      "copy": {
+        "en": {
+          "title": "Top the set mousse",
+          "instructions": [
+            "Pour the room-temperature coulis gently into the centre of the firm mousse.",
+            "Let it spread to the edges."
+          ],
+          "caption": "Pour the cooled coulis into the centre of the set mousse and let it spread to the edges."
+        },
+        "fr": {
+          "title": "Napper la mousse prise",
+          "instructions": [
+            "Versez doucement le coulis à température ambiante au centre de la mousse prise.",
+            "Laissez-le s’étaler jusqu’aux bords."
+          ],
+          "caption": "Versez le coulis refroidi au centre de la mousse prise et laissez-le s’étaler jusqu’aux bords."
+        }
+      }
+    },
+    {
+      "id": "rest-overnight",
+      "activity": "chill",
+      "tone": "green",
+      "uses": [
+        "sponge-egg",
+        "sponge-flour",
+        "sponge-sugar",
+        "sponge-fat",
+        "sponge-salt",
+        "mousse-fruit",
+        "mousse-sugar",
+        "mousse-gelatin",
+        "mousse-water",
+        "mousse-cream",
+        "topping-fruit",
+        "topping-sugar",
+        "topping-gelatin",
+        "topping-water"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/rest-overnight.webp",
+      "copy": {
+        "en": {
+          "title": "Refrigerate overnight",
+          "wait": "Overnight in the fridge",
+          "instructions": [
+            "Cover the bavarois with a cake dome or an overturned bowl.",
+            "Refrigerate overnight before unmoulding."
+          ],
+          "caption": "Keep the covered bavarois in its ring overnight in the fridge."
+        },
+        "fr": {
+          "title": "Réfrigérer jusqu’au lendemain",
+          "wait": "Une nuit au réfrigérateur",
+          "instructions": [
+            "Couvrez le bavarois avec une cloche ou un saladier retourné.",
+            "Réfrigérez jusqu’au lendemain avant de démouler."
+          ],
+          "caption": "Gardez le bavarois couvert dans son cercle une nuit au réfrigérateur."
+        }
+      }
+    },
+    {
+      "id": "serve",
+      "activity": "prep",
+      "tone": "green",
+      "uses": [
+        "sponge-egg",
+        "sponge-flour",
+        "sponge-sugar",
+        "sponge-fat",
+        "sponge-salt",
+        "mousse-fruit",
+        "mousse-sugar",
+        "mousse-gelatin",
+        "mousse-water",
+        "mousse-cream",
+        "topping-fruit",
+        "topping-sugar",
+        "topping-gelatin",
+        "topping-water"
+      ],
+      "illustration": "assets/illustrations/steps/bavarois-aux-fraises/serve.webp",
+      "copy": {
+        "en": {
+          "title": "Unmould the bavarois",
+          "instructions": [
+            "Remove the film from underneath the ring.",
+            "Lift off the ring.",
+            "Peel away the acetate if used."
+          ],
+          "caption": "Lift off the ring, then peel the clear lining away from the chilled layers."
+        },
+        "fr": {
+          "title": "Démouler le bavarois",
+          "instructions": [
+            "Retirez le film sous le cercle.",
+            "Soulevez le cercle.",
+            "Décollez le rhodoïd si vous en avez utilisé."
+          ],
+          "caption": "Soulevez le cercle puis décollez le rhodoïd du bavarois bien froid."
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "fridge": "Keep covered overnight before serving the next day."
+      },
+      "fr": {
+        "fridge": "Gardez le bavarois couvert au frais une nuit avant de le servir le lendemain."
+      }
+    }
+  },
+  "related": [
+    {
+      "id": "genoise",
+      "label": "Génoise"
+    }
+  ],
+  "source": {
+    "url": "https://www.cestmafournee.com/2019/05/le-bavarois-aux-fraises.html",
+    "copy": {
+      "en": {
+        "credit": "Method adapted from",
+        "label": "C’est ma fournée ! – Strawberry bavarois"
+      },
+      "fr": {
+        "credit": "Méthode adaptée de",
+        "label": "C’est ma fournée ! · Bavarois aux fraises"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Strawberry bavarois",
+      "totalTime": "Prepare the day before serving",
+      "cookingTime": "About 18 min for the sponge, plus heating the two fruit mixtures",
+      "description": "A thin genoise topped with strawberry mousse and a strawberry coulis that sets overnight in the fridge.",
+      "yield": "One 18 cm bavarois (6–8 portions)",
+      "restTime": "2½–3 h for the mousse, then overnight, plus cooling",
+      "allergens": [
+        "Wheat (gluten)",
+        "Egg",
+        "Milk",
+        "Fish (if using fish gelatine)"
+      ],
+      "setup": [
+        "Bake in an 18 cm tin. Cut a 16 cm sponge disc and assemble in a ring 18 cm across and 4.5 cm high.",
+        "Preheat the fan oven to 160 °C before baking."
+      ]
+    },
+    "fr": {
+      "title": "Bavarois aux fraises",
+      "totalTime": "Préparer la veille du service",
+      "cookingTime": "Environ 18 min pour la génoise, plus le chauffage des deux préparations aux fraises",
+      "description": "Une génoise fine sous une mousse aux fraises, avec un coulis gélifié qui prend toute une nuit au frais.",
+      "yield": "Un bavarois de 18 cm (6 à 8 parts)",
+      "restTime": "2 h 30 à 3 h pour la mousse, puis une nuit, hors refroidissement",
+      "allergens": [
+        "Blé (gluten)",
+        "Œuf",
+        "Lait",
+        "Poisson (si vous utilisez de la gélatine de poisson)"
+      ],
+      "setup": [
+        "Prévoyez un moule de 18 cm pour la cuisson, un cercle de 16 cm pour la découpe et un cercle de 18 cm de diamètre sur 4,5 cm de haut pour le montage.",
+        "Préchauffez le four à 160 °C en chaleur tournante avant d’enfourner."
+      ]
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Little Cookbook recipe",
+  "description": "One bilingual recipe with shared cooking data and English and French copy.",
+  "type": "object",
+  "required": ["schemaVersion", "id", "category", "groups", "steps", "copy"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "$ref": "#/$defs/id" },
+    "category": { "$ref": "#/$defs/text" },
+    "servings": { "type": ["integer", "string"], "minimum": 1, "minLength": 1 },
+    "thumbnail": { "$ref": "#/$defs/text" },
+    "image": {
+      "type": "object",
+      "required": ["src"],
+      "properties": { "src": { "$ref": "#/$defs/text" } }
+    },
+    "groups": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/group" } },
+    "steps": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/step" } },
+    "copy": {
+      "$ref": "#/$defs/languages",
+      "additionalProperties": {
+        "required": ["title", "description", "allergens"],
+        "properties": {
+          "title": { "$ref": "#/$defs/text" },
+          "description": { "$ref": "#/$defs/text" },
+          "allergens": { "$ref": "#/$defs/textList" },
+          "setup": { "$ref": "#/$defs/textList" }
+        }
+      }
+    }
+  },
+  "anyOf": [{ "required": ["thumbnail"] }, { "required": ["image"] }],
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "text": { "type": "string", "minLength": 1 },
+    "textList": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+    "positiveNumber": { "type": "number", "exclusiveMinimum": 0 },
+    "tone": { "enum": ["yellow", "blue", "pink", "green", "oat"] },
+    "languages": {
+      "type": "object",
+      "required": ["en", "fr"],
+      "propertyNames": { "enum": ["en", "fr"] },
+      "additionalProperties": { "type": "object" }
+    },
+    "group": {
+      "type": "object",
+      "required": ["tone", "ingredients", "copy"],
+      "properties": {
+        "tone": { "$ref": "#/$defs/tone" },
+        "ingredients": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/ingredient" } },
+        "copy": {
+          "$ref": "#/$defs/languages",
+          "additionalProperties": {
+            "required": ["title"],
+            "properties": { "title": { "$ref": "#/$defs/text" } }
+          }
+        }
+      }
+    },
+    "ingredient": {
+      "type": "object",
+      "required": ["id", "copy"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "grams": { "$ref": "#/$defs/positiveNumber" },
+        "gramRange": {
+          "type": "array",
+          "minItems": 2,
+          "prefixItems": [
+            { "type": "number", "minimum": 0 },
+            { "$ref": "#/$defs/positiveNumber" }
+          ],
+          "items": false
+        },
+        "gramVariants": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/positiveNumber" } },
+        "weightEstimate": { "type": "boolean" },
+        "copy": {
+          "$ref": "#/$defs/languages",
+          "additionalProperties": {
+            "required": ["name"],
+            "properties": { "name": { "$ref": "#/$defs/text" } }
+          }
+        }
+      },
+      "oneOf": [
+        { "required": ["grams"] },
+        { "required": ["gramRange"] },
+        { "required": ["gramVariants"] }
+      ]
+    },
+    "actionCopy": {
+      "required": ["title", "instructions"],
+      "properties": {
+        "title": { "$ref": "#/$defs/text" },
+        "instructions": { "$ref": "#/$defs/textList" },
+        "heat": { "$ref": "#/$defs/text" },
+        "wait": { "$ref": "#/$defs/text" },
+        "timing": { "$ref": "#/$defs/text" }
+      }
+    },
+    "step": {
+      "type": "object",
+      "required": ["id", "activity", "tone", "uses", "illustration", "copy"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "activity": { "enum": ["prep", "cooking", "wait", "chill"] },
+        "tone": { "$ref": "#/$defs/tone" },
+        "uses": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/id" } },
+        "during": { "$ref": "#/$defs/id" },
+        "duration": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "$ref": "#/$defs/positiveNumber" } },
+        "durationMinimum": { "type": "boolean" },
+        "durationPerBatch": { "type": "boolean" },
+        "optional": { "type": "boolean" },
+        "illustration": { "type": "string", "pattern": "^assets/illustrations/steps/[a-z0-9-]+/[a-z0-9-]+\\.webp$" },
+        "timers": { "type": "array", "items": { "$ref": "#/$defs/timer" } },
+        "options": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/option" } },
+        "copy": {
+          "$ref": "#/$defs/languages",
+          "additionalProperties": {
+            "$ref": "#/$defs/actionCopy",
+            "required": ["caption"],
+            "properties": { "caption": { "$ref": "#/$defs/text" } }
+          }
+        }
+      }
+    },
+    "option": {
+      "type": "object",
+      "required": ["copy"],
+      "properties": {
+        "timers": { "type": "array", "items": { "$ref": "#/$defs/timer" } },
+        "copy": {
+          "$ref": "#/$defs/languages",
+          "additionalProperties": { "$ref": "#/$defs/actionCopy" }
+        }
+      }
+    },
+    "timer": {
+      "type": "object",
+      "required": ["minutes", "afterInstruction", "copy"],
+      "properties": {
+        "minutes": { "$ref": "#/$defs/positiveNumber" },
+        "afterInstruction": { "type": "integer", "minimum": 1 },
+        "copy": {
+          "$ref": "#/$defs/languages",
+          "additionalProperties": {
+            "required": ["label"],
+            "properties": { "label": { "$ref": "#/$defs/text" } }
+          }
+        }
+      }
+    }
+  }
+}

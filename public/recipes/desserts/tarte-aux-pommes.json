@@ -1,0 +1,857 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "tarte-aux-pommes",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/tarte-aux-pommes.webp",
+  "times": [
+    {
+      "icon": "oven",
+      "copy": {
+        "en": {
+          "label": "Blind bake",
+          "value": "15 min"
+        },
+        "fr": {
+          "label": "Cuisson à blanc",
+          "value": "15 min"
+        }
+      }
+    },
+    {
+      "icon": "oven",
+      "copy": {
+        "en": {
+          "label": "Final bake",
+          "value": "About 30 min"
+        },
+        "fr": {
+          "label": "Cuisson finale",
+          "value": "Environ 30 min"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "art": "rolling",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "flour",
+          "grams": 200,
+          "copy": {
+            "en": {
+              "name": "flour"
+            },
+            "fr": {
+              "name": "farine"
+            }
+          }
+        },
+        {
+          "id": "butter",
+          "grams": 100,
+          "copy": {
+            "en": {
+              "name": "softened butter"
+            },
+            "fr": {
+              "name": "beurre ramolli"
+            }
+          }
+        },
+        {
+          "id": "pastry-yolk",
+          "grams": 17,
+          "quantity": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "egg yolk"
+            },
+            "fr": {
+              "name": "jaune d’œuf"
+            }
+          }
+        },
+        {
+          "id": "pastry-water",
+          "grams": 40,
+          "quantity": 4,
+          "unit": "cl",
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "water",
+              "note": "adjust as needed"
+            },
+            "fr": {
+              "name": "eau",
+              "note": "ajuster au besoin"
+            }
+          }
+        },
+        {
+          "id": "salt",
+          "grams": 0.8,
+          "quantity": 2,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "salt",
+              "unit": "pinches"
+            },
+            "fr": {
+              "name": "sel",
+              "unit": "pincées"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Shortcrust pastry"
+        },
+        "fr": {
+          "title": "Pâte brisée"
+        }
+      }
+    },
+    {
+      "art": "saucepan",
+      "tone": "blue",
+      "ingredients": [
+        {
+          "id": "compote-apples",
+          "grams": 900,
+          "quantity": 4,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "Bramley cooking apples",
+              "note": "weigh after coring, then chop. Use the same weight of eating apples if substituting (about 6)"
+            },
+            "fr": {
+              "name": "pommes à cuire Bramley",
+              "note": "à peser après avoir retiré le trognon, puis à couper en morceaux. On peut utiliser le même poids de pommes à croquer (environ 6)"
+            }
+          }
+        },
+        {
+          "id": "compote-water",
+          "grams": 200,
+          "quantity": 200,
+          "unit": "ml",
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "water",
+              "note": "use 100 g (100 ml) for a chunky sauce or 300 g (300 ml) for a smooth purée"
+            },
+            "fr": {
+              "name": "eau",
+              "note": "100 g (100 ml) pour une compote avec des morceaux, ou 300 g (300 ml) pour une purée lisse"
+            }
+          }
+        },
+        {
+          "id": "cinnamon",
+          "grams": 3,
+          "quantity": 3,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "cinnamon stick",
+              "unit": "inches",
+              "note": "or about 1.3 g (½ tsp) ground cinnamon"
+            },
+            "fr": {
+              "name": "bâton de cannelle",
+              "unit": "pouces",
+              "note": "ou environ 1,3 g (½ c. à café) de cannelle moulue"
+            }
+          }
+        },
+        {
+          "id": "lemon-juice",
+          "grams": 14,
+          "quantity": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "lemon juice",
+              "unit": "tbsp",
+              "note": "add another 14 g (1 tbsp) if you like"
+            },
+            "fr": {
+              "name": "jus de citron",
+              "unit": "c. à soupe",
+              "note": "ajouter 14 g (1 c. à soupe) de plus selon le goût"
+            }
+          }
+        },
+        {
+          "id": "sugar",
+          "grams": 150,
+          "copy": {
+            "en": {
+              "name": "granulated sugar",
+              "note": "optional, adjust to taste"
+            },
+            "fr": {
+              "name": "sucre cristallisé",
+              "note": "facultatif, à doser selon le goût"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Apple compote"
+        },
+        "fr": {
+          "title": "Compote de pommes"
+        }
+      }
+    },
+    {
+      "art": "pie",
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "golden-apples",
+          "grams": 360,
+          "quantity": 2,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "Golden apples",
+              "note": "weighed after coring"
+            },
+            "fr": {
+              "name": "pommes Golden",
+              "note": "à peser après avoir retiré le trognon"
+            }
+          }
+        },
+        {
+          "id": "glaze-yolk",
+          "grams": 17,
+          "quantity": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "egg yolk"
+            },
+            "fr": {
+              "name": "jaune d’œuf"
+            }
+          }
+        },
+        {
+          "id": "glaze-water",
+          "grams": 15,
+          "quantity": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "water",
+              "unit": "tbsp"
+            },
+            "fr": {
+              "name": "eau",
+              "unit": "c. à soupe"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Topping"
+        },
+        "fr": {
+          "title": "Garniture"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "make-pastry",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "butter",
+        "pastry-yolk",
+        "pastry-water",
+        "salt"
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/make-pastry.webp",
+      "copy": {
+        "en": {
+          "title": "Make the shortcrust",
+          "instructions": [
+            "Rub the butter into the flour and salt until sandy.",
+            "Mix in the yolk.",
+            "Add the water gradually until the dough holds together."
+          ],
+          "caption": "Rub the butter into the flour and salt with your fingertips until sandy."
+        },
+        "fr": {
+          "title": "Préparer la pâte brisée",
+          "instructions": [
+            "Sablez le beurre avec la farine et le sel.",
+            "Incorporez le jaune.",
+            "Ajoutez l’eau peu à peu jusqu’à ce que la pâte se rassemble."
+          ],
+          "caption": "Sablez le beurre, la farine et le sel du bout des doigts."
+        }
+      }
+    },
+    {
+      "id": "chill-dough",
+      "activity": "chill",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "butter",
+        "pastry-yolk",
+        "pastry-water",
+        "salt"
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/chill-dough.webp",
+      "copy": {
+        "en": {
+          "title": "Rest the dough",
+          "wait": "Chill before rolling",
+          "instructions": [
+            "Wrap the dough.",
+            "Refrigerate it before rolling."
+          ],
+          "caption": "Wrap the shortcrust before resting it in the fridge."
+        },
+        "fr": {
+          "title": "Faire reposer la pâte",
+          "wait": "Au frais avant de l’étaler",
+          "instructions": [
+            "Enveloppez la pâte.",
+            "Réfrigérez-la avant de l’étaler."
+          ],
+          "caption": "Enveloppez la pâte brisée avant de la faire reposer au frais."
+        }
+      }
+    },
+    {
+      "id": "roll",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "butter",
+        "pastry-yolk",
+        "pastry-water",
+        "salt"
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/roll.webp",
+      "copy": {
+        "en": {
+          "title": "Roll out the pastry",
+          "instructions": [
+            "Roll the rested pastry into a thin round on a lightly floured worktop."
+          ],
+          "caption": "Roll the chilled dough into a thin round on a lightly floured worktop."
+        },
+        "fr": {
+          "title": "Étaler la pâte",
+          "instructions": [
+            "Étalez la pâte reposée en un disque mince sur le plan de travail légèrement fariné."
+          ],
+          "caption": "Étalez la pâte refroidie en un disque mince sur un plan de travail légèrement fariné."
+        }
+      }
+    },
+    {
+      "id": "line",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "butter",
+        "pastry-yolk",
+        "pastry-water",
+        "salt"
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/line.webp",
+      "copy": {
+        "en": {
+          "title": "Line the tin",
+          "instructions": [
+            "Ease the dough into the base and sides of the tart tin."
+          ],
+          "caption": "Ease the rolled dough into the base and sides of the tart tin."
+        },
+        "fr": {
+          "title": "Foncer le moule",
+          "instructions": [
+            "Foncez le fond et les bords du moule à tarte avec la pâte."
+          ],
+          "caption": "Foncez le fond et les bords du moule avec la pâte étalée."
+        }
+      }
+    },
+    {
+      "id": "weight-shell",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "butter",
+        "pastry-yolk",
+        "pastry-water",
+        "salt"
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/weight-shell.webp",
+      "copy": {
+        "en": {
+          "title": "Weight the shell",
+          "instructions": [
+            "Preheat the oven to 180 °C.",
+            "Line the pastry with baking parchment.",
+            "Fill the lined shell with baking beans."
+          ],
+          "caption": "Line the raw pastry with baking paper before adding the beans."
+        },
+        "fr": {
+          "title": "Lester le fond de tarte",
+          "instructions": [
+            "Préchauffez le four à 180 °C.",
+            "Recouvrez la pâte de papier cuisson.",
+            "Remplissez le fond de tarte de billes de cuisson."
+          ],
+          "caption": "Chemisez la pâte crue de papier cuisson avant d’ajouter les billes de cuisson."
+        }
+      }
+    },
+    {
+      "id": "blind-bake",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "butter",
+        "pastry-yolk",
+        "pastry-water",
+        "salt"
+      ],
+      "duration": [
+        15,
+        15
+      ],
+      "timers": [
+        {
+          "minutes": 15,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Blind-bake the tart shell"
+            },
+            "fr": {
+              "label": "Cuire le fond de tarte à blanc"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/blind-bake.webp",
+      "copy": {
+        "en": {
+          "title": "Blind-bake the shell",
+          "heat": "180 °C",
+          "instructions": [
+            "Bake the weighted shell at 180 °C for 15 minutes.",
+            "Lift out the paper and beans together."
+          ],
+          "caption": "After blind baking, lift the paper and beans out together to leave the shell bare."
+        },
+        "fr": {
+          "title": "Cuire le fond à blanc",
+          "heat": "180 °C",
+          "instructions": [
+            "Enfournez le fond lesté à 180 °C pour 15 minutes.",
+            "Retirez ensemble le papier et les billes."
+          ],
+          "caption": "Après la cuisson à blanc, retirez ensemble le papier et les billes pour dégager le fond de tarte."
+        }
+      }
+    },
+    {
+      "id": "compote",
+      "activity": "cooking",
+      "tone": "blue",
+      "uses": [
+        "compote-apples",
+        "compote-water",
+        "cinnamon",
+        "lemon-juice"
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/compote.webp",
+      "copy": {
+        "en": {
+          "title": "Cook the apples",
+          "heat": "Hob",
+          "instructions": [
+            "Put the chopped cooking apples, water, cinnamon and lemon juice in a saucepan.",
+            "Cook until the apple pieces are tender."
+          ],
+          "caption": "Once the apple pieces are tender, lift out the cinnamon stick if you used one."
+        },
+        "fr": {
+          "title": "Cuire les pommes",
+          "heat": "Sur le feu",
+          "instructions": [
+            "Réunissez les morceaux de pomme à cuire, l’eau, la cannelle et le jus de citron dans une casserole.",
+            "Faites cuire jusqu’à ce que les pommes soient tendres."
+          ],
+          "caption": "Une fois les morceaux de pomme tendres, retirez le bâton de cannelle si vous en avez utilisé un."
+        }
+      }
+    },
+    {
+      "id": "texture",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "compote-apples",
+        "compote-water",
+        "cinnamon",
+        "lemon-juice"
+      ],
+      "options": [
+        {
+          "copy": {
+            "en": {
+              "title": "Chunky",
+              "instructions": [
+                "Mash the cooked apples, leaving some pieces intact."
+              ]
+            },
+            "fr": {
+              "title": "Avec des morceaux",
+              "instructions": [
+                "Écrasez les pommes en gardant quelques morceaux."
+              ]
+            }
+          }
+        },
+        {
+          "copy": {
+            "en": {
+              "title": "Smooth",
+              "instructions": [
+                "Blend the apples to a smooth purée."
+              ]
+            },
+            "fr": {
+              "title": "Lisse",
+              "instructions": [
+                "Mixez les pommes en purée lisse."
+              ]
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/texture.webp",
+      "copy": {
+        "en": {
+          "title": "Finish the compote",
+          "heat": "Off the heat",
+          "instructions": [
+            "Remove the cinnamon stick if using one."
+          ],
+          "caption": "Crush for a compote with visible pieces, or blend to a smoother purée."
+        },
+        "fr": {
+          "title": "Choisir la texture de la compote",
+          "heat": "Hors du feu",
+          "instructions": [
+            "Retirez le bâton de cannelle si vous en avez utilisé un."
+          ],
+          "caption": "Écrasez les pommes pour garder des morceaux, ou mixez-les pour une purée plus lisse."
+        }
+      }
+    },
+    {
+      "id": "cool-compote",
+      "activity": "wait",
+      "tone": "blue",
+      "uses": [
+        "compote-apples",
+        "compote-water",
+        "cinnamon",
+        "lemon-juice",
+        "sugar"
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/cool-compote.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the compote",
+          "wait": "Until cool",
+          "instructions": [
+            "Sweeten to taste if needed.",
+            "Let the compote cool before filling the shell."
+          ],
+          "caption": "Let the compote cool before spreading it over the pastry."
+        },
+        "fr": {
+          "title": "Refroidir la compote",
+          "wait": "Jusqu’à refroidissement",
+          "instructions": [
+            "Sucrez à votre goût si nécessaire.",
+            "Laissez refroidir la compote avant de garnir le fond de tarte."
+          ],
+          "caption": "Laissez refroidir la compote avant de l’étaler sur la pâte."
+        }
+      }
+    },
+    {
+      "id": "assemble",
+      "activity": "prep",
+      "tone": "green",
+      "uses": [
+        "flour",
+        "butter",
+        "pastry-yolk",
+        "pastry-water",
+        "salt",
+        "compote-apples",
+        "compote-water",
+        "cinnamon",
+        "lemon-juice",
+        "sugar"
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/assemble.webp",
+      "copy": {
+        "en": {
+          "title": "Fill the shell",
+          "instructions": [
+            "Spread the cooled compote evenly across the pastry shell."
+          ],
+          "caption": "Spread a level layer of cooled compote across the base of the pastry shell."
+        },
+        "fr": {
+          "title": "Garnir le fond de tarte",
+          "instructions": [
+            "Étalez la compote refroidie en couche régulière sur le fond de tarte."
+          ],
+          "caption": "Étalez la compote refroidie en couche régulière sur le fond de tarte."
+        }
+      }
+    },
+    {
+      "id": "arrange",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "golden-apples"
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/arrange.webp",
+      "copy": {
+        "en": {
+          "title": "Arrange the sliced apples",
+          "instructions": [
+            "Cut the Golden apples into thin slices.",
+            "Overlap the slices on the compote."
+          ],
+          "caption": "Arrange the thin apple slices so they overlap."
+        },
+        "fr": {
+          "title": "Disposer les lamelles de pomme",
+          "instructions": [
+            "Coupez les pommes Golden en fines lamelles.",
+            "Disposez les lamelles sur la compote en les faisant se chevaucher."
+          ],
+          "caption": "Disposez les fines lamelles de pomme en les faisant se chevaucher."
+        }
+      }
+    },
+    {
+      "id": "glaze",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "golden-apples",
+        "glaze-yolk",
+        "glaze-water"
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/glaze.webp",
+      "copy": {
+        "en": {
+          "title": "Glaze the apples",
+          "instructions": [
+            "Mix the remaining yolk with 15 g (1 tbsp) of water.",
+            "Brush the glaze lightly over the apple slices."
+          ],
+          "caption": "Brush the exposed apple slices lightly with the egg-yolk glaze."
+        },
+        "fr": {
+          "title": "Dorer les pommes",
+          "instructions": [
+            "Mélangez le jaune restant avec 15 g d’eau (1 c. à soupe).",
+            "Badigeonnez légèrement les lamelles de pomme de dorure."
+          ],
+          "caption": "Badigeonnez légèrement les lamelles de pomme avec la dorure au jaune d’œuf."
+        }
+      }
+    },
+    {
+      "id": "bake",
+      "activity": "cooking",
+      "tone": "green",
+      "uses": [
+        "flour",
+        "butter",
+        "pastry-yolk",
+        "pastry-water",
+        "salt",
+        "compote-apples",
+        "compote-water",
+        "cinnamon",
+        "lemon-juice",
+        "sugar",
+        "golden-apples",
+        "glaze-yolk",
+        "glaze-water"
+      ],
+      "duration": [
+        30,
+        30
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/bake.webp",
+      "copy": {
+        "en": {
+          "title": "Bake the tart",
+          "timing": "About 30 min",
+          "heat": "180 °C",
+          "instructions": [
+            "Bake at 180 °C for about 30 minutes, until the pastry is golden and the apples are tender."
+          ],
+          "caption": "Bake the glazed apple tart until the pastry is golden."
+        },
+        "fr": {
+          "title": "Cuire la tarte",
+          "timing": "Environ 30 min",
+          "heat": "180 °C",
+          "instructions": [
+            "Enfournez à 180 °C pour environ 30 minutes, jusqu’à ce que la pâte soit dorée et les pommes tendres."
+          ],
+          "caption": "Faites cuire la tarte dorée à l’œuf jusqu’à ce que la pâte soit dorée."
+        }
+      }
+    },
+    {
+      "id": "cool",
+      "activity": "wait",
+      "tone": "green",
+      "uses": [
+        "flour",
+        "butter",
+        "pastry-yolk",
+        "pastry-water",
+        "salt",
+        "compote-apples",
+        "compote-water",
+        "cinnamon",
+        "lemon-juice",
+        "sugar",
+        "golden-apples",
+        "glaze-yolk",
+        "glaze-water"
+      ],
+      "illustration": "assets/illustrations/steps/tarte-aux-pommes/cool.webp",
+      "copy": {
+        "en": {
+          "title": "Cool before unmoulding",
+          "wait": "Until cool",
+          "instructions": [
+            "Let the tart cool in its tin.",
+            "Remove the cooled tart from the tin."
+          ],
+          "caption": "Cool the tart in its tin once the pastry is golden and the apples are tender."
+        },
+        "fr": {
+          "title": "Refroidir avant de démouler",
+          "wait": "Jusqu’à refroidissement",
+          "instructions": [
+            "Laissez refroidir la tarte dans son moule.",
+            "Démoulez la tarte refroidie."
+          ],
+          "caption": "Laissez refroidir la tarte dans son moule quand la pâte est dorée et les pommes tendres."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "The final bake follows Meilleur du Chef’s apple and compote tart. The original notes give the blind-bake time and finish at the glazing step."
+        },
+        "fr": {
+          "text": "La cuisson finale suit la recette de tarte aux pommes et à la compote de Meilleur du Chef. Les notes d’origine précisent le temps de cuisson à blanc et s’arrêtent à l’étape de la dorure."
+        }
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "pate-brisee",
+      "label": "Pâte brisée"
+    },
+    {
+      "id": "apple-sauce",
+      "label": "Apple sauce"
+    }
+  ],
+  "source": {
+    "url": "https://www.meilleurduchef.com/fr/recette/tarte-pommes-cap.html",
+    "copy": {
+      "en": {
+        "label": "Meilleur du Chef · Final baking time"
+      },
+      "fr": {
+        "label": "Meilleur du Chef – Temps de cuisson finale"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Tarte aux pommes",
+      "cookingTime": "About 45 min in the oven, plus cooking the compote",
+      "restTime": "Chill the dough. Allow the compote and the baked tart to cool.",
+      "description": "A shortcrust tart with cinnamon apple compote and a layer of thinly sliced Golden apples.",
+      "allergens": [
+        "Wheat (gluten)",
+        "Egg",
+        "Milk"
+      ],
+      "setup": [
+        "Use a tart tin. Preheat the oven to 180 °C before blind baking."
+      ]
+    },
+    "fr": {
+      "title": "Tarte aux pommes",
+      "cookingTime": "Environ 45 min au four, plus la cuisson de la compote",
+      "restTime": "Pâte à réfrigérer, compote et tarte cuite à laisser refroidir",
+      "description": "Une tarte en pâte brisée garnie de compote à la cannelle et de fines lamelles de pommes Golden.",
+      "allergens": [
+        "Blé (gluten)",
+        "Œuf",
+        "Lait"
+      ],
+      "setup": [
+        "Utilisez un moule à tarte. Préchauffez le four à 180 °C avant la cuisson à blanc."
+      ]
+    }
+  }
+}

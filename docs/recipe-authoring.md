@@ -1,5 +1,11 @@
 # Authoring and reviewing recipes
 
+## Store the recipe
+
+Use one JSON file for both languages. Keep the recipe ID, ingredient IDs, weights, numeric servings, step IDs, durations, timer positions and asset paths on their shared records. Add English and French wording under `copy.en` and `copy.fr` on the record it describes. The recipe itself has this pair for its title, description, setup and allergens. Steps have their own pair for titles, instructions, heat and wait labels, and captions. Apply the same pattern to ingredient names, timer labels, kitchen notes and other text.
+
+Start with the [crêpes example](../public/recipes/breakfast-brunch/crepes.json) and set `schemaVersion` to `1` and `$schema` to `../recipe.schema.json`. The [schema](../public/recipes/recipe.schema.json) checks the core data shape and both language keys. Register the file in [the catalogue index](../public/recipes/index.js).
+
 ## Write the recipe
 
 1. Check the source and any kitchen notes. Capture the yield, pan size, oven mode and ingredient weights. Keep grams primary and label converted or suggested weights as estimates. For a sourced liquid measure use `quantity` and a metric volume `unit`, or `volumeMl` for an explicit millilitre value.
@@ -32,16 +38,16 @@ The [recipe template spec](product/specs/recipe-template.md) shows how the page 
 - Put recipe-level planning facts in `times`. Use `highlight` with `total`, `cook` or `rest` for a sourced whole-recipe time. Preserve any equipment and batch qualifiers in its translated value.
 - Set each timer’s `afterInstruction` to the one-based number of the instruction that starts it. Write the duration, starting event and next action in the method so the print version is usable. For a range, put the countdown at the first check and describe what to look for. For a fixed handoff, name the action the cook takes when time is up. Offer separate timers for equipment variants only when their timings differ.
 - Set each step’s `uses` to the IDs of the ingredients involved. For a mixed component, include the ingredients already combined as well as any additions. Groups provide the ingredient rows and tones. Independent components can share a chart column until a step brings them together.
-- In the matching `public/translations/` entry, translate the setup, timing, instructions, heat and wait pills, choices, kitchen notes, allergens, storage and source credit. Keep translated instructions, options and `timerLabels` in source order. Keep IDs, weights, duration values and timer positions in the source recipe.
-- Preserve recipe, ingredient and step IDs when they still describe the same item or action. The page uses IDs for saved progress, step links and artwork. Use each step ID for its illustration filename and caption entry.
+- Translate the setup, timing, instructions, heat and wait pills, choices, kitchen notes, allergens, storage and source credit in each record’s `copy`. Keep the instructions in the same order in both languages so each timer points to the right action.
+- Preserve recipe, ingredient and step IDs when they still describe the same item or action. The page uses IDs for saved progress, step links and artwork. Use each step ID for its illustration filename and reference it in the step’s `illustration` field.
 
 ## Examples
 
 | Recipe | Pattern |
 | --- | --- |
-| [Chocolate Brownies](../public/recipes/desserts/brownies-au-chocolat.js) | Separate egg and chocolate mixtures come together before baking. The method gives a sourced general doneness cue and a cooling endpoint. |
-| [Strawberry–Raspberry Muffins](../public/recipes/desserts/strawberry-raspberry-muffins.js) | One timer prompts a heat change and the next prompts a doneness check. Each sits after its own starting instruction. |
-| [Two-Day Birthday Cake](../public/recipes/desserts/two-day-birthday-cake.js) | An overnight rest and three Day 2 waits appear in the schedule. Slicing the sponge can overlap the filling chill. |
+| [Chocolate Brownies](../public/recipes/desserts/brownies-au-chocolat.json) | Separate egg and chocolate mixtures come together before baking. The method gives a sourced general doneness cue and a cooling endpoint. |
+| [Strawberry–Raspberry Muffins](../public/recipes/desserts/strawberry-raspberry-muffins.json) | One timer prompts a heat change and the next prompts a doneness check. Each sits after its own starting instruction. |
+| [Two-Day Birthday Cake](../public/recipes/desserts/two-day-birthday-cake.json) | An overnight rest and three Day 2 waits appear in the schedule. Slicing the sponge can overlap the filling chill. |
 
 The compact ingredient layout was informed by [Michael Chu’s Cooking For Engineers recipe card](https://www.cookingforengineers.com/recipe/108/Banana-Nut-Bread/trn).
 

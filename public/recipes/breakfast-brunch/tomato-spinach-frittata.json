@@ -1,0 +1,448 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "tomato-spinach-frittata",
+  "category": "Breakfast & brunch",
+  "thumbnail": "assets/illustrations/recipes/tomato-spinach-frittata.webp",
+  "groups": [
+    {
+      "tone": "blue",
+      "ingredients": [
+        {
+          "id": "passata",
+          "grams": 250,
+          "copy": {
+            "en": {
+              "name": "passata",
+              "note": "half a standard 500 g carton"
+            },
+            "fr": {
+              "name": "coulis de tomates",
+              "note": "la moitié d’une brique de 500 g"
+            }
+          }
+        },
+        {
+          "id": "spinach",
+          "grams": 160,
+          "copy": {
+            "en": {
+              "name": "baby spinach"
+            },
+            "fr": {
+              "name": "jeunes pousses d’épinards"
+            }
+          }
+        },
+        {
+          "id": "eggs",
+          "grams": 250,
+          "weightEstimate": true,
+          "quantity": 5,
+          "copy": {
+            "en": {
+              "name": "large eggs",
+              "note": "weighed without the shells"
+            },
+            "fr": {
+              "name": "gros œufs",
+              "note": "pesés sans la coquille"
+            }
+          }
+        },
+        {
+          "id": "extra-eggs",
+          "grams": 100,
+          "weightEstimate": true,
+          "quantity": 2,
+          "copy": {
+            "en": {
+              "name": "additional large eggs",
+              "note": "or 100 g liquid egg whites"
+            },
+            "fr": {
+              "name": "gros œufs supplémentaires",
+              "note": "ou 100 g de blancs d’œufs liquides"
+            }
+          }
+        },
+        {
+          "id": "cheese",
+          "grams": 40,
+          "copy": {
+            "en": {
+              "name": "cheddar or feta",
+              "note": "grated or crumbled"
+            },
+            "fr": {
+              "name": "cheddar ou feta",
+              "note": "râpé ou émiettée"
+            }
+          }
+        },
+        {
+          "id": "oil",
+          "grams": 8,
+          "copy": {
+            "en": {
+              "name": "avocado oil",
+              "note": "about ½ tbsp"
+            },
+            "fr": {
+              "name": "huile d’avocat",
+              "note": "environ ½ c. à soupe"
+            }
+          }
+        },
+        {
+          "id": "oregano",
+          "grams": 1,
+          "weightEstimate": true,
+          "quantity": 1,
+          "copy": {
+            "en": {
+              "name": "dried oregano",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "origan séché",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "seasoning",
+          "gramRange": [
+            0,
+            3
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "sea salt and black pepper",
+              "quantity": "To taste",
+              "note": "suggested total range. Start with less and adjust to taste"
+            },
+            "fr": {
+              "name": "sel de mer et poivre noir",
+              "quantity": "Au goût",
+              "note": "quantité totale indicative. Commencez par en mettre peu, puis ajustez au goût"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Frittata"
+        },
+        "fr": {
+          "title": "Frittata"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "whisk",
+      "tone": "blue",
+      "activity": "prep",
+      "uses": [
+        "eggs",
+        "extra-eggs",
+        "seasoning"
+      ],
+      "illustration": "assets/illustrations/steps/tomato-spinach-frittata/whisk.webp",
+      "copy": {
+        "en": {
+          "title": "Whisk the eggs",
+          "instructions": [
+            "Crack the five eggs into a bowl.",
+            "Add the two extra eggs or 100 g of liquid egg whites.",
+            "Whisk with the salt and pepper."
+          ],
+          "caption": "Whisk the eggs with salt and pepper before cooking the spinach."
+        },
+        "fr": {
+          "title": "Fouetter les œufs",
+          "instructions": [
+            "Cassez les cinq œufs dans un bol.",
+            "Ajoutez les deux œufs supplémentaires ou 100 g de blancs liquides.",
+            "Battez le tout avec le sel et le poivre."
+          ],
+          "caption": "Battez les œufs avec le sel et le poivre avant de cuire les épinards."
+        }
+      }
+    },
+    {
+      "id": "wilt",
+      "tone": "blue",
+      "activity": "cooking",
+      "uses": [
+        "passata",
+        "spinach",
+        "oil",
+        "oregano"
+      ],
+      "duration": [
+        4,
+        4
+      ],
+      "illustration": "assets/illustrations/steps/tomato-spinach-frittata/wilt.webp",
+      "copy": {
+        "en": {
+          "title": "Cook the spinach and tomato base",
+          "instructions": [
+            "Heat the oil in the ovenproof frying pan over medium heat.",
+            "Wilt the spinach in the oil for 2 minutes.",
+            "Add the passata and oregano.",
+            "Cook for a further 2 minutes, until the sauce bubbles."
+          ],
+          "heat": "Medium hob",
+          "caption": "Pour the passata over the wilted spinach."
+        },
+        "fr": {
+          "title": "Préparer la base aux épinards et à la tomate",
+          "instructions": [
+            "Chauffez l’huile à feu moyen dans la poêle allant au four.",
+            "Faites tomber les épinards dans l’huile pendant 2 minutes.",
+            "Ajoutez le coulis de tomates et l’origan.",
+            "Laissez cuire encore 2 minutes, jusqu’aux premiers bouillons."
+          ],
+          "heat": "Feu moyen",
+          "caption": "Versez le coulis de tomate sur les épinards juste tombés."
+        }
+      }
+    },
+    {
+      "id": "eggs",
+      "tone": "blue",
+      "activity": "cooking",
+      "uses": [
+        "passata",
+        "spinach",
+        "oil",
+        "oregano",
+        "eggs",
+        "extra-eggs",
+        "seasoning"
+      ],
+      "duration": [
+        4,
+        5
+      ],
+      "timers": [
+        {
+          "minutes": 4,
+          "afterInstruction": 3,
+          "copy": {
+            "en": {
+              "label": "Check the edges"
+            },
+            "fr": {
+              "label": "Vérifier les bords"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/tomato-spinach-frittata/eggs.webp",
+      "copy": {
+        "en": {
+          "title": "Set the edges on the hob",
+          "instructions": [
+            "Pour the beaten eggs into the bubbling tomato and spinach mixture.",
+            "Swirl gently with a spatula.",
+            "Cook undisturbed for 4–5 minutes, until the edges set."
+          ],
+          "heat": "Medium hob",
+          "caption": "Pour in the beaten eggs and swirl them gently through the bubbling sauce."
+        },
+        "fr": {
+          "title": "Faire prendre les bords à la poêle",
+          "instructions": [
+            "Versez les œufs battus dans le mélange frémissant de tomates et d’épinards.",
+            "Remuez délicatement à la spatule.",
+            "Laissez cuire 4 à 5 minutes sans remuer, jusqu’à ce que les bords soient pris."
+          ],
+          "heat": "Feu moyen",
+          "caption": "Versez les œufs battus et mélangez-les délicatement à la sauce frémissante."
+        }
+      }
+    },
+    {
+      "id": "grill",
+      "tone": "blue",
+      "activity": "cooking",
+      "uses": [
+        "passata",
+        "spinach",
+        "oil",
+        "oregano",
+        "eggs",
+        "extra-eggs",
+        "seasoning",
+        "cheese"
+      ],
+      "duration": [
+        4,
+        5
+      ],
+      "timers": [
+        {
+          "minutes": 4,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the frittata"
+            },
+            "fr": {
+              "label": "Vérifier la cuisson de la frittata"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/tomato-spinach-frittata/grill.webp",
+      "copy": {
+        "en": {
+          "title": "Grill the frittata",
+          "instructions": [
+            "Scatter the cheese over the frittata.",
+            "Place the pan under the preheated grill for 4–5 minutes, until the frittata is puffed and set.",
+            "Check that the centre reaches 71°C (160°F) with a food thermometer.",
+            "Continue grilling if the centre is below that temperature."
+          ],
+          "heat": "Medium-high grill · about 200°C",
+          "caption": "Check that the centre of the grilled frittata reaches 71°C (160°F)."
+        },
+        "fr": {
+          "title": "Cuire la frittata sous le gril",
+          "instructions": [
+            "Répartissez le fromage sur la frittata.",
+            "Placez la poêle sous le gril préchauffé pendant 4 à 5 minutes, jusqu’à ce que la frittata gonfle et prenne.",
+            "Vérifiez que le centre atteint 71 °C (160 °F) avec un thermomètre de cuisine.",
+            "Prolongez la cuisson sous le gril si le centre est en dessous de cette température."
+          ],
+          "heat": "Gril moyen à fort · environ 200 °C",
+          "caption": "Vérifiez que la frittata sortie du gril atteint 71 °C (160 °F) à cœur."
+        }
+      }
+    },
+    {
+      "id": "slice",
+      "tone": "blue",
+      "activity": "prep",
+      "uses": [
+        "passata",
+        "spinach",
+        "oil",
+        "oregano",
+        "eggs",
+        "extra-eggs",
+        "seasoning",
+        "cheese"
+      ],
+      "illustration": "assets/illustrations/steps/tomato-spinach-frittata/slice.webp",
+      "copy": {
+        "en": {
+          "title": "Slice the frittata",
+          "instructions": [
+            "Remove the pan from the grill.",
+            "Slice the frittata into wedges.",
+            "Cut a child’s portion into easy-to-grasp strips."
+          ],
+          "heat": "Off the heat",
+          "caption": "Cut the set frittata into wedges or strips."
+        },
+        "fr": {
+          "title": "Découper la frittata",
+          "instructions": [
+            "Sortez la poêle du four.",
+            "Découpez la frittata en parts.",
+            "Découpez la portion destinée à un jeune enfant en lanières faciles à saisir."
+          ],
+          "heat": "Hors du feu",
+          "caption": "Découpez la frittata cuite en parts ou en lanières."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "If you made the chicken and butter bean stew, use the remaining half-carton of passata here."
+        },
+        "fr": {
+          "text": "Si vous avez préparé le mijoté de poulet et de haricots blancs, utilisez ici la demi-brique de coulis restante."
+        }
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "chicken-butter-bean-stew"
+    }
+  ],
+  "safety": {
+    "notes": [
+      {
+        "copy": {
+          "en": {
+            "text": "Check the centre reaches 71°C (160°F) with a food thermometer before slicing."
+          },
+          "fr": {
+            "text": "Avant de découper la frittata, vérifiez qu’elle atteint 71 °C (160 °F) à cœur à l’aide d’un thermomètre de cuisine."
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+        "copy": {
+          "en": {
+            "label": "FoodSafety.gov cooking temperatures"
+          },
+          "fr": {
+            "label": "FoodSafety.gov · Températures de cuisson"
+          }
+        }
+      }
+    ],
+    "copy": {
+      "en": {
+        "title": "Check the centre"
+      },
+      "fr": {
+        "title": "Vérifier la cuisson à cœur"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Spanish Tomato & Spinach Frittata",
+      "cookingTime": "12–14 min, longer if the centre is below 71°C",
+      "description": "A tomato and spinach frittata that uses the rest of the passata from the chicken and butter bean stew.",
+      "servings": "2 adult portions + 1 toddler portion",
+      "setup": [
+        "Preheat the grill to medium-high, about 200°C. Use an ovenproof frying pan."
+      ],
+      "allergens": [
+        "Eggs",
+        "Milk"
+      ]
+    },
+    "fr": {
+      "title": "Frittata aux tomates et aux épinards à l’espagnole",
+      "cookingTime": "12 à 14 min, davantage si le centre est à moins de 71 °C",
+      "description": "Une frittata aux tomates et aux épinards pour utiliser le coulis restant du mijoté de poulet et de haricots blancs.",
+      "servings": "2 portions adultes + 1 portion pour jeune enfant",
+      "setup": [
+        "Préchauffez le gril du four à puissance moyenne à forte, autour de 200 °C. Prévoyez une poêle allant au four."
+      ],
+      "allergens": [
+        "Œufs",
+        "Lait"
+      ]
+    }
+  }
+}

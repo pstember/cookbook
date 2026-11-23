@@ -1,0 +1,438 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "riz-au-lait",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/riz-au-lait.webp",
+  "times": [
+    {
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Simmer the rice",
+          "value": "22 min"
+        },
+        "fr": {
+          "label": "Cuisson du riz",
+          "value": "22 min"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "art": "saucepan",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "milk",
+          "grams": 1030,
+          "weightEstimate": true,
+          "quantity": 1,
+          "unit": "litre",
+          "copy": {
+            "en": {
+              "name": "milk"
+            },
+            "fr": {
+              "name": "lait"
+            }
+          }
+        },
+        {
+          "id": "rice",
+          "grams": 250,
+          "copy": {
+            "en": {
+              "name": "short-grain rice",
+              "note": "risotto rice works"
+            },
+            "fr": {
+              "name": "riz à grains courts",
+              "note": "le riz à risotto convient"
+            }
+          }
+        },
+        {
+          "id": "sugar",
+          "grams": 60,
+          "copy": {
+            "en": {
+              "name": "sugar"
+            },
+            "fr": {
+              "name": "sucre"
+            }
+          }
+        },
+        {
+          "id": "extra-sugar",
+          "grams": 50,
+          "weightEstimate": true,
+          "quantity": 4,
+          "copy": {
+            "en": {
+              "name": "additional sugar",
+              "unit": "tbsp"
+            },
+            "fr": {
+              "name": "sucre supplémentaire",
+              "unit": "c. à soupe"
+            }
+          }
+        },
+        {
+          "id": "egg",
+          "grams": 50,
+          "weightEstimate": true,
+          "quantity": 1,
+          "copy": {
+            "en": {
+              "name": "egg",
+              "note": "weighed without the shell, then separated"
+            },
+            "fr": {
+              "name": "œuf",
+              "note": "pesé sans la coquille, puis jaune et blanc séparés"
+            }
+          }
+        },
+        {
+          "id": "vanilla",
+          "gramVariants": [
+            4,
+            13
+          ],
+          "weightEstimate": true,
+          "quantity": 1,
+          "copy": {
+            "en": {
+              "name": "vanilla pod",
+              "note": "one whole pod (about 4 g) or 1 tbsp vanilla extract (about 13 g)"
+            },
+            "fr": {
+              "name": "gousse de vanille",
+              "note": "une gousse entière (environ 4 g) ou 1 c. à soupe d’extrait de vanille (environ 13 g)"
+            }
+          }
+        },
+        {
+          "id": "salt",
+          "gramRange": [
+            0,
+            0.4
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "salt",
+              "quantity": "A pinch"
+            },
+            "fr": {
+              "name": "sel",
+              "quantity": "Une pincée"
+            }
+          }
+        },
+        {
+          "id": "butter",
+          "grams": 15,
+          "copy": {
+            "en": {
+              "name": "butter"
+            },
+            "fr": {
+              "name": "beurre"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Rice pudding"
+        },
+        "fr": {
+          "title": "Riz au lait"
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "counter": "Cool leftovers promptly, ideally within 1 hour, then refrigerate.",
+        "fridge": "Use within 1 day."
+      },
+      "fr": {
+        "counter": "Faites refroidir rapidement les restes, idéalement dans l’heure, puis réfrigérez-les.",
+        "fridge": "Consommez dans la journée."
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "simmer",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "milk",
+        "rice",
+        "vanilla",
+        "salt"
+      ],
+      "duration": [
+        22,
+        22
+      ],
+      "timers": [
+        {
+          "minutes": 22,
+          "afterInstruction": 3,
+          "copy": {
+            "en": {
+              "label": "Check the rice"
+            },
+            "fr": {
+              "label": "Vérifier la cuisson du riz"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/riz-au-lait/simmer.webp",
+      "copy": {
+        "en": {
+          "title": "Simmer the rice in vanilla milk",
+          "instructions": [
+            "Warm the milk with the vanilla and salt in a saucepan.",
+            "Add the rice.",
+            "Simmer gently for about 22 minutes, stirring occasionally, until the rice is tender.",
+            "Remove the vanilla pod if you used one."
+          ],
+          "heat": "Gentle simmer",
+          "timing": "About 22 min of simmering",
+          "caption": "Look for small bubbles around the edges as the rice cooks in the vanilla milk."
+        },
+        "fr": {
+          "title": "Cuire le riz dans le lait vanillé",
+          "instructions": [
+            "Chauffez le lait avec la vanille et le sel dans une casserole.",
+            "Ajoutez le riz.",
+            "Faites mijoter environ 22 minutes en remuant de temps en temps, jusqu’à ce que le riz soit tendre.",
+            "Retirez la gousse de vanille si vous en avez utilisé une."
+          ],
+          "heat": "Frémissement",
+          "timing": "Environ 22 min de cuisson à frémissement",
+          "caption": "Surveillez le léger frémissement sur les bords pendant que le riz cuit dans le lait vanillé."
+        }
+      }
+    },
+    {
+      "id": "yolk",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "milk",
+        "rice",
+        "vanilla",
+        "salt",
+        "sugar",
+        "extra-sugar",
+        "egg",
+        "butter"
+      ],
+      "illustration": "assets/illustrations/steps/riz-au-lait/yolk.webp",
+      "copy": {
+        "en": {
+          "title": "Temper the yolk",
+          "instructions": [
+            "Take the pan off the heat.",
+            "Whisk the yolk with both measures of sugar.",
+            "Whisk in the hot milk from the pan a spoonful at a time.",
+            "Stir the tempered yolk mixture into the cooked rice.",
+            "Stir in the butter."
+          ],
+          "heat": "Off the heat",
+          "caption": "Whisk a little hot milk into the yolk and sugar, one spoonful at a time."
+        },
+        "fr": {
+          "title": "Tempérer le jaune",
+          "instructions": [
+            "Retirez la casserole du feu.",
+            "Fouettez le jaune avec les deux quantités de sucre.",
+            "Incorporez au fouet le lait chaud prélevé dans la casserole, une cuillerée à la fois.",
+            "Incorporez le mélange au jaune d’œuf dans le riz cuit.",
+            "Incorporez le beurre."
+          ],
+          "heat": "Hors du feu",
+          "caption": "Fouettez les jaunes avec le sucre en ajoutant le lait chaud une cuillerée à la fois."
+        }
+      }
+    },
+    {
+      "id": "finish",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "milk",
+        "rice",
+        "vanilla",
+        "salt",
+        "sugar",
+        "extra-sugar",
+        "egg",
+        "butter"
+      ],
+      "illustration": "assets/illustrations/steps/riz-au-lait/finish.webp",
+      "copy": {
+        "en": {
+          "title": "Fold in the whipped white",
+          "instructions": [
+            "Whisk the reserved egg white until it holds peaks.",
+            "Fold it gently into the rice pudding with a flexible spatula."
+          ],
+          "heat": "Off the heat",
+          "caption": "Use a flexible spatula to fold the whipped egg white gently into the cooked rice."
+        },
+        "fr": {
+          "title": "Incorporer le blanc en neige",
+          "instructions": [
+            "Montez le blanc réservé en neige jusqu’à ce qu’il forme des pics.",
+            "Incorporez délicatement le blanc au riz au lait à l’aide d’une spatule souple."
+          ],
+          "heat": "Hors du feu",
+          "caption": "Incorporez délicatement le blanc monté au riz cuit à l’aide d’une spatule souple."
+        }
+      }
+    },
+    {
+      "id": "heat-through",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "milk",
+        "rice",
+        "vanilla",
+        "salt",
+        "sugar",
+        "extra-sugar",
+        "egg",
+        "butter"
+      ],
+      "illustration": "assets/illustrations/steps/riz-au-lait/heat-through.webp",
+      "copy": {
+        "en": {
+          "title": "Heat the pudding through",
+          "instructions": [
+            "Stir the pudding gently over low heat.",
+            "Check with a food thermometer that the pudding reaches 72°C (162°F) throughout."
+          ],
+          "heat": "Low hob",
+          "caption": "Stir gently over low heat until a probe reads 72°C (162°F) throughout the pudding."
+        },
+        "fr": {
+          "title": "Terminer la cuisson à feu doux",
+          "instructions": [
+            "Remuez doucement le riz au lait à feu doux.",
+            "Vérifiez avec un thermomètre de cuisine que le riz au lait atteint 72 °C (162 °F) dans toute la casserole."
+          ],
+          "heat": "Feu doux",
+          "caption": "Remuez à feu doux jusqu’à ce que le riz au lait atteigne 72 °C (162 °F) dans toute la casserole."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Keep the heat low once the egg is in the pudding. Gentle heat keeps the egg smooth as the pudding warms through."
+        },
+        "fr": {
+          "text": "Une fois l’œuf incorporé, gardez le feu doux pour réchauffer le riz au lait sans former de grumeaux."
+        }
+      }
+    }
+  ],
+  "safety": {
+    "notes": [
+      {
+        "copy": {
+          "en": {
+            "text": "After folding in the whipped white, check that the pudding reaches 72°C (162°F) throughout with a food thermometer."
+          },
+          "fr": {
+            "text": "Après avoir incorporé le blanc monté en neige, utilisez un thermomètre de cuisine pour vérifier que toute la préparation atteint 72 °C (162 °F)."
+          }
+        }
+      },
+      {
+        "copy": {
+          "en": {
+            "text": "If you have leftovers, cool them promptly, ideally within an hour. Refrigerate and use within one day."
+          },
+          "fr": {
+            "text": "Faites refroidir rapidement les restes, idéalement dans l’heure. Réfrigérez-les et consommez-les dans la journée."
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+        "copy": {
+          "en": {
+            "label": "FoodSafety.gov cooking temperatures"
+          },
+          "fr": {
+            "label": "FoodSafety.gov · Températures de cuisson"
+          }
+        }
+      },
+      {
+        "url": "https://www.food.gov.uk/print/pdf/node/7611",
+        "copy": {
+          "en": {
+            "label": "Food Standards Agency rice storage guidance"
+          },
+          "fr": {
+            "label": "Food Standards Agency · Conseils de conservation du riz"
+          }
+        }
+      }
+    ],
+    "copy": {
+      "en": {
+        "title": "Cooking and storing rice pudding"
+      },
+      "fr": {
+        "title": "Cuire et conserver le riz au lait"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Riz au Lait",
+      "cookingTime": "About 22 min simmering, plus warming the milk and heating the egg to 72°C",
+      "description": "French vanilla rice pudding finished with butter and a folded-in whipped egg white.",
+      "setup": [
+        "Separate the egg. Reserve the white in a clean bowl."
+      ],
+      "allergens": [
+        "Milk",
+        "Egg"
+      ]
+    },
+    "fr": {
+      "title": "Riz au lait à la vanille",
+      "cookingTime": "Environ 22 min de frémissement, plus le chauffage du lait puis de l’œuf à 72 °C",
+      "description": "Un riz au lait parfumé à la vanille, enrichi de beurre et allégé par un blanc d’œuf monté en neige.",
+      "setup": [
+        "Séparez le blanc du jaune. Réservez le blanc dans un bol propre."
+      ],
+      "allergens": [
+        "Lait",
+        "Œuf"
+      ]
+    }
+  }
+}

@@ -306,7 +306,7 @@ function renderRecipe(recipe) {
       top.append(badge, label);
 
       item.append(top);
-      const illustration = renderStepIllustration(recipe.id, step.id);
+      const illustration = renderStepIllustration(step);
       const heading = element("div", "step-heading");
       heading.append(element("h3", null, step.title), element("p", "step-timing", stageTime(step)));
       item.append(heading);

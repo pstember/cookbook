@@ -1,0 +1,304 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "creme-patissiere",
+  "category": "Baking basics",
+  "thumbnail": "assets/illustrations/recipes/creme-patissiere.webp",
+  "groups": [
+    {
+      "art": "whisk",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "milk",
+          "grams": 250,
+          "copy": {
+            "en": {
+              "name": "milk"
+            },
+            "fr": {
+              "name": "lait"
+            }
+          }
+        },
+        {
+          "id": "yolks",
+          "grams": 51,
+          "quantity": 3,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "egg yolks"
+            },
+            "fr": {
+              "name": "jaunes d’œufs"
+            }
+          }
+        },
+        {
+          "id": "sugar",
+          "grams": 50,
+          "copy": {
+            "en": {
+              "name": "granulated sugar",
+              "note": "type S2"
+            },
+            "fr": {
+              "name": "sucre cristallisé",
+              "note": "type S2"
+            }
+          }
+        },
+        {
+          "id": "flour",
+          "grams": 12.5,
+          "copy": {
+            "en": {
+              "name": "flour"
+            },
+            "fr": {
+              "name": "farine"
+            }
+          }
+        },
+        {
+          "id": "starch",
+          "grams": 12.5,
+          "copy": {
+            "en": {
+              "name": "cornflour"
+            },
+            "fr": {
+              "name": "fécule de maïs"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Custard"
+        },
+        "fr": {
+          "title": "Crème"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "heat-milk",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "milk"
+      ],
+      "illustration": "assets/illustrations/steps/creme-patissiere/heat-milk.webp",
+      "copy": {
+        "en": {
+          "title": "Bring the milk to the boil",
+          "heat": "Hob · bring to the boil",
+          "instructions": [
+            "Bring the milk to the boil in a saucepan."
+          ],
+          "tip": "Whisk the yolks while the milk heats.",
+          "caption": "Watch the milk for the first boil."
+        },
+        "fr": {
+          "title": "Faire bouillir le lait",
+          "heat": "Sur le feu · jusqu’à ébullition",
+          "instructions": [
+            "Portez le lait à ébullition dans une casserole."
+          ],
+          "tip": "Fouettez les jaunes pendant que le lait chauffe.",
+          "caption": "Surveillez le lait jusqu’au premier bouillon."
+        }
+      }
+    },
+    {
+      "id": "whisk",
+      "during": "heat-milk",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "yolks",
+        "sugar",
+        "flour",
+        "starch"
+      ],
+      "illustration": "assets/illustrations/steps/creme-patissiere/whisk.webp",
+      "copy": {
+        "en": {
+          "title": "Whisk the yolks",
+          "instructions": [
+            "Whisk the yolks with the sugar.",
+            "Add the flour and cornflour together.",
+            "Whisk until smooth."
+          ],
+          "caption": "Whisk the yolks and sugar, then add the flour and cornflour. Keep whisking until smooth."
+        },
+        "fr": {
+          "title": "Fouetter les jaunes",
+          "instructions": [
+            "Fouettez les jaunes avec le sucre.",
+            "Ajoutez ensemble la farine et la fécule.",
+            "Fouettez jusqu’à obtenir un mélange lisse."
+          ],
+          "caption": "Fouettez les jaunes avec le sucre, puis ajoutez la farine et la fécule. Fouettez jusqu’à obtenir un mélange lisse."
+        }
+      }
+    },
+    {
+      "id": "temper",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "milk",
+        "yolks",
+        "sugar",
+        "flour",
+        "starch"
+      ],
+      "illustration": "assets/illustrations/steps/creme-patissiere/temper.webp",
+      "copy": {
+        "en": {
+          "title": "Temper the yolks",
+          "heat": "Off the heat",
+          "instructions": [
+            "Whisk about 83 g of the boiling milk (one third) into the yolk mixture in a steady stream.",
+            "Pour the mixture back into the pan with the remaining milk."
+          ],
+          "caption": "Whisk about a third of the hot milk into the yolk mixture in a steady stream."
+        },
+        "fr": {
+          "title": "Délayer les jaunes",
+          "heat": "Hors du feu",
+          "instructions": [
+            "Versez environ 83 g de lait bouillant (un tiers) sur les jaunes en fouettant.",
+            "Reversez le mélange dans la casserole avec le reste de lait."
+          ],
+          "caption": "Versez environ un tiers du lait chaud en filet sur les jaunes en fouettant."
+        }
+      }
+    },
+    {
+      "id": "thicken",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "milk",
+        "yolks",
+        "sugar",
+        "flour",
+        "starch"
+      ],
+      "illustration": "assets/illustrations/steps/creme-patissiere/thicken.webp",
+      "copy": {
+        "en": {
+          "title": "Thicken the custard",
+          "heat": "Low heat",
+          "instructions": [
+            "Return the pan to a low heat.",
+            "Stir continuously until the custard thickens and large bubbles rise through it."
+          ],
+          "caption": "Return the mixture to the pan. Stir over low heat until the cream thickens and large bubbles rise through it."
+        },
+        "fr": {
+          "title": "Faire épaissir la crème",
+          "heat": "Feu doux",
+          "instructions": [
+            "Remettez la casserole à feu doux.",
+            "Remuez sans arrêt jusqu’à ce que la crème épaississe et forme de grosses bulles."
+          ],
+          "caption": "Reversez le mélange dans la casserole. Remuez à feu doux jusqu’à ce que la crème épaississe et forme de grosses bulles."
+        }
+      }
+    },
+    {
+      "id": "cool",
+      "activity": "wait",
+      "tone": "yellow",
+      "uses": [
+        "milk",
+        "yolks",
+        "sugar",
+        "flour",
+        "starch"
+      ],
+      "illustration": "assets/illustrations/steps/creme-patissiere/cool.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the custard",
+          "heat": "Off the heat",
+          "instructions": [
+            "Transfer the custard to a stainless steel bowl or a tray to stop the cooking.",
+            "Press cling film directly against the surface if preparing ahead.",
+            "Refrigerate the covered custard if preparing ahead."
+          ],
+          "caption": "Spread the cream in a shallow tray. If storing it, press film straight against the surface before refrigerating."
+        },
+        "fr": {
+          "title": "Refroidir la crème",
+          "heat": "Hors du feu",
+          "instructions": [
+            "Transvasez la crème dans un bol en inox ou sur une plaque pour arrêter la cuisson.",
+            "Posez un film alimentaire au contact de la crème si vous la préparez à l’avance.",
+            "Réfrigérez la crème filmée si vous la préparez à l’avance."
+          ],
+          "caption": "Étalez la crème sur une plaque peu profonde. Pour la conserver, posez le film au contact de la crème avant de la réfrigérer."
+        }
+      }
+    }
+  ],
+  "source": {
+    "copy": {
+      "en": {
+        "label": "Author’s cookbook notes"
+      },
+      "fr": {
+        "label": "Notes du carnet de recettes"
+      }
+    }
+  },
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Useful equipment includes scales, a saucepan, a sieve, a whisk, a spatula and cling film."
+        },
+        "fr": {
+          "text": "Matériel utile : balance, casserole, tamis, fouet, spatule et film alimentaire."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "The egg whites can be frozen for another recipe."
+        },
+        "fr": {
+          "text": "Les blancs d’œufs peuvent être conservés au congélateur."
+        }
+      }
+    }
+  ],
+  "copy": {
+    "en": {
+      "title": "Pastry cream",
+      "description": "A milk and egg yolk custard for filling choux pastries or lining a tart shell.",
+      "allergens": [
+        "Wheat (gluten)",
+        "Egg",
+        "Milk"
+      ]
+    },
+    "fr": {
+      "title": "Crème pâtissière",
+      "description": "Une crème au lait et aux jaunes d’œufs à utiliser pour garnir des choux ou un fond de tarte.",
+      "allergens": [
+        "Blé (gluten)",
+        "Œuf",
+        "Lait"
+      ]
+    }
+  }
+}

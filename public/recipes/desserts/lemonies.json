@@ -1,0 +1,480 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "lemonies",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/lemonies.webp",
+  "servings": 9,
+  "times": [
+    {
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Prep",
+          "value": "10 min"
+        },
+        "fr": {
+          "label": "Préparation",
+          "value": "10 min"
+        }
+      }
+    },
+    {
+      "icon": "oven",
+      "highlight": "cook",
+      "copy": {
+        "en": {
+          "label": "Bake",
+          "value": "15–20 min"
+        },
+        "fr": {
+          "label": "Cuisson",
+          "value": "15–20 min"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "eggs",
+          "grams": 200,
+          "quantity": 4,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "eggs",
+              "note": "weighed without shells"
+            },
+            "fr": {
+              "name": "d’œufs",
+              "note": "pesés sans coquille"
+            }
+          }
+        },
+        {
+          "id": "flour",
+          "grams": 115,
+          "copy": {
+            "en": {
+              "name": "flour"
+            },
+            "fr": {
+              "name": "de farine"
+            }
+          }
+        },
+        {
+          "id": "baking-powder",
+          "grams": 4,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "baking powder",
+              "quantity": "1 level tsp"
+            },
+            "fr": {
+              "name": "de levure chimique",
+              "quantity": "1 c. à café rase"
+            }
+          }
+        },
+        {
+          "id": "sugar",
+          "grams": 120,
+          "copy": {
+            "en": {
+              "name": "sugar"
+            },
+            "fr": {
+              "name": "de sucre"
+            }
+          }
+        },
+        {
+          "id": "lemon-juice",
+          "grams": 15,
+          "copy": {
+            "en": {
+              "name": "lemon juice"
+            },
+            "fr": {
+              "name": "de jus de citron"
+            }
+          }
+        },
+        {
+          "id": "vanilla",
+          "grams": 4.2,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "liquid vanilla",
+              "quantity": "1 tsp"
+            },
+            "fr": {
+              "name": "de vanille liquide",
+              "quantity": "1 c. à café"
+            }
+          }
+        },
+        {
+          "id": "butter",
+          "grams": 120,
+          "copy": {
+            "en": {
+              "name": "melted butter"
+            },
+            "fr": {
+              "name": "de beurre fondu"
+            }
+          }
+        },
+        {
+          "id": "zest",
+          "grams": 6,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "unwaxed lemon zest",
+              "quantity": "zest of 1 lemon"
+            },
+            "fr": {
+              "name": "de zeste de citron non traité",
+              "quantity": "le zeste d’un citron"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Lemon batter"
+        },
+        "fr": {
+          "title": "Pâte au citron"
+        }
+      }
+    },
+    {
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "icing-sugar",
+          "grams": 60,
+          "copy": {
+            "en": {
+              "name": "icing sugar"
+            },
+            "fr": {
+              "name": "de sucre glace"
+            }
+          }
+        },
+        {
+          "id": "icing-juice",
+          "grams": 15,
+          "copy": {
+            "en": {
+              "name": "lemon juice"
+            },
+            "fr": {
+              "name": "de jus de citron"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Glaze"
+        },
+        "fr": {
+          "title": "Glaçage"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "prepare",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [],
+      "illustration": "assets/illustrations/steps/lemonies/prepare.webp",
+      "copy": {
+        "en": {
+          "title": "Prepare the tin",
+          "instructions": [
+            "Preheat the fan oven to 165°C.",
+            "Grease an 18 cm square tin.",
+            "Line the tin with baking parchment, leaving two tabs overhanging on opposite sides."
+          ],
+          "caption": "Leave two parchment tabs hanging over opposite sides of the square tin."
+        },
+        "fr": {
+          "title": "Préparer le moule",
+          "instructions": [
+            "Préchauffez le four à 165 °C en chaleur tournante.",
+            "Graissez un moule carré de 18 cm.",
+            "Chemisez le moule de papier cuisson en laissant dépasser deux languettes sur les côtés opposés."
+          ],
+          "caption": "Laissez dépasser deux languettes de papier cuisson sur les côtés opposés du moule carré."
+        }
+      }
+    },
+    {
+      "id": "mix",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "butter",
+        "sugar",
+        "eggs",
+        "lemon-juice",
+        "flour",
+        "baking-powder",
+        "zest",
+        "vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/lemonies/mix.webp",
+      "copy": {
+        "en": {
+          "title": "Mix the lemon batter",
+          "instructions": [
+            "Whisk the melted butter with the sugar.",
+            "Beat in the eggs one at a time.",
+            "Add the lemon juice.",
+            "Sift the flour and baking powder into the mixture.",
+            "Add the zest and vanilla.",
+            "Mix until the batter is smooth.",
+            "Pour the batter into the prepared tin."
+          ],
+          "caption": "Whisk until the lemon batter is smooth and no streaks of flour remain."
+        },
+        "fr": {
+          "title": "Mélanger la pâte au citron",
+          "instructions": [
+            "Fouettez le beurre fondu avec le sucre.",
+            "Incorporez les œufs un par un au fouet.",
+            "Ajoutez le jus de citron.",
+            "Tamisez la farine et la levure au-dessus du mélange.",
+            "Ajoutez le zeste et la vanille.",
+            "Mélangez jusqu’à ce que la pâte soit lisse.",
+            "Versez la pâte dans le moule préparé."
+          ],
+          "caption": "Fouettez jusqu’à ce que la pâte au citron soit lisse et sans traces de farine."
+        }
+      }
+    },
+    {
+      "id": "bake",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "butter",
+        "sugar",
+        "eggs",
+        "lemon-juice",
+        "flour",
+        "baking-powder",
+        "zest",
+        "vanilla"
+      ],
+      "duration": [
+        15,
+        20
+      ],
+      "timers": [
+        {
+          "minutes": 15,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the bake"
+            },
+            "fr": {
+              "label": "Vérifier la cuisson"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/lemonies/bake.webp",
+      "copy": {
+        "en": {
+          "title": "Bake the lemonies",
+          "heat": "165°C fan",
+          "instructions": [
+            "Bake for 15–20 minutes, until the surface is lightly golden.",
+            "Check the colour from 15 minutes for a soft texture."
+          ],
+          "caption": "Look for a lightly golden surface when checking the bake."
+        },
+        "fr": {
+          "title": "Cuire les lemonies",
+          "heat": "165 °C chaleur tournante",
+          "instructions": [
+            "Faites cuire 15 à 20 minutes, jusqu’à ce que la surface soit légèrement dorée.",
+            "Vérifiez la couleur dès 15 minutes pour garder une texture fondante."
+          ],
+          "caption": "Vérifiez que la surface est légèrement dorée."
+        }
+      }
+    },
+    {
+      "id": "cool",
+      "activity": "wait",
+      "tone": "yellow",
+      "uses": [
+        "butter",
+        "sugar",
+        "eggs",
+        "lemon-juice",
+        "flour",
+        "baking-powder",
+        "zest",
+        "vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/lemonies/cool.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the slab",
+          "wait": "Until cool",
+          "instructions": [
+            "Leave the baked slab to cool in the tin before glazing."
+          ],
+          "caption": "Leave the unglazed lemon slab to cool in the lined tin."
+        },
+        "fr": {
+          "title": "Laisser refroidir le gâteau",
+          "wait": "Jusqu’à refroidissement",
+          "instructions": [
+            "Laissez refroidir le gâteau dans le moule avant de le glacer."
+          ],
+          "caption": "Laissez refroidir le gâteau au citron dans le moule chemisé avant de le glacer."
+        }
+      }
+    },
+    {
+      "id": "glaze",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "butter",
+        "sugar",
+        "eggs",
+        "lemon-juice",
+        "flour",
+        "baking-powder",
+        "zest",
+        "vanilla",
+        "icing-sugar",
+        "icing-juice"
+      ],
+      "illustration": "assets/illustrations/steps/lemonies/glaze.webp",
+      "copy": {
+        "en": {
+          "title": "Glaze the cooled slab",
+          "instructions": [
+            "Mix the icing sugar and lemon juice to make the glaze.",
+            "Lift the cooled slab from the tin by the parchment tabs.",
+            "Spread the glaze over the top with a spatula."
+          ],
+          "tip": "Decorate with a little lemon zest if you like.",
+          "caption": "Smooth the lemon glaze over the cooled slab with a spatula."
+        },
+        "fr": {
+          "title": "Glacer le gâteau refroidi",
+          "instructions": [
+            "Mélangez le sucre glace et le jus de citron pour former le glaçage.",
+            "Sortez le gâteau refroidi du moule à l’aide des languettes de papier cuisson.",
+            "Étalez le glaçage à la spatule sur le dessus."
+          ],
+          "tip": "Décorez de quelques zestes de citron si vous le souhaitez.",
+          "caption": "Étalez le glaçage au citron sur le gâteau refroidi à l’aide d’une spatule."
+        }
+      }
+    },
+    {
+      "id": "slice",
+      "activity": "wait",
+      "tone": "green",
+      "uses": [
+        "butter",
+        "sugar",
+        "eggs",
+        "lemon-juice",
+        "flour",
+        "baking-powder",
+        "zest",
+        "vanilla",
+        "icing-sugar",
+        "icing-juice"
+      ],
+      "illustration": "assets/illustrations/steps/lemonies/slice.webp",
+      "copy": {
+        "en": {
+          "title": "Let the glaze set before slicing",
+          "wait": "Until the glaze sets",
+          "instructions": [
+            "Let the glaze set.",
+            "Cut the glazed slab into nine squares."
+          ],
+          "caption": "Let the glaze set before cutting the slab into squares."
+        },
+        "fr": {
+          "title": "Laisser figer avant de découper",
+          "wait": "Jusqu’à la prise du glaçage",
+          "instructions": [
+            "Laissez figer le glaçage.",
+            "Découpez le gâteau glacé en neuf carrés."
+          ],
+          "caption": "Laissez le glaçage figer avant de découper le gâteau en carrés."
+        }
+      }
+    }
+  ],
+  "source": {
+    "url": "https://mesdelicieusescreations.com/brownie-au-citron/",
+    "copy": {
+      "en": {
+        "label": "Mes Délicieuses Créations",
+        "credit": "Recipe adapted from"
+      },
+      "fr": {
+        "label": "Mes Délicieuses Créations",
+        "credit": "Recette adaptée de"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Lemonies",
+      "totalTime": "25–30 min for prep and baking, plus cooling and setting the glaze",
+      "restTime": "Cool the cake, then let the glaze set",
+      "description": "Soft lemon squares with a tangy lemon glaze.",
+      "setup": [
+        "Use an 18 cm square tin. Preheat the fan oven to 165°C."
+      ],
+      "allergens": [
+        "Wheat (gluten)",
+        "Egg",
+        "Milk"
+      ]
+    },
+    "fr": {
+      "title": "Lemonies",
+      "totalTime": "25 à 30 min de préparation et de cuisson, plus le refroidissement et la prise du glaçage",
+      "restTime": "Refroidissement du gâteau, puis prise du glaçage",
+      "description": "Des carrés fondants au citron, avec un glaçage acidulé.",
+      "setup": [
+        "Prévoyez un moule carré de 18 cm. Préchauffez le four à 165 °C en chaleur tournante."
+      ],
+      "allergens": [
+        "Blé (gluten)",
+        "Œuf",
+        "Lait"
+      ]
+    }
+  }
+}

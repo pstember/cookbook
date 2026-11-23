@@ -1,0 +1,841 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "strawberry-raspberry-muffins",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/strawberry-raspberry-muffins.webp",
+  "times": [
+    {
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Cook filling",
+          "value": "10–12 min"
+        },
+        "fr": {
+          "label": "Cuisson de la garniture",
+          "value": "10 à 12 min"
+        }
+      }
+    },
+    {
+      "icon": "oven",
+      "copy": {
+        "en": {
+          "label": "Bake",
+          "value": "19–21 min"
+        },
+        "fr": {
+          "label": "Cuisson au four",
+          "value": "19 à 21 min"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "art": "saucepan",
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "filling-strawberries",
+          "grams": 120,
+          "copy": {
+            "en": {
+              "name": "strawberries",
+              "note": "hulled and diced into 5–8 mm pieces"
+            },
+            "fr": {
+              "name": "fraises",
+              "note": "équeutées et coupées en dés de 5 à 8 mm"
+            }
+          }
+        },
+        {
+          "id": "filling-raspberries",
+          "grams": 80,
+          "copy": {
+            "en": {
+              "name": "raspberries",
+              "note": "left whole"
+            },
+            "fr": {
+              "name": "framboises",
+              "note": "laissées entières"
+            }
+          }
+        },
+        {
+          "id": "filling-sugar",
+          "grams": 35,
+          "copy": {
+            "en": {
+              "name": "caster sugar"
+            },
+            "fr": {
+              "name": "sucre en poudre fin"
+            }
+          }
+        },
+        {
+          "id": "lemon-juice",
+          "grams": 10,
+          "copy": {
+            "en": {
+              "name": "lemon juice"
+            },
+            "fr": {
+              "name": "jus de citron"
+            }
+          }
+        },
+        {
+          "id": "glucose",
+          "grams": 15,
+          "copy": {
+            "en": {
+              "name": "glucose syrup"
+            },
+            "fr": {
+              "name": "sirop de glucose"
+            }
+          }
+        },
+        {
+          "id": "cornflour",
+          "quantity": "½–1",
+          "gramRange": [
+            1.2,
+            2.3
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "cornflour",
+              "unit": "tsp",
+              "note": "optional, if the filling needs thickening"
+            },
+            "fr": {
+              "name": "fécule de maïs",
+              "unit": "c. à café",
+              "note": "facultative, si la garniture doit être épaissie"
+            }
+          }
+        },
+        {
+          "id": "slurry-water",
+          "grams": 5,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "cold water",
+              "note": "suggested amount for mixing with the optional cornflour"
+            },
+            "fr": {
+              "name": "eau froide",
+              "note": "quantité suggérée pour délayer la fécule facultative"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Strawberry–raspberry filling"
+        },
+        "fr": {
+          "title": "Garniture aux fraises et aux framboises"
+        }
+      }
+    },
+    {
+      "art": "whisk",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "flour",
+          "grams": 180,
+          "copy": {
+            "en": {
+              "name": "plain flour"
+            },
+            "fr": {
+              "name": "farine de blé"
+            }
+          }
+        },
+        {
+          "id": "baking-powder",
+          "grams": 8,
+          "copy": {
+            "en": {
+              "name": "baking powder"
+            },
+            "fr": {
+              "name": "levure chimique"
+            }
+          }
+        },
+        {
+          "id": "batter-sugar",
+          "grams": 90,
+          "copy": {
+            "en": {
+              "name": "caster sugar"
+            },
+            "fr": {
+              "name": "sucre en poudre fin"
+            }
+          }
+        },
+        {
+          "id": "egg",
+          "quantity": 1,
+          "grams": 50,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "large egg",
+              "note": "weighed without the shell"
+            },
+            "fr": {
+              "name": "gros œuf",
+              "note": "pesé sans coquille"
+            }
+          }
+        },
+        {
+          "id": "butter",
+          "grams": 70,
+          "copy": {
+            "en": {
+              "name": "salted butter",
+              "note": "melted"
+            },
+            "fr": {
+              "name": "beurre salé",
+              "note": "fondu"
+            }
+          }
+        },
+        {
+          "id": "milk",
+          "grams": 70,
+          "copy": {
+            "en": {
+              "name": "milk"
+            },
+            "fr": {
+              "name": "lait"
+            }
+          }
+        },
+        {
+          "id": "yoghurt",
+          "grams": 60,
+          "copy": {
+            "en": {
+              "name": "Greek yoghurt"
+            },
+            "fr": {
+              "name": "yaourt grec"
+            }
+          }
+        },
+        {
+          "id": "vanilla",
+          "quantity": 1,
+          "grams": 4.2,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "vanilla extract",
+              "unit": "tsp",
+              "note": "optional"
+            },
+            "fr": {
+              "name": "extrait de vanille",
+              "unit": "c. à café",
+              "note": "facultatif"
+            }
+          }
+        },
+        {
+          "id": "batter-strawberries",
+          "grams": 100,
+          "copy": {
+            "en": {
+              "name": "strawberries",
+              "note": "diced into about 5 mm pieces"
+            },
+            "fr": {
+              "name": "fraises",
+              "note": "coupées en dés d’environ 5 mm"
+            }
+          }
+        },
+        {
+          "id": "batter-raspberries",
+          "grams": 60,
+          "copy": {
+            "en": {
+              "name": "raspberries"
+            },
+            "fr": {
+              "name": "framboises"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Muffin batter"
+        },
+        "fr": {
+          "title": "Pâte à muffins"
+        }
+      }
+    },
+    {
+      "art": "pie",
+      "tone": "blue",
+      "ingredients": [
+        {
+          "id": "extra-berries",
+          "gramRange": [
+            20,
+            50
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "extra pieces of strawberry and raspberry",
+              "quantity": "A few",
+              "note": "estimated allowance for the tops and, optionally, the centres"
+            },
+            "fr": {
+              "name": "morceaux de fraises et de framboises",
+              "quantity": "Quelques",
+              "note": "quantité estimée pour le dessus et éventuellement le cœur des muffins"
+            }
+          }
+        },
+        {
+          "id": "topping-sugar",
+          "quantity": "1–2",
+          "gramRange": [
+            4.1,
+            8.3
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "caster or coarse sugar",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "sucre en poudre fin ou sucre à gros grains",
+              "unit": "c. à café"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Fruit and sugar topping"
+        },
+        "fr": {
+          "title": "Garniture du dessus"
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "counter": "Best within 2–3 days. Cool completely before storing in an airtight container."
+      },
+      "fr": {
+        "counter": "À déguster de préférence dans les 2 à 3 jours. Laissez refroidir complètement avant de ranger dans une boîte hermétique."
+      }
+    }
+  },
+  "source": {
+    "copy": {
+      "en": {
+        "label": "The author’s cookbook"
+      },
+      "fr": {
+        "label": "Le carnet de recettes de l’auteur"
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "filling",
+      "activity": "cooking",
+      "tone": "pink",
+      "uses": [
+        "filling-strawberries",
+        "filling-raspberries",
+        "filling-sugar",
+        "lemon-juice",
+        "glucose",
+        "cornflour",
+        "slurry-water"
+      ],
+      "duration": [
+        10,
+        12
+      ],
+      "timers": [
+        {
+          "minutes": 10,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the filling"
+            },
+            "fr": {
+              "label": "Vérifier la garniture"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-raspberry-muffins/filling.webp",
+      "copy": {
+        "en": {
+          "title": "Cook the berry filling",
+          "timing": "10–12 min, plus 1 min if thickened",
+          "heat": "Medium hob",
+          "instructions": [
+            "Put the diced strawberries, whole raspberries, filling sugar, lemon juice and glucose syrup into a small saucepan.",
+            "Cook over medium heat for 10–12 minutes until thick and glossy.",
+            "Stir regularly during cooking.",
+            "Crush a few strawberries lightly, leaving visible pieces of fruit.",
+            "If the filling is still runny, mix about 1.2–2.3 g cornflour with about 5 g cold water.",
+            "Stir the slurry into the runny filling.",
+            "Cook for one more minute if you added the slurry."
+          ],
+          "caption": "Draw a spoon through the thick, glossy filling. A few pieces of fruit should still be visible."
+        },
+        "fr": {
+          "title": "Cuire la garniture aux fruits",
+          "timing": "10 à 12 min, plus 1 min avec la fécule",
+          "heat": "Feu moyen",
+          "instructions": [
+            "Réunissez les dés de fraises, les framboises entières, le sucre de la garniture, le jus de citron et le sirop de glucose dans une petite casserole.",
+            "Faites cuire à feu moyen 10 à 12 minutes, jusqu’à obtenir une garniture épaisse et brillante.",
+            "Remuez régulièrement pendant la cuisson.",
+            "Écrasez légèrement quelques fraises en gardant des morceaux de fruits visibles.",
+            "Si la garniture reste liquide, délayez environ 1,2 à 2,3 g de fécule de maïs dans environ 5 g d’eau froide.",
+            "Incorporez la fécule délayée à la garniture trop liquide.",
+            "Prolongez la cuisson d’une minute si vous avez ajouté la fécule."
+          ],
+          "caption": "Passez une cuillère dans la garniture épaisse et brillante. Quelques morceaux de fruits doivent rester visibles."
+        }
+      }
+    },
+    {
+      "id": "cool-filling",
+      "activity": "wait",
+      "tone": "pink",
+      "uses": [
+        "filling-strawberries",
+        "filling-raspberries",
+        "filling-sugar",
+        "lemon-juice",
+        "glucose",
+        "cornflour",
+        "slurry-water"
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-raspberry-muffins/cool-filling.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the filling",
+          "wait": "Until completely cool",
+          "instructions": [
+            "Take the filling off the heat.",
+            "Let it cool completely.",
+            "Refrigerate the cooled filling while you make the batter."
+          ],
+          "caption": "Let the thick berry filling cool completely before layering it into the muffins."
+        },
+        "fr": {
+          "title": "Laisser refroidir la garniture",
+          "wait": "Jusqu’à refroidissement complet",
+          "instructions": [
+            "Retirez la garniture du feu.",
+            "Laissez-la refroidir complètement.",
+            "Réservez la garniture refroidie au réfrigérateur pendant la préparation de la pâte."
+          ],
+          "caption": "Laissez la garniture aux fruits refroidir complètement avant de la répartir dans les muffins."
+        }
+      }
+    },
+    {
+      "id": "batter",
+      "during": "cool-filling",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "baking-powder",
+        "batter-sugar",
+        "egg",
+        "butter",
+        "milk",
+        "yoghurt",
+        "vanilla",
+        "batter-strawberries",
+        "batter-raspberries"
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-raspberry-muffins/batter.webp",
+      "copy": {
+        "en": {
+          "title": "Mix the batter",
+          "tip": "Stop while the batter is slightly uneven for a tender crumb and fewer streaks of berry juice.",
+          "instructions": [
+            "Preheat the oven to 210°C conventional or 190°C fan.",
+            "Line a six-hole tin with large muffin cases.",
+            "Mix the flour, baking powder and batter sugar in a bowl.",
+            "Whisk the egg, melted salted butter, milk, Greek yoghurt and optional vanilla in another bowl.",
+            "Pour the wet mixture into the dry ingredients.",
+            "Fold gently until almost combined.",
+            "Fold in the diced strawberries and raspberries."
+          ],
+          "caption": "Fold the berries in gently and stop while the batter is still slightly uneven."
+        },
+        "fr": {
+          "title": "Préparer la pâte",
+          "tip": "Arrêtez quand la pâte est encore un peu irrégulière pour garder une mie tendre et éviter que les fruits la colorent trop.",
+          "instructions": [
+            "Préchauffez le four à 210 °C en chaleur statique ou à 190 °C en chaleur tournante.",
+            "Garnissez un moule à six muffins de grandes caissettes.",
+            "Mélangez la farine, la levure chimique et le sucre de la pâte dans un saladier.",
+            "Fouettez l’œuf, le beurre salé fondu, le lait, le yaourt grec et la vanille facultative dans un autre saladier.",
+            "Versez le mélange liquide sur les ingrédients secs.",
+            "Incorporez délicatement jusqu’à ce que la pâte soit presque homogène.",
+            "Incorporez les dés de fraises et les framboises."
+          ],
+          "caption": "Incorporez délicatement les fruits et arrêtez quand la pâte est encore un peu irrégulière."
+        }
+      }
+    },
+    {
+      "id": "fill",
+      "activity": "prep",
+      "tone": "green",
+      "uses": [
+        "filling-strawberries",
+        "filling-raspberries",
+        "filling-sugar",
+        "lemon-juice",
+        "glucose",
+        "cornflour",
+        "slurry-water",
+        "flour",
+        "baking-powder",
+        "batter-sugar",
+        "egg",
+        "butter",
+        "milk",
+        "yoghurt",
+        "vanilla",
+        "batter-strawberries",
+        "batter-raspberries",
+        "extra-berries"
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-raspberry-muffins/fill.webp",
+      "copy": {
+        "en": {
+          "title": "Fill the centres",
+          "instructions": [
+            "Spoon about 40–45 g batter into each case.",
+            "Spoon about 20 g cold filling into the centre of each portion.",
+            "Add tiny strawberry pieces and a raspberry to the filling if you like."
+          ],
+          "caption": "Spoon the chilled berry filling into the centre of each case, on top of the first layer of batter."
+        },
+        "fr": {
+          "title": "Garnir les cœurs",
+          "instructions": [
+            "Déposez environ 40 à 45 g de pâte dans chaque caissette.",
+            "Déposez environ 20 g de garniture froide au centre de chaque portion.",
+            "Ajoutez de petits morceaux de fraise et une framboise sur la garniture si vous le souhaitez."
+          ],
+          "caption": "Déposez la garniture froide au centre de chaque caissette, sur la première couche de pâte."
+        }
+      }
+    },
+    {
+      "id": "cover",
+      "activity": "prep",
+      "tone": "green",
+      "uses": [
+        "filling-strawberries",
+        "filling-raspberries",
+        "filling-sugar",
+        "lemon-juice",
+        "glucose",
+        "cornflour",
+        "slurry-water",
+        "flour",
+        "baking-powder",
+        "batter-sugar",
+        "egg",
+        "butter",
+        "milk",
+        "yoghurt",
+        "vanilla",
+        "batter-strawberries",
+        "batter-raspberries",
+        "extra-berries"
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-raspberry-muffins/cover.webp",
+      "copy": {
+        "en": {
+          "title": "Cover the filling",
+          "instructions": [
+            "Cover each berry centre completely with another 35–40 g batter, aiming for cases about 90% full."
+          ],
+          "caption": "Cover the berry centre completely with batter. Leave each case about 90% full."
+        },
+        "fr": {
+          "title": "Recouvrir la garniture",
+          "instructions": [
+            "Recouvrez entièrement chaque cœur de fruits avec environ 35 à 40 g de pâte, de façon à remplir les caissettes à environ 90 %."
+          ],
+          "caption": "Recouvrez entièrement le cœur aux fruits de pâte. Remplissez chaque caissette à environ 90 %."
+        }
+      }
+    },
+    {
+      "id": "topping",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "extra-berries",
+        "topping-sugar"
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-raspberry-muffins/topping.webp",
+      "copy": {
+        "en": {
+          "title": "Add the topping",
+          "instructions": [
+            "Place a couple of small berry pieces on each muffin.",
+            "Sprinkle each top with about 1 g sugar."
+          ],
+          "caption": "Top each muffin with a couple of small berry pieces and about 1 g of sugar."
+        },
+        "fr": {
+          "title": "Garnir le dessus",
+          "instructions": [
+            "Déposez deux petits morceaux de fruits sur chaque muffin.",
+            "Saupoudrez chaque muffin d’environ 1 g de sucre."
+          ],
+          "caption": "Déposez deux petits morceaux de fruits et environ 1 g de sucre sur chaque muffin."
+        }
+      }
+    },
+    {
+      "id": "bake",
+      "activity": "cooking",
+      "tone": "green",
+      "uses": [
+        "filling-strawberries",
+        "filling-raspberries",
+        "filling-sugar",
+        "lemon-juice",
+        "glucose",
+        "cornflour",
+        "slurry-water",
+        "flour",
+        "baking-powder",
+        "batter-sugar",
+        "egg",
+        "butter",
+        "milk",
+        "yoghurt",
+        "vanilla",
+        "batter-strawberries",
+        "batter-raspberries",
+        "extra-berries",
+        "topping-sugar"
+      ],
+      "duration": [
+        5,
+        5
+      ],
+      "timers": [
+        {
+          "minutes": 5,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Lower oven temperature"
+            },
+            "fr": {
+              "label": "Baisser la température du four"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-raspberry-muffins/bake.webp",
+      "copy": {
+        "en": {
+          "title": "Start in a hot oven",
+          "heat": "210°C conventional / 190°C fan",
+          "instructions": [
+            "Bake the muffins for 5 minutes at 210°C conventional or 190°C fan before lowering the heat."
+          ],
+          "caption": "After the first 5 minutes, lower the oven temperature without opening the door."
+        },
+        "fr": {
+          "title": "Commencer à four chaud",
+          "heat": "210 °C statique / 190 °C chaleur tournante",
+          "instructions": [
+            "Enfournez les muffins pour 5 minutes à 210 °C en chaleur statique ou à 190 °C en chaleur tournante avant de baisser la température."
+          ],
+          "caption": "Au bout des 5 premières minutes, baissez la température sans ouvrir la porte du four."
+        }
+      }
+    },
+    {
+      "id": "finish-baking",
+      "activity": "cooking",
+      "tone": "green",
+      "uses": [
+        "filling-strawberries",
+        "filling-raspberries",
+        "filling-sugar",
+        "lemon-juice",
+        "glucose",
+        "cornflour",
+        "slurry-water",
+        "flour",
+        "baking-powder",
+        "batter-sugar",
+        "egg",
+        "butter",
+        "milk",
+        "yoghurt",
+        "vanilla",
+        "batter-strawberries",
+        "batter-raspberries",
+        "extra-berries",
+        "topping-sugar"
+      ],
+      "duration": [
+        14,
+        16
+      ],
+      "timers": [
+        {
+          "minutes": 14,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the muffins"
+            },
+            "fr": {
+              "label": "Vérifier les muffins"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-raspberry-muffins/finish-baking.webp",
+      "copy": {
+        "en": {
+          "title": "Finish at the lower temperature",
+          "heat": "180°C conventional / 160°C fan",
+          "instructions": [
+            "Lower the oven to 180°C conventional or 160°C fan without opening the door.",
+            "Bake for 14–16 minutes from the change of temperature.",
+            "Check at 14 minutes for golden tops that spring back lightly.",
+            "Insert a skewer into the crumb beside the berry centre.",
+            "Remove the muffins when the skewer comes out free of wet batter."
+          ],
+          "caption": "Look for a golden dome that springs back when touched lightly."
+        },
+        "fr": {
+          "title": "Terminer à four plus doux",
+          "heat": "180 °C statique / 160 °C chaleur tournante",
+          "instructions": [
+            "Baissez le four à 180 °C en chaleur statique ou à 160 °C en chaleur tournante sans ouvrir la porte.",
+            "Poursuivez la cuisson 14 à 16 minutes à partir du changement de température.",
+            "Vérifiez au bout de 14 minutes que le dessus est doré et reprend sa forme sous le doigt.",
+            "Plantez une pique dans la mie à côté du cœur de fruits.",
+            "Sortez les muffins lorsque la pique ressort sans pâte crue."
+          ],
+          "caption": "Le dessus doit être doré et reprendre sa forme quand vous l’effleurez."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Salted butter seasons the batter, and cornflour can thicken the filling if needed."
+        },
+        "fr": {
+          "text": "Le beurre salé assaisonne la pâte. La fécule de maïs permet d’épaissir la garniture au besoin."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "The original quantities specify six large muffins. The amount of batter or filling left over depends on the size of the cases."
+        },
+        "fr": {
+          "text": "Les quantités sont prévues pour six gros muffins. La quantité de pâte ou de garniture restante dépend de la taille des caissettes."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "Cool completely before storing airtight at room temperature. Best within 2–3 days. To soften a muffin just before eating, microwave it for about 10–15 seconds."
+        },
+        "fr": {
+          "text": "Laissez refroidir complètement avant de conserver dans une boîte hermétique à température ambiante. Les muffins sont meilleurs dans les 2 à 3 jours. Pour en assouplir un juste avant de le manger, passez-le environ 10 à 15 secondes au micro-ondes."
+        }
+      }
+    }
+  ],
+  "copy": {
+    "en": {
+      "cookingTime": "29–33 min, plus 1 min if thickening the filling",
+      "restTime": "Until the berry filling cools completely",
+      "title": "Strawberry & Raspberry Bakery Muffins",
+      "description": "Large buttery muffins with fresh berries, homemade berry filling and a crisp sugar top.",
+      "yield": "6 large muffins",
+      "setup": [
+        "Line a six-hole tin with large muffin cases.",
+        "Preheat to 210°C conventional or 190°C fan."
+      ],
+      "allergens": [
+        "Wheat",
+        "Egg",
+        "Milk"
+      ]
+    },
+    "fr": {
+      "cookingTime": "29 à 33 min, plus 1 min si la garniture doit épaissir",
+      "restTime": "Jusqu’à refroidissement complet de la garniture",
+      "title": "Gros muffins aux fraises et aux framboises",
+      "description": "De gros muffins au beurre, garnis de fruits frais et d’une compotée maison, avec un dessus croustillant au sucre.",
+      "yield": "6 gros muffins",
+      "setup": [
+        "Garnissez un moule à six muffins de grandes caissettes.",
+        "Préchauffez le four à 210 °C en chaleur statique ou à 190 °C en chaleur tournante."
+      ],
+      "allergens": [
+        "Blé",
+        "Œuf",
+        "Lait"
+      ]
+    }
+  }
+}
