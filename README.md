@@ -4,13 +4,13 @@ The Little Cookbook is an illustrated recipe collection drawn from the author’
 
 ## Run locally
 
-With Python 3 and Node.js installed, run:
+With Python 3 and Node.js 22 or newer installed, run:
 
 ```sh
 npm run dev
 ```
 
-Open [the cookbook](http://127.0.0.1:8000) in a browser. The page uses native JavaScript modules. You can also serve `public/` with any static HTTP server. The local preview serves the same files that GitHub Pages publishes.
+Open [the cookbook](http://127.0.0.1:8000) in a current browser with JSON module support. The local preview serves the same files that GitHub Pages publishes. You can also serve `public/` with any static HTTP server that serves JSON as `application/json`.
 
 Run `npm run check` to check the JavaScript, recipe structure, catalogue registration, translations, artwork, ingredient weights and nutrition calculations.
 
@@ -20,11 +20,9 @@ In the repository’s **Settings → Pages**, set **Build and deployment → Sou
 
 ## Edit or add a recipe
 
-- The screen and binder print layouts use the same recipe data in both languages. Follow the [recipe authoring guide](docs/recipe-authoring.md) for the timeline, ingredient chart and illustrated method.
-- Edit `public/recipes/desserts/lemon-meringue-pie.js` for ingredients, steps, safety notes and the estimated finished weight. Ingredient weights in grams drive both the checklist and the nutrition calculation.
-- Add data files under category directories such as `public/recipes/breads/` and register them in `public/recipes/index.js`. Registered recipes appear on the home page grouped by category. Each recipe has a direct link at `/recipe.html?recipe=<id>` relative to the site’s root. Add `&lang=fr` to share a French recipe link.
-- Give each recipe a stable `id`, a `title`, and a `category`. Put ingredient checklists in `groups` and numbered instructions in `steps`. A recipe can also include `times`, `servings` or `yield`, `notes`, `related` recipe IDs and a public `source`. Give every ingredient a gram weight. Use `grams` for a single weight, `gramRange: [min, max]` for a range, or `gramVariants` for ordered batch options. Keep `quantity` and `unit` when the source measure adds useful context. Set `lang: "fr"` for French recipe copy.
-- Add the second language in `public/translations/`. Key the copy by recipe ID, then by ingredient and step IDs. Keep group titles, timing labels and timer labels in the same order as the source. Ingredient weights, serving numbers and timer durations come from the source recipe.
+- Each recipe is one JSON file with shared cooking data and `copy.en` and `copy.fr` for the text on each record. The screen and binder print layouts use the same selected language and batch.
+- Open [the crêpes recipe data](public/recipes/breakfast-brunch/crepes.json) for a complete example. Use the [recipe schema](public/recipes/recipe.schema.json) and [authoring guide](docs/recipe-authoring.md) when editing or adding recipes.
+- Save new recipes in their category directory under `public/recipes/` and register them in `public/recipes/index.js`. A registered recipe appears on the home page and at `/recipe.html?recipe=<id>` relative to the site’s root. Add `&lang=fr` to link to the French version.
 - Keep ingredient reference values and their sources in `public/recipes/nutrition-data.js`. Values describe 100 g of edible ingredient. The renderer sums the nutrient contribution of each ingredient and divides by the finished batch weight to display values per 100 g of finished food.
 - Use 640 × 480 WebP artwork for the hero, catalogue and method. Give each numbered step one illustration and caption it in both languages. The design system documents file locations and naming.
 - The [design system](docs/design-system.md) describes the shared typography, colours, cards and controls.

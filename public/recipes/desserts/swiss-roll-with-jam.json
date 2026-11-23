@@ -1,0 +1,897 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "swiss-roll-with-jam",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/swiss-roll-with-jam.webp",
+  "servings": 4,
+  "times": [
+    {
+      "icon": "oven",
+      "copy": {
+        "en": {
+          "label": "Sponge bake",
+          "value": "10–12 min"
+        },
+        "fr": {
+          "label": "Cuisson de la génoise",
+          "value": "10 à 12 min"
+        }
+      }
+    },
+    {
+      "icon": "snow",
+      "copy": {
+        "en": {
+          "label": "Chill to set",
+          "value": "20–30 min"
+        },
+        "fr": {
+          "label": "Repos au frais",
+          "value": "20 à 30 min"
+        }
+      }
+    },
+    {
+      "icon": "clock",
+      "highlight": "total",
+      "copy": {
+        "en": {
+          "label": "Total",
+          "value": "About 1 hr 50 min"
+        },
+        "fr": {
+          "label": "Durée totale",
+          "value": "Environ 1 h 50 min"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "art": "whisk",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "eggs",
+          "quantity": 2,
+          "grams": 100,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "large eggs",
+              "note": "room temperature, weighed without shells"
+            },
+            "fr": {
+              "name": "gros œufs",
+              "note": "à température ambiante, pesés sans coquille"
+            }
+          }
+        },
+        {
+          "id": "sponge-sugar",
+          "grams": 60,
+          "copy": {
+            "en": {
+              "name": "granulated sugar"
+            },
+            "fr": {
+              "name": "sucre en poudre"
+            }
+          }
+        },
+        {
+          "id": "flour",
+          "grams": 60,
+          "copy": {
+            "en": {
+              "name": "plain flour",
+              "note": "sifted twice"
+            },
+            "fr": {
+              "name": "farine de blé",
+              "note": "tamisée deux fois"
+            }
+          }
+        },
+        {
+          "id": "sponge-butter",
+          "grams": 20,
+          "copy": {
+            "en": {
+              "name": "salted butter",
+              "note": "melted and cooled"
+            },
+            "fr": {
+              "name": "beurre salé",
+              "note": "fondu et refroidi"
+            }
+          }
+        },
+        {
+          "id": "sponge-vanilla",
+          "quantity": "½",
+          "grams": 2.1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "vanilla extract",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "extrait de vanille",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "icing-sugar",
+          "grams": 5,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "icing sugar",
+              "note": "estimated amount for dusting the tea towel and, optionally, the finished roll"
+            },
+            "fr": {
+              "name": "sucre glace",
+              "note": "quantité estimée pour saupoudrer le torchon et éventuellement le roulé terminé"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Génoise sponge"
+        },
+        "fr": {
+          "title": "Génoise"
+        }
+      }
+    },
+    {
+      "art": "saucepan",
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "raspberries",
+          "grams": 75,
+          "copy": {
+            "en": {
+              "name": "raspberries",
+              "note": "fresh or frozen"
+            },
+            "fr": {
+              "name": "framboises",
+              "note": "fraîches ou surgelées"
+            }
+          }
+        },
+        {
+          "id": "strawberries",
+          "grams": 75,
+          "copy": {
+            "en": {
+              "name": "strawberries",
+              "note": "fresh or frozen, hulled and chopped"
+            },
+            "fr": {
+              "name": "fraises",
+              "note": "fraîches ou surgelées, équeutées et coupées en morceaux"
+            }
+          }
+        },
+        {
+          "id": "filling-sugar",
+          "grams": 40,
+          "copy": {
+            "en": {
+              "name": "granulated sugar"
+            },
+            "fr": {
+              "name": "sucre en poudre"
+            }
+          }
+        },
+        {
+          "id": "cornflour",
+          "quantity": 1,
+          "grams": 2.3,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "cornflour",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "fécule de maïs",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "lemon-juice",
+          "quantity": 2,
+          "grams": 10,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "lemon juice",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "jus de citron",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "water",
+          "quantity": 2,
+          "grams": 10,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "water",
+              "unit": "tsp",
+              "note": "5 g for the fruit and 5 g for the cornflour slurry"
+            },
+            "fr": {
+              "name": "eau",
+              "unit": "c. à café",
+              "note": "5 g pour cuire les fruits et 5 g pour délayer la fécule"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Berry filling"
+        },
+        "fr": {
+          "title": "Garniture aux fruits rouges"
+        }
+      }
+    },
+    {
+      "art": "whisk",
+      "tone": "blue",
+      "ingredients": [
+        {
+          "id": "egg-whites",
+          "grams": 30,
+          "copy": {
+            "en": {
+              "name": "egg whites",
+              "note": "about one large egg white"
+            },
+            "fr": {
+              "name": "blancs d’œufs",
+              "note": "environ le blanc d’un gros œuf"
+            }
+          }
+        },
+        {
+          "id": "buttercream-sugar",
+          "grams": 50,
+          "copy": {
+            "en": {
+              "name": "granulated sugar"
+            },
+            "fr": {
+              "name": "sucre en poudre"
+            }
+          }
+        },
+        {
+          "id": "buttercream-butter",
+          "grams": 75,
+          "copy": {
+            "en": {
+              "name": "salted butter",
+              "note": "softened and cubed"
+            },
+            "fr": {
+              "name": "beurre salé",
+              "note": "ramolli et coupé en dés"
+            }
+          }
+        },
+        {
+          "id": "buttercream-vanilla",
+          "quantity": "¼",
+          "grams": 1.1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "vanilla extract",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "extrait de vanille",
+              "unit": "c. à café"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Swiss meringue buttercream"
+        },
+        "fr": {
+          "title": "Crème au beurre à la meringue suisse"
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "fridge": "Keep chilled until serving. Storage time not tested."
+      },
+      "fr": {
+        "fridge": "Gardez le roulé au frais jusqu’au service. Durée de conservation non testée."
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "fruit",
+      "tone": "pink",
+      "activity": "cooking",
+      "uses": [
+        "raspberries",
+        "strawberries",
+        "filling-sugar",
+        "cornflour",
+        "lemon-juice",
+        "water"
+      ],
+      "duration": [
+        15,
+        15
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/fruit.webp",
+      "copy": {
+        "en": {
+          "title": "Cook the berry filling",
+          "timing": "15 min active",
+          "heat": "Medium heat",
+          "tip": "Adjust the sugar to taste if the berries are very ripe.",
+          "instructions": [
+            "Combine the berries, sugar and 5 g of the water in a small saucepan.",
+            "Cook over medium heat for 5–7 minutes, until the berries soften and release their juices.",
+            "Stir the cornflour into the remaining 5 g of water.",
+            "Pour the slurry into the pan.",
+            "Stir until the filling thickens.",
+            "Stir in the lemon juice."
+          ],
+          "caption": "Stir the cornflour slurry into the softened fruit until the filling thickens."
+        },
+        "fr": {
+          "title": "Cuire la garniture aux fruits rouges",
+          "timing": "15 min de préparation active",
+          "heat": "Feu moyen",
+          "tip": "Ajustez le sucre à votre goût si les fruits sont très mûrs.",
+          "instructions": [
+            "Réunissez les fruits rouges, le sucre et 5 g d’eau dans une petite casserole.",
+            "Faites cuire à feu moyen pendant 5 à 7 minutes, jusqu’à ce que les fruits ramollissent et rendent leur jus.",
+            "Délayez la fécule dans les 5 g d’eau restants.",
+            "Versez la fécule délayée dans la casserole.",
+            "Remuez jusqu’à épaississement.",
+            "Incorporez le jus de citron."
+          ],
+          "caption": "Incorporez la fécule de maïs délayée aux fruits attendris et remuez jusqu’à épaississement."
+        }
+      }
+    },
+    {
+      "id": "chill-fruit",
+      "tone": "pink",
+      "activity": "chill",
+      "uses": [
+        "raspberries",
+        "strawberries",
+        "filling-sugar",
+        "cornflour",
+        "lemon-juice",
+        "water"
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/chill-fruit.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the filling",
+          "wait": "Until completely cool",
+          "instructions": [
+            "Transfer the filling to a shallow dish.",
+            "Refrigerate until completely cool."
+          ],
+          "caption": "A shallow dish lets the berry filling cool before spreading."
+        },
+        "fr": {
+          "title": "Refroidir la garniture",
+          "wait": "Jusqu’à refroidissement complet",
+          "instructions": [
+            "Transvasez la garniture dans un plat peu profond.",
+            "Réfrigérez jusqu’à refroidissement complet."
+          ],
+          "caption": "Laissez refroidir la garniture dans un plat peu profond avant de l’étaler."
+        }
+      }
+    },
+    {
+      "id": "warm-eggs",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "eggs",
+        "sponge-sugar"
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/warm-eggs.webp",
+      "copy": {
+        "en": {
+          "title": "Warm the eggs for the sponge",
+          "heat": "Simmering water",
+          "instructions": [
+            "Preheat the oven to 180°C (350°F).",
+            "Line a 25 × 18 cm tray with baking parchment.",
+            "Whisk the eggs and sugar in a heatproof bowl over simmering water until warm to the touch."
+          ],
+          "caption": "Whisk the whole eggs with the sugar over simmering water."
+        },
+        "fr": {
+          "title": "Tiédir les œufs de la génoise",
+          "heat": "Bain-marie frémissant",
+          "instructions": [
+            "Préchauffez le four à 180 °C (350 °F).",
+            "Chemisez une plaque de 25 × 18 cm de papier cuisson.",
+            "Fouettez les œufs et le sucre dans un bol résistant à la chaleur au-dessus d’une eau frémissante jusqu’à ce que le mélange soit tiède au toucher."
+          ],
+          "caption": "Fouettez les œufs entiers avec le sucre au bain-marie."
+        }
+      }
+    },
+    {
+      "id": "sponge",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "sponge-butter",
+        "sponge-vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Whip and fold the batter",
+          "heat": "Off the heat",
+          "timing": "5–6 min whisking",
+          "instructions": [
+            "Take the bowl off the heat.",
+            "Beat on high for 5–6 minutes, until the mixture triples in volume and falls from the whisk in ribbons.",
+            "Fold in the flour in two batches.",
+            "Fold in the melted butter and vanilla."
+          ],
+          "caption": "Lift the whisk to check that the beaten eggs fall in thick ribbons."
+        },
+        "fr": {
+          "title": "Monter puis mélanger la pâte",
+          "heat": "Hors du feu",
+          "timing": "5 à 6 min au fouet",
+          "instructions": [
+            "Retirez le bol du bain-marie.",
+            "Fouettez à grande vitesse pendant 5 à 6 minutes, jusqu’à ce que le mélange triple de volume et retombe du fouet en ruban.",
+            "Incorporez délicatement la farine en deux fois.",
+            "Incorporez délicatement le beurre fondu et la vanille."
+          ],
+          "caption": "Soulevez le fouet pour vérifier que les œufs battus retombent en ruban épais."
+        }
+      }
+    },
+    {
+      "id": "bake-sponge",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "sponge-butter",
+        "sponge-vanilla"
+      ],
+      "duration": [
+        10,
+        12
+      ],
+      "timers": [
+        {
+          "minutes": 10,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the sponge"
+            },
+            "fr": {
+              "label": "Vérifier la cuisson de la génoise"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/bake-sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Bake the sheet of sponge",
+          "heat": "Oven at 180°C (350°F)",
+          "instructions": [
+            "Spread the batter evenly over the lined tray.",
+            "Bake at 180°C (350°F) for 10–12 minutes, until golden and springy."
+          ],
+          "caption": "Bake the génoise in an even, thin sheet."
+        },
+        "fr": {
+          "title": "Cuire la génoise sur plaque",
+          "heat": "Four à 180 °C (350 °F)",
+          "instructions": [
+            "Étalez uniformément la pâte sur la plaque chemisée.",
+            "Faites cuire à 180 °C (350 °F) pendant 10 à 12 minutes, jusqu’à ce que la génoise soit dorée et souple au toucher."
+          ],
+          "caption": "Faites cuire la génoise en couche fine et régulière."
+        }
+      }
+    },
+    {
+      "id": "roll-sponge",
+      "tone": "yellow",
+      "activity": "wait",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "sponge-butter",
+        "sponge-vanilla",
+        "icing-sugar"
+      ],
+      "duration": [
+        30,
+        30
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/roll-sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the rolled sponge",
+          "timing": "About 30 min cooling",
+          "wait": "Until completely cool",
+          "instructions": [
+            "Dust a clean tea towel with icing sugar.",
+            "Turn the hot sponge out onto the towel.",
+            "Peel off the parchment.",
+            "Roll the sponge gently from a short side with the towel inside.",
+            "Let the rolled sponge cool completely, about 30 minutes."
+          ],
+          "caption": "Roll the warm sponge from a short side with the clean, dusted towel inside."
+        },
+        "fr": {
+          "title": "Laisser refroidir la génoise roulée",
+          "timing": "Environ 30 min de refroidissement",
+          "wait": "Jusqu’à refroidissement complet",
+          "instructions": [
+            "Saupoudrez un torchon propre de sucre glace.",
+            "Retournez la génoise chaude sur le torchon.",
+            "Décollez le papier cuisson.",
+            "Roulez délicatement la génoise à partir d’un petit côté avec le torchon à l’intérieur.",
+            "Laissez la génoise roulée refroidir complètement, environ 30 minutes."
+          ],
+          "caption": "Roulez la génoise encore chaude en partant d’un petit côté, avec le torchon propre et saupoudré de sucre glace à l’intérieur."
+        }
+      }
+    },
+    {
+      "id": "heat-meringue",
+      "tone": "blue",
+      "activity": "cooking",
+      "uses": [
+        "egg-whites",
+        "buttercream-sugar"
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/heat-meringue.webp",
+      "copy": {
+        "en": {
+          "title": "Heat the meringue",
+          "heat": "Simmering water",
+          "instructions": [
+            "Set a clean heatproof bowl above a pan of simmering water.",
+            "Whisk the egg whites and sugar over the pan until the sugar dissolves.",
+            "Check with a food thermometer that the mixture reaches 72°C (162°F) throughout."
+          ],
+          "caption": "Check the egg whites and sugar reach 72°C (162°F) throughout over simmering water."
+        },
+        "fr": {
+          "title": "Chauffer la meringue",
+          "heat": "Bain-marie frémissant",
+          "instructions": [
+            "Posez un bol propre résistant à la chaleur au-dessus d’une casserole d’eau frémissante.",
+            "Fouettez les blancs d’œufs et le sucre au bain-marie jusqu’à dissolution du sucre.",
+            "Vérifiez au thermomètre de cuisine que le mélange atteint 72 °C (162 °F) partout."
+          ],
+          "caption": "Vérifiez que les blancs et le sucre atteignent 72 °C (162 °F) partout au bain-marie."
+        }
+      }
+    },
+    {
+      "id": "buttercream",
+      "tone": "blue",
+      "activity": "prep",
+      "uses": [
+        "egg-whites",
+        "buttercream-sugar",
+        "buttercream-butter",
+        "buttercream-vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/buttercream.webp",
+      "copy": {
+        "en": {
+          "title": "Whip the buttercream",
+          "heat": "Off the heat",
+          "timing": "5–7 min whisking off the heat",
+          "tip": "Allow about 20 minutes in all for heating the meringue and finishing the buttercream.",
+          "instructions": [
+            "Take the bowl off the heat.",
+            "Whisk on high for 5–7 minutes, until the meringue holds stiff peaks and the bowl feels cool.",
+            "Beat in the softened butter one piece at a time.",
+            "Add the vanilla.",
+            "Whip until smooth."
+          ],
+          "caption": "Once the whipped meringue and bowl have cooled, beat in the butter one piece at a time."
+        },
+        "fr": {
+          "title": "Monter la crème au beurre",
+          "heat": "Hors du feu",
+          "timing": "5 à 7 min au fouet hors du feu",
+          "tip": "Comptez environ 20 minutes en tout pour chauffer la meringue et terminer la crème au beurre.",
+          "instructions": [
+            "Retirez le bol du bain-marie.",
+            "Fouettez à grande vitesse pendant 5 à 7 minutes, jusqu’à ce que la meringue forme des pics fermes et que le bol soit froid au toucher.",
+            "Incorporez le beurre ramolli morceau par morceau en fouettant.",
+            "Ajoutez la vanille.",
+            "Fouettez jusqu’à obtenir une crème lisse."
+          ],
+          "caption": "Lorsque la meringue montée et le bol ont refroidi, ajoutez le beurre morceau par morceau en fouettant."
+        }
+      }
+    },
+    {
+      "id": "assemble",
+      "tone": "green",
+      "activity": "prep",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "sponge-butter",
+        "sponge-vanilla",
+        "raspberries",
+        "strawberries",
+        "filling-sugar",
+        "cornflour",
+        "lemon-juice",
+        "water",
+        "egg-whites",
+        "buttercream-sugar",
+        "buttercream-butter",
+        "buttercream-vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/assemble.webp",
+      "copy": {
+        "en": {
+          "title": "Fill the sponge",
+          "tip": "Allow 15 minutes to fill and roll the sponge before chilling.",
+          "instructions": [
+            "Unroll the cooled sponge.",
+            "Spread a 2–3 mm layer of buttercream over it, leaving a 1 cm border.",
+            "Spread the cold berry filling gently over the buttercream."
+          ],
+          "caption": "Spread cooled berry filling over the buttercream, leaving the narrow border bare."
+        },
+        "fr": {
+          "title": "Garnir la génoise",
+          "tip": "Prévoyez 15 minutes pour garnir et rouler la génoise avant la mise au frais.",
+          "instructions": [
+            "Déroulez la génoise froide.",
+            "Étalez une couche de crème au beurre de 2 à 3 mm en laissant une bordure de 1 cm.",
+            "Répartissez délicatement la garniture froide sur la crème au beurre."
+          ],
+          "caption": "Étalez la garniture refroidie sur la crème au beurre en laissant une fine bordure libre."
+        }
+      }
+    },
+    {
+      "id": "roll",
+      "tone": "green",
+      "activity": "prep",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "sponge-butter",
+        "sponge-vanilla",
+        "raspberries",
+        "strawberries",
+        "filling-sugar",
+        "cornflour",
+        "lemon-juice",
+        "water",
+        "egg-whites",
+        "buttercream-sugar",
+        "buttercream-butter",
+        "buttercream-vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/roll.webp",
+      "copy": {
+        "en": {
+          "title": "Roll up the cake",
+          "instructions": [
+            "Roll the filled sponge up snugly from a short side.",
+            "Wrap the roll to hold its shape."
+          ],
+          "caption": "Roll the filled sponge snugly from a short side before wrapping and chilling."
+        },
+        "fr": {
+          "title": "Rouler le gâteau",
+          "instructions": [
+            "Roulez la génoise garnie en partant d’un petit côté et en serrant bien.",
+            "Emballez le roulé pour qu’il garde sa forme."
+          ],
+          "caption": "Roulez la génoise garnie en serrant bien, en partant d’un petit côté, puis emballez-la et réfrigérez-la."
+        }
+      }
+    },
+    {
+      "id": "chill-roll",
+      "tone": "green",
+      "activity": "chill",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "sponge-butter",
+        "sponge-vanilla",
+        "raspberries",
+        "strawberries",
+        "filling-sugar",
+        "cornflour",
+        "lemon-juice",
+        "water",
+        "egg-whites",
+        "buttercream-sugar",
+        "buttercream-butter",
+        "buttercream-vanilla"
+      ],
+      "duration": [
+        20,
+        30
+      ],
+      "timers": [
+        {
+          "minutes": 20,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the chilled roll"
+            },
+            "fr": {
+              "label": "Vérifier la tenue du roulé"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/chill-roll.webp",
+      "copy": {
+        "en": {
+          "title": "Chill the wrapped roll",
+          "wait": "20–30 min in the fridge",
+          "instructions": [
+            "Refrigerate the wrapped roll for 20–30 minutes to set."
+          ],
+          "caption": "Chill the filled roll in its wrapping."
+        },
+        "fr": {
+          "title": "Réfrigérer le roulé emballé",
+          "wait": "20 à 30 min au réfrigérateur",
+          "instructions": [
+            "Réfrigérez le roulé emballé pendant 20 à 30 minutes pour qu’il se tienne."
+          ],
+          "caption": "Réfrigérez le roulé garni dans son emballage."
+        }
+      }
+    },
+    {
+      "id": "finish",
+      "tone": "green",
+      "activity": "prep",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "sponge-butter",
+        "sponge-vanilla",
+        "raspberries",
+        "strawberries",
+        "filling-sugar",
+        "cornflour",
+        "lemon-juice",
+        "water",
+        "egg-whites",
+        "buttercream-sugar",
+        "buttercream-butter",
+        "buttercream-vanilla",
+        "icing-sugar"
+      ],
+      "illustration": "assets/illustrations/steps/swiss-roll-with-jam/finish.webp",
+      "copy": {
+        "en": {
+          "title": "Finish and serve",
+          "timing": "Up to 10 min",
+          "tip": "Before slicing, coat the roll with the remaining buttercream or dust it with icing sugar if you like.",
+          "instructions": [
+            "Slice with a sharp knife.",
+            "Wipe the blade between cuts.",
+            "Serve straight away or keep chilled until serving."
+          ],
+          "caption": "Use a sharp knife and wipe the blade between cuts to keep the spiral neat."
+        },
+        "fr": {
+          "title": "Découper et servir",
+          "timing": "Jusqu’à 10 min",
+          "tip": "Avant la découpe, recouvrez le roulé du reste de crème au beurre ou saupoudrez-le de sucre glace si vous le souhaitez.",
+          "instructions": [
+            "Découpez le roulé avec un couteau bien aiguisé.",
+            "Essuyez la lame entre chaque part.",
+            "Servez aussitôt ou gardez le roulé au frais jusqu’au service."
+          ],
+          "caption": "Utilisez un couteau bien aiguisé et essuyez la lame entre les coupes pour garder la spirale nette."
+        }
+      }
+    }
+  ],
+  "source": {
+    "url": "https://www.kingarthurbaking.com/recipes/swiss-meringue-buttercream-recipe",
+    "copy": {
+      "en": {
+        "label": "Swiss meringue buttercream technique from King Arthur Baking"
+      },
+      "fr": {
+        "label": "Technique de la crème au beurre à la meringue suisse de King Arthur Baking"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "restTime": "Cool the fruit and sponge. Chill the roll for 20–30 min.",
+      "title": "Swiss Roll with Raspberry–Strawberry Filling",
+      "description": "A rolled génoise with homemade berry filling and silky Swiss meringue buttercream.",
+      "setup": [
+        "Line a 25 × 18 cm tray with baking parchment. Heat the oven to 180°C (350°F) for the sponge."
+      ],
+      "allergens": [
+        "Eggs",
+        "Wheat (gluten)",
+        "Milk"
+      ]
+    },
+    "fr": {
+      "restTime": "Laisser refroidir la garniture et le biscuit, puis réfrigérer le roulé 20 à 30 min",
+      "title": "Gâteau roulé aux framboises et aux fraises",
+      "description": "Une génoise roulée, garnie d’une compotée de fruits rouges maison et d’une crème au beurre à la meringue suisse.",
+      "setup": [
+        "Chemisez une plaque de 25 × 18 cm de papier cuisson. Préchauffez le four à 180 °C (350 °F) pour la génoise."
+      ],
+      "allergens": [
+        "Œufs",
+        "Blé (gluten)",
+        "Lait"
+      ]
+    }
+  }
+}

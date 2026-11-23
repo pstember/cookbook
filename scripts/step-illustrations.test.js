@@ -3,8 +3,6 @@ import { createHash } from "node:crypto";
 import { readdirSync, readFileSync } from "node:fs";
 import test from "node:test";
 import { recipes } from "../public/recipes/index.js";
-import { stepIllustrations } from "../public/step-illustrations/index.js";
-import { stepImagePath } from "../public/src/step-illustration.js";
 
 const publicDirectory = new URL("../public/", import.meta.url);
 
@@ -46,22 +44,15 @@ test("every recipe hero and thumbnail is a 640 × 480 WebP", () => {
 });
 
 test("every numbered step has one distinct 640 × 480 WebP and bilingual captions", () => {
-  const illustratedRecipes = recipes.filter(recipe => recipe.steps?.length);
   const stepAssetDirectory = new URL("assets/illustrations/steps/", publicDirectory);
   const artworkHashes = new Map();
   const files = [];
-  assert.deepEqual(Object.keys(stepIllustrations).sort(), illustratedRecipes.map(recipe => recipe.id).sort());
 
-  for (const recipe of illustratedRecipes) {
-    const scenes = stepIllustrations[recipe.id];
-    assert.deepEqual(Object.keys(scenes).sort(), recipe.steps.map(step => step.id).sort(), recipe.id);
-    for (const [step, frames] of Object.entries(scenes)) {
-      const label = `${recipe.id}/${step}`;
-      assert.ok(Array.isArray(frames), label);
-      assert.equal(frames.length, 1, label);
-      const [{ en, fr }] = frames;
-      const assetPath = stepImagePath(recipe.id, step, 0, 1);
-      assert.ok(en?.trim() && fr?.trim(), `${assetPath} needs two captions`);
+  for (const recipe of recipes) {
+    for (const step of recipe.steps) {
+      const assetPath = step.illustration;
+      assert.equal(assetPath, `assets/illustrations/steps/${recipe.id}/${step.id}.webp`);
+      assert.ok(step.copy.en.caption?.trim() && step.copy.fr.caption?.trim(), `${assetPath} needs two captions`);
       const hash = createHash("sha256").update(readRecipeImage(assetPath)).digest("hex");
       assert.ok(!artworkHashes.has(hash), `${assetPath} repeats ${artworkHashes.get(hash)}`);
       artworkHashes.set(hash, assetPath);

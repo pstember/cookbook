@@ -1,0 +1,981 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "chicken-nuggets",
+  "category": "Main dishes",
+  "thumbnail": "assets/illustrations/recipes/chicken-nuggets.webp",
+  "servings": 3,
+  "groups": [
+    {
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "chicken",
+          "grams": 650,
+          "copy": {
+            "en": {
+              "name": "boneless, skinless chicken thigh"
+            },
+            "fr": {
+              "name": "hauts de cuisse de poulet désossés, sans peau"
+            }
+          }
+        },
+        {
+          "id": "egg",
+          "grams": 60,
+          "weightEstimate": true,
+          "quantity": 1,
+          "copy": {
+            "en": {
+              "name": "large egg",
+              "note": "weighed without the shell"
+            },
+            "fr": {
+              "name": "gros œuf",
+              "note": "pesé sans la coquille"
+            }
+          }
+        },
+        {
+          "id": "milk",
+          "grams": 25,
+          "copy": {
+            "en": {
+              "name": "milk or cream",
+              "note": "about 25 ml"
+            },
+            "fr": {
+              "name": "lait ou crème",
+              "note": "environ 25 ml"
+            }
+          }
+        },
+        {
+          "id": "breadcrumbs",
+          "grams": 65,
+          "copy": {
+            "en": {
+              "name": "breadcrumbs"
+            },
+            "fr": {
+              "name": "chapelure"
+            }
+          }
+        },
+        {
+          "id": "flour",
+          "grams": 35,
+          "copy": {
+            "en": {
+              "name": "plain flour"
+            },
+            "fr": {
+              "name": "farine de blé ordinaire"
+            }
+          }
+        },
+        {
+          "id": "carrot",
+          "grams": 65,
+          "copy": {
+            "en": {
+              "name": "carrot",
+              "note": "very finely grated"
+            },
+            "fr": {
+              "name": "carotte",
+              "note": "râpée très finement"
+            }
+          }
+        },
+        {
+          "id": "onion",
+          "grams": 40,
+          "copy": {
+            "en": {
+              "name": "onion",
+              "note": "very finely grated"
+            },
+            "fr": {
+              "name": "oignon",
+              "note": "râpé très finement"
+            }
+          }
+        },
+        {
+          "id": "nugget-salt",
+          "grams": 7,
+          "weightEstimate": true,
+          "quantity": "1¼",
+          "copy": {
+            "en": {
+              "name": "salt",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "sel",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "paprika",
+          "grams": 1,
+          "weightEstimate": true,
+          "quantity": "½",
+          "copy": {
+            "en": {
+              "name": "sweet paprika",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "paprika doux",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "thyme",
+          "grams": 0.3,
+          "weightEstimate": true,
+          "quantity": "¼",
+          "copy": {
+            "en": {
+              "name": "dried thyme",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "thym séché",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "nugget-oil",
+          "grams": 15,
+          "copy": {
+            "en": {
+              "name": "neutral oil",
+              "note": "sunflower or rapeseed"
+            },
+            "fr": {
+              "name": "huile neutre",
+              "note": "tournesol ou colza"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Chicken nuggets"
+        },
+        "fr": {
+          "title": "Nuggets de poulet"
+        }
+      }
+    },
+    {
+      "tone": "blue",
+      "ingredients": [
+        {
+          "id": "potatoes",
+          "grams": 900,
+          "copy": {
+            "en": {
+              "name": "potatoes",
+              "note": "peeled"
+            },
+            "fr": {
+              "name": "pommes de terre",
+              "note": "épluchées"
+            }
+          }
+        },
+        {
+          "id": "butter",
+          "grams": 20,
+          "copy": {
+            "en": {
+              "name": "butter"
+            },
+            "fr": {
+              "name": "beurre"
+            }
+          }
+        },
+        {
+          "id": "potato-oil",
+          "grams": 15,
+          "copy": {
+            "en": {
+              "name": "olive or rapeseed oil"
+            },
+            "fr": {
+              "name": "huile d’olive ou de colza"
+            }
+          }
+        },
+        {
+          "id": "potato-salt",
+          "grams": 4,
+          "weightEstimate": true,
+          "quantity": "¾",
+          "copy": {
+            "en": {
+              "name": "salt",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "sel",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "parsley",
+          "gramRange": [
+            8,
+            10
+          ],
+          "weightEstimate": true,
+          "quantity": 2,
+          "copy": {
+            "en": {
+              "name": "fresh parsley",
+              "unit": "tbsp",
+              "note": "finely chopped"
+            },
+            "fr": {
+              "name": "persil frais",
+              "unit": "c. à soupe",
+              "note": "finement haché"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Parsley potatoes"
+        },
+        "fr": {
+          "title": "Pommes de terre persillées"
+        }
+      }
+    },
+    {
+      "tone": "pink",
+      "art": "saucepan",
+      "ingredients": [
+        {
+          "id": "apples",
+          "grams": 750,
+          "weightEstimate": true,
+          "quantity": 5,
+          "copy": {
+            "en": {
+              "name": "medium apples",
+              "note": "weighed before peeling"
+            },
+            "fr": {
+              "name": "pommes de taille moyenne",
+              "note": "pesées avant épluchage"
+            }
+          }
+        },
+        {
+          "id": "water",
+          "grams": 70,
+          "weightEstimate": true,
+          "quantity": 70,
+          "unit": "ml",
+          "copy": {
+            "en": {
+              "name": "water"
+            },
+            "fr": {
+              "name": "eau"
+            }
+          }
+        },
+        {
+          "id": "cinnamon",
+          "gramRange": [
+            0,
+            0.3
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "cinnamon",
+              "quantity": "A tiny pinch",
+              "note": "optional, a tiny pinch if using"
+            },
+            "fr": {
+              "name": "cannelle",
+              "quantity": "Une toute petite pincée",
+              "note": "facultative, une toute petite pincée si utilisée"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Apple compote"
+        },
+        "fr": {
+          "title": "Compote de pommes"
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "counter": "Refrigerate within 2 hours of cooking.",
+        "fridge": "48 hours at 0–5°C.",
+        "freezer": "1–3 months for the cooked nuggets at −18°C or colder for best quality."
+      },
+      "fr": {
+        "counter": "Réfrigérez dans les 2 heures suivant la cuisson.",
+        "fridge": "48 heures entre 0 et 5 °C.",
+        "freezer": "1 à 3 mois pour les nuggets cuits à −18 °C ou moins, pour une qualité optimale."
+      }
+    }
+  },
+  "source": {
+    "copy": {
+      "en": {
+        "label": "The author’s cookbook notes"
+      },
+      "fr": {
+        "label": "Carnet de recettes de l’auteur"
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "compote",
+      "activity": "cooking",
+      "tone": "pink",
+      "uses": [
+        "apples",
+        "water",
+        "cinnamon"
+      ],
+      "duration": [
+        12,
+        15
+      ],
+      "timers": [
+        {
+          "minutes": 12,
+          "afterInstruction": 6,
+          "copy": {
+            "en": {
+              "label": "Simmer the compote"
+            },
+            "fr": {
+              "label": "Faire mijoter la compote"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/chicken-nuggets/compote.webp",
+      "copy": {
+        "en": {
+          "title": "Simmer the apples",
+          "heat": "Medium hob",
+          "instructions": [
+            "Peel the apples.",
+            "Core them.",
+            "Cut them into 1–2 cm pieces.",
+            "Put the apples, water and optional cinnamon in a saucepan.",
+            "Cover the pan.",
+            "Cook over medium heat for 12–15 minutes, until the apples are soft enough to crush with a fork."
+          ],
+          "caption": "Cook the small apple pieces with the water under a lid until tender."
+        },
+        "fr": {
+          "title": "Faire mijoter les pommes",
+          "heat": "Feu moyen",
+          "instructions": [
+            "Épluchez les pommes.",
+            "Évidez-les.",
+            "Coupez-les en morceaux de 1 à 2 cm.",
+            "Réunissez les pommes, l’eau et éventuellement la cannelle dans une casserole.",
+            "Couvrez la casserole.",
+            "Faites cuire à feu moyen de 12 à 15 minutes, jusqu’à ce que les pommes s’écrasent à la fourchette."
+          ],
+          "caption": "Faites cuire les petits morceaux de pomme à couvert avec l’eau jusqu’à ce qu’ils soient tendres."
+        }
+      }
+    },
+    {
+      "id": "mash-apples",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "apples",
+        "water",
+        "cinnamon"
+      ],
+      "illustration": "assets/illustrations/steps/chicken-nuggets/mash-apples.webp",
+      "copy": {
+        "en": {
+          "title": "Mash the compote",
+          "heat": "Off the heat",
+          "wait": "Until cool",
+          "instructions": [
+            "Take the pan off the heat.",
+            "Crush the apples with a fork, leaving a few pieces intact.",
+            "Leave the compote to cool while you make the potatoes."
+          ],
+          "caption": "Crush the softened apples with a fork, leaving a few chunks for texture."
+        },
+        "fr": {
+          "title": "Écraser la compote",
+          "heat": "Hors du feu",
+          "wait": "Jusqu’à refroidissement",
+          "instructions": [
+            "Retirez la casserole du feu.",
+            "Écrasez les pommes à la fourchette en laissant quelques morceaux.",
+            "Laissez refroidir la compote pendant la préparation des pommes de terre."
+          ],
+          "caption": "Écrasez les pommes fondantes à la fourchette en gardant quelques morceaux."
+        }
+      }
+    },
+    {
+      "id": "potatoes",
+      "during": "mash-apples",
+      "activity": "cooking",
+      "tone": "blue",
+      "uses": [
+        "potatoes",
+        "potato-salt"
+      ],
+      "duration": [
+        10,
+        12
+      ],
+      "timers": [
+        {
+          "minutes": 10,
+          "afterInstruction": 4,
+          "copy": {
+            "en": {
+              "label": "Boil the potatoes"
+            },
+            "fr": {
+              "label": "Précuire les pommes de terre"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/chicken-nuggets/potatoes.webp",
+      "copy": {
+        "en": {
+          "title": "Parboil the potatoes",
+          "heat": "Gentle boil",
+          "timing": "10–12 min once boiling",
+          "instructions": [
+            "Cut the peeled potatoes into 1.5 cm cubes.",
+            "Put the cubes in cold salted water.",
+            "Bring to a gentle boil.",
+            "Cook at a gentle boil for 10–12 minutes before draining."
+          ],
+          "caption": "Cook the potato cubes at a gentle boil before roasting them."
+        },
+        "fr": {
+          "title": "Précuire les pommes de terre",
+          "heat": "Petite ébullition",
+          "timing": "10 à 12 min à partir de l’ébullition",
+          "instructions": [
+            "Coupez les pommes de terre épluchées en dés de 1,5 cm.",
+            "Plongez les dés dans de l’eau froide salée.",
+            "Portez à petite ébullition.",
+            "Faites cuire à petite ébullition de 10 à 12 minutes avant d’égoutter."
+          ],
+          "caption": "Faites cuire les dés de pommes de terre à petite ébullition avant de les rôtir."
+        }
+      }
+    },
+    {
+      "id": "steam-dry",
+      "activity": "wait",
+      "tone": "blue",
+      "uses": [
+        "potatoes",
+        "potato-salt"
+      ],
+      "duration": [
+        2,
+        2
+      ],
+      "illustration": "assets/illustrations/steps/chicken-nuggets/steam-dry.webp",
+      "copy": {
+        "en": {
+          "title": "Steam-dry the potatoes",
+          "heat": "Off the heat",
+          "wait": "2 min after draining",
+          "instructions": [
+            "Drain the potatoes.",
+            "Leave them to steam-dry for 2 minutes.",
+            "Heat the oven to 200°C (180°C fan)."
+          ],
+          "caption": "Drain the boiled potato cubes and let their surface dry as the steam escapes."
+        },
+        "fr": {
+          "title": "Laisser sécher les pommes de terre",
+          "heat": "Hors du feu",
+          "wait": "2 min après égouttage",
+          "instructions": [
+            "Égouttez les pommes de terre.",
+            "Laissez-les sécher 2 minutes au contact de l’air.",
+            "Préchauffez le four à 200 °C (180 °C en chaleur tournante)."
+          ],
+          "caption": "Égouttez les dés de pommes de terre et laissez la vapeur s’échapper pour en sécher la surface."
+        }
+      }
+    },
+    {
+      "id": "roast-potatoes",
+      "activity": "cooking",
+      "tone": "blue",
+      "uses": [
+        "potatoes",
+        "potato-salt",
+        "butter",
+        "potato-oil",
+        "parsley"
+      ],
+      "duration": [
+        15,
+        20
+      ],
+      "timers": [
+        {
+          "minutes": 15,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Roast the potatoes"
+            },
+            "fr": {
+              "label": "Rôtir les pommes de terre"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/chicken-nuggets/roast-potatoes.webp",
+      "copy": {
+        "en": {
+          "title": "Roast the potatoes",
+          "heat": "200°C oven / 180°C fan",
+          "instructions": [
+            "Toss the potato cubes with the butter and oil.",
+            "Roast for 15–20 minutes.",
+            "Turn the cubes halfway through roasting.",
+            "Take the potatoes out of the oven.",
+            "Toss gently with the chopped parsley."
+          ],
+          "caption": "Turn the potatoes halfway through roasting. Add the parsley after they come out of the oven."
+        },
+        "fr": {
+          "title": "Rôtir les pommes de terre",
+          "heat": "Four à 200 °C / 180 °C en chaleur tournante",
+          "instructions": [
+            "Enrobez les dés de pommes de terre de beurre et d’huile.",
+            "Enfournez pour 15 à 20 minutes.",
+            "Retournez les dés à mi-cuisson.",
+            "Sortez les pommes de terre du four.",
+            "Mélangez-les délicatement avec le persil haché."
+          ],
+          "caption": "Retournez les pommes de terre à mi-cuisson. Ajoutez le persil à la sortie du four."
+        }
+      }
+    },
+    {
+      "id": "blend",
+      "during": "roast-potatoes",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "chicken",
+        "egg",
+        "milk",
+        "nugget-salt",
+        "paprika",
+        "thyme",
+        "carrot",
+        "onion"
+      ],
+      "illustration": "assets/illustrations/steps/chicken-nuggets/blend.webp",
+      "copy": {
+        "en": {
+          "title": "Blend the nugget mixture",
+          "instructions": [
+            "Place the chicken, egg, milk or cream, salt, paprika and thyme in a blender or food processor.",
+            "Pulse 5–7 times in short bursts until the mixture forms a thick paste.",
+            "Squeeze the grated carrot and onion dry.",
+            "Mix the grated vegetables into the chicken."
+          ],
+          "caption": "Pulse the chicken into a thick paste, then mix in the grated carrot and onion."
+        },
+        "fr": {
+          "title": "Mixer la farce des nuggets",
+          "instructions": [
+            "Mettez le poulet, l’œuf, le lait ou la crème, le sel, le paprika et le thym dans un mixeur ou un robot.",
+            "Mixez en 5 à 7 impulsions courtes jusqu’à obtenir une pâte épaisse.",
+            "Pressez la carotte et l’oignon râpés pour en retirer l’eau.",
+            "Incorporez les légumes râpés au poulet."
+          ],
+          "caption": "Mixez le poulet par impulsions jusqu’à obtenir une pâte épaisse, puis incorporez la carotte et l’oignon râpés."
+        }
+      }
+    },
+    {
+      "id": "shape",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "chicken",
+        "egg",
+        "milk",
+        "nugget-salt",
+        "paprika",
+        "thyme",
+        "carrot",
+        "onion",
+        "flour",
+        "breadcrumbs"
+      ],
+      "options": [
+        {
+          "copy": {
+            "en": {
+              "title": "Flour and breadcrumbs",
+              "instructions": [
+                "Dust each nugget lightly with flour.",
+                "Roll it in breadcrumbs."
+              ]
+            },
+            "fr": {
+              "title": "Farine et chapelure",
+              "instructions": [
+                "Farinez légèrement chaque nugget.",
+                "Roulez-le dans la chapelure."
+              ]
+            }
+          }
+        },
+        {
+          "copy": {
+            "en": {
+              "title": "Softer crust",
+              "instructions": [
+                "Roll each nugget directly in breadcrumbs."
+              ]
+            },
+            "fr": {
+              "title": "Croûte plus tendre",
+              "instructions": [
+                "Roulez chaque nugget directement dans la chapelure."
+              ]
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/chicken-nuggets/shape.webp",
+      "copy": {
+        "en": {
+          "title": "Shape and coat the nuggets",
+          "instructions": [
+            "Shape small nuggets with damp hands."
+          ],
+          "caption": "Shape small nuggets with damp hands, then coat them in flour followed by breadcrumbs."
+        },
+        "fr": {
+          "title": "Façonner et paner les nuggets",
+          "instructions": [
+            "Façonnez de petits nuggets avec les mains humides."
+          ],
+          "caption": "Façonnez de petits nuggets avec les mains humides, puis passez-les dans la farine et la chapelure."
+        }
+      }
+    },
+    {
+      "id": "fry",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "chicken",
+        "egg",
+        "milk",
+        "nugget-salt",
+        "paprika",
+        "thyme",
+        "carrot",
+        "onion",
+        "flour",
+        "breadcrumbs",
+        "nugget-oil"
+      ],
+      "durationPerBatch": true,
+      "duration": [
+        10,
+        12
+      ],
+      "timers": [
+        {
+          "minutes": 10,
+          "afterInstruction": 4,
+          "copy": {
+            "en": {
+              "label": "Check the fresh nuggets"
+            },
+            "fr": {
+              "label": "Vérifier la cuisson des nuggets frais"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/chicken-nuggets/fry.webp",
+      "copy": {
+        "en": {
+          "title": "Air-fry in a single layer",
+          "heat": "Air fryer · 180°C",
+          "timing": "10–12 min per fresh batch, after preheating",
+          "instructions": [
+            "Preheat the air fryer to 180°C for 3–5 minutes.",
+            "Brush the nuggets lightly with oil.",
+            "Arrange a single layer in the basket, working in batches if needed.",
+            "Air-fry fresh nuggets for 10–12 minutes.",
+            "Turn them halfway through cooking."
+          ],
+          "caption": "Air-fry the nuggets in one layer and turn them halfway through cooking."
+        },
+        "fr": {
+          "title": "Cuire les nuggets en une seule couche",
+          "heat": "Friteuse à air · 180 °C",
+          "timing": "10 à 12 min par fournée de nuggets frais, après préchauffage",
+          "instructions": [
+            "Préchauffez la friteuse à air à 180 °C pendant 3 à 5 minutes.",
+            "Badigeonnez légèrement les nuggets d’huile.",
+            "Disposez les nuggets en une seule couche dans le panier, en plusieurs fournées au besoin.",
+            "Faites cuire les nuggets frais de 10 à 12 minutes.",
+            "Retournez-les à mi-cuisson."
+          ],
+          "caption": "Faites cuire les nuggets en une seule couche dans la friteuse à air et retournez-les à mi-cuisson."
+        }
+      }
+    },
+    {
+      "id": "check",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "chicken",
+        "egg",
+        "milk",
+        "nugget-salt",
+        "paprika",
+        "thyme",
+        "carrot",
+        "onion",
+        "flour",
+        "breadcrumbs",
+        "nugget-oil"
+      ],
+      "illustration": "assets/illustrations/steps/chicken-nuggets/check.webp",
+      "copy": {
+        "en": {
+          "title": "Check the centre",
+          "heat": "Air fryer · 180°C if needed",
+          "instructions": [
+            "Insert a food thermometer into the thickest nugget in each batch.",
+            "Check that it reaches 74°C (165°F) at the centre.",
+            "Continue cooking if the centre is below that temperature.",
+            "Serve with the parsley potatoes and the cooled compote."
+          ],
+          "caption": "Insert the probe into the centre of a thick nugget and check that it reaches 74°C (165°F)."
+        },
+        "fr": {
+          "title": "Vérifier la cuisson à cœur",
+          "heat": "Friteuse à air · 180 °C si nécessaire",
+          "instructions": [
+            "Piquez un thermomètre de cuisine dans le nugget le plus épais de chaque fournée.",
+            "Vérifiez qu’il atteint 74 °C (165 °F) à cœur.",
+            "Poursuivez la cuisson si la température à cœur est inférieure à ce seuil.",
+            "Servez avec les pommes de terre persillées et la compote refroidie."
+          ],
+          "caption": "Insérez la sonde au cœur d’un nugget épais et vérifiez qu’il atteint 74 °C (165 °F)."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "You can prepare the nuggets while the potatoes roast."
+        },
+        "fr": {
+          "text": "Vous pouvez préparer les nuggets pendant que les pommes de terre rôtissent."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "Season adult portions with black pepper or smoked paprika after cooking."
+        },
+        "fr": {
+          "text": "Assaisonnez les portions adultes de poivre noir ou de paprika fumé après cuisson."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "For a softer crust, coat the nuggets in breadcrumbs alone."
+        },
+        "fr": {
+          "text": "Pour une croûte plus tendre, panez les nuggets avec de la chapelure seule."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "Swap the carrot for the same weight of courgette or celeriac and squeeze it equally dry. Buttered couscous or small pasta shells can replace the potatoes."
+        },
+        "fr": {
+          "text": "Remplacez la carotte par le même poids de courgette ou de céleri-rave et pressez bien le légume râpé. De la semoule de couscous au beurre ou de petites pâtes en coquille peuvent remplacer les pommes de terre."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "To cook nuggets frozen from raw, start checking about 3–4 minutes later at the same setting and continue until each batch reaches the same internal temperature."
+        },
+        "fr": {
+          "text": "Pour cuire les nuggets surgelés crus, commencez à vérifier la cuisson environ 3 à 4 minutes plus tard, à la même température. Poursuivez jusqu’à ce que chaque fournée atteigne la même température à cœur."
+        }
+      }
+    },
+    {
+      "source": {
+        "url": "https://www.gov.uk/government/publications/how-to-chill-freeze-and-defrost-food-safely/how-to-chill-freeze-and-defrost-food-safely",
+        "copy": {
+          "en": {
+            "label": "Food Standards Agency · Chilling leftovers"
+          },
+          "fr": {
+            "label": "Food Standards Agency · Conservation des restes"
+          }
+        }
+      },
+      "copy": {
+        "en": {
+          "text": "Cool leftovers in small portions. Refrigerate within 2 hours of cooking."
+        },
+        "fr": {
+          "text": "Répartissez les restes en petites portions pour les refroidir. Réfrigérez-les dans les 2 heures suivant la cuisson."
+        }
+      }
+    },
+    {
+      "source": {
+        "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+        "copy": {
+          "en": {
+            "label": "FoodSafety.gov · Cold food storage chart"
+          },
+          "fr": {
+            "label": "FoodSafety.gov · Conservation au froid"
+          }
+        }
+      },
+      "copy": {
+        "en": {
+          "text": "The freezer time is a quality guideline for the cooked dish."
+        },
+        "fr": {
+          "text": "La durée au congélateur correspond à la qualité du plat cuit."
+        }
+      }
+    }
+  ],
+  "safety": {
+    "notes": [
+      {
+        "copy": {
+          "en": {
+            "text": "Use a food thermometer in the thickest part of a large nugget to confirm it reaches 74°C (165°F), including when cooking from frozen."
+          },
+          "fr": {
+            "text": "Plantez un thermomètre de cuisine dans la partie la plus épaisse d’un gros nugget pour vérifier qu’il atteint 74 °C (165 °F), y compris si vous le cuisez surgelé."
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+        "copy": {
+          "en": {
+            "label": "FoodSafety.gov cooking temperatures"
+          },
+          "fr": {
+            "label": "FoodSafety.gov · Températures de cuisson"
+          }
+        }
+      }
+    ],
+    "copy": {
+      "en": {
+        "title": "Check the nuggets"
+      },
+      "fr": {
+        "title": "Vérifier la cuisson des nuggets"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Air-Fryer Chicken Nuggets",
+      "cookingTime": "Compote 12–15 min, potatoes 25–32 min, fresh nuggets 10–12 min per batch",
+      "restTime": "Steam-dry potatoes for 2 min. Allow the compote to cool.",
+      "description": "Carrot and onion chicken nuggets with parsley potatoes and a chunky apple compote.",
+      "setup": [
+        "Roast the potatoes at 200°C (180°C fan).",
+        "Air-fry the nuggets at 180°C in a single layer."
+      ],
+      "allergens": [
+        "Egg",
+        "Milk",
+        "Wheat",
+        "Celery if using celeriac instead of carrot"
+      ]
+    },
+    "fr": {
+      "title": "Nuggets de poulet à la friteuse à air",
+      "cookingTime": "Compote 12 à 15 min, pommes de terre 25 à 32 min, nuggets frais 10 à 12 min par fournée",
+      "restTime": "2 min pour sécher les pommes de terre. Prévoir le refroidissement de la compote.",
+      "description": "Des nuggets de poulet à la carotte et à l’oignon, avec des pommes de terre persillées et une compote de pommes avec des morceaux.",
+      "setup": [
+        "Faites rôtir les pommes de terre à 200 °C (180 °C en chaleur tournante).",
+        "Faites cuire les nuggets à 180 °C en une seule couche dans la friteuse à air."
+      ],
+      "allergens": [
+        "Œuf",
+        "Lait",
+        "Blé",
+        "Céleri si vous remplacez la carotte par du céleri-rave"
+      ]
+    }
+  }
+}

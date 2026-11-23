@@ -1,0 +1,1069 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "two-day-birthday-cake",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/two-day-birthday-cake.webp",
+  "times": [
+    {
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Start ahead",
+          "value": "The day before serving"
+        },
+        "fr": {
+          "label": "À commencer",
+          "value": "La veille du service"
+        }
+      }
+    },
+    {
+      "icon": "oven",
+      "copy": {
+        "en": {
+          "label": "Tin diameter",
+          "value": "20 or 23 cm"
+        },
+        "fr": {
+          "label": "Diamètre du moule",
+          "value": "20 ou 23 cm"
+        }
+      }
+    },
+    {
+      "icon": "snow",
+      "copy": {
+        "en": {
+          "label": "Day 2 chilling",
+          "value": "At least 3½ hr, plus prep"
+        },
+        "fr": {
+          "label": "Jour 2 au frais",
+          "value": "Au moins 3 h 30, hors préparation"
+        }
+      }
+    }
+  ],
+  "plan": [
+    {
+      "step": "make-sponge",
+      "copy": {
+        "en": {
+          "title": "Day 1 · Bake the sponge",
+          "detail": "Let the sponge cool completely before wrapping it for the overnight rest."
+        },
+        "fr": {
+          "title": "Jour 1 · Cuire la génoise",
+          "detail": "Laissez refroidir complètement la génoise avant de l’emballer pour la nuit."
+        }
+      }
+    },
+    {
+      "step": "filling",
+      "copy": {
+        "en": {
+          "title": "Day 2 · Start with the fruit filling",
+          "detail": "Chill the filling for 1–2 hr, until it holds its shape when spread. Slice the cooled sponge while you wait."
+        },
+        "fr": {
+          "title": "Jour 2 · Commencer par la garniture aux fruits",
+          "detail": "Réfrigérez la garniture 1 à 2 h, jusqu’à ce qu’elle puisse être étalée sans couler. Pendant ce temps, découpez la génoise refroidie."
+        }
+      }
+    },
+    {
+      "step": "assemble",
+      "copy": {
+        "en": {
+          "title": "Day 2 · Fill, frost and chill",
+          "detail": "Chill the crumb coat for 30–60 min. Add the final coat, then chill for at least 2 hr before serving."
+        },
+        "fr": {
+          "title": "Jour 2 · Garnir, recouvrir et réfrigérer",
+          "detail": "Réfrigérez la première couche de crème 30 à 60 min. Ajoutez la dernière couche, puis réfrigérez au moins 2 h avant de servir."
+        }
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "genoise"
+    },
+    {
+      "id": "creme-au-beurre"
+    }
+  ],
+  "groups": [
+    {
+      "art": "whisk",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "eggs",
+          "quantity": "4 / 6",
+          "gramVariants": [
+            200,
+            300
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "large eggs",
+              "note": "weighed without shells"
+            },
+            "fr": {
+              "name": "gros œufs",
+              "note": "pesés sans coquille"
+            }
+          }
+        },
+        {
+          "id": "sponge-sugar",
+          "quantity": "120 / 180",
+          "unit": "g",
+          "gramVariants": [
+            120,
+            180
+          ],
+          "copy": {
+            "en": {
+              "name": "granulated sugar"
+            },
+            "fr": {
+              "name": "sucre en poudre"
+            }
+          }
+        },
+        {
+          "id": "flour",
+          "quantity": "120 / 180",
+          "unit": "g",
+          "gramVariants": [
+            120,
+            180
+          ],
+          "copy": {
+            "en": {
+              "name": "cake flour or T45 flour"
+            },
+            "fr": {
+              "name": "farine à gâteau ou farine T45"
+            }
+          }
+        },
+        {
+          "id": "fat",
+          "quantity": "40 / 60",
+          "unit": "g",
+          "gramVariants": [
+            40,
+            60
+          ],
+          "copy": {
+            "en": {
+              "name": "melted butter or oil"
+            },
+            "fr": {
+              "name": "beurre fondu ou huile"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Génoise"
+        },
+        "fr": {
+          "title": "Génoise"
+        }
+      }
+    },
+    {
+      "art": "saucepan",
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "strawberries",
+          "quantity": "180 / 240",
+          "unit": "g",
+          "gramVariants": [
+            180,
+            240
+          ],
+          "copy": {
+            "en": {
+              "name": "strawberries",
+              "note": "diced"
+            },
+            "fr": {
+              "name": "fraises",
+              "note": "coupées en dés"
+            }
+          }
+        },
+        {
+          "id": "raspberries",
+          "quantity": "120 / 160",
+          "unit": "g",
+          "gramVariants": [
+            120,
+            160
+          ],
+          "copy": {
+            "en": {
+              "name": "raspberries",
+              "note": "left whole"
+            },
+            "fr": {
+              "name": "framboises",
+              "note": "laissées entières"
+            }
+          }
+        },
+        {
+          "id": "gelatine",
+          "quantity": "3.5 / 4.7",
+          "unit": "g",
+          "gramVariants": [
+            3.5,
+            4.7
+          ],
+          "copy": {
+            "en": {
+              "name": "gelatine (200 Bloom)",
+              "note": "about 2 / 2½ sheets, depending on the brand"
+            },
+            "fr": {
+              "name": "gélatine (200 Bloom)",
+              "note": "environ 2 ou 2½ feuilles selon la marque"
+            }
+          }
+        },
+        {
+          "id": "filling-sugar",
+          "quantity": "30 / 40",
+          "unit": "g",
+          "gramVariants": [
+            30,
+            40
+          ],
+          "copy": {
+            "en": {
+              "name": "sugar"
+            },
+            "fr": {
+              "name": "sucre"
+            }
+          }
+        },
+        {
+          "id": "lemon-juice",
+          "gramVariants": [
+            5,
+            7
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "lemon juice",
+              "note": "suggested starting amounts, as the original does not give a quantity"
+            },
+            "fr": {
+              "name": "jus de citron",
+              "note": "quantités suggérées, la recette d’origine n’en précise pas"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Fruit filling"
+        },
+        "fr": {
+          "title": "Garniture aux fruits"
+        }
+      }
+    },
+    {
+      "art": "whisk",
+      "tone": "blue",
+      "ingredients": [
+        {
+          "id": "mascarpone",
+          "quantity": "300 / 400",
+          "unit": "g",
+          "gramVariants": [
+            300,
+            400
+          ],
+          "copy": {
+            "en": {
+              "name": "mascarpone",
+              "note": "cold"
+            },
+            "fr": {
+              "name": "mascarpone",
+              "note": "bien froid"
+            }
+          }
+        },
+        {
+          "id": "cream",
+          "quantity": "300 / 400",
+          "unit": "g",
+          "gramVariants": [
+            300,
+            400
+          ],
+          "copy": {
+            "en": {
+              "name": "cream (at least 30% fat)",
+              "note": "cold"
+            },
+            "fr": {
+              "name": "crème liquide (au moins 30 % de matière grasse)",
+              "note": "bien froide"
+            }
+          }
+        },
+        {
+          "id": "icing-sugar",
+          "quantity": "60 / 80",
+          "unit": "g",
+          "gramVariants": [
+            60,
+            80
+          ],
+          "copy": {
+            "en": {
+              "name": "icing sugar"
+            },
+            "fr": {
+              "name": "sucre glace"
+            }
+          }
+        },
+        {
+          "id": "vanilla",
+          "gramVariants": [
+            4,
+            5
+          ],
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "vanilla extract",
+              "note": "suggested starting amounts, as the original does not give a quantity"
+            },
+            "fr": {
+              "name": "extrait de vanille",
+              "note": "quantités suggérées, la recette d’origine n’en précise pas"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Mascarpone icing"
+        },
+        "fr": {
+          "title": "Crème au mascarpone"
+        }
+      }
+    }
+  ],
+  "source": {
+    "copy": {
+      "en": {
+        "label": "The author’s cookbook"
+      },
+      "fr": {
+        "label": "Le carnet de recettes de l’auteur"
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "make-sponge",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "eggs",
+        "sponge-sugar"
+      ],
+      "duration": [
+        8,
+        10
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/make-sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Day 1 · Whisk the eggs",
+          "timing": "8–10 min whisking",
+          "instructions": [
+            "Preheat the oven to 165°C.",
+            "Soak the baking strips in water.",
+            "Wrap the strips around the prepared cake tin.",
+            "Whisk the eggs with the sugar for 8–10 minutes, until the mixture falls from the whisk in a ribbon."
+          ],
+          "caption": "Lift the whisk to check that the eggs and sugar fall in a thick ribbon."
+        },
+        "fr": {
+          "title": "Jour 1 · Fouetter les œufs",
+          "timing": "8 à 10 min au fouet",
+          "instructions": [
+            "Préchauffez le four à 165 °C.",
+            "Trempez les bandes de cuisson dans l’eau.",
+            "Enroulez les bandes autour du moule préparé.",
+            "Fouettez les œufs avec le sucre pendant 8 à 10 minutes, jusqu’à ce que le mélange retombe du fouet en ruban."
+          ],
+          "caption": "Soulevez le fouet pour vérifier que les œufs et le sucre retombent en ruban épais."
+        }
+      }
+    },
+    {
+      "id": "fold-sponge",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "fat"
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/fold-sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Fold in the flour",
+          "instructions": [
+            "Sift one third of the flour over the eggs.",
+            "Fold it in gently with a spatula.",
+            "Repeat with each remaining third of the flour.",
+            "Fold in the melted butter or oil."
+          ],
+          "caption": "Sift in the flour in batches and fold gently after each addition."
+        },
+        "fr": {
+          "title": "Incorporer la farine",
+          "instructions": [
+            "Tamisez un tiers de la farine au-dessus des œufs.",
+            "Incorporez-la délicatement à la spatule.",
+            "Répétez l’opération avec chacun des deux tiers restants.",
+            "Incorporez le beurre fondu ou l’huile."
+          ],
+          "caption": "Tamisez la farine en plusieurs fois et incorporez-la délicatement à chaque ajout."
+        }
+      }
+    },
+    {
+      "id": "bake",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "fat"
+      ],
+      "duration": [
+        25,
+        40
+      ],
+      "timers": [
+        {
+          "minutes": 25,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the 20 cm sponge"
+            },
+            "fr": {
+              "label": "Vérifier la génoise de 20 cm"
+            }
+          }
+        },
+        {
+          "minutes": 35,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the 23 cm sponge"
+            },
+            "fr": {
+              "label": "Vérifier la génoise de 23 cm"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/bake.webp",
+      "copy": {
+        "en": {
+          "title": "Bake the génoise",
+          "heat": "Oven at 165°C",
+          "timing": "20 cm: 25–30 min · 23 cm: 35–40 min",
+          "instructions": [
+            "Pour the batter into the prepared tin.",
+            "Bake at 165°C for about 25–30 minutes for a 20 cm tin, or 35–40 minutes for a 23 cm tin."
+          ],
+          "caption": "Bake the génoise in the tin with its wet baking strip."
+        },
+        "fr": {
+          "title": "Cuire la génoise",
+          "heat": "Four à 165 °C",
+          "timing": "20 cm : 25 à 30 min · 23 cm : 35 à 40 min",
+          "instructions": [
+            "Versez la pâte dans le moule préparé.",
+            "Faites cuire à 165 °C environ 25 à 30 minutes pour un moule de 20 cm, ou 35 à 40 minutes pour un moule de 23 cm."
+          ],
+          "caption": "Faites cuire la génoise dans le moule entouré de sa bande humide."
+        }
+      }
+    },
+    {
+      "id": "rest-sponge",
+      "tone": "yellow",
+      "activity": "wait",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "fat"
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/rest-sponge.webp",
+      "copy": {
+        "en": {
+          "title": "Rest the sponge overnight",
+          "wait": "10 min in the tin, then cool completely and rest overnight",
+          "tip": "An overnight rest helps the crumb hold together when sliced.",
+          "instructions": [
+            "Leave the sponge in its tin for 10 minutes after baking.",
+            "Turn the sponge out onto a wire rack.",
+            "Let it cool completely.",
+            "Wrap the cooled sponge tightly.",
+            "Rest it overnight at room temperature, or in the fridge if the kitchen is very warm."
+          ],
+          "caption": "Let the sponge cool completely on the rack before wrapping it for its overnight rest."
+        },
+        "fr": {
+          "title": "Laisser reposer la génoise une nuit",
+          "wait": "10 min dans le moule, puis refroidissement complet et repos d’une nuit",
+          "tip": "Le repos d’une nuit aide la mie à se tenir à la découpe.",
+          "instructions": [
+            "Laissez la génoise dans son moule pendant 10 minutes à la sortie du four.",
+            "Démoulez la génoise sur une grille.",
+            "Laissez-la refroidir complètement.",
+            "Emballez soigneusement la génoise refroidie.",
+            "Laissez-la reposer une nuit à température ambiante, ou au réfrigérateur s’il fait très chaud dans la cuisine."
+          ],
+          "caption": "Laissez la génoise refroidir complètement sur une grille avant de l’emballer pour la nuit."
+        }
+      }
+    },
+    {
+      "id": "bloom",
+      "tone": "pink",
+      "activity": "wait",
+      "uses": [
+        "gelatine"
+      ],
+      "duration": [
+        5,
+        5
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/bloom.webp",
+      "copy": {
+        "en": {
+          "title": "Day 2 · Soften the gelatine",
+          "wait": "5 min in ice water",
+          "instructions": [
+            "Soak the gelatine sheets in ice water for 5 minutes."
+          ],
+          "caption": "Cover the gelatine sheets with ice water."
+        },
+        "fr": {
+          "title": "Jour 2 · Ramollir la gélatine",
+          "wait": "5 min dans l’eau glacée",
+          "instructions": [
+            "Faites tremper les feuilles de gélatine dans de l’eau glacée pendant 5 minutes."
+          ],
+          "caption": "Recouvrez les feuilles de gélatine d’eau glacée."
+        }
+      }
+    },
+    {
+      "id": "simmer-fruit",
+      "tone": "pink",
+      "activity": "cooking",
+      "uses": [
+        "strawberries",
+        "filling-sugar",
+        "lemon-juice"
+      ],
+      "duration": [
+        3,
+        4
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/simmer-fruit.webp",
+      "copy": {
+        "en": {
+          "title": "Simmer the strawberries",
+          "heat": "Gentle simmer",
+          "instructions": [
+            "Simmer the diced strawberries with the sugar and lemon juice for 3–4 minutes."
+          ],
+          "caption": "Simmer the diced strawberries in their juices."
+        },
+        "fr": {
+          "title": "Cuire les fraises",
+          "heat": "Frémissement",
+          "instructions": [
+            "Faites mijoter les dés de fraise avec le sucre et le jus de citron pendant 3 à 4 minutes."
+          ],
+          "caption": "Faites mijoter les dés de fraise dans leur jus."
+        }
+      }
+    },
+    {
+      "id": "filling",
+      "tone": "pink",
+      "activity": "prep",
+      "uses": [
+        "strawberries",
+        "gelatine",
+        "filling-sugar",
+        "lemon-juice"
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/filling.webp",
+      "copy": {
+        "en": {
+          "title": "Dissolve the gelatine",
+          "heat": "Off the heat",
+          "instructions": [
+            "Take the pan off the heat.",
+            "Squeeze the water from the softened gelatine.",
+            "Stir the gelatine into the warm strawberries until dissolved."
+          ],
+          "caption": "Squeeze the water from the softened gelatine before stirring it into the warm strawberries off the heat."
+        },
+        "fr": {
+          "title": "Dissoudre la gélatine",
+          "heat": "Hors du feu",
+          "instructions": [
+            "Retirez la casserole du feu.",
+            "Essorez la gélatine ramollie.",
+            "Incorporez la gélatine aux fraises chaudes jusqu’à dissolution."
+          ],
+          "caption": "Essorez la gélatine ramollie avant de l’incorporer aux fraises chaudes hors du feu."
+        }
+      }
+    },
+    {
+      "id": "add-raspberries",
+      "tone": "pink",
+      "activity": "prep",
+      "uses": [
+        "strawberries",
+        "raspberries",
+        "gelatine",
+        "filling-sugar",
+        "lemon-juice"
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/add-raspberries.webp",
+      "copy": {
+        "en": {
+          "title": "Fold in the raspberries",
+          "instructions": [
+            "Fold the whole raspberries gently into the strawberries."
+          ],
+          "caption": "Fold in the whole raspberries gently so they hold their shape."
+        },
+        "fr": {
+          "title": "Incorporer les framboises",
+          "instructions": [
+            "Incorporez délicatement les framboises entières aux fraises."
+          ],
+          "caption": "Incorporez délicatement les framboises entières pour qu’elles gardent leur forme."
+        }
+      }
+    },
+    {
+      "id": "chill-filling",
+      "tone": "pink",
+      "activity": "chill",
+      "uses": [
+        "strawberries",
+        "raspberries",
+        "gelatine",
+        "filling-sugar",
+        "lemon-juice"
+      ],
+      "duration": [
+        60,
+        120
+      ],
+      "timers": [
+        {
+          "minutes": 60,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the fruit filling"
+            },
+            "fr": {
+              "label": "Vérifier la garniture aux fruits"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/chill-filling.webp",
+      "copy": {
+        "en": {
+          "title": "Set the berry filling",
+          "wait": "1–2 hr in the fridge",
+          "tip": "Slice the cooled sponge while the filling chills.",
+          "instructions": [
+            "Refrigerate the filling for 1–2 hours, until it spreads without running."
+          ],
+          "caption": "Chill the fruit filling until it holds its shape."
+        },
+        "fr": {
+          "title": "Faire prendre la garniture",
+          "wait": "1 à 2 h au réfrigérateur",
+          "tip": "Découpez la génoise refroidie pendant que la garniture est au frais.",
+          "instructions": [
+            "Réfrigérez la garniture pendant 1 à 2 heures, jusqu’à ce qu’elle puisse être étalée sans couler."
+          ],
+          "caption": "Réfrigérez la garniture aux fruits jusqu’à ce qu’elle se tienne."
+        }
+      }
+    },
+    {
+      "id": "slice-and-whip",
+      "during": "chill-filling",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "fat"
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/slice-and-whip.webp",
+      "copy": {
+        "en": {
+          "title": "Slice the sponge",
+          "instructions": [
+            "Unwrap the cooled sponge.",
+            "Cut it horizontally into two even layers with a serrated knife."
+          ],
+          "caption": "Hold the serrated knife level to cut the sponge into two even layers."
+        },
+        "fr": {
+          "title": "Découper la génoise",
+          "instructions": [
+            "Déballez la génoise refroidie.",
+            "Coupez-la horizontalement en deux disques de même épaisseur avec un couteau-scie."
+          ],
+          "caption": "Tenez le couteau dentelé à l’horizontale pour couper la génoise en deux disques de même épaisseur."
+        }
+      }
+    },
+    {
+      "id": "whip-icing",
+      "tone": "blue",
+      "activity": "prep",
+      "uses": [
+        "mascarpone",
+        "cream",
+        "icing-sugar",
+        "vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/whip-icing.webp",
+      "copy": {
+        "en": {
+          "title": "Whip the mascarpone icing",
+          "tip": "Chill the bowl and whisk in the freezer for 10 minutes before whipping.",
+          "instructions": [
+            "Whip the cold mascarpone and cream with the icing sugar and vanilla until the icing holds stiff peaks."
+          ],
+          "caption": "Whip the mascarpone icing until its peaks stand upright."
+        },
+        "fr": {
+          "title": "Monter la crème au mascarpone",
+          "tip": "Placez le saladier et le fouet au congélateur 10 minutes avant de monter la crème.",
+          "instructions": [
+            "Fouettez le mascarpone et la crème bien froids avec le sucre glace et la vanille jusqu’à obtenir des pics fermes."
+          ],
+          "caption": "Fouettez la crème au mascarpone jusqu’à ce qu’elle forme des pics fermes."
+        }
+      }
+    },
+    {
+      "id": "assemble",
+      "tone": "green",
+      "activity": "prep",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "fat",
+        "strawberries",
+        "raspberries",
+        "gelatine",
+        "filling-sugar",
+        "lemon-juice",
+        "mascarpone",
+        "cream",
+        "icing-sugar",
+        "vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/assemble.webp",
+      "copy": {
+        "en": {
+          "title": "Fill the cake",
+          "instructions": [
+            "Pipe a tall ring of icing around the edge of the bottom layer.",
+            "Spread the set berry filling inside the ring.",
+            "Place the second sponge layer on top."
+          ],
+          "caption": "Pipe a tall ring of icing around the edge to hold the berry filling in the middle."
+        },
+        "fr": {
+          "title": "Garnir le gâteau",
+          "instructions": [
+            "Pochez un cordon épais de crème au bord du disque inférieur.",
+            "Étalez la garniture aux fruits prise à l’intérieur du cordon.",
+            "Posez le second disque de génoise par-dessus."
+          ],
+          "caption": "Pochez un cordon épais de crème autour du bord pour retenir la garniture aux fruits au centre."
+        }
+      }
+    },
+    {
+      "id": "crumb-coat",
+      "tone": "blue",
+      "activity": "prep",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "fat",
+        "strawberries",
+        "raspberries",
+        "gelatine",
+        "filling-sugar",
+        "lemon-juice",
+        "mascarpone",
+        "cream",
+        "icing-sugar",
+        "vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/crumb-coat.webp",
+      "copy": {
+        "en": {
+          "title": "Apply the crumb coat",
+          "instructions": [
+            "Spread a thin layer of icing over the top and sides to hold the crumbs in place."
+          ],
+          "caption": "After stacking the second layer, spread a thin crumb coat over the top and sides."
+        },
+        "fr": {
+          "title": "Fixer les miettes",
+          "instructions": [
+            "Étalez une fine couche de crème sur le dessus et les côtés pour fixer les miettes."
+          ],
+          "caption": "Une fois le deuxième disque posé, étalez une fine couche de crème sur le dessus et les côtés pour fixer les miettes."
+        }
+      }
+    },
+    {
+      "id": "chill-coat",
+      "tone": "blue",
+      "activity": "chill",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "fat",
+        "strawberries",
+        "raspberries",
+        "gelatine",
+        "filling-sugar",
+        "lemon-juice",
+        "mascarpone",
+        "cream",
+        "icing-sugar",
+        "vanilla"
+      ],
+      "duration": [
+        30,
+        60
+      ],
+      "timers": [
+        {
+          "minutes": 30,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the crumb coat"
+            },
+            "fr": {
+              "label": "Vérifier la première couche de crème"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/chill-coat.webp",
+      "copy": {
+        "en": {
+          "title": "Set the crumb coat",
+          "wait": "30–60 min in the fridge",
+          "instructions": [
+            "Refrigerate the crumb-coated cake for 30–60 minutes before applying more icing."
+          ],
+          "caption": "Chill the thin first coat of icing before adding more."
+        },
+        "fr": {
+          "title": "Faire prendre la première couche",
+          "wait": "30 à 60 min au réfrigérateur",
+          "instructions": [
+            "Réfrigérez le gâteau recouvert de sa fine couche de crème pendant 30 à 60 minutes avant la finition."
+          ],
+          "caption": "Réfrigérez la fine première couche de crème avant la finition."
+        }
+      }
+    },
+    {
+      "id": "finish",
+      "tone": "blue",
+      "activity": "prep",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "fat",
+        "strawberries",
+        "raspberries",
+        "gelatine",
+        "filling-sugar",
+        "lemon-juice",
+        "mascarpone",
+        "cream",
+        "icing-sugar",
+        "vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/finish.webp",
+      "copy": {
+        "en": {
+          "title": "Ice the cake",
+          "instructions": [
+            "Coat the top and sides with the remaining mascarpone icing."
+          ],
+          "caption": "Cover the chilled crumb coat with the remaining icing, smoothing the top and sides."
+        },
+        "fr": {
+          "title": "Recouvrir le gâteau",
+          "instructions": [
+            "Recouvrez le dessus et les côtés avec le reste de la crème au mascarpone."
+          ],
+          "caption": "Recouvrez la première couche froide du reste de crème, puis lissez le dessus et les côtés."
+        }
+      }
+    },
+    {
+      "id": "chill-cake",
+      "tone": "green",
+      "activity": "chill",
+      "uses": [
+        "eggs",
+        "sponge-sugar",
+        "flour",
+        "fat",
+        "strawberries",
+        "raspberries",
+        "gelatine",
+        "filling-sugar",
+        "lemon-juice",
+        "mascarpone",
+        "cream",
+        "icing-sugar",
+        "vanilla"
+      ],
+      "duration": [
+        120,
+        120
+      ],
+      "durationMinimum": true,
+      "timers": [
+        {
+          "minutes": 120,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Minimum final chill"
+            },
+            "fr": {
+              "label": "Repos final minimum"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/two-day-birthday-cake/chill-cake.webp",
+      "copy": {
+        "en": {
+          "title": "Chill before serving",
+          "wait": "At least 2 hr in the fridge",
+          "tip": "Dip the knife in hot water and wipe it dry between slices.",
+          "instructions": [
+            "Refrigerate the finished cake for at least 2 hours and until ready to serve."
+          ],
+          "caption": "Chill the finished cake before cutting it into slices."
+        },
+        "fr": {
+          "title": "Réfrigérer avant le service",
+          "wait": "Au moins 2 h au réfrigérateur",
+          "tip": "Trempez la lame du couteau dans l’eau chaude et essuyez-la entre les parts.",
+          "instructions": [
+            "Gardez le gâteau au réfrigérateur pendant au moins 2 heures et jusqu’au moment de servir."
+          ],
+          "caption": "Réfrigérez le gâteau terminé avant de le découper."
+        }
+      }
+    }
+  ],
+  "copy": {
+    "en": {
+      "totalTime": "Over two days",
+      "cookingTime": "20 cm tin: 28–34 min · 23 cm tin: 38–44 min, including the fruit",
+      "restTime": "Cool the sponge and rest overnight, plus at least 3½ hr of chilling on day 2",
+      "title": "Two-Day Birthday Cake",
+      "description": "Two layers of génoise filled with strawberries and raspberries and finished with whipped mascarpone icing.",
+      "ingredientTip": "Where two quantities appear, use the first for a 20 cm cake and the second for a 23 cm cake.",
+      "setup": [
+        "Use the first weight for a 20 cm tin and the second for a 23 cm tin. Wrap wet baking strips around the tin and heat the oven to 165°C."
+      ],
+      "allergens": [
+        "Eggs",
+        "Wheat (gluten)",
+        "Milk"
+      ]
+    },
+    "fr": {
+      "totalTime": "Sur deux jours",
+      "cookingTime": "Moule de 20 cm : 28 à 34 min · 23 cm : 38 à 44 min, fruits compris",
+      "restTime": "Laisser refroidir le biscuit et le faire reposer une nuit, puis prévoir au moins 3 h 30 au frais le deuxième jour",
+      "title": "Gâteau d’anniversaire sur deux jours",
+      "description": "Deux disques de génoise garnis de fraises et de framboises, puis recouverts de crème fouettée au mascarpone.",
+      "ingredientTip": "Lorsque deux quantités sont indiquées, la première correspond à un gâteau de 20 cm et la seconde à un gâteau de 23 cm.",
+      "setup": [
+        "Utilisez le premier poids pour un moule de 20 cm et le second pour un moule de 23 cm. Entourez le moule de bandes de cuisson humides et préchauffez le four à 165 °C."
+      ],
+      "allergens": [
+        "Œufs",
+        "Blé (gluten)",
+        "Lait"
+      ]
+    }
+  }
+}

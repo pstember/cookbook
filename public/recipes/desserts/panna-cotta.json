@@ -1,0 +1,311 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "panna-cotta",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/panna-cotta.webp",
+  "times": [
+    {
+      "icon": "snow",
+      "copy": {
+        "en": {
+          "label": "Chill",
+          "value": "4 hr"
+        },
+        "fr": {
+          "label": "Réfrigération",
+          "value": "4 h"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "cream",
+          "grams": 130,
+          "copy": {
+            "en": {
+              "name": "whipping cream"
+            },
+            "fr": {
+              "name": "de crème liquide entière"
+            }
+          }
+        },
+        {
+          "id": "milk",
+          "grams": 115,
+          "copy": {
+            "en": {
+              "name": "milk"
+            },
+            "fr": {
+              "name": "de lait"
+            }
+          }
+        },
+        {
+          "id": "gelatine",
+          "grams": 2,
+          "quantity": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "leaf gelatine",
+              "unit": "sheet",
+              "note": "about 2 g for a gold-grade sheet. Check the packet for your grade"
+            },
+            "fr": {
+              "name": "de gélatine en feuille",
+              "unit": "feuille",
+              "note": "environ 2 g pour une feuille de qualité or. Vérifiez les indications du paquet pour votre type de gélatine"
+            }
+          }
+        },
+        {
+          "id": "vanilla",
+          "grams": 2,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "vanilla extract",
+              "note": "suggested starting amount. The original recipe does not specify a quantity"
+            },
+            "fr": {
+              "name": "d’extrait de vanille",
+              "note": "quantité indicative. La recette d’origine ne précise pas de quantité"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Panna cotta"
+        },
+        "fr": {
+          "title": "Panna cotta"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "soak",
+      "activity": "wait",
+      "tone": "yellow",
+      "uses": [
+        "gelatine"
+      ],
+      "illustration": "assets/illustrations/steps/panna-cotta/soak.webp",
+      "copy": {
+        "en": {
+          "title": "Soak the gelatine",
+          "wait": "Follow the packet timing",
+          "instructions": [
+            "Soak the gelatine sheet in cold water for the time given on its packet."
+          ],
+          "tip": "Heat the cream while the gelatine softens.",
+          "caption": "Submerge the gelatine sheet in cold water to soften it."
+        },
+        "fr": {
+          "title": "Faire tremper la gélatine",
+          "wait": "Selon la durée indiquée sur le paquet",
+          "instructions": [
+            "Faites tremper la feuille de gélatine dans de l’eau froide pendant la durée indiquée sur le paquet."
+          ],
+          "tip": "Faites chauffer la crème pendant que la gélatine ramollit.",
+          "caption": "Plongez la feuille de gélatine dans de l’eau froide pour la ramollir."
+        }
+      }
+    },
+    {
+      "id": "heat",
+      "during": "soak",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "cream",
+        "milk",
+        "vanilla"
+      ],
+      "illustration": "assets/illustrations/steps/panna-cotta/heat.webp",
+      "copy": {
+        "en": {
+          "title": "Heat the cream",
+          "heat": "Just to the boil",
+          "instructions": [
+            "Pour the cream, milk and vanilla into a small saucepan.",
+            "Bring the mixture just to the boil."
+          ],
+          "caption": "Look for the first bubbles around the edge of the cream."
+        },
+        "fr": {
+          "title": "Chauffer la crème",
+          "heat": "Jusqu’au début de l’ébullition",
+          "instructions": [
+            "Versez la crème, le lait et la vanille dans une petite casserole.",
+            "Portez le mélange tout juste à ébullition."
+          ],
+          "caption": "Repérez les premières bulles sur le bord de la crème."
+        }
+      }
+    },
+    {
+      "id": "dissolve",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "cream",
+        "milk",
+        "vanilla",
+        "gelatine"
+      ],
+      "illustration": "assets/illustrations/steps/panna-cotta/dissolve.webp",
+      "copy": {
+        "en": {
+          "title": "Dissolve the gelatine",
+          "heat": "Off the heat",
+          "instructions": [
+            "Take the pan off the heat.",
+            "Squeeze the excess water from the softened gelatine.",
+            "Stir the gelatine into the hot cream until it dissolves completely."
+          ],
+          "caption": "Squeeze water from the softened gelatine before stirring it into the hot cream off the heat."
+        },
+        "fr": {
+          "title": "Dissoudre la gélatine",
+          "heat": "Hors du feu",
+          "instructions": [
+            "Retirez la casserole du feu.",
+            "Essorez la gélatine ramollie.",
+            "Incorporez la gélatine à la crème chaude en remuant jusqu’à dissolution complète."
+          ],
+          "caption": "Essorez la gélatine ramollie avant de l’incorporer à la crème chaude hors du feu."
+        }
+      }
+    },
+    {
+      "id": "cool",
+      "activity": "wait",
+      "tone": "yellow",
+      "uses": [
+        "cream",
+        "milk",
+        "vanilla",
+        "gelatine"
+      ],
+      "illustration": "assets/illustrations/steps/panna-cotta/cool.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the cream in ramekins",
+          "wait": "Until cool",
+          "instructions": [
+            "Pour the cream into ramekins.",
+            "Leave the ramekins to cool before chilling."
+          ],
+          "caption": "Pour the cream into individual ramekins for cooling."
+        },
+        "fr": {
+          "title": "Laisser refroidir la crème en ramequins",
+          "wait": "Jusqu’à refroidissement",
+          "instructions": [
+            "Versez la crème dans des ramequins.",
+            "Laissez refroidir les ramequins avant de les réfrigérer."
+          ],
+          "caption": "Versez la crème dans des ramequins individuels pour la laisser refroidir."
+        }
+      }
+    },
+    {
+      "id": "set",
+      "activity": "chill",
+      "tone": "yellow",
+      "uses": [
+        "cream",
+        "milk",
+        "vanilla",
+        "gelatine"
+      ],
+      "duration": [
+        240,
+        240
+      ],
+      "timers": [
+        {
+          "minutes": 240,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the set"
+            },
+            "fr": {
+              "label": "Vérifier la prise"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/panna-cotta/set.webp",
+      "copy": {
+        "en": {
+          "title": "Chill until set",
+          "timing": "About 4 hr",
+          "wait": "Until set",
+          "instructions": [
+            "Refrigerate the cooled ramekins for about 4 hours, until the panna cotta is set."
+          ],
+          "caption": "Chill the cooled ramekins until the cream has set."
+        },
+        "fr": {
+          "title": "Laisser prendre au réfrigérateur",
+          "timing": "Environ 4 h",
+          "wait": "Jusqu’à la prise",
+          "instructions": [
+            "Réfrigérez les ramequins refroidis pendant environ 4 heures, jusqu’à ce que la panna cotta soit prise."
+          ],
+          "caption": "Réfrigérez les ramequins refroidis jusqu’à ce que la crème soit prise."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Leaf gelatine strength varies by brand. Check the packet for the recommended amount for 245 g of liquid."
+        },
+        "fr": {
+          "text": "Le pouvoir gélifiant des feuilles varie selon la marque. Vérifiez sur le paquet la quantité conseillée pour 245 g de liquide."
+        }
+      }
+    }
+  ],
+  "copy": {
+    "en": {
+      "title": "Vanilla Panna Cotta",
+      "restTime": "Soak gelatine as directed. Allow cream to cool, then chill about 4 hr.",
+      "description": "A simple cream-and-milk panna cotta set with leaf gelatine.",
+      "setup": [
+        "Use a small saucepan and individual ramekins."
+      ],
+      "allergens": [
+        "Milk",
+        "Fish if using fish gelatine (check the packet)"
+      ]
+    },
+    "fr": {
+      "title": "Panna cotta à la vanille",
+      "restTime": "Trempage selon le paquet, refroidissement puis environ 4 h au frais",
+      "description": "Une panna cotta au lait et à la crème, prise avec de la gélatine en feuille.",
+      "setup": [
+        "Prévoyez une petite casserole et des ramequins individuels."
+      ],
+      "allergens": [
+        "Lait",
+        "Poisson si la gélatine est à base de poisson (vérifiez l’étiquette)"
+      ]
+    }
+  }
+}

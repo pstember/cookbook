@@ -41,4 +41,4 @@ Keep heat and wait pills with their step or option. Place each timer beside its 
 
 Use 640 × 480 WebP files for recipe heroes, thumbnails and method illustrations. Match the collection’s warm gouache and coloured-pencil style. Frame the equipment, hand position and ingredient texture that illustrate the action. Check the finished crop at phone and print sizes.
 
-Use one distinct image per numbered step. Save it as `public/assets/illustrations/steps/<recipe-id>/<step-id>.webp`. In `public/step-illustrations/<recipe-id>.js`, give the step ID a single-entry array containing its short `en` and `fr` captions. Register the recipe in that directory’s `index.js`. Captions describe the visible cue. The method supplies quantities, temperatures and times.
+Use one distinct image per numbered step. Save it as `public/assets/illustrations/steps/<recipe-id>/<step-id>.webp`. Set the step’s `illustration` to the path relative to `public/` and set `copy.en.caption` and `copy.fr.caption` in the recipe JSON. Captions describe the visible cue. The method supplies quantities, temperatures and times.

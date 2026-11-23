@@ -1,0 +1,1330 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "lemon-meringue-pie",
+  "category": "Desserts",
+  "image": {
+    "src": "assets/illustrations/lemon-meringue-pie.webp",
+    "copy": {
+      "en": {
+        "alt": "Illustrated lemon meringue pie on a blue plate, with a slice pulled forward to show the lemon filling."
+      },
+      "fr": {
+        "alt": "Illustration d’une tarte au citron meringuée sur une assiette bleue, avec une part avancée pour montrer la garniture."
+      }
+    }
+  },
+  "times": [
+    {
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Prep",
+          "value": "40 min"
+        },
+        "fr": {
+          "label": "Préparation",
+          "value": "40 min"
+        }
+      }
+    },
+    {
+      "icon": "oven",
+      "highlight": "cook",
+      "copy": {
+        "en": {
+          "label": "Cook",
+          "value": "51–67 min"
+        },
+        "fr": {
+          "label": "Cuisson",
+          "value": "51–67 min"
+        }
+      }
+    },
+    {
+      "icon": "snow",
+      "highlight": "rest",
+      "copy": {
+        "en": {
+          "label": "Chill & rest",
+          "value": "2–3½ hr"
+        },
+        "fr": {
+          "label": "Repos et réfrigération",
+          "value": "2 h à 3 h 30"
+        }
+      }
+    }
+  ],
+  "servings": 8,
+  "batches": [
+    {
+      "servings": 4,
+      "copy": {
+        "en": {
+          "tins": "one 16 cm tin"
+        },
+        "fr": {
+          "tins": "un moule de 16 cm"
+        }
+      }
+    },
+    {
+      "servings": 8,
+      "copy": {
+        "en": {
+          "tins": "one 23 cm tin"
+        },
+        "fr": {
+          "tins": "un moule de 23 cm"
+        }
+      }
+    },
+    {
+      "servings": 12,
+      "copy": {
+        "en": {
+          "tins": "two 20 cm tins"
+        },
+        "fr": {
+          "tins": "deux moules de 20 cm"
+        }
+      }
+    },
+    {
+      "servings": 16,
+      "copy": {
+        "en": {
+          "tins": "two 23 cm tins"
+        },
+        "fr": {
+          "tins": "deux moules de 23 cm"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "art": "rolling",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "flour",
+          "grams": 175,
+          "food": "flour",
+          "copy": {
+            "en": {
+              "name": "plain flour"
+            },
+            "fr": {
+              "name": "de farine de blé"
+            }
+          }
+        },
+        {
+          "id": "pastry-butter",
+          "grams": 100,
+          "food": "butter",
+          "copy": {
+            "en": {
+              "name": "unsalted butter",
+              "note": "cold, cubed"
+            },
+            "fr": {
+              "name": "de beurre doux",
+              "note": "froid, coupé en dés"
+            }
+          }
+        },
+        {
+          "id": "pastry-sugar",
+          "grams": 12,
+          "food": "sugar",
+          "copy": {
+            "en": {
+              "name": "caster sugar"
+            },
+            "fr": {
+              "name": "de sucre en poudre"
+            }
+          }
+        },
+        {
+          "id": "pastry-yolk",
+          "grams": 18,
+          "food": "yolk",
+          "eggGrams": 18,
+          "copy": {
+            "en": {
+              "name": "egg yolk",
+              "eggName": "large yolk"
+            },
+            "fr": {
+              "name": "de jaune d’œuf",
+              "eggName": "gros jaune",
+              "eggPlural": "gros jaunes"
+            }
+          }
+        },
+        {
+          "id": "pastry-water",
+          "grams": 15,
+          "food": "water",
+          "copy": {
+            "en": {
+              "name": "cold water"
+            },
+            "fr": {
+              "name": "d’eau froide"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Pastry"
+        },
+        "fr": {
+          "title": "Pâte brisée"
+        }
+      }
+    },
+    {
+      "art": "lemon",
+      "tone": "blue",
+      "ingredients": [
+        {
+          "id": "filling-eggs",
+          "grams": 150,
+          "food": "egg",
+          "eggGrams": 50,
+          "copy": {
+            "en": {
+              "name": "beaten whole eggs",
+              "eggName": "egg"
+            },
+            "fr": {
+              "name": "d’œufs entiers battus",
+              "eggName": "œuf",
+              "eggPlural": "œufs"
+            }
+          }
+        },
+        {
+          "id": "filling-yolk",
+          "grams": 18,
+          "food": "yolk",
+          "eggGrams": 18,
+          "copy": {
+            "en": {
+              "name": "egg yolk",
+              "eggName": "large yolk"
+            },
+            "fr": {
+              "name": "de jaune d’œuf",
+              "eggName": "gros jaune",
+              "eggPlural": "gros jaunes"
+            }
+          }
+        },
+        {
+          "id": "filling-sugar",
+          "grams": 150,
+          "food": "sugar",
+          "copy": {
+            "en": {
+              "name": "caster sugar"
+            },
+            "fr": {
+              "name": "de sucre en poudre"
+            }
+          }
+        },
+        {
+          "id": "filling-juice",
+          "grams": 155,
+          "food": "juice",
+          "weightEstimate": true,
+          "quantity": 150,
+          "unit": "ml",
+          "copy": {
+            "en": {
+              "name": "fresh lemon juice",
+              "note": "strained, from about 4 lemons"
+            },
+            "fr": {
+              "name": "de jus de citron frais",
+              "note": "filtré, environ 4 citrons"
+            }
+          }
+        },
+        {
+          "id": "filling-zest",
+          "grams": 18,
+          "food": "zest",
+          "weightEstimate": true,
+          "quantity": 3,
+          "copy": {
+            "en": {
+              "name": "finely grated lemon zest",
+              "unit": "lemons",
+              "note": "yellow peel only"
+            },
+            "fr": {
+              "name": "de zeste de citron finement râpé",
+              "unit": "citrons",
+              "note": "partie jaune seulement"
+            }
+          }
+        },
+        {
+          "id": "filling-butter",
+          "grams": 100,
+          "food": "saltedButter",
+          "copy": {
+            "en": {
+              "name": "salted butter",
+              "note": "melted and cooled until just warm"
+            },
+            "fr": {
+              "name": "de beurre salé",
+              "note": "fondu puis laissé tiédir"
+            }
+          }
+        },
+        {
+          "id": "filling-cornflour",
+          "grams": 10,
+          "food": "cornflour",
+          "copy": {
+            "en": {
+              "name": "cornflour",
+              "note": "cornstarch"
+            },
+            "fr": {
+              "name": "de fécule de maïs",
+              "note": "amidon de maïs"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Lemon filling"
+        },
+        "fr": {
+          "title": "Crème au citron"
+        }
+      }
+    },
+    {
+      "art": "whisk",
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "white",
+          "grams": 120,
+          "food": "white",
+          "eggGrams": 30,
+          "copy": {
+            "en": {
+              "name": "egg whites",
+              "eggName": "white"
+            },
+            "fr": {
+              "name": "de blancs d’œufs",
+              "eggName": "blanc",
+              "eggPlural": "blancs"
+            }
+          }
+        },
+        {
+          "id": "meringue-sugar",
+          "grams": 200,
+          "food": "sugar",
+          "copy": {
+            "en": {
+              "name": "caster sugar"
+            },
+            "fr": {
+              "name": "de sucre en poudre"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Swiss meringue"
+        },
+        "fr": {
+          "title": "Meringue suisse"
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "counter": "Refrigerate within 2 hours of baking the filling.",
+        "fridge": "Keep refrigerated. Serve within 24 hours for the best texture."
+      },
+      "fr": {
+        "counter": "Réfrigérez dans les 2 heures suivant la cuisson de la crème.",
+        "fridge": "Conservez au réfrigérateur. Servez dans les 24 heures pour une texture optimale."
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "rub-pastry",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water"
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/rub-pastry.webp",
+      "copy": {
+        "en": {
+          "title": "Rub in the butter",
+          "instructions": [
+            "Rub the cold butter into the flour and sugar until the mixture resembles breadcrumbs.",
+            "Add the yolk and cold water.",
+            "Gently press the dough together."
+          ],
+          "caption": "Rub cold butter into the flour and sugar with your fingertips until it resembles fine crumbs."
+        },
+        "fr": {
+          "title": "Sabler le beurre",
+          "instructions": [
+            "Sablez le beurre froid avec la farine et le sucre jusqu’à obtenir la texture d’une chapelure.",
+            "Ajoutez le jaune d’œuf et l’eau froide.",
+            "Rassemblez délicatement la pâte."
+          ],
+          "caption": "Sablez du bout des doigts le beurre froid, la farine et le sucre jusqu’à obtenir une chapelure fine."
+        }
+      }
+    },
+    {
+      "id": "pastry",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water"
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/pastry.webp",
+      "copy": {
+        "en": {
+          "title": "Roll and line the pastry",
+          "tip": "Patch any cracks with a little spare dough.",
+          "instructions": [
+            "Roll the dough between sheets of baking parchment to about 3 mm thick.",
+            "Line {tins} with the pastry, using loose-bottomed tins about 2.5 cm deep.",
+            "Trim the pastry at the rim.",
+            "Prick the base with a fork."
+          ],
+          "caption": "Roll the dough between sheets of baking parchment to about 3 mm thick before lining the tin."
+        },
+        "fr": {
+          "title": "Foncer le moule",
+          "tip": "Réparez les fissures avec un peu de pâte restante.",
+          "instructions": [
+            "Étalez la pâte entre deux feuilles de papier cuisson sur environ 3 mm d’épaisseur.",
+            "Foncez {tins} avec la pâte, en utilisant des moules à fond amovible d’environ 2,5 cm de profondeur.",
+            "Arasez les bords.",
+            "Piquez le fond à la fourchette."
+          ],
+          "caption": "Étalez la pâte entre deux feuilles de papier cuisson sur environ 3 mm avant de foncer le moule."
+        }
+      }
+    },
+    {
+      "id": "chill-pastry",
+      "activity": "chill",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water"
+      ],
+      "duration": [
+        30,
+        30
+      ],
+      "timers": [
+        {
+          "minutes": 30,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Chill pastry"
+            },
+            "fr": {
+              "label": "Réfrigérer la pâte"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/chill-pastry.webp",
+      "copy": {
+        "en": {
+          "title": "Chill the pastry shell",
+          "wait": "30 min in the fridge",
+          "instructions": [
+            "Refrigerate the lined tin for 30 minutes before blind baking.",
+            "Preheat the oven to 200°C conventional (180°C fan / 400°F) with a baking tray inside while the pastry chills."
+          ],
+          "caption": "Chill the pricked shell before filling it with baking weights."
+        },
+        "fr": {
+          "title": "Réfrigérer le fond de tarte",
+          "wait": "30 min au réfrigérateur",
+          "instructions": [
+            "Réfrigérez le fond de tarte pendant 30 minutes avant la cuisson à blanc.",
+            "Préchauffez le four à 200 °C en chaleur statique (180 °C en chaleur tournante / 400 °F) avec une plaque à l’intérieur pendant le repos de la pâte."
+          ],
+          "caption": "Réfrigérez le fond de tarte piqué avant de le garnir de billes de cuisson."
+        }
+      }
+    },
+    {
+      "id": "blind-bake",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water"
+      ],
+      "duration": [
+        20,
+        23
+      ],
+      "timers": [
+        {
+          "minutes": 15,
+          "afterInstruction": 4,
+          "copy": {
+            "en": {
+              "label": "Bake with weights"
+            },
+            "fr": {
+              "label": "Cuire avec les billes"
+            }
+          }
+        },
+        {
+          "minutes": 5,
+          "afterInstruction": 6,
+          "copy": {
+            "en": {
+              "label": "Bake uncovered"
+            },
+            "fr": {
+              "label": "Terminer la cuisson sans les billes"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/blind-bake.webp",
+      "copy": {
+        "en": {
+          "title": "Blind bake the shell",
+          "heat": "200°C conventional / 180°C fan (400°F)",
+          "instructions": [
+            "Line the chilled pastry with baking parchment.",
+            "Fill with baking beans up to the rim.",
+            "Set the tin on the hot baking tray.",
+            "Bake for 15 minutes before removing the weights.",
+            "Lift out the parchment with the beans.",
+            "Bake uncovered for another 5–8 minutes until the base is dry and golden."
+          ],
+          "caption": "Lift the parchment and baking beads out together once the pastry sides hold their shape."
+        },
+        "fr": {
+          "title": "Cuire le fond à blanc",
+          "heat": "200 °C statique / 180 °C chaleur tournante (400 °F)",
+          "instructions": [
+            "Tapissez la pâte froide de papier cuisson.",
+            "Remplissez de billes de cuisson jusqu’au bord.",
+            "Posez le moule sur la plaque chaude.",
+            "Enfournez pour 15 minutes avant de retirer les billes.",
+            "Retirez ensemble le papier et les billes.",
+            "Poursuivez la cuisson à découvert 5 à 8 minutes, jusqu’à ce que le fond soit sec et doré."
+          ],
+          "caption": "Retirez ensemble le papier cuisson et les billes quand les bords de la pâte se tiennent."
+        }
+      }
+    },
+    {
+      "id": "prep-lemons",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "filling-zest"
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/prep-lemons.webp",
+      "copy": {
+        "en": {
+          "title": "Zest the lemons",
+          "instructions": [
+            "Wash the lemons.",
+            "Dry the skins.",
+            "Finely grate only the thin yellow zest."
+          ],
+          "caption": "Rasp off the thin yellow zest before squeezing the lemons."
+        },
+        "fr": {
+          "title": "Zester les citrons",
+          "instructions": [
+            "Lavez les citrons.",
+            "Séchez-les.",
+            "Râpez finement la partie jaune de l’écorce uniquement."
+          ],
+          "caption": "Râpez la fine couche de zeste jaune avant de presser les citrons."
+        }
+      }
+    },
+    {
+      "id": "juice-lemons",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "filling-juice"
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/juice-lemons.webp",
+      "copy": {
+        "en": {
+          "title": "Strain the lemon juice",
+          "instructions": [
+            "Squeeze the zested lemons.",
+            "Strain out the seeds.",
+            "Weigh the juice for the filling."
+          ],
+          "caption": "Juice the lemons and strain out any seeds."
+        },
+        "fr": {
+          "title": "Filtrer le jus de citron",
+          "instructions": [
+            "Pressez les citrons zestés.",
+            "Filtrez le jus pour retirer les pépins.",
+            "Pesez le jus nécessaire à la crème."
+          ],
+          "caption": "Pressez les citrons et filtrez le jus pour retirer les pépins."
+        }
+      }
+    },
+    {
+      "id": "melt-butter",
+      "activity": "cooking",
+      "tone": "blue",
+      "uses": [
+        "filling-butter"
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/melt-butter.webp",
+      "copy": {
+        "en": {
+          "title": "Melt the salted butter",
+          "instructions": [
+            "Melt the salted butter for the filling."
+          ],
+          "caption": "Melt the salted butter before whisking it into the lemon filling."
+        },
+        "fr": {
+          "title": "Faire fondre le beurre salé",
+          "instructions": [
+            "Faites fondre le beurre salé de la crème."
+          ],
+          "caption": "Faites fondre le beurre salé avant de l’incorporer à la crème au citron."
+        }
+      }
+    },
+    {
+      "id": "mix-filling",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "filling-eggs",
+        "filling-yolk",
+        "filling-sugar",
+        "filling-cornflour"
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/mix-filling.webp",
+      "copy": {
+        "en": {
+          "title": "Whisk the egg base",
+          "timing": "Whisk for 30–45 sec",
+          "wait": "Let the melted butter cool until just warm",
+          "instructions": [
+            "Set the melted butter aside off the heat to cool until just warm.",
+            "Stir the caster sugar and cornflour together in a mixing bowl.",
+            "Add the whole eggs and extra yolk.",
+            "Whisk gently for 30–45 seconds until smooth."
+          ],
+          "caption": "Whisk the eggs and extra yolk with the sugar and cornflour just until smooth."
+        },
+        "fr": {
+          "title": "Fouetter les œufs",
+          "timing": "Fouetter 30 à 45 s",
+          "wait": "Laisser tiédir le beurre fondu",
+          "instructions": [
+            "Laissez tiédir le beurre fondu hors du feu.",
+            "Mélangez le sucre et la fécule de maïs dans un saladier.",
+            "Ajoutez les œufs entiers et le jaune supplémentaire.",
+            "Fouettez doucement pendant 30 à 45 secondes jusqu’à obtenir un mélange lisse."
+          ],
+          "caption": "Fouettez doucement les œufs et le jaune supplémentaire avec le sucre et la fécule, jusqu’à obtenir un mélange lisse."
+        }
+      }
+    },
+    {
+      "id": "finish-filling",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "filling-eggs",
+        "filling-yolk",
+        "filling-sugar",
+        "filling-juice",
+        "filling-zest",
+        "filling-butter",
+        "filling-cornflour"
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/finish-filling.webp",
+      "copy": {
+        "en": {
+          "title": "Finish the lemon filling",
+          "tip": "A light hand keeps air bubbles to a minimum.",
+          "instructions": [
+            "Whisk the lemon juice into the egg base gradually.",
+            "Stir in the zest.",
+            "Drizzle in the just-warm butter while whisking gently, stopping as soon as the runny filling is combined."
+          ],
+          "caption": "Drizzle in the warm melted salted butter while whisking. The filling stays runny."
+        },
+        "fr": {
+          "title": "Terminer la crème au citron",
+          "tip": "Un geste léger évite la formation de bulles d’air.",
+          "instructions": [
+            "Incorporez progressivement le jus de citron au fouet.",
+            "Incorporez le zeste.",
+            "Versez le beurre tiède en filet en fouettant doucement, juste assez pour obtenir une crème liquide homogène."
+          ],
+          "caption": "Versez le beurre salé fondu et tiède en filet tout en fouettant. La crème reste liquide."
+        }
+      }
+    },
+    {
+      "id": "fill-shell",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water",
+        "filling-eggs",
+        "filling-yolk",
+        "filling-sugar",
+        "filling-juice",
+        "filling-zest",
+        "filling-butter",
+        "filling-cornflour"
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/fill-shell.webp",
+      "copy": {
+        "en": {
+          "title": "Fill the warm shell",
+          "instructions": [
+            "Lower the oven to 150°C fan.",
+            "Place the warm baked shell on a tray.",
+            "Pour the filling into the shell to just below the rim."
+          ],
+          "caption": "Pour the runny filling into the warm shell until it sits just below the rim."
+        },
+        "fr": {
+          "title": "Garnir le fond encore chaud",
+          "instructions": [
+            "Baissez le four à 150 °C en chaleur tournante.",
+            "Posez le fond de tarte cuit encore chaud sur une plaque.",
+            "Versez la crème dans le fond de tarte en vous arrêtant juste sous le bord."
+          ],
+          "caption": "Versez la crème liquide dans le fond de tarte chaud en vous arrêtant juste sous le bord."
+        }
+      }
+    },
+    {
+      "id": "bake-filling",
+      "activity": "cooking",
+      "tone": "blue",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water",
+        "filling-eggs",
+        "filling-yolk",
+        "filling-sugar",
+        "filling-juice",
+        "filling-zest",
+        "filling-butter",
+        "filling-cornflour"
+      ],
+      "duration": [
+        25,
+        25
+      ],
+      "timers": [
+        {
+          "minutes": 25,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the baked filling"
+            },
+            "fr": {
+              "label": "Vérifier la cuisson de la crème"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/bake-filling.webp",
+      "copy": {
+        "en": {
+          "title": "Bake the lemon filling",
+          "timing": "First check at 25 min, usually 25–35 min in all",
+          "heat": "150°C fan",
+          "instructions": [
+            "Bake the tart on the middle shelf at 150°C fan for 25 minutes before the first check."
+          ],
+          "caption": "Bake on the middle shelf at 150°C fan. Start checking after 25 minutes."
+        },
+        "fr": {
+          "title": "Cuire la crème au citron",
+          "timing": "Première vérification à 25 min, prévoir 25 à 35 min au total",
+          "heat": "150 °C chaleur tournante",
+          "instructions": [
+            "Enfournez à mi-hauteur à 150 °C en chaleur tournante pour 25 minutes avant la première vérification."
+          ],
+          "caption": "Enfournez à mi-hauteur à 150 °C en chaleur tournante. Vérifiez la cuisson au bout de 25 minutes."
+        }
+      }
+    },
+    {
+      "id": "check-filling",
+      "activity": "cooking",
+      "tone": "blue",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water",
+        "filling-eggs",
+        "filling-yolk",
+        "filling-sugar",
+        "filling-juice",
+        "filling-zest",
+        "filling-butter",
+        "filling-cornflour"
+      ],
+      "timers": [
+        {
+          "minutes": 3,
+          "afterInstruction": 3,
+          "copy": {
+            "en": {
+              "label": "Recheck after extra baking"
+            },
+            "fr": {
+              "label": "Vérifier à nouveau après la cuisson supplémentaire"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/check-filling.webp",
+      "copy": {
+        "en": {
+          "title": "Check the centre",
+          "timing": "If needed, 3–5 min per recheck",
+          "heat": "150°C fan",
+          "tip": "Check each tart separately. Loosely shield the pastry rim with foil if it starts to darken.",
+          "instructions": [
+            "Gently nudge the tray to check for set edges and a slight jelly-like wobble in the centre.",
+            "Check the centre with a food thermometer for a temperature of at least 75°C (167°F).",
+            "Bake for a further 3–5 minutes if the centre is still liquid or below 75°C.",
+            "Repeat the checks before taking the tart out."
+          ],
+          "caption": "The edges should be set and the centre should wobble slightly. Check that it reaches 75°C (167°F)."
+        },
+        "fr": {
+          "title": "Vérifier le centre",
+          "timing": "Si nécessaire, 3 à 5 min entre les vérifications",
+          "heat": "150 °C chaleur tournante",
+          "tip": "Vérifiez chaque tarte séparément. Protégez les bords de pâte avec du papier aluminium s’ils commencent à brunir.",
+          "instructions": [
+            "Secouez doucement la plaque pour vérifier que les bords sont pris et que le centre tremble légèrement comme une gelée.",
+            "Vérifiez au thermomètre de cuisine que le centre atteint au moins 75 °C (167 °F).",
+            "Prolongez la cuisson de 3 à 5 minutes si le centre est encore liquide ou en dessous de 75 °C.",
+            "Vérifiez de nouveau la texture et la température avant de sortir la tarte."
+          ],
+          "caption": "Les bords doivent être pris et le centre légèrement tremblotant. Vérifiez qu’il atteint 75 °C (167 °F)."
+        }
+      }
+    },
+    {
+      "id": "cool-filling",
+      "activity": "wait",
+      "tone": "blue",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water",
+        "filling-eggs",
+        "filling-yolk",
+        "filling-sugar",
+        "filling-juice",
+        "filling-zest",
+        "filling-butter",
+        "filling-cornflour"
+      ],
+      "duration": [
+        30,
+        60
+      ],
+      "timers": [
+        {
+          "minutes": 30,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the tart has cooled"
+            },
+            "fr": {
+              "label": "Vérifier que la tarte a refroidi"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/cool-filling.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the baked tart",
+          "wait": "On a rack until room temperature",
+          "instructions": [
+            "Leave the tart in its tin on a wire rack for 30–60 minutes, until the filling has set and reached room temperature.",
+            "Start the meringue when the tart is ready to top."
+          ],
+          "caption": "Cool the baked tart in its tin on a wire rack before adding the meringue."
+        },
+        "fr": {
+          "title": "Laisser refroidir la tarte",
+          "wait": "Sur une grille jusqu’à température ambiante",
+          "instructions": [
+            "Laissez la tarte dans son moule sur une grille pendant 30 à 60 minutes, jusqu’à ce que la crème soit prise et à température ambiante.",
+            "Commencez la meringue lorsque la tarte est prête à garnir."
+          ],
+          "caption": "Laissez refroidir la tarte cuite dans son moule sur une grille avant d’ajouter la meringue."
+        }
+      }
+    },
+    {
+      "id": "meringue",
+      "activity": "cooking",
+      "tone": "pink",
+      "uses": [
+        "white",
+        "meringue-sugar"
+      ],
+      "duration": [
+        5,
+        7
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/meringue.webp",
+      "copy": {
+        "en": {
+          "title": "Heat the egg whites and sugar",
+          "heat": "Barely simmering water",
+          "tip": "Stir before checking the temperature. Keep the thermometer tip off the bowl.",
+          "instructions": [
+            "Combine the whites and sugar in a clean heatproof bowl.",
+            "Set the bowl over barely simmering water, leaving a gap underneath.",
+            "Whisk continuously until the sugar dissolves, about 5–7 minutes.",
+            "Check that the mixture reaches at least 72°C (162°F) throughout before removing from the heat."
+          ],
+          "caption": "Whisk the whites and sugar above barely simmering water, leaving a gap below the bowl."
+        },
+        "fr": {
+          "title": "Chauffer les blancs et le sucre",
+          "heat": "Bain-marie à peine frémissant",
+          "tip": "Remuez avant de vérifier la température. Évitez de toucher le bol avec la sonde.",
+          "instructions": [
+            "Mélangez les blancs et le sucre dans un bol propre résistant à la chaleur.",
+            "Placez le bol au-dessus d’une eau à peine frémissante, sans que le fond touche l’eau.",
+            "Fouettez sans arrêt jusqu’à dissolution du sucre, environ 5 à 7 minutes.",
+            "Vérifiez que tout le mélange atteint au moins 72 °C (162 °F) avant de le retirer du bain-marie."
+          ],
+          "caption": "Fouettez les blancs et le sucre au-dessus d’une eau à peine frémissante, sans que le bol touche l’eau."
+        }
+      }
+    },
+    {
+      "id": "whip-meringue",
+      "activity": "prep",
+      "tone": "pink",
+      "uses": [
+        "white",
+        "meringue-sugar"
+      ],
+      "duration": [
+        5,
+        8
+      ],
+      "timers": [
+        {
+          "minutes": 5,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the whisked peaks"
+            },
+            "fr": {
+              "label": "Vérifier la tenue de la meringue"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/whip-meringue.webp",
+      "copy": {
+        "en": {
+          "title": "Whip to stiff peaks",
+          "heat": "Off the heat",
+          "instructions": [
+            "Lift the bowl off the heat.",
+            "Beat with an electric mixer for 5–8 minutes until the meringue is glossy and holds stiff peaks."
+          ],
+          "caption": "After heating to at least 72°C (162°F), whip off the heat until a peak stands upright."
+        },
+        "fr": {
+          "title": "Monter la meringue",
+          "heat": "Hors du feu",
+          "instructions": [
+            "Retirez le bol du bain-marie.",
+            "Fouettez au batteur électrique 5 à 8 minutes, jusqu’à ce que la meringue soit brillante et forme des pics fermes."
+          ],
+          "caption": "Après avoir atteint au moins 72 °C (162 °F), fouettez hors du feu jusqu’à ce qu’un pic tienne droit."
+        }
+      }
+    },
+    {
+      "id": "swirl",
+      "activity": "prep",
+      "tone": "green",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water",
+        "filling-eggs",
+        "filling-yolk",
+        "filling-sugar",
+        "filling-juice",
+        "filling-zest",
+        "filling-butter",
+        "filling-cornflour",
+        "white",
+        "meringue-sugar"
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/swirl.webp",
+      "copy": {
+        "en": {
+          "title": "Shape the meringue peaks",
+          "instructions": [
+            "Spoon the freshly whipped meringue onto the room-temperature filling.",
+            "Spread it right to the pastry edge.",
+            "Lift the spoon to form wavy peaks."
+          ],
+          "caption": "Spread the meringue over the cooled filling to the pastry edge. Lift the spoon to pull up peaks."
+        },
+        "fr": {
+          "title": "Former les pics de meringue",
+          "instructions": [
+            "Déposez la meringue fraîchement montée sur la crème à température ambiante.",
+            "Étalez-la jusqu’au bord de la pâte.",
+            "Soulevez la cuillère par endroits pour former des pics."
+          ],
+          "caption": "Étalez la meringue sur la crème refroidie jusqu’au bord de la pâte. Soulevez la cuillère pour former des pics."
+        }
+      }
+    },
+    {
+      "id": "brown",
+      "activity": "cooking",
+      "tone": "green",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water",
+        "filling-eggs",
+        "filling-yolk",
+        "filling-sugar",
+        "filling-juice",
+        "filling-zest",
+        "filling-butter",
+        "filling-cornflour",
+        "white",
+        "meringue-sugar"
+      ],
+      "options": [
+        {
+          "copy": {
+            "en": {
+              "title": "Oven grill",
+              "heat": "Hot preheated grill",
+              "wait": "Watch continuously, usually 1–2 min",
+              "instructions": [
+                "Set the pie about 15 cm below the hot grill element.",
+                "Watch the pie constantly.",
+                "Turn the tin as needed.",
+                "Remove the pie as soon as the tips turn golden, usually after 1–2 minutes."
+              ]
+            },
+            "fr": {
+              "title": "Gril du four",
+              "heat": "Gril chaud préchauffé",
+              "wait": "Surveiller en continu, généralement 1 à 2 min",
+              "instructions": [
+                "Placez la tarte à environ 15 cm sous la résistance chaude.",
+                "Surveillez-la sans interruption.",
+                "Tournez le moule si nécessaire.",
+                "Sortez la tarte dès que les pointes sont dorées, généralement au bout de 1 à 2 minutes."
+              ]
+            }
+          }
+        },
+        {
+          "copy": {
+            "en": {
+              "title": "Kitchen blowtorch",
+              "heat": "Kitchen blowtorch",
+              "wait": "Until the tips turn golden",
+              "instructions": [
+                "Set the pie on a heatproof surface.",
+                "Hold the torch about 15 cm from the peaks.",
+                "Sweep the flame continuously over the peaks until the tips turn golden."
+              ]
+            },
+            "fr": {
+              "title": "Chalumeau de cuisine",
+              "heat": "Chalumeau de cuisine",
+              "wait": "Jusqu’à ce que les pointes soient dorées",
+              "instructions": [
+                "Placez la tarte sur une surface résistante à la chaleur.",
+                "Tenez le chalumeau à environ 15 cm des pics.",
+                "Balayez les pics avec la flamme sans l’immobiliser, jusqu’à ce que les pointes soient dorées."
+              ]
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/brown.webp",
+      "copy": {
+        "en": {
+          "title": "Toast the meringue",
+          "tip": "Grilling or torching only browns the surface. Check the egg whites’ temperature over the water bath.",
+          "instructions": [
+            "Toast the peaks with one of the following methods."
+          ],
+          "caption": "Oven grill option. Watch the pie closely and take it out as soon as the tips turn golden."
+        },
+        "fr": {
+          "title": "Dorer la meringue",
+          "tip": "Le gril et le chalumeau dorent seulement la surface. Vérifiez la température des blancs pendant le chauffage au bain-marie.",
+          "instructions": [
+            "Dorez les pointes selon l’une des méthodes suivantes."
+          ],
+          "caption": "Au gril du four. Surveillez la tarte et sortez-la dès que les pointes sont dorées."
+        }
+      }
+    },
+    {
+      "id": "chill",
+      "activity": "chill",
+      "tone": "green",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water",
+        "filling-eggs",
+        "filling-yolk",
+        "filling-sugar",
+        "filling-juice",
+        "filling-zest",
+        "filling-butter",
+        "filling-cornflour",
+        "white",
+        "meringue-sugar"
+      ],
+      "duration": [
+        60,
+        120
+      ],
+      "timers": [
+        {
+          "minutes": 60,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the chilled pie"
+            },
+            "fr": {
+              "label": "Vérifier que la tarte est froide"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/chill.webp",
+      "copy": {
+        "en": {
+          "title": "Chill the finished pie",
+          "wait": "1–2 hours in the fridge",
+          "instructions": [
+            "Refrigerate the finished pie within 2 hours of baking the filling.",
+            "Chill for 1–2 hours before serving."
+          ],
+          "caption": "Chill the toasted pie before slicing."
+        },
+        "fr": {
+          "title": "Réfrigérer la tarte garnie",
+          "wait": "1 à 2 h au réfrigérateur",
+          "instructions": [
+            "Réfrigérez la tarte garnie dans les 2 heures suivant la cuisson de la crème.",
+            "Laissez-la au réfrigérateur 1 à 2 heures avant de servir."
+          ],
+          "caption": "Réfrigérez la tarte meringuée avant de la découper."
+        }
+      }
+    },
+    {
+      "id": "serve",
+      "activity": "prep",
+      "tone": "green",
+      "uses": [
+        "flour",
+        "pastry-butter",
+        "pastry-sugar",
+        "pastry-yolk",
+        "pastry-water",
+        "filling-eggs",
+        "filling-yolk",
+        "filling-sugar",
+        "filling-juice",
+        "filling-zest",
+        "filling-butter",
+        "filling-cornflour",
+        "white",
+        "meringue-sugar"
+      ],
+      "illustration": "assets/illustrations/steps/lemon-meringue-pie/serve.webp",
+      "copy": {
+        "en": {
+          "title": "Slice the chilled pie",
+          "tip": "Wipe the blade between cuts for neat layers.",
+          "instructions": [
+            "Lift the chilled pie from the tin.",
+            "Slice straight down with a sharp knife."
+          ],
+          "caption": "Slice the chilled pie once the lemon layer is set and can hold its shape."
+        },
+        "fr": {
+          "title": "Découper la tarte froide",
+          "tip": "Essuyez la lame entre les parts pour obtenir des couches bien nettes.",
+          "instructions": [
+            "Démoulez la tarte froide.",
+            "Découpez-la verticalement avec un couteau bien aiguisé."
+          ],
+          "caption": "Découpez la tarte froide quand la crème au citron est prise et se tient."
+        }
+      }
+    }
+  ],
+  "nutrition": {
+    "finishedWeightGrams": 1150,
+    "copy": {
+      "en": {
+        "yieldAssumptions": "The 1,150 g finished yield assumes roughly 90 g lost to pastry trimming and moisture loss during baking, heating and cooling. Weigh the chilled pie for a more accurate yield.",
+        "dataAssumptions": "The calculation treats the weight loss as predominantly water and retains all ingredient nutrients. Raw egg white is a proxy for pasteurised white. Raw lemon peel is a proxy for zest, with fibre subtracted from total carbohydrate. Fresh lemon juice uses CoFID’s NSP fibre as a proxy because its AOAC value is unavailable. The lemon juice weight is converted from volume using USDA data. The zest weight assumes three medium lemons. CoFID trace values and tap-water nutrients are treated as zero."
+      },
+      "fr": {
+        "yieldAssumptions": "Le poids final estimé de 1 150 g suppose une perte d’environ 90 g, due à la pâte retirée des bords et à l’humidité perdue pendant la cuisson, le chauffage et le refroidissement. Pesez la tarte froide pour connaître son poids réel.",
+        "dataAssumptions": "Le calcul suppose que la perte de poids correspond principalement à de l’eau et que les nutriments des ingrédients sont conservés. Les valeurs du blanc d’œuf cru servent à estimer celles du blanc pasteurisé. Les valeurs de l’écorce de citron crue servent à estimer celles du zeste, après déduction des fibres des glucides totaux. Pour le jus de citron frais, les fibres NSP de la base CoFID remplacent la valeur AOAC indisponible. Le volume de jus de citron est converti en poids à partir des données de l’USDA. Le poids du zeste correspond à une estimation pour trois citrons moyens. Les traces signalées dans CoFID et les nutriments de l’eau du robinet sont comptés comme nuls."
+      }
+    }
+  },
+  "source": {
+    "url": "https://www.bbcgoodfood.com/recipes/ultimate-lemon-meringue-pie",
+    "copy": {
+      "en": {
+        "credit": "Shortcrust adapted from",
+        "label": "Angela Nilsen’s lemon meringue pie in Good Food"
+      },
+      "fr": {
+        "credit": "Pâte brisée adaptée de",
+        "label": "la tarte au citron meringuée d’Angela Nilsen, publiée dans Good Food"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "totalTime": "About 3 hr 30 min–5 hr 20 min if made in sequence",
+      "title": "Lemon Meringue Pie",
+      "description": "Buttery shortcrust with an oven-baked lemon filling and soft swirls of toasted Swiss meringue.",
+      "ingredientTip": "Save the whites from the pastry and filling yolks and top up to the listed weight for the meringue. Weigh the eggs without their shells. If using carton whites, choose ones suitable for whipping.",
+      "setup": [
+        "Use {tins}, loose-bottomed and about 2.5 cm deep.",
+        "Preheat the oven to 200°C conventional (180°C fan / 400°F) with a baking tray inside."
+      ],
+      "allergens": [
+        "Wheat",
+        "Egg",
+        "Milk"
+      ]
+    },
+    "fr": {
+      "totalTime": "Environ 3 h 30 à 5 h 20 en travaillant étape par étape",
+      "title": "Tarte au citron meringuée",
+      "description": "Une pâte brisée au beurre garnie d’une crème au citron cuite au four et de volutes de meringue suisse dorée.",
+      "ingredientTip": "Réservez les blancs des jaunes utilisés pour la pâte et la crème, puis complétez jusqu’au poids indiqué pour la meringue. Pesez les œufs sans leur coquille. Si vous utilisez des blancs en brique, choisissez-en qui peuvent être montés en neige.",
+      "setup": [
+        "Utilisez {tins}, à fond amovible et d’environ 2,5 cm de profondeur.",
+        "Préchauffez le four à 200 °C en chaleur statique (180 °C en chaleur tournante / 400 °F) avec une plaque à l’intérieur."
+      ],
+      "allergens": [
+        "Blé",
+        "Œuf",
+        "Lait"
+      ]
+    }
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "pate-brisee",
+  "category": "Baking basics",
+  "thumbnail": "assets/illustrations/recipes/pate-brisee.webp",
+  "groups": [
+    {
+      "art": "rolling",
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "flour",
+          "grams": 200,
+          "copy": {
+            "en": {
+              "name": "flour"
+            },
+            "fr": {
+              "name": "farine"
+            }
+          }
+        },
+        {
+          "id": "butter",
+          "grams": 100,
+          "copy": {
+            "en": {
+              "name": "butter",
+              "note": "softened and cut into pieces"
+            },
+            "fr": {
+              "name": "beurre",
+              "note": "souple et coupé en morceaux"
+            }
+          }
+        },
+        {
+          "id": "salt",
+          "grams": 0.8,
+          "quantity": 2,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "fine salt",
+              "unit": "pinches"
+            },
+            "fr": {
+              "name": "sel fin",
+              "unit": "pincées"
+            }
+          }
+        },
+        {
+          "id": "yolk",
+          "grams": 17,
+          "quantity": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "egg yolk"
+            },
+            "fr": {
+              "name": "jaune d’œuf"
+            }
+          }
+        },
+        {
+          "id": "water",
+          "grams": 40,
+          "quantity": 4,
+          "unit": "cl",
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "water",
+              "note": "adjust to achieve the right consistency"
+            },
+            "fr": {
+              "name": "eau",
+              "note": "à ajuster selon la consistance"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Pastry"
+        },
+        "fr": {
+          "title": "Pâte"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "rub-in",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "butter",
+        "salt"
+      ],
+      "options": [
+        {
+          "copy": {
+            "en": {
+              "title": "By hand",
+              "instructions": [
+                "Rub the mixture between your fingertips until it feels like coarse sand."
+              ]
+            },
+            "fr": {
+              "title": "À la main",
+              "instructions": [
+                "Sablez le mélange du bout des doigts jusqu’à obtenir une texture de sable grossier."
+              ]
+            }
+          }
+        },
+        {
+          "copy": {
+            "en": {
+              "title": "Stand mixer",
+              "instructions": [
+                "Work the mixture with the paddle attachment until it resembles coarse sand."
+              ]
+            },
+            "fr": {
+              "title": "Au robot",
+              "instructions": [
+                "Travaillez le mélange à la feuille jusqu’à obtenir une texture de sable grossier."
+              ]
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/pate-brisee/rub-in.webp",
+      "copy": {
+        "en": {
+          "title": "Rub in the butter",
+          "instructions": [
+            "Put the flour, salt and butter pieces in a bowl."
+          ],
+          "caption": "Rub the butter into the flour with your fingertips until it feels like coarse sand."
+        },
+        "fr": {
+          "title": "Sabler le beurre",
+          "instructions": [
+            "Réunissez la farine, le sel et les morceaux de beurre dans un bol."
+          ],
+          "caption": "Sablez le beurre et la farine du bout des doigts jusqu’à obtenir un sable grossier."
+        }
+      }
+    },
+    {
+      "id": "form",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "butter",
+        "salt",
+        "yolk",
+        "water"
+      ],
+      "illustration": "assets/illustrations/steps/pate-brisee/form.webp",
+      "copy": {
+        "en": {
+          "title": "Bring the dough together",
+          "instructions": [
+            "Mix in the yolk.",
+            "Add the water a little at a time, just until the dough holds together without crumbling."
+          ],
+          "caption": "Add the yolk and a little water at a time. Stop once the dough holds together."
+        },
+        "fr": {
+          "title": "Former la pâte",
+          "instructions": [
+            "Incorporez le jaune.",
+            "Ajoutez l’eau peu à peu, juste assez pour que la pâte se tienne sans s’effriter."
+          ],
+          "caption": "Ajoutez le jaune et versez l’eau petit à petit. Arrêtez dès que la pâte se rassemble."
+        }
+      }
+    },
+    {
+      "id": "fraise",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "butter",
+        "salt",
+        "yolk",
+        "water"
+      ],
+      "illustration": "assets/illustrations/steps/pate-brisee/fraise.webp",
+      "copy": {
+        "en": {
+          "title": "Smooth out the butter",
+          "instructions": [
+            "Turn the dough onto the work surface.",
+            "Press it away from you briefly with the heel of your hand to flatten any visible butter pieces.",
+            "Gather the dough with a scraper or spatula."
+          ],
+          "caption": "Press briefly with the heel of your hand, then gather the dough with a scraper."
+        },
+        "fr": {
+          "title": "Fraiser la pâte",
+          "instructions": [
+            "Déposez la pâte sur le plan de travail.",
+            "Écrasez-la brièvement avec le talon de la main pour aplatir les morceaux de beurre encore visibles.",
+            "Rassemblez la pâte avec une corne ou une spatule."
+          ],
+          "caption": "Aplatissez brièvement la pâte du talon de la main, puis rassemblez-la avec une corne."
+        }
+      }
+    },
+    {
+      "id": "rest",
+      "activity": "chill",
+      "tone": "yellow",
+      "uses": [
+        "flour",
+        "butter",
+        "salt",
+        "yolk",
+        "water"
+      ],
+      "illustration": "assets/illustrations/steps/pate-brisee/rest.webp",
+      "copy": {
+        "en": {
+          "title": "Chill the pastry",
+          "wait": "Until needed",
+          "instructions": [
+            "Wrap the dough.",
+            "Refrigerate it until needed."
+          ],
+          "tip": "You can prepare the pastry several hours ahead or the day before.",
+          "caption": "Wrap the dough snugly before chilling it."
+        },
+        "fr": {
+          "title": "Laisser reposer au frais",
+          "wait": "Jusqu’à utilisation",
+          "instructions": [
+            "Enveloppez la pâte.",
+            "Réfrigérez-la jusqu’à son utilisation."
+          ],
+          "tip": "Vous pouvez préparer la pâte plusieurs heures à l’avance ou la veille.",
+          "caption": "Enveloppez bien la pâte avant de la laisser reposer au frais."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Stop mixing as soon as the dough holds together. Add the water gradually so you can judge when it has enough."
+        },
+        "fr": {
+          "text": "Arrêtez de mélanger dès que la pâte se tient. Versez l’eau peu à peu pour pouvoir ajuster la quantité."
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "fridge": "Keep wrapped for several hours or overnight before using."
+      },
+      "fr": {
+        "fridge": "Gardez la pâte enveloppée plusieurs heures ou une nuit avant de l’utiliser."
+      }
+    }
+  },
+  "source": {
+    "url": "https://www.meilleurduchef.com/fr/recette/pate-brisee.html",
+    "copy": {
+      "en": {
+        "credit": "Technique from",
+        "label": "Meilleur du Chef – Shortcrust pastry"
+      },
+      "fr": {
+        "credit": "Technique d’après",
+        "label": "Meilleur du Chef · Pâte brisée"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Shortcrust pastry",
+      "restTime": "Chill until needed. Can be made the day before.",
+      "description": "A butter and egg yolk pastry for sweet or savoury tarts.",
+      "allergens": [
+        "Wheat (gluten)",
+        "Egg",
+        "Milk"
+      ]
+    },
+    "fr": {
+      "title": "Pâte brisée",
+      "restTime": "Au réfrigérateur jusqu’à utilisation, préparation possible la veille",
+      "description": "Une pâte à foncer au beurre et au jaune d’œuf pour les tartes salées ou sucrées.",
+      "allergens": [
+        "Blé (gluten)",
+        "Œuf",
+        "Lait"
+      ]
+    }
+  }
+}

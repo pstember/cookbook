@@ -1,0 +1,416 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "crepes",
+  "category": "Breakfast & brunch",
+  "image": {
+    "src": "assets/illustrations/recipes/crepes.webp",
+    "copy": {
+      "en": {
+        "alt": "Golden crêpes folded into quarters on a plate beside lemon wedges."
+      },
+      "fr": {
+        "alt": "Des crêpes dorées pliées en quatre sur une assiette, à côté de quartiers de citron."
+      }
+    }
+  },
+  "servings": 4,
+  "groups": [
+    {
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "flour",
+          "grams": 400,
+          "copy": {
+            "en": {
+              "name": "plain wheat flour"
+            },
+            "fr": {
+              "name": "de farine de blé"
+            }
+          }
+        },
+        {
+          "id": "eggs",
+          "grams": 300,
+          "quantity": 6,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "eggs",
+              "note": "weighed without shells"
+            },
+            "fr": {
+              "name": "d’œufs",
+              "note": "pesés sans coquille"
+            }
+          }
+        },
+        {
+          "id": "milk",
+          "grams": 516,
+          "quantity": 500,
+          "unit": "ml",
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "milk",
+              "note": "starting amount, plus more as needed"
+            },
+            "fr": {
+              "name": "de lait",
+              "note": "quantité de départ, à ajuster selon la consistance"
+            }
+          }
+        },
+        {
+          "id": "butter",
+          "grams": 80,
+          "copy": {
+            "en": {
+              "name": "melted butter",
+              "note": "lukewarm"
+            },
+            "fr": {
+              "name": "de beurre fondu",
+              "note": "tiède"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Crêpe batter"
+        },
+        "fr": {
+          "title": "Pâte à crêpes"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "sift",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "flour"
+      ],
+      "illustration": "assets/illustrations/steps/crepes/sift.webp",
+      "copy": {
+        "en": {
+          "title": "Sift the flour",
+          "instructions": [
+            "Sift all 400 g of flour into a large bowl."
+          ],
+          "caption": "Sift the flour into a large bowl."
+        },
+        "fr": {
+          "title": "Tamiser la farine",
+          "instructions": [
+            "Tamisez les 400 g de farine dans un grand saladier."
+          ],
+          "caption": "Tamisez la farine dans un grand saladier."
+        }
+      }
+    },
+    {
+      "id": "whisk-eggs",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "flour",
+        "eggs"
+      ],
+      "illustration": "assets/illustrations/steps/crepes/whisk-eggs.webp",
+      "copy": {
+        "en": {
+          "title": "Whisk in the eggs",
+          "instructions": [
+            "Make a well in the centre of the flour.",
+            "Crack the six eggs into the well.",
+            "Whisk from the centre to draw in the flour gradually."
+          ],
+          "caption": "Whisk the eggs from the centre of the well."
+        },
+        "fr": {
+          "title": "Incorporer les œufs au fouet",
+          "instructions": [
+            "Creusez un puits au centre de la farine.",
+            "Cassez les six œufs dans le puits.",
+            "Fouettez en partant du centre pour incorporer la farine peu à peu."
+          ],
+          "caption": "Fouettez les œufs au centre du puits."
+        }
+      }
+    },
+    {
+      "id": "add-milk",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "flour",
+        "eggs",
+        "milk"
+      ],
+      "illustration": "assets/illustrations/steps/crepes/add-milk.webp",
+      "copy": {
+        "en": {
+          "title": "Thin the batter with milk",
+          "instructions": [
+            "Whisk in 500 ml of milk gradually until the batter is smooth.",
+            "Whisk in more milk a splash at a time until the batter pours in a thin, steady stream and leaves a light film on the back of a spoon."
+          ],
+          "caption": "Add the milk gradually until the batter flows easily."
+        },
+        "fr": {
+          "title": "Délayer la pâte avec le lait",
+          "instructions": [
+            "Incorporez progressivement 500 ml de lait au fouet jusqu’à obtenir une pâte lisse.",
+            "Ajoutez un peu de lait à la fois en fouettant, jusqu’à ce que la pâte coule en un filet fin et continu et laisse une fine pellicule au dos d’une cuillère."
+          ],
+          "caption": "Ajoutez le lait peu à peu jusqu’à ce que la pâte coule facilement."
+        }
+      }
+    },
+    {
+      "id": "add-butter",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "flour",
+        "eggs",
+        "milk",
+        "butter"
+      ],
+      "illustration": "assets/illustrations/steps/crepes/add-butter.webp",
+      "copy": {
+        "en": {
+          "title": "Add the melted butter",
+          "instructions": [
+            "Whisk in the lukewarm melted butter until evenly mixed."
+          ],
+          "caption": "Pour the lukewarm melted butter into the batter."
+        },
+        "fr": {
+          "title": "Incorporer le beurre fondu",
+          "instructions": [
+            "Incorporez le beurre fondu tiède au fouet jusqu’à ce que la pâte soit homogène."
+          ],
+          "caption": "Versez le beurre fondu tiède dans la pâte."
+        }
+      }
+    },
+    {
+      "id": "rest",
+      "tone": "yellow",
+      "activity": "chill",
+      "uses": [
+        "flour",
+        "eggs",
+        "milk",
+        "butter"
+      ],
+      "duration": [
+        20,
+        20
+      ],
+      "durationMinimum": true,
+      "timers": [
+        {
+          "minutes": 20,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the rested batter"
+            },
+            "fr": {
+              "label": "Vérifier la pâte après le repos"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/crepes/rest.webp",
+      "copy": {
+        "en": {
+          "title": "Rest the batter",
+          "instructions": [
+            "Cover the bowl.",
+            "Refrigerate for at least 20 minutes, preferably overnight and ideally for 24 hours, before checking the consistency again."
+          ],
+          "wait": "At least 20 min in the fridge",
+          "caption": "Rest the covered batter in the fridge."
+        },
+        "fr": {
+          "title": "Laisser reposer la pâte",
+          "instructions": [
+            "Couvrez le saladier.",
+            "Réfrigérez la pâte au moins 20 minutes, de préférence toute une nuit et idéalement 24 heures, avant de vérifier de nouveau sa consistance."
+          ],
+          "wait": "Au moins 20 min au réfrigérateur",
+          "caption": "Laissez reposer la pâte couverte au réfrigérateur."
+        }
+      }
+    },
+    {
+      "id": "spread",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "flour",
+        "eggs",
+        "milk",
+        "butter"
+      ],
+      "illustration": "assets/illustrations/steps/crepes/spread.webp",
+      "copy": {
+        "en": {
+          "title": "Swirl the batter in the pan",
+          "heat": "Medium heat",
+          "instructions": [
+            "Heat the dry crêpe pan over medium heat.",
+            "Pour a small ladleful of batter into the centre.",
+            "Tilt the pan immediately to spread the batter into a thin, even layer."
+          ],
+          "caption": "Tilt the pan to spread a thin film of batter."
+        },
+        "fr": {
+          "title": "Répartir la pâte dans la crêpière",
+          "heat": "Feu moyen",
+          "instructions": [
+            "Chauffez la crêpière à feu moyen sans la graisser.",
+            "Versez une petite louche de pâte au centre.",
+            "Inclinez aussitôt la crêpière pour étaler la pâte en une couche fine et régulière."
+          ],
+          "caption": "Inclinez la crêpière pour étaler une fine couche de pâte."
+        }
+      }
+    },
+    {
+      "id": "cook",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "flour",
+        "eggs",
+        "milk",
+        "butter"
+      ],
+      "illustration": "assets/illustrations/steps/crepes/cook.webp",
+      "copy": {
+        "en": {
+          "title": "Cook and turn each crêpe",
+          "heat": "Medium heat",
+          "instructions": [
+            "Cook the first side until the surface looks set and the edges lift easily.",
+            "Flip the crêpe with a thin spatula.",
+            "Cook the second side until lightly golden in spots.",
+            "Transfer the crêpe to a plate.",
+            "Repeat with the remaining batter."
+          ],
+          "caption": "Turn the crêpe when the edge lifts easily."
+        },
+        "fr": {
+          "title": "Cuire et retourner chaque crêpe",
+          "heat": "Feu moyen",
+          "instructions": [
+            "Cuisez la première face jusqu’à ce que la surface soit prise et que les bords se décollent facilement.",
+            "Retournez la crêpe à l’aide d’une spatule fine.",
+            "Cuisez la seconde face jusqu’à ce qu’elle soit légèrement dorée par endroits.",
+            "Déposez la crêpe sur une assiette.",
+            "Recommencez avec le reste de la pâte."
+          ],
+          "caption": "Retournez la crêpe quand le bord se décolle facilement."
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "counter": "Refrigerate within 2 hours of cooking, or within 1 hour above 32°C.",
+        "fridge": "Keep covered for up to 72 hours at 4°C or below."
+      },
+      "fr": {
+        "counter": "Réfrigérez dans les 2 heures suivant la cuisson, ou dans l’heure s’il fait plus de 32 °C.",
+        "fridge": "Conservez dans un récipient couvert jusqu’à 72 heures à 4 °C ou moins."
+      }
+    }
+  },
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Stir the rested batter gently before cooking. If it has thickened or the first crêpe takes more than a quick tilt to cover the pan, whisk in a splash of milk and try again."
+        },
+        "fr": {
+          "text": "Remuez doucement la pâte reposée avant la cuisson. Si elle a épaissi ou si elle ne couvre pas la crêpière d’un mouvement rapide, incorporez un trait de lait au fouet et réessayez."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "Stack the cooked crêpes on a plate under a clean tea towel to keep them soft while you finish the batch."
+        },
+        "fr": {
+          "text": "Empilez les crêpes cuites sur une assiette sous un torchon propre pour les garder moelleuses pendant la cuisson des suivantes."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "Fill with jam or Nutella for a sweet crêpe. For a savoury version, add ham and grated cheese to a cooked crêpe in the pan and fold it when the cheese melts."
+        },
+        "fr": {
+          "text": "Pour une crêpe sucrée, garnissez-la de confiture ou de Nutella. Pour une version salée, ajoutez du jambon et du fromage râpé sur une crêpe cuite dans la poêle et repliez-la quand le fromage a fondu."
+        }
+      }
+    },
+    {
+      "source": {
+        "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+        "copy": {
+          "en": { "label": "FoodSafety.gov · Refrigeration guidance" },
+          "fr": { "label": "FoodSafety.gov · Conseils de réfrigération" }
+        }
+      },
+      "copy": {
+        "en": { "text": "The storage times are for plain cooked crêpes." },
+        "fr": { "text": "Les durées de conservation concernent les crêpes cuites nature." }
+      }
+    }
+  ],
+  "copy": {
+    "en": {
+      "title": "Crêpes",
+      "qualifier": "Family Favourite",
+      "description": "Thin, tender crêpes from a rested batter, cooked in a dry crêpe pan.",
+      "restTime": "At least 20 min, ideally 24 hr",
+      "setup": [
+        "Use a non-stick or well-seasoned crêpe pan. Keep the pan dry."
+      ],
+      "allergens": [
+        "Wheat (gluten)",
+        "Eggs",
+        "Milk"
+      ]
+    },
+    "fr": {
+      "title": "Crêpes",
+      "qualifier": "Recette préférée de la famille",
+      "description": "Des crêpes fines et moelleuses, préparées avec une pâte reposée et cuites dans une crêpière sans matière grasse ajoutée.",
+      "restTime": "Au moins 20 min, idéalement 24 h",
+      "setup": [
+        "Utilisez une crêpière antiadhésive ou bien culottée, sans la graisser."
+      ],
+      "allergens": [
+        "Blé (gluten)",
+        "Œufs",
+        "Lait"
+      ]
+    }
+  }
+}

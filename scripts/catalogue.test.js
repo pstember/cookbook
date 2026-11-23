@@ -5,14 +5,19 @@ import { recipes } from "../public/recipes/index.js";
 
 test("every recipe file has a unique catalogue entry and a stable URL", async () => {
   const directory = new URL("../public/recipes/", import.meta.url);
-  const modules = readdirSync(directory, { recursive: true }).filter(path => /[\\/].+\.js$/.test(path));
-  const entries = await Promise.all(modules.map(path => import(new URL(path.replaceAll("\\", "/"), directory))));
+  const files = readdirSync(directory, { recursive: true }).filter(path => /[\\/].+\.json$/.test(path));
+  const entries = await Promise.all(files.map(path =>
+    import(new URL(path.replaceAll("\\", "/"), directory), { with: { type: "json" } }),
+  ));
   assert.equal(recipes.length, entries.length);
   assert.equal(new Set(recipes.map(recipe => recipe.id)).size, recipes.length);
-  for (const { default: recipe } of entries) {
+  for (const [index, file] of files.entries()) {
+    const { default: recipe } = entries[index];
     assert.ok(recipes.includes(recipe), `Unlisted recipe: ${recipe.id}`);
     assert.match(recipe.id, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
-    assert.ok(recipe.title && recipe.category, recipe.id);
+    assert.equal(file.split(/[\\/]/).at(-1), `${recipe.id}.json`);
+    assert.equal(recipe.schemaVersion, 1, recipe.id);
+    assert.ok(recipe.category, recipe.id);
   }
 });
 

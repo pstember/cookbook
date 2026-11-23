@@ -1,0 +1,366 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "strawberry-yoghurt-lollies",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/strawberry-yoghurt-lollies.webp",
+  "times": [
+    {
+      "icon": "snow",
+      "copy": {
+        "en": {
+          "label": "Freeze",
+          "value": "At least 6 hr"
+        },
+        "fr": {
+          "label": "Congélation",
+          "value": "Au moins 6 h"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "yoghurt",
+          "grams": 120,
+          "food": "greekYoghurt",
+          "copy": {
+            "en": {
+              "name": "full-fat Greek yoghurt"
+            },
+            "fr": {
+              "name": "de yaourt grec entier"
+            }
+          }
+        },
+        {
+          "id": "strawberries",
+          "grams": 100,
+          "food": "strawberries",
+          "copy": {
+            "en": {
+              "name": "strawberries",
+              "note": "fresh or thawed from frozen"
+            },
+            "fr": {
+              "name": "de fraises",
+              "note": "fraîches ou décongelées"
+            }
+          }
+        },
+        {
+          "id": "banana",
+          "grams": 118,
+          "food": "banana",
+          "copy": {
+            "en": {
+              "name": "ripe banana",
+              "note": "about one small banana, peeled"
+            },
+            "fr": {
+              "name": "de banane mûre",
+              "note": "environ une petite banane pelée"
+            }
+          }
+        },
+        {
+          "id": "glucose",
+          "grams": 15,
+          "food": "glucoseSyrup",
+          "copy": {
+            "en": {
+              "name": "glucose syrup"
+            },
+            "fr": {
+              "name": "de sirop de glucose"
+            }
+          }
+        },
+        {
+          "id": "lemon-juice",
+          "grams": 6,
+          "food": "juice",
+          "copy": {
+            "en": {
+              "name": "lemon juice",
+              "note": "optional"
+            },
+            "fr": {
+              "name": "de jus de citron",
+              "note": "facultatif"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Lolly mixture"
+        },
+        "fr": {
+          "title": "Préparation pour bâtonnets glacés"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "blend",
+      "tone": "pink",
+      "activity": "prep",
+      "uses": [
+        "yoghurt",
+        "strawberries",
+        "banana",
+        "glucose",
+        "lemon-juice"
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-yoghurt-lollies/blend.webp",
+      "copy": {
+        "en": {
+          "title": "Blend the fruit and yoghurt",
+          "instructions": [
+            "Put the yoghurt, strawberries, banana, glucose syrup and optional lemon juice in a blender.",
+            "Blend until smooth."
+          ],
+          "caption": "Blend the strawberries, banana and yoghurt until the mixture is smooth."
+        },
+        "fr": {
+          "title": "Mixer les fruits et le yaourt",
+          "instructions": [
+            "Mettez le yaourt, les fraises, la banane, le sirop de glucose et le jus de citron facultatif dans le blender.",
+            "Mixez jusqu’à obtenir une préparation lisse."
+          ],
+          "caption": "Mixez les fraises, la banane et le yaourt jusqu’à obtenir une préparation lisse."
+        }
+      }
+    },
+    {
+      "id": "fill",
+      "tone": "pink",
+      "activity": "prep",
+      "uses": [
+        "yoghurt",
+        "strawberries",
+        "banana",
+        "glucose",
+        "lemon-juice"
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-yoghurt-lollies/fill.webp",
+      "copy": {
+        "en": {
+          "title": "Fill the moulds",
+          "instructions": [
+            "Pour the mixture into the lolly moulds.",
+            "Insert the sticks."
+          ],
+          "caption": "Fill the moulds and insert the sticks before freezing."
+        },
+        "fr": {
+          "title": "Remplir les moules",
+          "instructions": [
+            "Versez la préparation dans les moules à glaces.",
+            "Insérez les bâtonnets."
+          ],
+          "caption": "Remplissez les moules et insérez les bâtonnets avant de congeler."
+        }
+      }
+    },
+    {
+      "id": "freeze",
+      "tone": "pink",
+      "activity": "chill",
+      "uses": [
+        "yoghurt",
+        "strawberries",
+        "banana",
+        "glucose",
+        "lemon-juice"
+      ],
+      "duration": [
+        360,
+        360
+      ],
+      "durationMinimum": true,
+      "timers": [
+        {
+          "minutes": 360,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the frozen lollies"
+            },
+            "fr": {
+              "label": "Vérifier la prise des glaces"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-yoghurt-lollies/freeze.webp",
+      "copy": {
+        "en": {
+          "title": "Freeze the lollies",
+          "instructions": [
+            "Freeze the filled moulds for at least 6 hours or overnight, until the lollies are solid."
+          ],
+          "wait": "At least 6 hr or overnight",
+          "caption": "Freeze the filled moulds with their sticks in place."
+        },
+        "fr": {
+          "title": "Congeler les bâtonnets",
+          "instructions": [
+            "Placez les moules remplis au congélateur pendant au moins 6 heures ou toute une nuit, jusqu’à ce que les glaces soient prises."
+          ],
+          "wait": "Au moins 6 h ou toute une nuit",
+          "caption": "Congelez les moules remplis, avec les bâtonnets en place."
+        }
+      }
+    },
+    {
+      "id": "release",
+      "tone": "pink",
+      "activity": "prep",
+      "uses": [
+        "yoghurt",
+        "strawberries",
+        "banana",
+        "glucose",
+        "lemon-juice"
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-yoghurt-lollies/release.webp",
+      "copy": {
+        "en": {
+          "title": "Release the lollies",
+          "instructions": [
+            "Run warm water briefly over the outside of each mould.",
+            "Ease each lolly out by its stick."
+          ],
+          "caption": "Run warm water briefly over the outside of the mould, then ease the lolly out by its stick."
+        },
+        "fr": {
+          "title": "Démouler les bâtonnets",
+          "instructions": [
+            "Passez brièvement l’extérieur de chaque moule sous l’eau tiède.",
+            "Démoulez chaque glace en tirant doucement sur son bâtonnet."
+          ],
+          "caption": "Passez brièvement l’extérieur du moule sous l’eau tiède, puis démoulez la glace en tirant doucement sur le bâtonnet."
+        }
+      }
+    },
+    {
+      "id": "soften",
+      "tone": "pink",
+      "activity": "wait",
+      "uses": [
+        "yoghurt",
+        "strawberries",
+        "banana",
+        "glucose",
+        "lemon-juice"
+      ],
+      "duration": [
+        10,
+        15
+      ],
+      "optional": true,
+      "timers": [
+        {
+          "minutes": 10,
+          "afterInstruction": 1,
+          "copy": {
+            "en": {
+              "label": "Check the texture"
+            },
+            "fr": {
+              "label": "Vérifier la texture"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/strawberry-yoghurt-lollies/soften.webp",
+      "copy": {
+        "en": {
+          "title": "Soften before serving, if you like",
+          "instructions": [
+            "Leave the lollies to soften for 10–15 minutes if you prefer a gentler bite."
+          ],
+          "wait": "10–15 min, optional",
+          "caption": "For a softer bite, let the frozen lolly soften slightly before serving."
+        },
+        "fr": {
+          "title": "Laisser s’attendrir, si souhaité",
+          "instructions": [
+            "Laissez les glaces s’attendrir 10 à 15 minutes si vous préférez une texture plus tendre."
+          ],
+          "wait": "10 à 15 min, facultatif",
+          "caption": "Pour une texture plus tendre, laissez la glace s’assouplir légèrement avant de servir."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "To vary the sweetener, try 15 g maple syrup or two soaked dates. Either can change how firmly the lollies freeze."
+        },
+        "fr": {
+          "text": "Pour varier, remplacez le sirop de glucose par 15 g de sirop d’érable ou deux dattes réhydratées. Ces variantes peuvent modifier la fermeté des glaces."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "Try mango and coconut milk in place of the strawberries and yoghurt. For a layered look, freeze two fruit mixtures in the same mould. Vanilla, cinnamon, finely chopped fruit or crushed cereal can also be added."
+        },
+        "fr": {
+          "text": "Essayez de remplacer les fraises et le yaourt par de la mangue et du lait de coco. Pour obtenir des couches de couleurs différentes, congelez deux préparations aux fruits dans le même moule. Vous pouvez aussi ajouter de la vanille, de la cannelle, des fruits finement coupés ou des céréales concassées."
+        }
+      }
+    }
+  ],
+  "nutrition": {
+    "finishedWeightGrams": 359,
+    "copy": {
+      "en": {
+        "yieldAssumptions": "The frozen mixture is assumed to retain the ingredient weight, with negligible evaporation and transfer loss.",
+        "dataAssumptions": "The calculation includes the optional lemon juice and uses 5% fat Greek yoghurt and the listed glucose syrup as reference products. CoFID trace values are treated as zero."
+      },
+      "fr": {
+        "yieldAssumptions": "On suppose que la préparation congelée conserve le poids des ingrédients et que les pertes par évaporation ou lors du transvasement sont négligeables.",
+        "dataAssumptions": "Le calcul inclut le jus de citron facultatif. Les produits de référence sont un yaourt grec à 5 % de matière grasse et le sirop de glucose indiqué. Les traces signalées dans CoFID sont comptées comme nulles."
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Strawberry Yoghurt Lollies",
+      "totalTime": "At least 6 hr, plus blending and unmoulding",
+      "restTime": "Freeze at least 6 hr, plus 10–15 min to soften if desired",
+      "description": "Strawberries, banana and Greek yoghurt blended into creamy ice lollies.",
+      "yield": "About 5 lollies",
+      "setup": [
+        "Have a blender, lolly moulds and sticks ready."
+      ],
+      "allergens": [
+        "Milk"
+      ]
+    },
+    "fr": {
+      "title": "Bâtonnets glacés à la fraise et au yaourt",
+      "totalTime": "Au moins 6 h, plus le mixage et le démoulage",
+      "restTime": "Au moins 6 h au congélateur, puis 10 à 15 min pour assouplir si souhaité",
+      "description": "Des glaces crémeuses à la fraise, à la banane et au yaourt grec.",
+      "yield": "Environ 5 bâtonnets",
+      "setup": [
+        "Prévoyez un blender, des moules à glaces et des bâtonnets."
+      ],
+      "allergens": [
+        "Lait"
+      ]
+    }
+  }
+}

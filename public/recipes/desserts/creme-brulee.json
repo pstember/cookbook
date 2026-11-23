@@ -1,0 +1,409 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "creme-brulee",
+  "category": "Desserts",
+  "thumbnail": "assets/illustrations/recipes/creme-brulee.webp",
+  "times": [
+    {
+      "icon": "oven",
+      "highlight": "cook",
+      "copy": {
+        "en": {
+          "label": "Steam oven",
+          "value": "About 1 hr 45 min in a steam oven"
+        },
+        "fr": {
+          "label": "Four vapeur",
+          "value": "Environ 1 h 45 au four vapeur"
+        }
+      }
+    },
+    {
+      "icon": "snow",
+      "copy": {
+        "en": {
+          "label": "Chill",
+          "value": "A few hours"
+        },
+        "fr": {
+          "label": "Réfrigération",
+          "value": "Quelques heures"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "cream",
+          "grams": 100,
+          "copy": {
+            "en": {
+              "name": "whipping cream"
+            },
+            "fr": {
+              "name": "de crème liquide entière"
+            }
+          }
+        },
+        {
+          "id": "milk",
+          "grams": 20,
+          "copy": {
+            "en": {
+              "name": "milk"
+            },
+            "fr": {
+              "name": "de lait"
+            }
+          }
+        },
+        {
+          "id": "yolk",
+          "grams": 17,
+          "quantity": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "egg yolk"
+            },
+            "fr": {
+              "name": "jaune d’œuf"
+            }
+          }
+        },
+        {
+          "id": "white",
+          "gramRange": [
+            5,
+            7
+          ],
+          "copy": {
+            "en": {
+              "name": "egg white"
+            },
+            "fr": {
+              "name": "de blanc d’œuf"
+            }
+          }
+        },
+        {
+          "id": "sugar",
+          "grams": 12,
+          "copy": {
+            "en": {
+              "name": "sugar"
+            },
+            "fr": {
+              "name": "de sucre"
+            }
+          }
+        },
+        {
+          "id": "vanilla",
+          "grams": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "vanilla extract",
+              "note": "suggested starting amount. The original recipe does not specify a quantity"
+            },
+            "fr": {
+              "name": "d’extrait de vanille",
+              "note": "quantité indicative. La recette d’origine ne précise pas de quantité"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Custard"
+        },
+        "fr": {
+          "title": "Crème aux œufs"
+        }
+      }
+    },
+    {
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "topping-sugar",
+          "grams": 5,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "sugar",
+              "note": "optional topping. The original recipe does not specify a quantity"
+            },
+            "fr": {
+              "name": "de sucre",
+              "note": "pour caraméliser, facultatif. La recette d’origine ne précise pas de quantité"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Optional sugar crust"
+        },
+        "fr": {
+          "title": "Croûte de sucre facultative"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "mix",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "cream",
+        "milk",
+        "vanilla",
+        "sugar",
+        "yolk",
+        "white"
+      ],
+      "illustration": "assets/illustrations/steps/creme-brulee/mix.webp",
+      "copy": {
+        "en": {
+          "title": "Mix the custard",
+          "instructions": [
+            "Mix the milk, cream and vanilla.",
+            "Stir in the sugar.",
+            "Gently whisk in the yolk and the measured egg white.",
+            "Pour the custard into small ovenproof ramekins."
+          ],
+          "caption": "Gently whisk the egg into the cream mixture."
+        },
+        "fr": {
+          "title": "Préparer la crème",
+          "instructions": [
+            "Mélangez le lait, la crème et la vanille.",
+            "Incorporez le sucre en remuant.",
+            "Incorporez délicatement le jaune et la quantité de blanc indiquée au fouet.",
+            "Versez la crème dans de petits ramequins allant au four."
+          ],
+          "caption": "Incorporez délicatement l’œuf au mélange de crème à l’aide d’un fouet."
+        }
+      }
+    },
+    {
+      "id": "bake",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "cream",
+        "milk",
+        "vanilla",
+        "sugar",
+        "yolk",
+        "white"
+      ],
+      "options": [
+        {
+          "timers": [
+            {
+              "minutes": 105,
+              "afterInstruction": 2,
+              "copy": {
+                "en": {
+                  "label": "Check the steam-oven custards"
+                },
+                "fr": {
+                  "label": "Vérifier les crèmes au four vapeur"
+                }
+              }
+            }
+          ],
+          "copy": {
+            "en": {
+              "title": "Steam oven",
+              "heat": "100°C · 100% humidity",
+              "wait": "About 1 hr 45 min",
+              "instructions": [
+                "Set the steam oven to 100°C and 100% humidity.",
+                "Bake the ramekins for about 1 hour 45 minutes, until the edges are set and the centres still tremble slightly."
+              ]
+            },
+            "fr": {
+              "title": "Four vapeur",
+              "heat": "100 °C · 100 % d’humidité",
+              "wait": "Environ 1 h 45",
+              "instructions": [
+                "Réglez le four vapeur à 100 °C et à 100 % d’humidité.",
+                "Faites cuire les ramequins environ 1 heure 45, jusqu’à ce que les bords soient pris et le centre encore légèrement tremblotant."
+              ]
+            }
+          }
+        },
+        {
+          "copy": {
+            "en": {
+              "title": "Conventional oven",
+              "heat": "Steam from a tray of water",
+              "instructions": [
+                "Place a shallow ovenproof tray of water on a lower shelf, as suggested in the kitchen notes.",
+                "Bake until the edges are set and the centres still tremble slightly. The kitchen notes give no tested temperature or time for this method."
+              ]
+            },
+            "fr": {
+              "title": "Four traditionnel",
+              "heat": "Vapeur d’un plat d’eau",
+              "instructions": [
+                "Placez un plat peu profond rempli d’eau sur une grille inférieure, comme le suggèrent les notes de cuisine.",
+                "Faites cuire les crèmes jusqu’à ce que les bords soient pris et le centre encore légèrement tremblotant. Les notes de cuisine ne donnent ni température ni durée vérifiées pour ce mode de cuisson."
+              ]
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/creme-brulee/bake.webp",
+      "copy": {
+        "en": {
+          "title": "Bake the custards",
+          "timing": "About 1 hr 45 min in a steam oven",
+          "instructions": [
+            "Choose the oven method that matches your equipment."
+          ],
+          "caption": "For the steam-oven method, set the custard ramekins on a tray in the oven."
+        },
+        "fr": {
+          "title": "Cuire les crèmes",
+          "timing": "Environ 1 h 45 au four vapeur",
+          "instructions": [
+            "Choisissez la méthode adaptée à votre four."
+          ],
+          "caption": "Pour la cuisson au four vapeur, disposez les ramequins de crème sur une plaque dans le four."
+        }
+      }
+    },
+    {
+      "id": "cool",
+      "activity": "wait",
+      "tone": "yellow",
+      "uses": [
+        "cream",
+        "milk",
+        "vanilla",
+        "sugar",
+        "yolk",
+        "white"
+      ],
+      "illustration": "assets/illustrations/steps/creme-brulee/cool.webp",
+      "copy": {
+        "en": {
+          "title": "Cool the baked custards",
+          "wait": "Until cool",
+          "instructions": [
+            "Take the ramekins out of the oven.",
+            "Let the ramekins cool before refrigerating."
+          ],
+          "caption": "Let the baked custards cool in their ramekins before chilling."
+        },
+        "fr": {
+          "title": "Laisser refroidir les crèmes cuites",
+          "wait": "Jusqu’à refroidissement",
+          "instructions": [
+            "Sortez les ramequins du four.",
+            "Laissez refroidir les ramequins avant de les réfrigérer."
+          ],
+          "caption": "Laissez refroidir les crèmes cuites dans leurs ramequins avant de les réfrigérer."
+        }
+      }
+    },
+    {
+      "id": "chill",
+      "activity": "chill",
+      "tone": "yellow",
+      "uses": [
+        "cream",
+        "milk",
+        "vanilla",
+        "sugar",
+        "yolk",
+        "white"
+      ],
+      "illustration": "assets/illustrations/steps/creme-brulee/chill.webp",
+      "copy": {
+        "en": {
+          "title": "Chill the custards",
+          "wait": "A few hours, until set",
+          "instructions": [
+            "Refrigerate the cooled ramekins for a few hours, until the custards are fully set."
+          ],
+          "caption": "Refrigerate the cooled ramekins until the custard has set fully."
+        },
+        "fr": {
+          "title": "Réfrigérer les crèmes",
+          "wait": "Quelques heures, jusqu’à la prise",
+          "instructions": [
+            "Réfrigérez les ramequins refroidis pendant quelques heures, jusqu’à ce que les crèmes soient bien prises."
+          ],
+          "caption": "Réfrigérez les ramequins refroidis jusqu’à ce que la crème soit bien prise."
+        }
+      }
+    },
+    {
+      "id": "caramelise",
+      "optional": true,
+      "activity": "cooking",
+      "tone": "pink",
+      "uses": [
+        "topping-sugar"
+      ],
+      "illustration": "assets/illustrations/steps/creme-brulee/caramelise.webp",
+      "copy": {
+        "en": {
+          "title": "Caramelise the topping (optional)",
+          "heat": "Kitchen torch",
+          "instructions": [
+            "Sprinkle a thin layer of topping sugar over the chilled custard just before serving.",
+            "Caramelise the sugar with a kitchen torch for a crisp top."
+          ],
+          "caption": "Caramelise a thin layer of sugar on the chilled custard with a kitchen torch."
+        },
+        "fr": {
+          "title": "Caraméliser le dessus (facultatif)",
+          "heat": "Chalumeau de cuisine",
+          "instructions": [
+            "Saupoudrez la crème froide d’une fine couche de sucre juste avant de servir.",
+            "Caramélisez le sucre au chalumeau de cuisine pour former une croûte craquante."
+          ],
+          "caption": "Caramélisez une fine couche de sucre au chalumeau sur la crème froide."
+        }
+      }
+    }
+  ],
+  "copy": {
+    "en": {
+      "title": "Crème Brûlée",
+      "restTime": "Cool, then chill for a few hours",
+      "description": "A small batch of cream custard baked gently with steam.",
+      "setup": [
+        "Use small ovenproof ramekins. The 100°C steam setting uses 100% humidity."
+      ],
+      "allergens": [
+        "Milk",
+        "Egg"
+      ]
+    },
+    "fr": {
+      "title": "Crème brûlée",
+      "restTime": "Laisser refroidir, puis réfrigérer quelques heures",
+      "description": "Une petite quantité de crème aux œufs cuite doucement à la vapeur.",
+      "setup": [
+        "Utilisez de petits ramequins allant au four. Réglez le four vapeur à 100 °C et à 100 % d’humidité."
+      ],
+      "allergens": [
+        "Lait",
+        "Œuf"
+      ]
+    }
+  }
+}

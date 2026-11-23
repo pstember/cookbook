@@ -1,0 +1,417 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "waffles",
+  "category": "Breakfast & brunch",
+  "thumbnail": "assets/illustrations/recipes/waffles.webp",
+  "times": [
+    {
+      "icon": "snow",
+      "highlight": "rest",
+      "copy": {
+        "en": {
+          "label": "Rest",
+          "value": "1 hr"
+        },
+        "fr": {
+          "label": "Repos",
+          "value": "1 h"
+        }
+      }
+    },
+    {
+      "icon": "oven",
+      "highlight": "cook",
+      "copy": {
+        "en": {
+          "label": "Cook",
+          "value": "3–5 min each"
+        },
+        "fr": {
+          "label": "Cuisson",
+          "value": "3–5 min par gaufre"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "flour",
+          "grams": 500,
+          "copy": {
+            "en": {
+              "name": "plain wheat flour",
+              "note": "French T45–T55 if available"
+            },
+            "fr": {
+              "name": "de farine de blé",
+              "note": "T45 à T55 si possible"
+            }
+          }
+        },
+        {
+          "id": "baking-powder",
+          "grams": 10,
+          "copy": {
+            "en": {
+              "name": "baking powder"
+            },
+            "fr": {
+              "name": "de levure chimique"
+            }
+          }
+        },
+        {
+          "id": "vanilla-sugar",
+          "grams": 60,
+          "copy": {
+            "en": {
+              "name": "vanilla sugar"
+            },
+            "fr": {
+              "name": "de sucre vanillé"
+            }
+          }
+        },
+        {
+          "id": "salt",
+          "grams": 2,
+          "copy": {
+            "en": {
+              "name": "salt"
+            },
+            "fr": {
+              "name": "de sel"
+            }
+          }
+        },
+        {
+          "id": "eggs",
+          "grams": 300,
+          "quantity": 6,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "eggs",
+              "note": "weighed without shells"
+            },
+            "fr": {
+              "name": "d’œufs",
+              "note": "pesés sans coquille"
+            }
+          }
+        },
+        {
+          "id": "milk",
+          "grams": 516,
+          "quantity": 500,
+          "unit": "ml",
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "whole milk"
+            },
+            "fr": {
+              "name": "de lait entier"
+            }
+          }
+        },
+        {
+          "id": "butter",
+          "grams": 180,
+          "copy": {
+            "en": {
+              "name": "melted butter",
+              "note": "lukewarm"
+            },
+            "fr": {
+              "name": "de beurre fondu",
+              "note": "tiède"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Waffle batter"
+        },
+        "fr": {
+          "title": "Pâte à gaufres"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "dry",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "flour",
+        "baking-powder",
+        "vanilla-sugar",
+        "salt"
+      ],
+      "illustration": "assets/illustrations/steps/waffles/dry.webp",
+      "copy": {
+        "en": {
+          "title": "Mix the dry ingredients",
+          "instructions": [
+            "Whisk together the flour, baking powder, vanilla sugar and salt."
+          ],
+          "caption": "Whisk the dry ingredients together before adding the eggs and milk."
+        },
+        "fr": {
+          "title": "Mélanger les ingrédients secs",
+          "instructions": [
+            "Mélangez au fouet la farine, la levure chimique, le sucre vanillé et le sel."
+          ],
+          "caption": "Mélangez les ingrédients secs au fouet avant d’ajouter les œufs et le lait."
+        }
+      }
+    },
+    {
+      "id": "batter",
+      "tone": "yellow",
+      "activity": "prep",
+      "uses": [
+        "flour",
+        "baking-powder",
+        "vanilla-sugar",
+        "salt",
+        "eggs",
+        "milk",
+        "butter"
+      ],
+      "options": [
+        {
+          "copy": {
+            "en": {
+              "title": "Whole eggs",
+              "instructions": [
+                "Lightly beat the eggs.",
+                "Whisk the eggs into the dry ingredients.",
+                "Gradually whisk in the milk until the batter is smooth.",
+                "Stir in the lukewarm melted butter."
+              ]
+            },
+            "fr": {
+              "title": "Aux œufs entiers",
+              "instructions": [
+                "Battez légèrement les œufs.",
+                "Incorporez les œufs au fouet aux ingrédients secs.",
+                "Incorporez progressivement le lait au fouet jusqu’à obtenir une pâte lisse.",
+                "Incorporez le beurre fondu tiède."
+              ]
+            }
+          }
+        },
+        {
+          "copy": {
+            "en": {
+              "title": "Whipped whites for lighter waffles",
+              "instructions": [
+                "Separate the eggs.",
+                "Whisk the yolks into the dry ingredients.",
+                "Gradually whisk in the milk until the batter is smooth.",
+                "Stir in the lukewarm melted butter.",
+                "Whip the reserved whites to stiff peaks.",
+                "Fold the whites gently into the batter."
+              ]
+            },
+            "fr": {
+              "title": "Aux blancs en neige pour des gaufres plus légères",
+              "instructions": [
+                "Séparez les blancs des jaunes.",
+                "Incorporez les jaunes au fouet aux ingrédients secs.",
+                "Incorporez progressivement le lait au fouet jusqu’à obtenir une pâte lisse.",
+                "Incorporez le beurre fondu tiède.",
+                "Montez les blancs réservés en neige ferme.",
+                "Incorporez délicatement les blancs à la pâte."
+              ]
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/waffles/batter.webp",
+      "copy": {
+        "en": {
+          "title": "Whisk the batter",
+          "instructions": [],
+          "caption": "Pour the milk in gradually as you whisk out the lumps."
+        },
+        "fr": {
+          "title": "Préparer la pâte",
+          "instructions": [],
+          "caption": "Versez le lait progressivement en fouettant pour éliminer les grumeaux."
+        }
+      }
+    },
+    {
+      "id": "rest",
+      "tone": "yellow",
+      "activity": "chill",
+      "uses": [
+        "flour",
+        "baking-powder",
+        "vanilla-sugar",
+        "salt",
+        "eggs",
+        "milk",
+        "butter"
+      ],
+      "duration": [
+        60,
+        60
+      ],
+      "timers": [
+        {
+          "minutes": 60,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the rested batter"
+            },
+            "fr": {
+              "label": "Vérifier la pâte reposée"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/waffles/rest.webp",
+      "copy": {
+        "en": {
+          "title": "Rest the batter",
+          "instructions": [
+            "Cover the bowl.",
+            "Refrigerate for 1 hour, until the batter is slightly thicker."
+          ],
+          "wait": "1 hr in the fridge",
+          "caption": "Cover the bowl and put the batter in the fridge to rest."
+        },
+        "fr": {
+          "title": "Laisser reposer la pâte",
+          "instructions": [
+            "Couvrez le bol.",
+            "Réfrigérez pendant 1 heure, jusqu’à ce que la pâte ait légèrement épaissi."
+          ],
+          "wait": "1 h au réfrigérateur",
+          "caption": "Couvrez le bol et laissez reposer la pâte au réfrigérateur."
+        }
+      }
+    },
+    {
+      "id": "cook",
+      "tone": "yellow",
+      "activity": "cooking",
+      "uses": [
+        "flour",
+        "baking-powder",
+        "vanilla-sugar",
+        "salt",
+        "eggs",
+        "milk",
+        "butter"
+      ],
+      "duration": [
+        3,
+        5
+      ],
+      "durationPerBatch": true,
+      "timers": [
+        {
+          "minutes": 3,
+          "afterInstruction": 3,
+          "copy": {
+            "en": {
+              "label": "Check the waffle"
+            },
+            "fr": {
+              "label": "Vérifier la gaufre"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/waffles/cook.webp",
+      "copy": {
+        "en": {
+          "title": "Cook the waffles in batches",
+          "instructions": [
+            "Heat the waffle iron to medium-high.",
+            "Fill the iron with the amount of batter recommended for your model.",
+            "Cook for 3–5 minutes, until golden.",
+            "Lift out the cooked waffle.",
+            "Repeat with the remaining batter."
+          ],
+          "timing": "3–5 min per waffle",
+          "heat": "Medium-high waffle iron",
+          "caption": "Lift the edge of the waffle once it is golden."
+        },
+        "fr": {
+          "title": "Cuire les gaufres par fournées",
+          "instructions": [
+            "Faites chauffer le gaufrier à puissance moyenne à forte.",
+            "Versez dans le gaufrier la quantité de pâte indiquée dans la notice.",
+            "Faites cuire 3 à 5 minutes, jusqu’à ce que la gaufre soit dorée.",
+            "Retirez la gaufre cuite.",
+            "Recommencez avec le reste de la pâte."
+          ],
+          "timing": "3 à 5 min par gaufre",
+          "heat": "Gaufrier à puissance moyenne à forte",
+          "caption": "Soulevez le bord de la gaufre quand elle est bien dorée."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "For a less sweet batch, reduce the vanilla sugar to 30 g. For savoury waffles, omit it and add cheese, herbs or spices."
+        },
+        "fr": {
+          "text": "Pour des gaufres moins sucrées, réduisez le sucre vanillé à 30 g. Pour des gaufres salées, supprimez-le et ajoutez du fromage, des herbes ou des épices."
+        }
+      }
+    },
+    {
+      "copy": {
+        "en": {
+          "text": "Try adding vanilla extract, cinnamon or citrus zest. The original notes also suggest replacing half the butter with neutral oil or light cream for a different texture."
+        },
+        "fr": {
+          "text": "Essayez d’ajouter de l’extrait de vanille, de la cannelle ou du zeste d’agrume. Les notes d’origine suggèrent aussi de remplacer la moitié du beurre par de l’huile neutre ou de la crème légère pour varier la texture."
+        }
+      }
+    }
+  ],
+  "copy": {
+    "en": {
+      "title": "Vanilla Waffles",
+      "description": "Golden waffles made with vanilla sugar and rested batter.",
+      "setup": [
+        "Use a waffle iron. Check its instructions for the amount of batter per waffle."
+      ],
+      "allergens": [
+        "Wheat (gluten)",
+        "Eggs",
+        "Milk"
+      ]
+    },
+    "fr": {
+      "title": "Gaufres à la vanille",
+      "description": "Des gaufres dorées au sucre vanillé, préparées avec une pâte qui repose au frais.",
+      "setup": [
+        "Prévoyez un gaufrier. Vérifiez dans sa notice la quantité de pâte par gaufre."
+      ],
+      "allergens": [
+        "Blé (gluten)",
+        "Œufs",
+        "Lait"
+      ]
+    }
+  }
+}

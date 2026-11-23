@@ -1,0 +1,623 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "berry-tiramisu",
+  "category": "Desserts",
+  "servings": 8,
+  "thumbnail": "assets/illustrations/recipes/berry-tiramisu.webp",
+  "times": [
+    {
+      "icon": "snow",
+      "copy": {
+        "en": {
+          "label": "Chill",
+          "value": "2–4 hr"
+        },
+        "fr": {
+          "label": "Réfrigération",
+          "value": "2–4 h"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "tone": "pink",
+      "ingredients": [
+        {
+          "id": "water",
+          "grams": 170,
+          "quantity": 170,
+          "unit": "ml",
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "water"
+            },
+            "fr": {
+              "name": "d’eau"
+            }
+          }
+        },
+        {
+          "id": "syrup-sugar",
+          "grams": 170,
+          "copy": {
+            "en": {
+              "name": "granulated sugar"
+            },
+            "fr": {
+              "name": "de sucre en poudre"
+            }
+          }
+        },
+        {
+          "id": "strawberries",
+          "grams": 284,
+          "copy": {
+            "en": {
+              "name": "fresh strawberries",
+              "note": "quartered"
+            },
+            "fr": {
+              "name": "de fraises fraîches",
+              "note": "coupées en quartiers"
+            }
+          }
+        },
+        {
+          "id": "raspberries",
+          "grams": 142,
+          "copy": {
+            "en": {
+              "name": "fresh raspberries"
+            },
+            "fr": {
+              "name": "de framboises fraîches"
+            }
+          }
+        },
+        {
+          "id": "blueberries",
+          "grams": 142,
+          "copy": {
+            "en": {
+              "name": "fresh blueberries"
+            },
+            "fr": {
+              "name": "de myrtilles fraîches"
+            }
+          }
+        },
+        {
+          "id": "cassis",
+          "volumeMl": 30,
+          "grams": 33,
+          "quantity": 2,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "crème de cassis",
+              "unit": "tbsp",
+              "note": "optional. The weight varies by brand"
+            },
+            "fr": {
+              "name": "de crème de cassis",
+              "unit": "c. à soupe",
+              "note": "facultatif. Le poids varie selon la marque"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Berries and syrup"
+        },
+        "fr": {
+          "title": "Fruits rouges et sirop"
+        }
+      }
+    },
+    {
+      "tone": "blue",
+      "ingredients": [
+        {
+          "id": "cream",
+          "grams": 284,
+          "quantity": 282,
+          "unit": "ml",
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "whipping cream"
+            },
+            "fr": {
+              "name": "de crème liquide entière"
+            }
+          }
+        },
+        {
+          "id": "cream-sugar",
+          "grams": 71,
+          "copy": {
+            "en": {
+              "name": "granulated sugar"
+            },
+            "fr": {
+              "name": "de sucre en poudre"
+            }
+          }
+        },
+        {
+          "id": "vanilla",
+          "grams": 4.2,
+          "quantity": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "vanilla extract",
+              "unit": "tsp"
+            },
+            "fr": {
+              "name": "d’extrait de vanille",
+              "unit": "c. à café"
+            }
+          }
+        },
+        {
+          "id": "mascarpone",
+          "grams": 225,
+          "copy": {
+            "en": {
+              "name": "mascarpone",
+              "note": "room temperature"
+            },
+            "fr": {
+              "name": "de mascarpone",
+              "note": "à température ambiante"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Mascarpone cream"
+        },
+        "fr": {
+          "title": "Crème au mascarpone"
+        }
+      }
+    },
+    {
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "biscuits",
+          "gramRange": [
+            200,
+            240
+          ],
+          "quantity": 1,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "boudoir biscuits",
+              "unit": "pack",
+              "note": "savoiardi or ladyfingers. Pack sizes vary. Allow about 28 biscuits"
+            },
+            "fr": {
+              "name": "de biscuits à la cuillère",
+              "unit": "paquet",
+              "note": "ou boudoirs (savoiardi). Le poids des paquets varie. Prévoyez environ 28 biscuits"
+            }
+          }
+        },
+        {
+          "id": "icing-sugar",
+          "grams": 5,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "icing sugar",
+              "note": "suggested amount for dusting. The original recipe does not specify a quantity"
+            },
+            "fr": {
+              "name": "de sucre glace",
+              "note": "quantité indicative pour saupoudrer. La recette d’origine ne précise pas de quantité"
+            }
+          }
+        },
+        {
+          "id": "almonds",
+          "grams": 15,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "toasted slivered almonds",
+              "note": "suggested garnish amount. The original recipe does not specify a quantity"
+            },
+            "fr": {
+              "name": "d’amandes effilées grillées",
+              "note": "quantité indicative pour la garniture. La recette d’origine ne précise pas de quantité"
+            }
+          }
+        },
+        {
+          "id": "extra-berries",
+          "grams": 50,
+          "weightEstimate": true,
+          "copy": {
+            "en": {
+              "name": "extra berries",
+              "note": "suggested garnish amount. The original recipe does not specify a quantity"
+            },
+            "fr": {
+              "name": "de fruits rouges supplémentaires",
+              "note": "quantité indicative pour la garniture. La recette d’origine ne précise pas de quantité"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Assembly"
+        },
+        "fr": {
+          "title": "Montage"
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "fridge": "Cover and refrigerate leftovers for up to one day."
+      },
+      "fr": {
+        "fridge": "Couvrez les restes et conservez-les au réfrigérateur pendant un jour au maximum."
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "heat-syrup",
+      "activity": "cooking",
+      "tone": "pink",
+      "uses": [
+        "water",
+        "syrup-sugar"
+      ],
+      "illustration": "assets/illustrations/steps/berry-tiramisu/heat-syrup.webp",
+      "copy": {
+        "en": {
+          "title": "Dissolve the syrup sugar",
+          "instructions": [
+            "Combine the water and syrup sugar in a saucepan.",
+            "Heat until the sugar dissolves."
+          ],
+          "caption": "Heat the sugar and water together until the sugar dissolves."
+        },
+        "fr": {
+          "title": "Dissoudre le sucre du sirop",
+          "instructions": [
+            "Réunissez l’eau et le sucre du sirop dans une casserole.",
+            "Faites chauffer jusqu’à dissolution du sucre."
+          ],
+          "caption": "Faites chauffer le sucre et l’eau jusqu’à dissolution du sucre."
+        }
+      }
+    },
+    {
+      "id": "syrup",
+      "activity": "wait",
+      "tone": "pink",
+      "uses": [
+        "water",
+        "syrup-sugar",
+        "strawberries",
+        "raspberries",
+        "blueberries",
+        "cassis"
+      ],
+      "duration": [
+        10,
+        10
+      ],
+      "timers": [
+        {
+          "minutes": 10,
+          "afterInstruction": 3,
+          "copy": {
+            "en": {
+              "label": "Strain the berries"
+            },
+            "fr": {
+              "label": "Égoutter les fruits"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/berry-tiramisu/syrup.webp",
+      "copy": {
+        "en": {
+          "title": "Steep and strain the berries",
+          "heat": "Off the heat",
+          "wait": "10 min",
+          "instructions": [
+            "Take the pan off the heat.",
+            "Add the strawberries, raspberries and blueberries.",
+            "Let the berries steep for 10 minutes.",
+            "Strain the fruit over a bowl to collect the syrup.",
+            "Stir the optional crème de cassis into the syrup."
+          ],
+          "caption": "Strain the steeped berries over a bowl to catch the syrup."
+        },
+        "fr": {
+          "title": "Faire infuser les fruits",
+          "heat": "Hors du feu",
+          "wait": "10 min",
+          "instructions": [
+            "Retirez la casserole du feu.",
+            "Ajoutez les fraises, les framboises et les myrtilles.",
+            "Laissez infuser les fruits pendant 10 minutes.",
+            "Égouttez les fruits au-dessus d’un bol pour récupérer le sirop.",
+            "Incorporez la crème de cassis au sirop si vous en utilisez."
+          ],
+          "caption": "Filtrez les fruits infusés au-dessus d’un bol pour récupérer le sirop."
+        }
+      }
+    },
+    {
+      "id": "whip",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "cream",
+        "cream-sugar",
+        "vanilla",
+        "mascarpone"
+      ],
+      "illustration": "assets/illustrations/steps/berry-tiramisu/whip.webp",
+      "copy": {
+        "en": {
+          "title": "Whip the mascarpone cream",
+          "instructions": [
+            "Whip the cream, sugar and vanilla to soft peaks.",
+            "Add the mascarpone.",
+            "Whip just until the cream holds stiff peaks."
+          ],
+          "caption": "Stop whipping when the mascarpone cream holds an upright peak."
+        },
+        "fr": {
+          "title": "Fouetter la crème au mascarpone",
+          "instructions": [
+            "Fouettez la crème, le sucre et la vanille jusqu’à la formation de pics souples.",
+            "Ajoutez le mascarpone.",
+            "Fouettez juste assez pour que la crème forme des pics fermes."
+          ],
+          "caption": "Arrêtez de fouetter quand la crème au mascarpone forme une pointe qui tient droite."
+        }
+      }
+    },
+    {
+      "id": "dip",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "water",
+        "syrup-sugar",
+        "strawberries",
+        "raspberries",
+        "blueberries",
+        "cassis",
+        "biscuits"
+      ],
+      "illustration": "assets/illustrations/steps/berry-tiramisu/dip.webp",
+      "copy": {
+        "en": {
+          "title": "Line the dish with dipped biscuits",
+          "instructions": [
+            "Dip the first half of the ladyfingers briefly in the syrup, one by one.",
+            "Arrange them in a single layer in a 20 cm square dish."
+          ],
+          "tip": "The source uses about 14 biscuits per layer. A quick dip keeps them intact.",
+          "caption": "Dip each ladyfinger briefly in the berry syrup before laying it in the dish."
+        },
+        "fr": {
+          "title": "Tapisser le plat de biscuits imbibés",
+          "instructions": [
+            "Trempez brièvement la première moitié des biscuits dans le sirop, un par un.",
+            "Disposez-les en une seule couche dans un plat carré de 20 cm."
+          ],
+          "tip": "La recette d’origine compte environ 14 biscuits par couche. Un trempage bref les garde entiers.",
+          "caption": "Trempez brièvement chaque biscuit à la cuillère dans le sirop avant de le déposer dans le plat."
+        }
+      }
+    },
+    {
+      "id": "layer",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "water",
+        "syrup-sugar",
+        "strawberries",
+        "raspberries",
+        "blueberries",
+        "cassis",
+        "cream",
+        "cream-sugar",
+        "vanilla",
+        "mascarpone",
+        "biscuits"
+      ],
+      "illustration": "assets/illustrations/steps/berry-tiramisu/layer.webp",
+      "copy": {
+        "en": {
+          "title": "Build the fruit and cream layers",
+          "instructions": [
+            "Spread half the drained berries over the biscuits.",
+            "Cover the berries with half the mascarpone cream.",
+            "Dip the remaining biscuits briefly in the syrup.",
+            "Arrange the dipped biscuits over the cream.",
+            "Cover the biscuits with the remaining berries.",
+            "Spread the remaining cream over the fruit."
+          ],
+          "caption": "Spread the mascarpone cream over the fruit, then repeat the biscuits, fruit and cream."
+        },
+        "fr": {
+          "title": "Monter les couches de fruits et de crème",
+          "instructions": [
+            "Répartissez la moitié des fruits égouttés sur les biscuits.",
+            "Recouvrez les fruits avec la moitié de la crème au mascarpone.",
+            "Trempez brièvement le reste des biscuits dans le sirop.",
+            "Disposez les biscuits imbibés sur la crème.",
+            "Recouvrez les biscuits avec le reste des fruits.",
+            "Étalez le reste de crème sur les fruits."
+          ],
+          "caption": "Étalez la crème au mascarpone sur les fruits, puis répétez les couches de biscuits, de fruits et de crème."
+        }
+      }
+    },
+    {
+      "id": "chill",
+      "activity": "chill",
+      "tone": "yellow",
+      "uses": [
+        "water",
+        "syrup-sugar",
+        "strawberries",
+        "raspberries",
+        "blueberries",
+        "cassis",
+        "cream",
+        "cream-sugar",
+        "vanilla",
+        "mascarpone",
+        "biscuits"
+      ],
+      "duration": [
+        120,
+        240
+      ],
+      "timers": [
+        {
+          "minutes": 120,
+          "afterInstruction": 2,
+          "copy": {
+            "en": {
+              "label": "Check the chilled tiramisu"
+            },
+            "fr": {
+              "label": "Vérifier le tiramisu réfrigéré"
+            }
+          }
+        }
+      ],
+      "illustration": "assets/illustrations/steps/berry-tiramisu/chill.webp",
+      "copy": {
+        "en": {
+          "title": "Chill the tiramisu",
+          "wait": "2–4 hr",
+          "instructions": [
+            "Cover the dish.",
+            "Refrigerate for 2–4 hours before garnishing."
+          ],
+          "caption": "Cover the layered tiramisu and place the dish in the fridge."
+        },
+        "fr": {
+          "title": "Réfrigérer le tiramisu",
+          "wait": "2–4 h",
+          "instructions": [
+            "Couvrez le plat.",
+            "Réfrigérez 2 à 4 heures avant de garnir."
+          ],
+          "caption": "Couvrez le tiramisu et placez le plat au réfrigérateur."
+        }
+      }
+    },
+    {
+      "id": "garnish",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "water",
+        "syrup-sugar",
+        "strawberries",
+        "raspberries",
+        "blueberries",
+        "cassis",
+        "cream",
+        "cream-sugar",
+        "vanilla",
+        "mascarpone",
+        "biscuits",
+        "icing-sugar",
+        "almonds",
+        "extra-berries"
+      ],
+      "illustration": "assets/illustrations/steps/berry-tiramisu/garnish.webp",
+      "copy": {
+        "en": {
+          "title": "Garnish just before serving",
+          "instructions": [
+            "Dust the chilled tiramisu with icing sugar.",
+            "Scatter the toasted almonds and extra berries over the top."
+          ],
+          "caption": "Scatter toasted slivered almonds and fresh berries over the icing sugar just before serving."
+        },
+        "fr": {
+          "title": "Décorer juste avant de servir",
+          "instructions": [
+            "Saupoudrez le tiramisu froid de sucre glace.",
+            "Parsemez le dessus d’amandes grillées et de fruits rouges supplémentaires."
+          ],
+          "caption": "Parsemez le sucre glace d’amandes effilées grillées et de fruits rouges frais juste avant de servir."
+        }
+      }
+    }
+  ],
+  "source": {
+    "url": "https://www.biggerbolderbaking.com/berry-tiramisu-recipe/",
+    "copy": {
+      "en": {
+        "label": "Gemma Stafford’s Bigger Bolder Baking",
+        "credit": "Recipe adapted from"
+      },
+      "fr": {
+        "label": "Bigger Bolder Baking, par Gemma Stafford",
+        "credit": "Recette adaptée de"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "Berry Tiramisu",
+      "totalTime": "About 4 hr 10 min with a 4 hr chill",
+      "restTime": "10 min steeping, then 2–4 hr in the fridge",
+      "description": "Layers of berry-soaked boudoir biscuits, fresh fruit and whipped mascarpone cream.",
+      "setup": [
+        "Use a 20 cm square dish and allow about 14 ladyfingers per layer."
+      ],
+      "allergens": [
+        "Milk",
+        "Wheat (gluten) and egg in the ladyfingers (check the packet)",
+        "Almonds"
+      ]
+    },
+    "fr": {
+      "title": "Tiramisu aux fruits rouges",
+      "totalTime": "Environ 4 h 10 pour 4 h de réfrigération",
+      "restTime": "10 min d’infusion, puis 2 à 4 h au frais",
+      "description": "Des couches de biscuits imbibés de sirop aux fruits rouges, de fruits frais et de crème fouettée au mascarpone.",
+      "setup": [
+        "Prévoyez un plat carré de 20 cm et environ 14 biscuits à la cuillère par couche."
+      ],
+      "allergens": [
+        "Lait",
+        "Blé (gluten) et œuf dans les biscuits à la cuillère (vérifiez l’étiquette)",
+        "Amandes"
+      ]
+    }
+  }
+}

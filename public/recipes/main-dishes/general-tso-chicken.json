@@ -1,0 +1,649 @@
+{
+  "$schema": "../recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "general-tso-chicken",
+  "category": "Main dishes",
+  "thumbnail": "assets/illustrations/recipes/general-tso-chicken.webp",
+  "servings": 8,
+  "times": [
+    {
+      "highlight": "total",
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Total",
+          "value": "30 min"
+        },
+        "fr": {
+          "label": "Total",
+          "value": "30 min"
+        }
+      }
+    },
+    {
+      "icon": "clock",
+      "copy": {
+        "en": {
+          "label": "Prep",
+          "value": "15 min"
+        },
+        "fr": {
+          "label": "Préparation",
+          "value": "15 min"
+        }
+      }
+    },
+    {
+      "highlight": "cook",
+      "icon": "oven",
+      "copy": {
+        "en": {
+          "label": "Cook",
+          "value": "15 min"
+        },
+        "fr": {
+          "label": "Cuisson",
+          "value": "15 min"
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "tone": "yellow",
+      "ingredients": [
+        {
+          "id": "chicken",
+          "grams": 900,
+          "weightEstimate": true,
+          "quantity": 2,
+          "unit": "lb",
+          "copy": {
+            "en": {
+              "name": "boneless chicken thighs",
+              "note": "trimmed"
+            },
+            "fr": {
+              "name": "hauts de cuisse de poulet désossés",
+              "note": "parés"
+            }
+          }
+        },
+        {
+          "id": "coating",
+          "grams": 56,
+          "weightEstimate": true,
+          "quantity": "½",
+          "copy": {
+            "en": {
+              "name": "cornflour",
+              "unit": "cup",
+              "note": "cornstarch"
+            },
+            "fr": {
+              "name": "fécule de maïs",
+              "unit": "tasse",
+              "note": "amidon de maïs"
+            }
+          }
+        },
+        {
+          "id": "frying-oil",
+          "volumeMl": 60,
+          "grams": 50,
+          "weightEstimate": true,
+          "quantity": "¼",
+          "copy": {
+            "en": {
+              "name": "extra-light olive oil",
+              "unit": "cup",
+              "note": "plus more as needed"
+            },
+            "fr": {
+              "name": "huile d’olive au goût très doux",
+              "unit": "tasse",
+              "note": "plus si nécessaire"
+            }
+          }
+        },
+        {
+          "id": "ginger",
+          "grams": 12,
+          "weightEstimate": true,
+          "quantity": 2,
+          "copy": {
+            "en": {
+              "name": "fresh ginger",
+              "unit": "tbsp",
+              "note": "finely minced, from about a 5 cm piece"
+            },
+            "fr": {
+              "name": "gingembre frais",
+              "unit": "c. à soupe",
+              "note": "finement haché, prélevé sur un morceau d’environ 5 cm"
+            }
+          }
+        },
+        {
+          "id": "garlic",
+          "grams": 9,
+          "weightEstimate": true,
+          "quantity": 3,
+          "copy": {
+            "en": {
+              "name": "garlic cloves",
+              "note": "finely grated or minced, about 1 tbsp"
+            },
+            "fr": {
+              "name": "gousses d’ail",
+              "note": "râpées ou finement hachées, environ 1 c. à soupe"
+            }
+          }
+        },
+        {
+          "id": "chilli",
+          "grams": 1,
+          "weightEstimate": true,
+          "quantity": "½",
+          "copy": {
+            "en": {
+              "name": "chilli flakes",
+              "unit": "tsp",
+              "note": "adjust to taste"
+            },
+            "fr": {
+              "name": "flocons de piment",
+              "unit": "c. à café",
+              "note": "à ajuster au goût"
+            }
+          }
+        },
+        {
+          "id": "sesame",
+          "grams": 3,
+          "weightEstimate": true,
+          "quantity": 1,
+          "copy": {
+            "en": {
+              "name": "sesame seeds",
+              "unit": "tsp",
+              "note": "omit if not using as a garnish"
+            },
+            "fr": {
+              "name": "graines de sésame",
+              "unit": "c. à café",
+              "note": "à omettre si vous ne décorez pas le plat"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Chicken"
+        },
+        "fr": {
+          "title": "Poulet"
+        }
+      }
+    },
+    {
+      "tone": "blue",
+      "art": "saucepan",
+      "ingredients": [
+        {
+          "id": "water",
+          "volumeMl": 120,
+          "grams": 120,
+          "weightEstimate": true,
+          "quantity": "½",
+          "copy": {
+            "en": {
+              "name": "cold water",
+              "unit": "cup"
+            },
+            "fr": {
+              "name": "eau froide",
+              "unit": "tasse"
+            }
+          }
+        },
+        {
+          "id": "soy",
+          "volumeMl": 75,
+          "grams": 80,
+          "weightEstimate": true,
+          "quantity": 5,
+          "copy": {
+            "en": {
+              "name": "reduced-salt soy sauce",
+              "unit": "tbsp"
+            },
+            "fr": {
+              "name": "sauce soja réduite en sel",
+              "unit": "c. à soupe"
+            }
+          }
+        },
+        {
+          "id": "vinegar",
+          "volumeMl": 45,
+          "grams": 45,
+          "weightEstimate": true,
+          "quantity": 3,
+          "copy": {
+            "en": {
+              "name": "rice vinegar",
+              "unit": "tbsp",
+              "note": "plus more to taste"
+            },
+            "fr": {
+              "name": "vinaigre de riz",
+              "unit": "c. à soupe",
+              "note": "plus au goût"
+            }
+          }
+        },
+        {
+          "id": "hoisin",
+          "grams": 24,
+          "weightEstimate": true,
+          "quantity": "1½",
+          "copy": {
+            "en": {
+              "name": "hoisin sauce",
+              "unit": "tbsp"
+            },
+            "fr": {
+              "name": "sauce hoisin",
+              "unit": "c. à soupe"
+            }
+          }
+        },
+        {
+          "id": "sugar",
+          "grams": 50,
+          "weightEstimate": true,
+          "quantity": 4,
+          "copy": {
+            "en": {
+              "name": "granulated sugar",
+              "unit": "tbsp"
+            },
+            "fr": {
+              "name": "sucre en poudre",
+              "unit": "c. à soupe"
+            }
+          }
+        },
+        {
+          "id": "thickener",
+          "grams": 11,
+          "weightEstimate": true,
+          "quantity": "1½",
+          "copy": {
+            "en": {
+              "name": "cornflour",
+              "unit": "tbsp",
+              "note": "cornstarch"
+            },
+            "fr": {
+              "name": "fécule de maïs",
+              "unit": "c. à soupe",
+              "note": "amidon de maïs"
+            }
+          }
+        }
+      ],
+      "copy": {
+        "en": {
+          "title": "Sauce"
+        },
+        "fr": {
+          "title": "Sauce"
+        }
+      }
+    }
+  ],
+  "storage": {
+    "copy": {
+      "en": {
+        "counter": "Refrigerate within 2 hours of cooking.",
+        "fridge": "48 hours at 0–5°C.",
+        "freezer": "2–6 months for cooked chicken at −18°C or colder for best quality."
+      },
+      "fr": {
+        "counter": "Réfrigérez dans les 2 heures suivant la cuisson.",
+        "fridge": "48 heures entre 0 et 5 °C.",
+        "freezer": "2 à 6 mois pour le poulet cuit à −18 °C ou moins, pour une qualité optimale."
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "prep",
+      "activity": "prep",
+      "tone": "yellow",
+      "uses": [
+        "chicken",
+        "coating"
+      ],
+      "illustration": "assets/illustrations/steps/general-tso-chicken/prep.webp",
+      "copy": {
+        "en": {
+          "title": "Coat the chicken",
+          "instructions": [
+            "Cut the thighs into 2.5 cm pieces.",
+            "Toss the pieces lightly in the coating cornflour.",
+            "Shake off the excess cornflour."
+          ],
+          "caption": "Cut the thighs into bite-size pieces and dust them lightly with cornflour."
+        },
+        "fr": {
+          "title": "Enrober le poulet",
+          "instructions": [
+            "Coupez les hauts de cuisse en morceaux de 2,5 cm.",
+            "Enrobez légèrement les morceaux de fécule de maïs.",
+            "Secouez les morceaux pour retirer l’excédent de fécule."
+          ],
+          "caption": "Coupez les hauts de cuisse en bouchées puis enrobez-les légèrement de fécule de maïs."
+        }
+      }
+    },
+    {
+      "id": "mix-sauce",
+      "activity": "prep",
+      "tone": "blue",
+      "uses": [
+        "water",
+        "soy",
+        "vinegar",
+        "hoisin",
+        "sugar",
+        "thickener"
+      ],
+      "illustration": "assets/illustrations/steps/general-tso-chicken/mix-sauce.webp",
+      "copy": {
+        "en": {
+          "title": "Whisk the sauce",
+          "instructions": [
+            "Put the cold water, soy sauce, vinegar, hoisin, sugar and sauce cornflour in a bowl.",
+            "Whisk until the mixture is smooth."
+          ],
+          "caption": "Whisk the sauce in a separate bowl until no streaks of cornflour remain."
+        },
+        "fr": {
+          "title": "Mélanger la sauce",
+          "instructions": [
+            "Réunissez dans un bol l’eau froide, la sauce soja, le vinaigre, la sauce hoisin, le sucre et la fécule prévue pour la sauce.",
+            "Fouettez jusqu’à obtenir un mélange lisse."
+          ],
+          "caption": "Fouettez la sauce dans un bol à part jusqu’à ce que la fécule soit bien incorporée."
+        }
+      }
+    },
+    {
+      "id": "fry",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "chicken",
+        "coating",
+        "frying-oil"
+      ],
+      "illustration": "assets/illustrations/steps/general-tso-chicken/fry.webp",
+      "copy": {
+        "en": {
+          "title": "Fry the chicken in batches",
+          "heat": "Pan-fry",
+          "instructions": [
+            "Heat some of the oil in the frying pan.",
+            "Fry the chicken in two or three batches.",
+            "Turn the pieces to brown them on both sides.",
+            "Add oil as needed.",
+            "Check with a food thermometer that the thickest piece in each batch reaches 74°C (165°F) at the centre.",
+            "Transfer each cooked batch to a clean bowl.",
+            "Leave about 13 g of oil in the pan."
+          ],
+          "caption": "Brown the chicken in batches and check that the centre of a thick piece reaches 74°C (165°F)."
+        },
+        "fr": {
+          "title": "Dorer le poulet en plusieurs fois",
+          "heat": "À la poêle",
+          "instructions": [
+            "Chauffez un peu d’huile dans la poêle.",
+            "Faites revenir le poulet en deux ou trois fois.",
+            "Retournez les morceaux pour les dorer des deux côtés.",
+            "Ajoutez de l’huile au besoin.",
+            "Vérifiez au thermomètre que le morceau le plus épais de chaque fournée atteint 74 °C (165 °F) à cœur.",
+            "Déposez chaque fournée cuite dans un bol propre.",
+            "Gardez environ 13 g d’huile dans la poêle."
+          ],
+          "caption": "Dorez le poulet en plusieurs fournées et vérifiez qu’un morceau épais atteint 74 °C (165 °F) à cœur."
+        }
+      }
+    },
+    {
+      "id": "aromatics",
+      "activity": "cooking",
+      "tone": "yellow",
+      "uses": [
+        "garlic",
+        "ginger",
+        "chilli",
+        "frying-oil"
+      ],
+      "duration": [
+        0.5,
+        0.5
+      ],
+      "illustration": "assets/illustrations/steps/general-tso-chicken/aromatics.webp",
+      "copy": {
+        "en": {
+          "title": "Fry the aromatics",
+          "heat": "Pan-fry",
+          "timing": "About 30 sec",
+          "instructions": [
+            "Fry the garlic, ginger and chilli flakes in the remaining oil for about 30 seconds, until fragrant."
+          ],
+          "caption": "Fry the garlic, ginger and chilli flakes in the oil left in the pan."
+        },
+        "fr": {
+          "title": "Faire revenir les aromates",
+          "heat": "À la poêle",
+          "timing": "Environ 30 s",
+          "instructions": [
+            "Faites revenir l’ail, le gingembre et le piment environ 30 secondes dans l’huile restante, jusqu’à ce qu’ils dégagent leur parfum."
+          ],
+          "caption": "Faites revenir l’ail, le gingembre et le piment dans l’huile restée dans la poêle."
+        }
+      }
+    },
+    {
+      "id": "sauce",
+      "activity": "cooking",
+      "tone": "green",
+      "uses": [
+        "chicken",
+        "coating",
+        "frying-oil",
+        "ginger",
+        "garlic",
+        "chilli",
+        "sesame",
+        "water",
+        "soy",
+        "vinegar",
+        "hoisin",
+        "sugar",
+        "thickener"
+      ],
+      "duration": [
+        1,
+        1
+      ],
+      "illustration": "assets/illustrations/steps/general-tso-chicken/sauce.webp",
+      "copy": {
+        "en": {
+          "title": "Glaze the chicken",
+          "heat": "Simmer",
+          "timing": "About 1 min at a simmer",
+          "instructions": [
+            "Stir the sauce mixture again.",
+            "Pour it into the pan with the aromatics.",
+            "Stir until the sauce comes to a simmer.",
+            "Let it bubble for about 1 minute.",
+            "Adjust the seasoning with soy sauce or rice vinegar to taste.",
+            "Return the chicken to the pan.",
+            "Toss until the sauce coats every piece.",
+            "Sprinkle with sesame seeds if using."
+          ],
+          "caption": "Toss the browned chicken in the simmered sauce until it clings to every piece."
+        },
+        "fr": {
+          "title": "Napper le poulet",
+          "heat": "Frémissement",
+          "timing": "Environ 1 min à frémissement",
+          "instructions": [
+            "Mélangez de nouveau la sauce.",
+            "Versez-la dans la poêle avec les aromates.",
+            "Remuez jusqu’aux premiers frémissements.",
+            "Laissez frémir environ 1 minute.",
+            "Rectifiez l’assaisonnement avec de la sauce soja ou du vinaigre de riz.",
+            "Remettez le poulet dans la poêle.",
+            "Mélangez jusqu’à ce que la sauce nappe chaque morceau.",
+            "Parsemez de graines de sésame si vous en utilisez."
+          ],
+          "caption": "Mélangez le poulet doré dans la sauce réduite jusqu’à ce qu’elle nappe chaque morceau."
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "copy": {
+        "en": {
+          "text": "Serve straight away to keep the coating crisp. Steamed rice or broccoli works well alongside."
+        },
+        "fr": {
+          "text": "Servez aussitôt pour conserver le croustillant. Du riz ou du brocoli vapeur accompagne bien ce plat."
+        }
+      }
+    },
+    {
+      "source": {
+        "url": "https://www.gov.uk/government/publications/how-to-chill-freeze-and-defrost-food-safely/how-to-chill-freeze-and-defrost-food-safely",
+        "copy": {
+          "en": {
+            "label": "Food Standards Agency · Chilling leftovers"
+          },
+          "fr": {
+            "label": "Food Standards Agency · Conservation des restes"
+          }
+        }
+      },
+      "copy": {
+        "en": {
+          "text": "Cool leftovers in small portions. Refrigerate within 2 hours of cooking."
+        },
+        "fr": {
+          "text": "Répartissez les restes en petites portions pour les refroidir. Réfrigérez-les dans les 2 heures suivant la cuisson."
+        }
+      }
+    },
+    {
+      "source": {
+        "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+        "copy": {
+          "en": {
+            "label": "FoodSafety.gov · Cold food storage chart"
+          },
+          "fr": {
+            "label": "FoodSafety.gov · Conservation au froid"
+          }
+        }
+      },
+      "copy": {
+        "en": {
+          "text": "The freezer time is a quality guideline for the cooked dish."
+        },
+        "fr": {
+          "text": "La durée au congélateur correspond à la qualité du plat cuit."
+        }
+      }
+    }
+  ],
+  "safety": {
+    "notes": [
+      {
+        "copy": {
+          "en": {
+            "text": "Use a food thermometer to check the centre of a large piece from each batch reaches 74°C (165°F)."
+          },
+          "fr": {
+            "text": "À l’aide d’un thermomètre de cuisine, vérifiez qu’un gros morceau de chaque fournée atteint 74 °C (165 °F) à cœur."
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+        "copy": {
+          "en": {
+            "label": "FoodSafety.gov cooking temperatures"
+          },
+          "fr": {
+            "label": "FoodSafety.gov · Températures de cuisson"
+          }
+        }
+      }
+    ],
+    "copy": {
+      "en": {
+        "title": "Check the chicken"
+      },
+      "fr": {
+        "title": "Vérifier la cuisson du poulet"
+      }
+    }
+  },
+  "source": {
+    "url": "https://natashaskitchen.com/general-tsos-chicken/",
+    "copy": {
+      "en": {
+        "credit": "Adapted from",
+        "label": "Natalya Drozhzhin’s General Tso’s Chicken on Natasha’s Kitchen"
+      },
+      "fr": {
+        "credit": "Adapté de",
+        "label": "la recette du poulet du général Tso de Natalya Drozhzhin sur Natasha’s Kitchen"
+      }
+    }
+  },
+  "copy": {
+    "en": {
+      "title": "General Tso’s Chicken",
+      "description": "Pan-fried chicken thighs tossed in a glossy sweet-and-sour sauce with ginger, garlic and chilli.",
+      "setup": [
+        "Use a large non-stick frying pan."
+      ],
+      "allergens": [
+        "Soya",
+        "Wheat and sesame may be present in the soy or hoisin sauce. Check the labels.",
+        "Sesame if using the garnish"
+      ]
+    },
+    "fr": {
+      "title": "Poulet du général Tso",
+      "description": "Des hauts de cuisse dorés à la poêle, enrobés d’une sauce aigre-douce au gingembre, à l’ail et au piment.",
+      "setup": [
+        "Utilisez une grande poêle antiadhésive."
+      ],
+      "allergens": [
+        "Soja",
+        "Les sauces soja et hoisin peuvent contenir du blé et du sésame. Vérifiez leurs étiquettes.",
+        "Sésame si vous ajoutez la garniture"
+      ]
+    }
+  }
+}
